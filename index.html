@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clearpath — Free Tools to Take Control of Your Money</title>
+<meta name="description" content="Clearpath builds free, private tools that help you plan your way out of debt and build better money habits. Start with our debt snowball tracker.">
+<meta property="og:title" content="Clearpath — Free Money Tools That Actually Help">
+<meta property="og:description" content="Free, private tools for getting out of debt and building money habits that stick. No signup, nothing stored.">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1c2434;--ink-soft:#3a4356;--cream:#faf6ef;--cream-deep:#f2ebdd;
+    --coral:#f2683c;--coral-deep:#d94f24;--amber:#f7a23b;--mint:#2f8f6b;
+    --line:#e4dccb;--card:#ffffff;--shadow:0 1px 2px rgba(28,36,52,.04),0 8px 28px rgba(28,36,52,.06);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.1;letter-spacing:-.01em}
+  header.site{border-bottom:1px solid var(--line);background:var(--cream)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;max-width:1000px;margin:0 auto}
+  .brand{display:flex;align-items:center;gap:10px;font-family:'Fraunces',serif;font-weight:600;font-size:20px;color:var(--ink);text-decoration:none}
+  .brand .dot{width:28px;height:28px;border-radius:50%;background:radial-gradient(circle at 32% 30%,#fff 0 18%,var(--amber) 19% 55%,var(--coral) 56%);box-shadow:inset 0 0 0 1px rgba(0,0,0,.04)}
+  .nav a.link{color:var(--ink-soft);text-decoration:none;font-size:14px;font-weight:500;margin-left:22px}
+  .nav a.link:hover{color:var(--coral-deep)}
+  @media(max-width:560px){.nav a.link{display:none}}
+
+  .hero{padding:80px 0 50px;text-align:center}
+  .eyebrow{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--coral-deep);background:var(--cream-deep);padding:6px 14px;border-radius:100px;margin-bottom:24px}
+  .hero h1{font-size:clamp(40px,6.5vw,68px);max-width:16ch;margin:0 auto 22px}
+  .hero h1 em{font-style:italic;color:var(--coral-deep)}
+  .hero p.sub{font-size:clamp(17px,2.4vw,21px);color:var(--ink-soft);max-width:54ch;margin:0 auto}
+
+  .tools{padding:20px 0 60px}
+  .tools h2.sec{text-align:center;font-size:14px;font-family:'Inter';font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-soft);margin-bottom:26px}
+  .tool-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+  .tool-card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:30px;box-shadow:var(--shadow);text-decoration:none;color:var(--ink);display:flex;flex-direction:column;transition:transform .15s ease,box-shadow .2s ease}
+  .tool-card.live:hover{transform:translateY(-4px);box-shadow:0 12px 34px rgba(28,36,52,.1)}
+  .tool-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:18px}
+  .tool-card h3{font-size:23px;margin-bottom:8px}
+  .tool-card p{font-size:15px;color:var(--ink-soft);margin-bottom:18px;flex:1}
+  .tool-tag{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:100px;align-self:flex-start}
+  .tool-card.live .tool-tag{background:#e6f2ec;color:var(--mint)}
+  .tool-card.soon{opacity:.72}
+  .tool-card.soon .tool-tag{background:var(--cream-deep);color:var(--ink-soft)}
+  .tool-card.soon{cursor:default}
+  .go{font-weight:600;color:var(--coral-deep);font-size:15px;margin-top:4px}
+
+  .why{padding:56px 0;border-top:1px solid var(--line)}
+  .why h2{text-align:center;font-size:clamp(26px,4vw,36px);margin-bottom:36px}
+  .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:26px}
+  .why-item{text-align:center}
+  .why-item .wi{font-size:30px;margin-bottom:10px}
+  .why-item h3{font-size:19px;margin-bottom:6px}
+  .why-item p{font-size:14.5px;color:var(--ink-soft)}
+
+  footer.site{background:var(--ink);color:#c3cad9;padding:44px 0 28px;margin-top:20px}
+  footer.site .fin{max-width:1000px;margin:0 auto;padding:0 24px}
+  footer.site .brand{color:#fff;margin-bottom:14px}
+  footer.site .flinks a{color:#c3cad9;text-decoration:none;font-size:14.5px;margin-right:20px;line-height:2.2}
+  footer.site .flinks a:hover{color:#fff}
+  footer.site .fbottom{border-top:1px solid #2f3a52;margin-top:20px;padding-top:18px;font-size:13px;color:#7c869c}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <nav class="nav">
+    <a href="/" class="brand"><span class="dot"></span>Clearpath</a>
+    <div>
+      <a href="/debt/index.html" class="link">Debt tracker</a>
+      <a href="/debt/blog.html" class="link">Guides</a>
+      <a href="/debt/about.html" class="link">About</a>
+      <a href="/debt/contact.html" class="link">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Free · Private · No signup</span>
+    <h1>Take the <em>clear path</em> with your money.</h1>
+    <p class="sub">Simple, free tools that help you plan your way out of debt and build money habits that actually stick. Nothing you enter ever leaves your device.</p>
+  </div>
+</section>
+
+<section class="tools">
+  <div class="wrap">
+    <h2 class="sec">Our tools</h2>
+    <div class="tool-grid">
+
+      <a href="/debt/index.html" class="tool-card live">
+        <div class="tool-icon" style="background:#fdeee7">❄️</div>
+        <span class="tool-tag">Live now</span>
+        <h3>Debt Snowball Tracker</h3>
+        <p>Enter your debts and instantly see your debt-free date, total interest, and a printable month-by-month payoff plan. Compare snowball vs avalanche in one tap.</p>
+        <span class="go">Open the tracker →</span>
+      </a>
+
+      <div class="tool-card soon">
+        <div class="tool-icon" style="background:var(--cream-deep)">🏠</div>
+        <span class="tool-tag">Coming soon</span>
+        <h3>Mortgage Decision Lab</h3>
+        <p>Work out whether buying really beats renting for your situation — factoring in the costs most calculators quietly ignore.</p>
+      </div>
+
+      <div class="tool-card soon">
+        <div class="tool-icon" style="background:var(--cream-deep)">👨‍👩‍👧</div>
+        <span class="tool-tag">Coming soon</span>
+        <h3>Family Money Tracker</h3>
+        <p>A simple shared space for allowances, savings goals, and teaching kids good money habits — built for the whole family.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <h2>Why Clearpath</h2>
+    <div class="why-grid">
+      <div class="why-item"><div class="wi">🔒</div><h3>Truly private</h3><p>Our tools run entirely in your browser. Your numbers are never uploaded, stored, or sold.</p></div>
+      <div class="why-item"><div class="wi">💸</div><h3>Always free</h3><p>No subscriptions, no paywalls, no account required. Just open a tool and use it.</p></div>
+      <div class="why-item"><div class="wi">📱</div><h3>Works everywhere</h3><p>Designed mobile-first, so it works just as well on your phone as your laptop.</p></div>
+      <div class="why-item"><div class="wi">🎯</div><h3>Actually useful</h3><p>Built to help you make a real decision or a real plan — not to sell you something.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="fin">
+    <span class="brand"><span class="dot"></span>Clearpath</span>
+    <div class="flinks">
+      <a href="/debt/index.html">Debt tracker</a>
+      <a href="/debt/blog.html">Guides</a>
+      <a href="/debt/about.html">About</a>
+      <a href="/debt/contact.html">Contact</a>
+      <a href="/debt/privacy.html">Privacy</a>
+      <a href="/debt/disclaimer.html">Disclaimer</a>
+    </div>
+    <div class="fbottom">© <span id="yr"></span> Clearpath. All rights reserved. · info@clearpath.lifestyle</div>
+  </div>
+</footer>
+<script>document.getElementById("yr").textContent=new Date().getFullYear();</script>
+</body>
+</html>
