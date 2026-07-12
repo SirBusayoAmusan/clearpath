@@ -73,12 +73,82 @@
   .optin .msg.err{color:var(--coral-deep);display:block}
   .optin.done form,.optin.done p.od,.optin.done .micro{display:none}
 
+  .hero-img{margin:24px 0 8px;border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
+  .hero-img svg{display:block;width:100%;height:auto}
+  .sharebar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:26px 0;padding:16px 18px;background:var(--cream-deep);border-radius:14px;border:1px solid var(--line)}
+  .sharebar .sb-label{font-size:13px;font-weight:600;color:var(--ink-soft);margin-right:4px;white-space:nowrap}
+  .sharebar a.sb-btn{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;text-decoration:none;font-size:16px;transition:transform .15s ease,opacity .15s ease;flex:none}
+  .sharebar a.sb-btn:hover{transform:translateY(-2px);opacity:.9}
+  .sb-pinterest{background:#E60023;color:#fff}
+  .sb-facebook{background:#1877F2;color:#fff}
+  .sb-x{background:#000000;color:#fff}
+  .sb-whatsapp{background:#25D366;color:#fff}
+  .sb-copy{background:var(--ink);color:#fff;cursor:pointer;border:none}
+  .sharebar .sb-copy-msg{font-size:12.5px;color:var(--mint);font-weight:600;margin-left:2px;display:none}
+
 </style></head><body><header class="site"><nav class="nav"><a href="/" class="brand"><span class="dot"></span>Clearpath</a><div><a href="/debt/index.html" class="link">Tracker</a><a href="/debt/blog.html" class="link">Guides</a><a href="/debt/about.html" class="link">About</a><a href="/debt/contact.html" class="link">Contact</a></div></nav></header>
 <main class="article"><div class="wrap">
 <span class="eyebrow">Debt payoff</span>
 <h1>Debt Snowball vs. Avalanche: Which Pays Off Debt Faster?</h1>
 <div class="meta"><span>Clearpath Team</span><span class="read">7 min read</span></div>
 <p class="lede">One method saves you the most money. The other gets you the most wins. Here's how to tell which will actually get you to zero — and why the "better" one on paper isn't always the one that works.</p>
+<div class="hero-img">
+  <svg viewBox="0 0 1000 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Debt Snowball vs Avalanche comparison graphic">
+    <defs>
+      <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#1c2434"/>
+        <stop offset="100%" stop-color="#2a3550"/>
+      </linearGradient>
+      <linearGradient id="snowGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#f7a23b"/>
+        <stop offset="100%" stop-color="#f2683c"/>
+      </linearGradient>
+    </defs>
+    <rect width="1000" height="560" rx="28" fill="url(#bgGrad)"/>
+    <text x="500" y="72" text-anchor="middle" font-family="Georgia,serif" font-size="38" font-weight="600" fill="#ffffff">Snowball vs. Avalanche</text>
+    <text x="500" y="106" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#a9b4cc">Two proven ways to pay off debt faster</text>
+
+    <!-- Snowball side -->
+    <rect x="60" y="150" width="410" height="360" rx="20" fill="#ffffff" opacity="0.06"/>
+    <circle cx="150" cy="230" r="34" fill="url(#snowGrad)"/>
+    <text x="150" y="240" text-anchor="middle" font-family="Arial,sans-serif" font-size="30">❄️</text>
+    <text x="200" y="222" font-family="Georgia,serif" font-size="24" font-weight="600" fill="#ffffff">Snowball</text>
+    <text x="200" y="246" font-family="Arial,sans-serif" font-size="14" fill="#cfd6e6">Smallest balance first</text>
+    <text x="95" y="300" font-family="Arial,sans-serif" font-size="15" fill="#e7ebf3">→ Fastest first win</text>
+    <text x="95" y="332" font-family="Arial,sans-serif" font-size="15" fill="#e7ebf3">→ Builds momentum fast</text>
+    <text x="95" y="364" font-family="Arial,sans-serif" font-size="15" fill="#e7ebf3">→ Best if you've quit before</text>
+    <text x="95" y="396" font-family="Arial,sans-serif" font-size="15" fill="#e7ebf3">→ Small extra interest cost</text>
+
+    <!-- Divider -->
+    <line x1="500" y1="150" x2="500" y2="510" stroke="#3a4356" stroke-width="2" stroke-dasharray="6,8"/>
+    <circle cx="500" cy="330" r="26" fill="#f2683c"/>
+    <text x="500" y="338" text-anchor="middle" font-family="Georgia,serif" font-size="16" font-weight="700" fill="#ffffff">VS</text>
+
+    <!-- Avalanche side -->
+    <rect x="530" y="150" width="410" height="360" rx="20" fill="#ffffff" opacity="0.06"/>
+    <circle cx="850" cy="230" r="34" fill="#2f8f6b"/>
+    <text x="850" y="240" text-anchor="middle" font-family="Arial,sans-serif" font-size="30">🏔️</text>
+    <text x="720" y="222" font-family="Georgia,serif" font-size="24" font-weight="600" fill="#ffffff">Avalanche</text>
+    <text x="720" y="246" font-family="Arial,sans-serif" font-size="14" fill="#cfd6e6">Highest interest first</text>
+    <text x="565" y="300" font-family="Arial,sans-serif" font-size="15" fill="#e7ebf3">→ Saves the most money</text>
+    <text x="565" y="332" font-family="Arial,sans-serif" font-size="15" fill="#e7ebf3">→ Best for high-rate cards</text>
+    <text x="565" y="364" font-family="Arial,sans-serif" font-size="15" fill="#e7ebf3">→ Mathematically optimal</text>
+    <text x="565" y="396" font-family="Arial,sans-serif" font-size="15" fill="#e7ebf3">→ First win can take longer</text>
+
+    <text x="500" y="540" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#8a94a8">clearpath.click/debt · Free debt payoff tools</text>
+  </svg>
+</div>
+
+<div class="sharebar">
+  <span class="sb-label">Share this:</span>
+  <a class="sb-btn sb-pinterest" target="_blank" rel="noopener" aria-label="Share on Pinterest" href="https://pinterest.com/pin/create/button/?url=https%3A//www.clearpath.click/debt/snowball-vs-avalanche.html&description=Debt%20Snowball%20vs.%20Avalanche%3A%20Which%20Pays%20Off%20Debt%20Faster%3F">📌</a>
+  <a class="sb-btn sb-facebook" target="_blank" rel="noopener" aria-label="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.clearpath.click/debt/snowball-vs-avalanche.html">f</a>
+  <a class="sb-btn sb-x" target="_blank" rel="noopener" aria-label="Share on X" href="https://twitter.com/intent/tweet?url=https%3A//www.clearpath.click/debt/snowball-vs-avalanche.html&text=Debt%20Snowball%20vs.%20Avalanche%3A%20Which%20Pays%20Off%20Debt%20Faster%3F">𝕏</a>
+  <a class="sb-btn sb-whatsapp" target="_blank" rel="noopener" aria-label="Share on WhatsApp" href="https://api.whatsapp.com/send?text=Debt%20Snowball%20vs.%20Avalanche%3A%20Which%20Pays%20Off%20Debt%20Faster%3F%20https%3A//www.clearpath.click/debt/snowball-vs-avalanche.html">💬</a>
+  <button class="sb-btn sb-copy" onclick="clearpathCopyLink(this)" aria-label="Copy link">🔗</button>
+  <span class="sb-copy-msg">Link copied!</span>
+</div>
+
 <div class="prose">
 
 <p>If you've got more than one debt and a little extra money to throw at them each month, you face a surprisingly important question: <strong>which debt do you attack first?</strong> The two most popular answers are the debt snowball and the debt avalanche. They sound similar, but they're built on opposite priorities — and choosing the wrong one for your personality is one of the quietest reasons people give up on getting out of debt.</p>
@@ -141,8 +211,19 @@
   <p class="msg" id="optinMsg"></p>
 </div>
 
+<div class="sharebar">
+  <span class="sb-label">Share this:</span>
+  <a class="sb-btn sb-pinterest" target="_blank" rel="noopener" aria-label="Share on Pinterest" href="https://pinterest.com/pin/create/button/?url=https%3A//www.clearpath.click/debt/snowball-vs-avalanche.html&description=Debt%20Snowball%20vs.%20Avalanche%3A%20Which%20Pays%20Off%20Debt%20Faster%3F">📌</a>
+  <a class="sb-btn sb-facebook" target="_blank" rel="noopener" aria-label="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.clearpath.click/debt/snowball-vs-avalanche.html">f</a>
+  <a class="sb-btn sb-x" target="_blank" rel="noopener" aria-label="Share on X" href="https://twitter.com/intent/tweet?url=https%3A//www.clearpath.click/debt/snowball-vs-avalanche.html&text=Debt%20Snowball%20vs.%20Avalanche%3A%20Which%20Pays%20Off%20Debt%20Faster%3F">𝕏</a>
+  <a class="sb-btn sb-whatsapp" target="_blank" rel="noopener" aria-label="Share on WhatsApp" href="https://api.whatsapp.com/send?text=Debt%20Snowball%20vs.%20Avalanche%3A%20Which%20Pays%20Off%20Debt%20Faster%3F%20https%3A//www.clearpath.click/debt/snowball-vs-avalanche.html">💬</a>
+  <button class="sb-btn sb-copy" onclick="clearpathCopyLink(this)" aria-label="Copy link">🔗</button>
+  <span class="sb-copy-msg">Link copied!</span>
+</div>
+
 <div class="related">
 <h3>People also read</h3>
+<a href="/debt/find-extra-money-for-debt.html">7 Realistic Ways to Find Extra Money to Pay Off Debt →</a>
 <a href="/debt/how-i-paid-off-10000.html">How I Paid Off $10,000 in 18 Months →</a>
 <a href="/debt/how-to-start-debt-snowball.html">How to Start the Debt Snowball Method (Step by Step) →</a>
 <a href="/debt/index.html">Free Debt Snowball Tracker →</a>
@@ -184,6 +265,21 @@
     });
   });
 })();
+</script>
+
+<script>
+function clearpathCopyLink(btn){
+  var url = window.location.href.split('#')[0];
+  navigator.clipboard.writeText(url).then(function(){
+    var msg = btn.parentElement.querySelector('.sb-copy-msg');
+    if(msg){ msg.style.display='inline'; setTimeout(function(){ msg.style.display='none'; }, 2200); }
+  }).catch(function(){
+    var ta=document.createElement('textarea'); ta.value=url; document.body.appendChild(ta);
+    ta.select(); document.execCommand('copy'); document.body.removeChild(ta);
+    var msg = btn.parentElement.querySelector('.sb-copy-msg');
+    if(msg){ msg.style.display='inline'; setTimeout(function(){ msg.style.display='none'; }, 2200); }
+  });
+}
 </script>
 
 </body></html>
