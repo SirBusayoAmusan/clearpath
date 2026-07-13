@@ -1,4 +1,10 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>How to Start the Debt Snowball Method (Step by Step) — Clearpath</title><meta name="description" content="A step-by-step guide to starting the debt snowball method. List your debts, order them smallest first, and roll each cleared payment forward to become debt-free."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><style>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>How to Start the Debt Snowball Method (Step by Step) — Clearpath</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png"><meta name="description" content="A step-by-step guide to starting the debt snowball method. List your debts, order them smallest first, and roll each cleared payment forward to become debt-free."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><style>
   :root{
     --ink:#1c2434;--ink-soft:#3a4356;--cream:#faf6ef;--cream-deep:#f2ebdd;
     --coral:#f2683c;--coral-deep:#d94f24;--amber:#f7a23b;--mint:#2f8f6b;
@@ -86,7 +92,28 @@
   .sb-copy{background:var(--ink);color:#fff;cursor:pointer;border:none}
   .sharebar .sb-copy-msg{font-size:12.5px;color:var(--mint);font-weight:600;margin-left:2px;display:none}
 
-</style></head><body><header class="site"><nav class="nav"><a href="/" class="brand"><span class="dot"></span>Clearpath</a><div><a href="/debt/index.html" class="link">Tracker</a><a href="/debt/blog.html" class="link">Guides</a><a href="/debt/about.html" class="link">About</a><a href="/debt/contact.html" class="link">Contact</a></div></nav></header>
+  .hamburger{display:none;flex:none;width:38px;height:38px;border:none;background:var(--cream-deep);border-radius:10px;cursor:pointer;position:relative;align-items:center;justify-content:center}
+  .hamburger span{display:block;width:18px;height:2px;background:var(--ink);border-radius:2px;position:relative;transition:transform .2s ease,opacity .2s ease}
+  .hamburger span::before,.hamburger span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--ink);border-radius:2px;transition:transform .2s ease}
+  .hamburger span::before{top:-6px}
+  .hamburger span::after{top:6px}
+  #navToggle{display:none}
+  #navToggle:checked ~ .nav .hamburger span{background:transparent}
+  #navToggle:checked ~ .nav .hamburger span::before{transform:translateY(6px) rotate(45deg)}
+  #navToggle:checked ~ .nav .hamburger span::after{transform:translateY(-6px) rotate(-45deg)}
+  .nav-drop{display:none}
+  #navToggle:checked ~ .nav-drop{display:block}
+  @media(max-width:640px){
+    .nav a.link{display:none}
+    .hamburger{display:flex}
+    .nav-drop{position:absolute;top:64px;left:0;right:0;background:var(--cream);border-bottom:1px solid var(--line);box-shadow:0 12px 24px rgba(28,36,52,.08);z-index:40;animation:dropIn .18s ease}
+    .nav-drop a{display:block;padding:14px 24px;color:var(--ink-soft);text-decoration:none;font-size:15px;font-weight:500;border-top:1px solid var(--line)}
+    .nav-drop a:first-child{border-top:none}
+    .nav-drop a:hover{color:var(--coral-deep);background:var(--cream-deep)}
+  }
+  @keyframes dropIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+
+</style></head><body><header class="site" style="position:relative"><input type="checkbox" id="navToggle"><nav class="nav"><a href="/" class="brand"><span class="dot"></span>Clearpath</a><div><a href="/debt/index.html" class="link">Tracker</a><a href="/debt/blog.html" class="link">Guides</a><a href="/debt/about.html" class="link">About</a><a href="/debt/contact.html" class="link">Contact</a></div><label for="navToggle" class="hamburger" aria-label="Menu"><span></span></label></nav><div class="nav-drop"><a href="/debt/index.html">Tracker</a><a href="/debt/blog.html">Guides</a><a href="/debt/about.html">About</a><a href="/debt/contact.html">Contact</a></div></header>
 <main class="article"><div class="wrap">
 <span class="eyebrow">Debt payoff</span>
 <h1>How to Start the Debt Snowball Method (Step by Step)</h1>
@@ -216,6 +243,8 @@
   <button class="sb-btn sb-copy" onclick="clearpathCopyLink(this)" aria-label="Copy link">🔗</button>
   <span class="sb-copy-msg">Link copied!</span>
 </div>
+
+<div class="ad-slot"><div class="ad-inner">Ad space</div></div>
 
 <div class="related">
 <h3>People also read</h3>

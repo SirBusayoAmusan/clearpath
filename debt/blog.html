@@ -6,6 +6,12 @@
 <title>Debt Payoff Guides & Articles — Clearpath</title>
 <meta name="description" content="Practical, honest guides on paying off debt: the snowball method, finding extra money, real payoff stories, and free printables. New articles added regularly.">
 <meta name="robots" content="index, follow">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
@@ -42,15 +48,38 @@
   .post.soon .cat{color:var(--ink-soft)}
   .post .badge{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;background:var(--cream-deep);color:var(--ink-soft);padding:4px 10px;border-radius:100px;align-self:flex-start}
   footer.site{background:var(--ink);color:#c3cad9;padding:44px 0 28px;margin-top:48px}
+  .ad-slot{margin:10px 0}
+  .ad-inner{border:1px dashed var(--line);border-radius:12px;min-height:90px;display:flex;align-items:center;justify-content:center;color:#b9b09c;font-size:12px;letter-spacing:.08em;text-transform:uppercase;background:repeating-linear-gradient(45deg,transparent,transparent 12px,rgba(228,220,203,.18) 12px,rgba(228,220,203,.18) 24px)}
   footer.site .fin{max-width:960px;margin:0 auto;padding:0 24px}
   footer.site .brand{color:#fff;margin-bottom:14px}
   footer.site .flinks a{color:#c3cad9;text-decoration:none;font-size:14.5px;margin-right:20px;line-height:2.2}
   footer.site .flinks a:hover{color:#fff}
   footer.site .fbottom{border-top:1px solid #2f3a52;margin-top:20px;padding-top:18px;font-size:13px;color:#7c869c}
+  .hamburger{display:none;flex:none;width:38px;height:38px;border:none;background:var(--cream-deep);border-radius:10px;cursor:pointer;position:relative;align-items:center;justify-content:center}
+  .hamburger span{display:block;width:18px;height:2px;background:var(--ink);border-radius:2px;position:relative;transition:transform .2s ease,opacity .2s ease}
+  .hamburger span::before,.hamburger span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--ink);border-radius:2px;transition:transform .2s ease}
+  .hamburger span::before{top:-6px}
+  .hamburger span::after{top:6px}
+  #navToggle{display:none}
+  #navToggle:checked ~ .nav .hamburger span{background:transparent}
+  #navToggle:checked ~ .nav .hamburger span::before{transform:translateY(6px) rotate(45deg)}
+  #navToggle:checked ~ .nav .hamburger span::after{transform:translateY(-6px) rotate(-45deg)}
+  .nav-drop{display:none}
+  #navToggle:checked ~ .nav-drop{display:block}
+  @media(max-width:640px){
+    .nav a.link{display:none}
+    .hamburger{display:flex}
+    .nav-drop{position:absolute;top:64px;left:0;right:0;background:var(--cream);border-bottom:1px solid var(--line);box-shadow:0 12px 24px rgba(28,36,52,.08);z-index:40;animation:dropIn .18s ease}
+    .nav-drop a{display:block;padding:14px 24px;color:var(--ink-soft);text-decoration:none;font-size:15px;font-weight:500;border-top:1px solid var(--line)}
+    .nav-drop a:first-child{border-top:none}
+    .nav-drop a:hover{color:var(--coral-deep);background:var(--cream-deep)}
+  }
+  @keyframes dropIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+
 </style>
 </head>
 <body>
-<header class="site">
+<header class="site" style="position:relative"><input type="checkbox" id="navToggle">
   <nav class="nav">
     <a href="/" class="brand"><span class="dot"></span>Clearpath</a>
     <div>
@@ -58,8 +87,8 @@
       <a href="/debt/blog.html" class="link on">Guides</a>
       <a href="/debt/about.html" class="link">About</a>
       <a href="/debt/contact.html" class="link">Contact</a>
-    </div>
-  </nav>
+    </div><label for="navToggle" class="hamburger" aria-label="Menu"><span></span></label>
+  </nav><div class="nav-drop"><a href="/debt/index.html">Tracker</a><a href="/debt/blog.html">Guides</a><a href="/debt/about.html">About</a><a href="/debt/contact.html">Contact</a></div>
 </header>
 
 <main class="page"><div class="wrap">
@@ -107,6 +136,7 @@
     </a>
 
   </div>
+  <div class="ad-slot"><div class="ad-inner">Ad space</div></div>
 </div></main>
 
 <footer class="site">
