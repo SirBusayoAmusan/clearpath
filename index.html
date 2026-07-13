@@ -3,11 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clearpath — Free Tools to Take Control of Your Money</title>
+<title>Clearpath — Free Debt Payoff Tools, Trackers &amp; Budgeting Tips</title>
 <meta name="description" content="Clearpath builds free, private tools that help you plan your way out of debt and build better money habits. Start with our debt snowball tracker.">
 <meta property="og:title" content="Clearpath — Free Money Tools That Actually Help">
 <meta property="og:description" content="Free, private tools for getting out of debt and building money habits that stick. No signup, nothing stored.">
 <meta name="robots" content="index, follow">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,61 +21,129 @@
   :root{
     --ink:#1c2434;--ink-soft:#3a4356;--cream:#faf6ef;--cream-deep:#f2ebdd;
     --coral:#f2683c;--coral-deep:#d94f24;--amber:#f7a23b;--mint:#2f8f6b;
+    --blush:#f6c9c9;--blush-deep:#e88fa0;
     --line:#e4dccb;--card:#ffffff;--shadow:0 1px 2px rgba(28,36,52,.04),0 8px 28px rgba(28,36,52,.06);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+  body{font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
   h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.1;letter-spacing:-.01em}
-  header.site{border-bottom:1px solid var(--line);background:var(--cream)}
-  .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;max-width:1000px;margin:0 auto}
+
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.3,1),transform .7s cubic-bezier(.2,.7,.3,1)}
+  .reveal.in{opacity:1;transform:translateY(0)}
+  .reveal-1{transition-delay:.05s}.reveal-2{transition-delay:.14s}.reveal-3{transition-delay:.23s}.reveal-4{transition-delay:.32s}
+
+  header.site{border-bottom:1px solid var(--line);background:rgba(250,246,239,.92);backdrop-filter:blur(6px);position:sticky;top:0;z-index:50}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1040px;margin:0 auto}
   .brand{display:flex;align-items:center;gap:10px;font-family:'Fraunces',serif;font-weight:600;font-size:20px;color:var(--ink);text-decoration:none}
-  .brand .dot{width:28px;height:28px;border-radius:50%;background:radial-gradient(circle at 32% 30%,#fff 0 18%,var(--amber) 19% 55%,var(--coral) 56%);box-shadow:inset 0 0 0 1px rgba(0,0,0,.04)}
-  .nav a.link{color:var(--ink-soft);text-decoration:none;font-size:14px;font-weight:500;margin-left:22px}
+  .brand .dot{width:28px;height:28px;border-radius:50%;background:radial-gradient(circle at 32% 30%,#fff 0 18%,var(--amber) 19% 55%,var(--coral) 56%);box-shadow:inset 0 0 0 1px rgba(0,0,0,.04);animation:softPulse 3.5s ease-in-out infinite}
+  .nav a.link{color:var(--ink-soft);text-decoration:none;font-size:14px;font-weight:500;margin-left:22px;position:relative}
+  .nav a.link::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--coral);border-radius:2px;transition:width .2s ease}
   .nav a.link:hover{color:var(--coral-deep)}
-  @media(max-width:560px){.nav a.link{display:none}}
+  .nav a.link:hover::after{width:100%}
+  @keyframes softPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
 
-  .hero{padding:80px 0 50px;text-align:center}
-  .eyebrow{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--coral-deep);background:var(--cream-deep);padding:6px 14px;border-radius:100px;margin-bottom:24px}
-  .hero h1{font-size:clamp(40px,6.5vw,68px);max-width:16ch;margin:0 auto 22px}
-  .hero h1 em{font-style:italic;color:var(--coral-deep)}
-  .hero p.sub{font-size:clamp(17px,2.4vw,21px);color:var(--ink-soft);max-width:54ch;margin:0 auto}
+  .blob{position:absolute;border-radius:50%;filter:blur(2px);opacity:.5;pointer-events:none;z-index:0}
+  .blob-1{width:220px;height:220px;background:radial-gradient(circle,var(--blush) 0%,transparent 70%);top:-40px;right:-60px;animation:floatSlow 9s ease-in-out infinite}
+  .blob-2{width:160px;height:160px;background:radial-gradient(circle,var(--amber) 0%,transparent 70%);opacity:.28;bottom:-30px;left:-40px;animation:floatSlow 11s ease-in-out infinite reverse}
+  @keyframes floatSlow{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(12px,-16px) scale(1.05)}}
 
-  .tools{padding:20px 0 60px}
+  .hero{padding:70px 0 46px;text-align:center;position:relative;overflow:hidden}
+  .eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--coral-deep);background:var(--cream-deep);padding:7px 16px;border-radius:100px;margin-bottom:24px;position:relative;z-index:1}
+  .eyebrow .spark{display:inline-block;animation:sparkle 2.4s ease-in-out infinite}
+  @keyframes sparkle{0%,100%{transform:scale(1) rotate(0deg);opacity:1}50%{transform:scale(1.3) rotate(15deg);opacity:.7}}
+  .hero h1{font-size:clamp(38px,6.2vw,64px);max-width:16ch;margin:0 auto 20px;position:relative;z-index:1}
+  .hero h1 em{font-style:italic;color:var(--coral-deep);position:relative;white-space:nowrap}
+  .hero h1 em::after{content:"";position:absolute;left:-2%;right:-2%;bottom:6px;height:10px;background:var(--blush);opacity:.55;z-index:-1;border-radius:6px;transform:skewX(-6deg)}
+  .hero p.sub{font-size:clamp(16px,2.2vw,19px);color:var(--ink-soft);max-width:52ch;margin:0 auto;position:relative;z-index:1}
+  .hero .cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px;position:relative;z-index:1}
+  .btn{font-family:'Inter';font-size:14.5px;font-weight:600;padding:13px 24px;border-radius:100px;text-decoration:none;display:inline-block;transition:transform .15s ease,box-shadow .2s ease}
+  .btn-primary{background:var(--coral);color:#fff;box-shadow:0 8px 20px rgba(242,104,60,.3)}
+  .btn-primary:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 12px 26px rgba(242,104,60,.4)}
+  .btn-ghost{background:#fff;color:var(--ink);border:1.5px solid var(--line)}
+  .btn-ghost:hover{border-color:var(--blush-deep);color:var(--coral-deep);transform:translateY(-2px)}
+
+  .articles{padding:14px 0 54px}
+  .articles .sec-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:22px;flex-wrap:wrap;gap:10px}
+  .articles h2.sec{font-size:14px;font-family:'Inter';font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-soft)}
+  .articles .seeall{font-size:13.5px;font-weight:600;color:var(--coral-deep);text-decoration:none}
+  .articles .seeall:hover{text-decoration:underline}
+  .art-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+  .art-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;box-shadow:var(--shadow);transition:transform .2s cubic-bezier(.2,.7,.3,1),box-shadow .25s ease,border-color .2s ease}
+  .art-card:hover{transform:translateY(-5px) rotate(-.3deg);box-shadow:0 16px 34px rgba(232,143,160,.22);border-color:var(--blush-deep)}
+  .art-card .cat{font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--coral-deep);margin-bottom:10px}
+  .art-card h3{font-size:16.5px;line-height:1.3;margin-bottom:8px}
+  .art-card .rd{font-size:12.5px;font-weight:600;color:var(--ink-soft);margin-top:auto}
+  .art-card:hover .rd{color:var(--coral-deep)}
+
+  .tools{padding:20px 0 60px;position:relative}
   .tools h2.sec{text-align:center;font-size:14px;font-family:'Inter';font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-soft);margin-bottom:26px}
   .tool-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
-  .tool-card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:30px;box-shadow:var(--shadow);text-decoration:none;color:var(--ink);display:flex;flex-direction:column;transition:transform .15s ease,box-shadow .2s ease}
-  .tool-card.live:hover{transform:translateY(-4px);box-shadow:0 12px 34px rgba(28,36,52,.1)}
-  .tool-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:18px}
+  .tool-card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:30px;box-shadow:var(--shadow);text-decoration:none;color:var(--ink);display:flex;flex-direction:column;transition:transform .25s cubic-bezier(.2,.7,.3,1),box-shadow .25s ease,border-color .2s ease}
+  .tool-card.live:hover{transform:translateY(-6px);box-shadow:0 18px 36px rgba(242,104,60,.16);border-color:var(--coral)}
+  .tool-icon{width:52px;height:52px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:18px;transition:transform .3s ease}
+  .tool-card.live:hover .tool-icon{transform:scale(1.12) rotate(-6deg)}
   .tool-card h3{font-size:23px;margin-bottom:8px}
   .tool-card p{font-size:15px;color:var(--ink-soft);margin-bottom:18px;flex:1}
   .tool-tag{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:100px;align-self:flex-start}
   .tool-card.live .tool-tag{background:#e6f2ec;color:var(--mint)}
-  .tool-card.soon{opacity:.72}
+  .tool-card.soon{opacity:.7}
   .tool-card.soon .tool-tag{background:var(--cream-deep);color:var(--ink-soft)}
   .tool-card.soon{cursor:default}
-  .go{font-weight:600;color:var(--coral-deep);font-size:15px;margin-top:4px}
+  .go{font-weight:600;color:var(--coral-deep);font-size:15px;margin-top:4px;display:inline-flex;align-items:center;gap:5px}
+  .tool-card.live:hover .go{gap:9px}
+  .go span{transition:transform .2s ease}
 
-  .why{padding:56px 0;border-top:1px solid var(--line)}
+  .why{padding:56px 0;border-top:1px solid var(--line);position:relative}
   .why h2{text-align:center;font-size:clamp(26px,4vw,36px);margin-bottom:36px}
   .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:26px}
-  .why-item{text-align:center}
-  .why-item .wi{font-size:30px;margin-bottom:10px}
+  .why-item{text-align:center;transition:transform .25s ease}
+  .why-item:hover{transform:translateY(-4px)}
+  .why-item .wi{font-size:32px;margin-bottom:12px;display:inline-block;transition:transform .3s ease}
+  .why-item:hover .wi{transform:scale(1.15) rotate(-8deg)}
   .why-item h3{font-size:19px;margin-bottom:6px}
   .why-item p{font-size:14.5px;color:var(--ink-soft)}
 
   footer.site{background:var(--ink);color:#c3cad9;padding:44px 0 28px;margin-top:20px}
-  footer.site .fin{max-width:1000px;margin:0 auto;padding:0 24px}
+  .ad-slot{margin:10px 0 40px}
+  .ad-inner{border:1px dashed var(--line);border-radius:12px;min-height:90px;display:flex;align-items:center;justify-content:center;color:#b9b09c;font-size:12px;letter-spacing:.08em;text-transform:uppercase;background:repeating-linear-gradient(45deg,transparent,transparent 12px,rgba(228,220,203,.18) 12px,rgba(228,220,203,.18) 24px)}
+  footer.site .fin{max-width:1040px;margin:0 auto;padding:0 24px}
   footer.site .brand{color:#fff;margin-bottom:14px}
   footer.site .flinks a{color:#c3cad9;text-decoration:none;font-size:14.5px;margin-right:20px;line-height:2.2}
   footer.site .flinks a:hover{color:#fff}
   footer.site .fbottom{border-top:1px solid #2f3a52;margin-top:20px;padding-top:18px;font-size:13px;color:#7c869c}
+
+  .hamburger{display:none;flex:none;width:38px;height:38px;border:none;background:var(--cream-deep);border-radius:10px;cursor:pointer;position:relative;align-items:center;justify-content:center}
+  .hamburger span{display:block;width:18px;height:2px;background:var(--ink);border-radius:2px;position:relative;transition:transform .2s ease,opacity .2s ease}
+  .hamburger span::before,.hamburger span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--ink);border-radius:2px;transition:transform .2s ease}
+  .hamburger span::before{top:-6px}
+  .hamburger span::after{top:6px}
+  #navToggle{display:none}
+  #navToggle:checked ~ .nav .hamburger span{background:transparent}
+  #navToggle:checked ~ .nav .hamburger span::before{transform:translateY(6px) rotate(45deg)}
+  #navToggle:checked ~ .nav .hamburger span::after{transform:translateY(-6px) rotate(-45deg)}
+  .nav-drop{display:none}
+  #navToggle:checked ~ .nav-drop{display:block}
+  @media(max-width:640px){
+    .nav a.link{display:none}
+    .hamburger{display:flex}
+    .nav-drop{position:absolute;top:64px;left:0;right:0;background:var(--cream);border-bottom:1px solid var(--line);box-shadow:0 12px 24px rgba(28,36,52,.08);z-index:40;animation:dropIn .18s ease}
+    .nav-drop a{display:block;padding:14px 24px;color:var(--ink-soft);text-decoration:none;font-size:15px;font-weight:500;border-top:1px solid var(--line)}
+    .nav-drop a:first-child{border-top:none}
+    .nav-drop a:hover{color:var(--coral-deep);background:var(--cream-deep)}
+  }
+  @keyframes dropIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+
+  @media(prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    .blob,.eyebrow .spark,.brand .dot{animation:none}
+  }
 </style>
 </head>
 <body>
 
-<header class="site">
+<header class="site" style="position:relative"><input type="checkbox" id="navToggle">
   <nav class="nav">
     <a href="/" class="brand"><span class="dot"></span>Clearpath</a>
     <div>
@@ -77,39 +151,81 @@
       <a href="/debt/blog.html" class="link">Guides</a>
       <a href="/debt/about.html" class="link">About</a>
       <a href="/debt/contact.html" class="link">Contact</a>
-    </div>
-  </nav>
+    </div><label for="navToggle" class="hamburger" aria-label="Menu"><span></span></label>
+  </nav><div class="nav-drop"><a href="/debt/index.html">Debt tracker</a><a href="/debt/blog.html">Guides</a><a href="/debt/about.html">About</a><a href="/debt/contact.html">Contact</a></div>
 </header>
 
 <section class="hero">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
   <div class="wrap">
-    <span class="eyebrow">Free · Private · No signup</span>
-    <h1>Take the <em>clear path</em> with your money.</h1>
-    <p class="sub">Simple, free tools that help you plan your way out of debt and build money habits that actually stick. Nothing you enter ever leaves your device.</p>
+    <span class="eyebrow reveal in"><span class="spark">✦</span> Free · Private · No signup</span>
+    <h1 class="reveal in">Take the <em>clear path</em> with your money.</h1>
+    <p class="sub reveal in">Simple, free tools that help you plan your way out of debt and build money habits that actually stick. Nothing you enter ever leaves your device.</p>
+    <div class="cta-row reveal in">
+      <a href="/debt/index.html" class="btn btn-primary">Try the free tracker →</a>
+      <a href="#articles" class="btn btn-ghost">Read the guides</a>
+    </div>
+  </div>
+</section>
+
+<section class="articles" id="articles">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec">Start reading</h2>
+      <a href="/debt/blog.html" class="seeall">See all guides →</a>
+    </div>
+    <div class="art-grid">
+
+      <a href="/debt/how-i-paid-off-10000.html" class="art-card reveal reveal-1">
+        <span class="cat">Real story</span>
+        <h3>How I Paid Off $10,000 in 18 Months</h3>
+        <span class="rd">Read the story →</span>
+      </a>
+
+      <a href="/debt/snowball-vs-avalanche.html" class="art-card reveal reveal-2">
+        <span class="cat">Debt payoff</span>
+        <h3>Debt Snowball vs. Avalanche: Which Is Faster?</h3>
+        <span class="rd">Read the guide →</span>
+      </a>
+
+      <a href="/debt/how-to-start-debt-snowball.html" class="art-card reveal reveal-3">
+        <span class="cat">Debt payoff</span>
+        <h3>How to Start the Debt Snowball Method</h3>
+        <span class="rd">Read the guide →</span>
+      </a>
+
+      <a href="/debt/find-extra-money-for-debt.html" class="art-card reveal reveal-4">
+        <span class="cat">Money tips</span>
+        <h3>7 Ways to Find Extra Money for Debt</h3>
+        <span class="rd">Read the guide →</span>
+      </a>
+
+    </div>
   </div>
 </section>
 
 <section class="tools">
   <div class="wrap">
-    <h2 class="sec">Our tools</h2>
+    <h2 class="sec reveal">Our tools</h2>
     <div class="tool-grid">
 
-      <a href="/debt/index.html" class="tool-card live">
+      <a href="/debt/index.html" class="tool-card live reveal reveal-1">
         <div class="tool-icon" style="background:#fdeee7">❄️</div>
         <span class="tool-tag">Live now</span>
         <h3>Debt Snowball Tracker</h3>
         <p>Enter your debts and instantly see your debt-free date, total interest, and a printable month-by-month payoff plan. Compare snowball vs avalanche in one tap.</p>
-        <span class="go">Open the tracker →</span>
+        <span class="go">Open the tracker <span>→</span></span>
       </a>
 
-      <div class="tool-card soon">
+      <div class="tool-card soon reveal reveal-2">
         <div class="tool-icon" style="background:var(--cream-deep)">🏠</div>
         <span class="tool-tag">Coming soon</span>
         <h3>Mortgage Decision Lab</h3>
         <p>Work out whether buying really beats renting for your situation — factoring in the costs most calculators quietly ignore.</p>
       </div>
 
-      <div class="tool-card soon">
+      <div class="tool-card soon reveal reveal-3">
         <div class="tool-icon" style="background:var(--cream-deep)">👨‍👩‍👧</div>
         <span class="tool-tag">Coming soon</span>
         <h3>Family Money Tracker</h3>
@@ -122,15 +238,17 @@
 
 <section class="why">
   <div class="wrap">
-    <h2>Why Clearpath</h2>
+    <h2 class="reveal">Why Clearpath</h2>
     <div class="why-grid">
-      <div class="why-item"><div class="wi">🔒</div><h3>Truly private</h3><p>Our tools run entirely in your browser. Your numbers are never uploaded, stored, or sold.</p></div>
-      <div class="why-item"><div class="wi">💸</div><h3>Always free</h3><p>No subscriptions, no paywalls, no account required. Just open a tool and use it.</p></div>
-      <div class="why-item"><div class="wi">📱</div><h3>Works everywhere</h3><p>Designed mobile-first, so it works just as well on your phone as your laptop.</p></div>
-      <div class="why-item"><div class="wi">🎯</div><h3>Actually useful</h3><p>Built to help you make a real decision or a real plan — not to sell you something.</p></div>
+      <div class="why-item reveal reveal-1"><div class="wi">🔒</div><h3>Truly private</h3><p>Our tools run entirely in your browser. Your numbers are never uploaded, stored, or sold.</p></div>
+      <div class="why-item reveal reveal-2"><div class="wi">💸</div><h3>Always free</h3><p>No subscriptions, no paywalls, no account required. Just open a tool and use it.</p></div>
+      <div class="why-item reveal reveal-3"><div class="wi">📱</div><h3>Works everywhere</h3><p>Designed mobile-first, so it works just as well on your phone as your laptop.</p></div>
+      <div class="why-item reveal reveal-4"><div class="wi">🎯</div><h3>Actually useful</h3><p>Built to help you make a real decision or a real plan — not to sell you something.</p></div>
     </div>
   </div>
 </section>
+
+<div class="wrap"><div class="ad-slot"><div class="ad-inner">Ad space</div></div></div>
 
 <footer class="site">
   <div class="fin">
@@ -146,6 +264,15 @@
     <div class="fbottom">© <span id="yr"></span> Clearpath. All rights reserved. · info@clearpath.lifestyle</div>
   </div>
 </footer>
-<script>document.getElementById("yr").textContent=new Date().getFullYear();</script>
+<script>
+document.getElementById("yr").textContent=new Date().getFullYear();
+if("IntersectionObserver" in window){
+  var els=document.querySelectorAll(".reveal:not(.in)");
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
+  },{threshold:0.15});
+  els.forEach(function(el){ io.observe(el); });
+}
+</script>
 </body>
 </html>
