@@ -37,8 +37,10 @@
   .page h1{font-size:clamp(34px,5.5vw,50px);margin-bottom:14px;max-width:18ch}
   .page .lead{font-size:18px;color:var(--ink-soft);max-width:60ch;margin-bottom:8px}
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px;margin-top:36px}
-  .post{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:var(--shadow);text-decoration:none;color:var(--ink);display:flex;flex-direction:column;transition:transform .15s ease,box-shadow .2s ease}
-  .post:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(28,36,52,.1)}
+  .post{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:var(--shadow);text-decoration:none;color:var(--ink);display:flex;flex-direction:column;transition:transform .25s cubic-bezier(.2,.7,.3,1),box-shadow .25s ease,border-color .2s ease}
+  .post:hover{transform:translateY(-5px) rotate(-.3deg);box-shadow:0 16px 34px rgba(242,104,60,.14);border-color:var(--coral)}
+  .post .rd{transition:color .2s ease}
+  .post:hover .rd{color:var(--coral-deep)}
   .post .cat{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--coral-deep);margin-bottom:10px}
   .post h2{font-size:21px;margin-bottom:8px;line-height:1.2}
   .post p{font-size:14.5px;color:var(--ink-soft);flex:1;margin-bottom:14px}
@@ -76,6 +78,11 @@
   }
   @keyframes dropIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
 
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s cubic-bezier(.2,.7,.3,1),transform .6s cubic-bezier(.2,.7,.3,1)}
+  .reveal.in{opacity:1;transform:translateY(0)}
+  .reveal-1{transition-delay:.06s}.reveal-2{transition-delay:.14s}.reveal-3{transition-delay:.22s}.reveal-4{transition-delay:.3s}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
 </style>
 </head>
 <body>
@@ -99,28 +106,28 @@
   <div class="grid">
 
     <!-- ===== PUBLISHED POSTS (newest first). To add a post: copy one block, change the href/title/text. ===== -->
-    <a href="/debt/how-i-paid-off-10000.html" class="post">
+    <a href="/debt/how-i-paid-off-10000.html" class="post reveal reveal-1">
       <span class="cat">Real story</span>
       <h2>How I Paid Off $10,000 in 18 Months</h2>
       <p>A real, month-by-month account of clearing five figures of debt with the snowball method — what worked, what hurt, and what I'd do differently.</p>
       <span class="rd">Read the story →</span>
     </a>
 
-    <a href="/debt/snowball-vs-avalanche.html" class="post">
+    <a href="/debt/snowball-vs-avalanche.html" class="post reveal reveal-2">
       <span class="cat">Debt payoff</span>
       <h2>Debt Snowball vs. Avalanche: Which Pays Off Debt Faster?</h2>
       <p>One method saves the most money, the other gets the most wins. Here's how to tell which will actually get you to zero.</p>
       <span class="rd">Read the guide →</span>
     </a>
 
-    <a href="/debt/how-to-start-debt-snowball.html" class="post">
+    <a href="/debt/how-to-start-debt-snowball.html" class="post reveal reveal-3">
       <span class="cat">Debt payoff</span>
       <h2>How to Start the Debt Snowball Method (Step by Step)</h2>
       <p>The 7 steps to set up your snowball this week — from listing your debts to rolling each cleared payment forward.</p>
       <span class="rd">Read the guide →</span>
     </a>
 
-    <a href="/debt/sell-digital-products-for-extra-cash.html" class="post">
+    <a href="/debt/sell-digital-products-for-extra-cash.html" class="post reveal reveal-4">
       <span class="cat">Fund Your Payoff</span>
       <h2>The Easiest Digital Products to Sell When You Need Extra Cash</h2>
       <p>Printables, spreadsheets, templates — build it once, sell it again and again. No inventory, no shipping, no second job required.</p>
@@ -128,14 +135,14 @@
     </a>
 
     <!-- ===== COMING SOON (remove the 'soon' class + the badge, add a real href, when published) ===== -->
-    <div class="post soon">
+    <div class="post soon reveal reveal-1">
       <span class="cat">Free printable</span>
       <h2>Debt Snowball Worksheet: Free Printable</h2>
       <p>A clean, printable worksheet to track your payoff order and balances by hand. Coming soon.</p>
       <span class="badge">Coming soon</span>
     </div>
 
-    <a href="/debt/find-extra-money-for-debt.html" class="post">
+    <a href="/debt/find-extra-money-for-debt.html" class="post reveal reveal-1">
       <span class="cat">Fund Your Payoff</span>
       <h2>7 Realistic Ways to Find Extra Money to Pay Off Debt</h2>
       <p>You don't need a second job. Here are 7 realistic ways to free up cash for your debt — even on a low income.</p>
@@ -161,5 +168,17 @@
   </div>
 </footer>
 <script>document.getElementById("yr").textContent=new Date().getFullYear();</script>
+<script>
+if("IntersectionObserver" in window){
+  var revealEls=document.querySelectorAll(".reveal:not(.in)");
+  var revealIO=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); revealIO.unobserve(e.target); } });
+  },{threshold:0.12});
+  revealEls.forEach(function(el){ revealIO.observe(el); });
+} else {
+  document.querySelectorAll(".reveal").forEach(function(el){ el.classList.add("in"); });
+}
+</script>
+
 </body>
 </html>

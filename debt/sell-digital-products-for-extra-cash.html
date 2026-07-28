@@ -7,7 +7,7 @@
   :root{
     --ink:#1c2434;--ink-soft:#3a4356;--cream:#faf6ef;--cream-deep:#f2ebdd;
     --coral:#f2683c;--coral-deep:#d94f24;--amber:#f7a23b;--mint:#2f8f6b;
-    --line:#e4dccb;--card:#ffffff;--shadow:0 1px 2px rgba(28,36,52,.04),0 8px 28px rgba(28,36,52,.06);
+    --line:#e4dccb;--blush:#f6c9c9;--card:#ffffff;--shadow:0 1px 2px rgba(28,36,52,.04),0 8px 28px rgba(28,36,52,.06);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -21,7 +21,14 @@
   .nav a.link{color:var(--ink-soft);text-decoration:none;font-size:14px;font-weight:500;margin-left:22px}
   .nav a.link:hover{color:var(--coral-deep)}
   @media(max-width:640px){.nav a.link{display:none}}
-  .article{padding:48px 0 20px}
+    .article{padding:48px 0 20px;position:relative;overflow:hidden}
+  .art-blob{position:absolute;border-radius:50%;filter:blur(2px);opacity:.4;pointer-events:none;z-index:0}
+  .art-blob-1{width:180px;height:180px;background:radial-gradient(circle,var(--blush,#f6c9c9) 0%,transparent 70%);top:-20px;right:-40px;animation:artFloatSlow 10s ease-in-out infinite}
+  .art-blob-2{width:130px;height:130px;background:radial-gradient(circle,var(--amber) 0%,transparent 70%);opacity:.22;top:120px;left:-50px;animation:artFloatSlow 12s ease-in-out infinite reverse}
+  @keyframes artFloatSlow{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(10px,-14px) scale(1.05)}}
+  .article > .wrap{position:relative;z-index:1}
+  @media(prefers-reduced-motion:reduce){.art-blob{animation:none}}
+
   .eyebrow{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--coral-deep);background:var(--cream-deep);padding:6px 14px;border-radius:100px;margin-bottom:20px}
   .article h1{font-size:clamp(30px,5vw,44px);margin-bottom:16px;max-width:20ch}
   .meta{font-size:13.5px;color:var(--ink-soft);margin-bottom:8px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
@@ -111,14 +118,19 @@
     .nav-drop a:hover{color:var(--coral-deep);background:var(--cream-deep)}
   }
   @keyframes dropIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s cubic-bezier(.2,.7,.3,1),transform .6s cubic-bezier(.2,.7,.3,1)}
+  .reveal.in{opacity:1;transform:translateY(0)}
+  .reveal-1{transition-delay:.06s}.reveal-2{transition-delay:.14s}.reveal-3{transition-delay:.22s}.reveal-4{transition-delay:.3s}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
 </style>
 </head><body><header class="site" style="position:relative"><input type="checkbox" id="navToggle"><nav class="nav"><a href="/" class="brand"><span class="dot"></span>Clearpath</a><div><a href="/debt/index.html" class="link">Tracker</a><a href="/debt/blog.html" class="link">Guides</a><a href="/debt/about.html" class="link">About</a><a href="/debt/contact.html" class="link">Contact</a></div><label for="navToggle" class="hamburger" aria-label="Menu"><span></span></label></nav><div class="nav-drop"><a href="/debt/index.html">Tracker</a><a href="/debt/blog.html">Guides</a><a href="/debt/about.html">About</a><a href="/debt/contact.html">Contact</a></div></header>
-<main class="article"><div class="wrap">
+<main class="article"><div class="art-blob art-blob-1"></div><div class="art-blob art-blob-2"></div><div class="wrap">
 <span class="eyebrow">Fund Your Payoff</span>
 <h1>The Easiest Digital Products to Sell When You Need Extra Cash</h1>
 <div class="meta"><span>Clearpath Team</span><span class="read">10 min read</span></div>
 <p class="lede">You don't need another exhausting side job. You need something you can build once and sell again and again — no inventory, no shipping, no late nights. Here's exactly what sells, how to make your first one this weekend, and what to do with the money once it lands.</p>
-<div class="hero-img">
+<div class="hero-img reveal in">
   <svg viewBox="0 0 1000 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Easiest digital products to sell for extra cash graphic">
     <defs>
       <linearGradient id="bgGrad5" x1="0" y1="0" x2="1" y2="1">
@@ -216,7 +228,7 @@
 <h3>6. Short, Focused Ebooks or Workbooks</h3>
 <p>You don't need to write a 200-page book. A focused, 25-40 page guide that solves one specific, urgent problem sells surprisingly well — think "a 30-day money reset," or a step-by-step guide aimed at one specific type of reader, like a teacher or a new parent. Add a few fillable worksheets at the end, and you've increased the value without much extra work.</p>
 
-<div class="toolcard">
+<div class="toolcard reveal">
 <h3>Whatever you make, plan where it goes</h3>
 <p>Once your first sales start landing, don't let the extra cash quietly disappear into daily spending. Enter your debts into our free tracker and see exactly how much sooner an extra $100–300 a month gets you to debt-free. Nothing is stored — it all stays in your browser.</p>
 <a href="/debt/index.html">Try the free debt tracker →</a>
@@ -245,7 +257,7 @@
 <p>Pinterest works more like a search engine than a typical social feed, and a single good pin can keep driving traffic and sales for months. Since printables, planners, and templates are inherently visual, they're a natural fit here.</p>
 <p>A few practical starting points: set up a free Pinterest business account, create vertical pins (1000×1500px work well) with a clear headline stating the actual benefit, and show a mockup of the product in use rather than a blank template. Pin consistently rather than all at once — a steady handful of pins each week beats one big burst.</p>
 
-<blockquote>The goal isn't to build an empire overnight. It's to create one useful thing, get it in front of the right people, and let that first sale become the foundation for the next.</blockquote>
+<blockquote class="reveal">The goal isn't to build an empire overnight. It's to create one useful thing, get it in front of the right people, and let that first sale become the foundation for the next.</blockquote>
 
 <h2>What to Do With the Money Once It Starts Coming In</h2>
 <p>This is the part almost every guide skips, and it's the part that actually matters most. Extra cash that arrives with no plan tends to just blend into everyday spending — a bit more takeout here, a bit more shopping there — and six months later you're wondering where it all went.</p>
@@ -300,7 +312,7 @@
 </div>
 
 
-<div class="related">
+<div class="related reveal">
 <h3>People also read</h3>
 <a href="/debt/find-extra-money-for-debt.html">7 Realistic Ways to Find Extra Money to Pay Off Debt →</a>
 <a href="/debt/how-i-paid-off-10000.html">How I Paid Off $10,000 in 18 Months →</a>
@@ -361,6 +373,18 @@ function clearpathCopyLink(btn){
 }
 </script>
 
+
+<script>
+if("IntersectionObserver" in window){
+  var revealEls=document.querySelectorAll(".reveal:not(.in)");
+  var revealIO=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); revealIO.unobserve(e.target); } });
+  },{threshold:0.12});
+  revealEls.forEach(function(el){ revealIO.observe(el); });
+} else {
+  document.querySelectorAll(".reveal").forEach(function(el){ el.classList.add("in"); });
+}
+</script>
 
 </body>
 </html>

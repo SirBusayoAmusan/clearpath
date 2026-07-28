@@ -8,7 +8,7 @@
   :root{
     --ink:#1c2434;--ink-soft:#3a4356;--cream:#faf6ef;--cream-deep:#f2ebdd;
     --coral:#f2683c;--coral-deep:#d94f24;--amber:#f7a23b;--mint:#2f8f6b;
-    --line:#e4dccb;--card:#ffffff;--shadow:0 1px 2px rgba(28,36,52,.04),0 8px 28px rgba(28,36,52,.06);
+    --line:#e4dccb;--blush:#f6c9c9;--card:#ffffff;--shadow:0 1px 2px rgba(28,36,52,.04),0 8px 28px rgba(28,36,52,.06);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -22,7 +22,14 @@
   .nav a.link{color:var(--ink-soft);text-decoration:none;font-size:14px;font-weight:500;margin-left:22px}
   .nav a.link:hover{color:var(--coral-deep)}
   @media(max-width:640px){.nav a.link{display:none}}
-  .article{padding:48px 0 20px}
+    .article{padding:48px 0 20px;position:relative;overflow:hidden}
+  .art-blob{position:absolute;border-radius:50%;filter:blur(2px);opacity:.4;pointer-events:none;z-index:0}
+  .art-blob-1{width:180px;height:180px;background:radial-gradient(circle,var(--blush,#f6c9c9) 0%,transparent 70%);top:-20px;right:-40px;animation:artFloatSlow 10s ease-in-out infinite}
+  .art-blob-2{width:130px;height:130px;background:radial-gradient(circle,var(--amber) 0%,transparent 70%);opacity:.22;top:120px;left:-50px;animation:artFloatSlow 12s ease-in-out infinite reverse}
+  @keyframes artFloatSlow{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(10px,-14px) scale(1.05)}}
+  .article > .wrap{position:relative;z-index:1}
+  @media(prefers-reduced-motion:reduce){.art-blob{animation:none}}
+
   .eyebrow{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--coral-deep);background:var(--cream-deep);padding:6px 14px;border-radius:100px;margin-bottom:20px}
   .article h1{font-size:clamp(30px,5vw,44px);margin-bottom:16px;max-width:20ch}
   .meta{font-size:13.5px;color:var(--ink-soft);margin-bottom:8px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
@@ -113,14 +120,19 @@
   }
   @keyframes dropIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
 
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s cubic-bezier(.2,.7,.3,1),transform .6s cubic-bezier(.2,.7,.3,1)}
+  .reveal.in{opacity:1;transform:translateY(0)}
+  .reveal-1{transition-delay:.06s}.reveal-2{transition-delay:.14s}.reveal-3{transition-delay:.22s}.reveal-4{transition-delay:.3s}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
 </style>
 </head><body><header class="site" style="position:relative"><input type="checkbox" id="navToggle"><nav class="nav"><a href="/" class="brand"><span class="dot"></span>Clearpath</a><div><a href="/debt/index.html" class="link">Tracker</a><a href="/debt/blog.html" class="link">Guides</a><a href="/debt/about.html" class="link">About</a><a href="/debt/contact.html" class="link">Contact</a></div><label for="navToggle" class="hamburger" aria-label="Menu"><span></span></label></nav><div class="nav-drop"><a href="/debt/index.html">Tracker</a><a href="/debt/blog.html">Guides</a><a href="/debt/about.html">About</a><a href="/debt/contact.html">Contact</a></div></header>
-<main class="article"><div class="wrap">
+<main class="article"><div class="art-blob art-blob-1"></div><div class="art-blob art-blob-2"></div><div class="wrap">
 <span class="eyebrow">Real story</span>
 <h1>How I Paid Off $10,000 in 18 Months</h1>
 <div class="meta"><span>Clearpath Team</span><span class="read">9 min read</span></div>
 <p class="lede">No windfall, no side hustle empire, no secret. Just a plan, a boring spreadsheet, and eighteen months of stubbornness. Here's the honest month-by-month of how the debt snowball cleared $10,000 — including the parts that hurt.</p>
-<div class="hero-img">
+<div class="hero-img reveal in">
   <svg viewBox="0 0 1000 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="How I paid off $10,000 in 18 months graphic">
     <defs>
       <linearGradient id="bgGrad2" x1="0" y1="0" x2="1" y2="1">
@@ -196,7 +208,7 @@
 <p>Here's where the snowball actually snowballs. That $35 I'd been paying on the store card didn't go back into my life as "extra spending money." It rolled onto the credit card. So the credit card went from getting $60 a month to getting $635 a month ($60 minimum + $35 rolled + my $260 extra + the freed-up cash). The $2,300 balance that would've taken years at minimums was gone by month seven.</p>
 <p>Two debts down. And now I had an even bigger payment to roll forward.</p>
 
-<blockquote>The middle is where most people quit. The first win has worn off, and the finish line isn't in sight yet. This is the part nobody posts about.</blockquote>
+<blockquote class="reveal">The middle is where most people quit. The first win has worn off, and the finish line isn't in sight yet. This is the part nobody posts about.</blockquote>
 
 <h2>Months 8–13: the boring, hard middle</h2>
 <p>I won't pretend this stretch was fun. The personal loan was $3,000, and even with my now-larger snowball payment of around $750 a month, it took about four months to clear. There were no exciting "paid it off!" moments for a while — just the same payment, every month, watching a big number come down slowly. This is the part where I leaned hardest on the tracker. Every time I felt like giving up, I'd open it, see the debt-free date holding steady, and see the progress bars that were now mostly filled in. Momentum you can <em>see</em> is what carries you through the months when you can't feel it.</p>
@@ -205,7 +217,7 @@
 <h2>Months 14–18: the final push</h2>
 <p>By now my snowball payment had grown to about $900 a month — all four original payments plus my extra, now aimed at the car loan. The $4,000 balance, which had felt permanent at the start, fell in under five months. I made the final payment in month eighteen, almost exactly when the tracker had predicted on day one.</p>
 
-<div class="toolcard">
+<div class="toolcard reveal">
 <h3>Find your own debt-free date</h3>
 <p>The single thing that kept me going was seeing a real date on the calendar. Enter your debts in our free tracker and it'll show you yours — plus a month-by-month plan you can print. Nothing is stored; it all stays in your browser.</p>
 <a href="/debt/index.html">Open the free tracker →</a>
@@ -242,8 +254,9 @@
 
 <div class="ad-slot"><div class="ad-inner">Ad space</div></div>
 
-<div class="related">
+<div class="related reveal">
 <h3>People also read</h3>
+<a href="/debt/sell-digital-products-for-extra-cash.html">The Easiest Digital Products to Sell When You Need Extra Cash →</a>
 <a href="/debt/find-extra-money-for-debt.html">7 Realistic Ways to Find Extra Money to Pay Off Debt →</a>
 <a href="/debt/how-to-start-debt-snowball.html">How to Start the Debt Snowball Method (Step by Step) →</a>
 <a href="/debt/snowball-vs-avalanche.html">Debt Snowball vs. Avalanche: Which Pays Off Debt Faster? →</a>
@@ -289,6 +302,18 @@
 })();
 </script>
 
+
+<script>
+if("IntersectionObserver" in window){
+  var revealEls=document.querySelectorAll(".reveal:not(.in)");
+  var revealIO=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); revealIO.unobserve(e.target); } });
+  },{threshold:0.12});
+  revealEls.forEach(function(el){ revealIO.observe(el); });
+} else {
+  document.querySelectorAll(".reveal").forEach(function(el){ el.classList.add("in"); });
+}
+</script>
 
 </body>
 </html>
