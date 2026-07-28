@@ -19,6 +19,7 @@
 *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
 body{font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 .wrap{max-width:1060px;margin:0 auto;padding:0 22px}.wrap-sm{max-width:760px;margin:0 auto;padding:0 22px}
+@media(max-width:480px){.wrap,.wrap-sm{padding:0 16px}}
 h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.15;letter-spacing:-.01em}
 .rev{opacity:0;transform:translateY(14px);transition:opacity .6s cubic-bezier(.2,.7,.3,1),transform .6s cubic-bezier(.2,.7,.3,1)}
 .rev.in{opacity:1;transform:translateY(0)}.rev-1{transition-delay:.06s}.rev-2{transition-delay:.14s}.rev-3{transition-delay:.22s}.rev-4{transition-delay:.3s}
@@ -53,20 +54,27 @@ header.site{border-bottom:1px solid var(--line);background:rgba(250,246,239,.94)
 .eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--coral-deep);background:var(--cream-deep);padding:6px 14px;border-radius:100px;margin-bottom:14px}
 .spark{display:inline-block;animation:sparkanim 2.4s ease-in-out infinite}
 @keyframes sparkanim{0%,100%{transform:scale(1) rotate(0)}50%{transform:scale(1.3) rotate(15deg)}}
-.hero h1{font-size:clamp(28px,4.2vw,42px);margin-bottom:12px}
+.hero h1{font-size:clamp(32px,5vw,52px);margin-bottom:14px;line-height:1.1}
 .hero h1 em{font-style:italic;color:var(--coral-deep);position:relative}
 .hero h1 em::after{content:"";position:absolute;left:-2%;right:-2%;bottom:3px;height:8px;background:var(--blush);opacity:.5;z-index:-1;border-radius:5px;transform:skewX(-6deg)}
 .hero p{font-size:16px;color:var(--ink-soft);max-width:54ch}
 .peng-hero{width:130px;flex:none;animation:pengbob 4s ease-in-out infinite;transform-origin:bottom center}
 @keyframes pengbob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-8px) rotate(-1.5deg)}}
+.peng-sm{display:block;flex:none}
 .peng-hero .eyelid{animation:dblink 5.5s infinite;transform-origin:center}
 @keyframes dblink{0%,93%,100%{transform:scaleY(0)}95%,98%{transform:scaleY(1)}}
 .peng-hero .flipper{transform-origin:78px 108px;animation:dwave 4s ease-in-out infinite}
 @keyframes dwave{0%,65%,100%{transform:rotate(0)}78%{transform:rotate(-20deg)}90%{transform:rotate(5deg)}}
-@media(max-width:680px){.hero-inner{flex-direction:column-reverse;text-align:center}.peng-hero{width:90px}}
-.section{padding:48px 0;border-top:1px solid var(--line)}
-.section h2{font-size:clamp(22px,3.2vw,31px);margin-bottom:10px}
-.section .lead{font-size:15.5px;color:var(--ink-soft);margin-bottom:20px;max-width:64ch}
+@media(max-width:680px){
+  .hero-inner{flex-direction:column-reverse;text-align:center;gap:16px}
+  .peng-hero{width:80px;animation:pengbob 3s ease-in-out infinite}
+  .hero p{font-size:15px}
+  .hero h1{font-size:clamp(28px,7vw,38px)}
+}
+.section{padding:56px 0;border-top:1px solid var(--line)}
+.section h2{font-size:clamp(26px,3.8vw,36px);margin-bottom:12px}
+.section .lead{font-size:16px;color:var(--ink-soft);margin-bottom:24px;max-width:64ch}
+@media(max-width:600px){.section{padding:40px 0}}
 .ad-slot{margin:24px 0}.ad-inner{border:1px dashed var(--line);border-radius:12px;min-height:88px;display:flex;align-items:center;justify-content:center;color:#b9b09c;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;background:repeating-linear-gradient(45deg,transparent,transparent 12px,rgba(228,220,203,.18) 12px,rgba(228,220,203,.18) 24px)}
 .need-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:13px;margin-top:6px}
 .need-card{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:18px;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s}
@@ -81,7 +89,8 @@ header.site{border-bottom:1px solid var(--line);background:rgba(250,246,239,.94)
 .peng-row{display:flex;align-items:flex-end;gap:11px;margin:18px 0}
 .peng-sm{width:42px;flex:none}
 .bubble{background:var(--card);border:1px solid var(--line);border-radius:15px;border-bottom-left-radius:3px;padding:12px 15px;font-size:14px;color:var(--ink-soft);box-shadow:var(--shadow);flex:1}
-.calc-wrap{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px;box-shadow:var(--shadow)}
+.calc-wrap{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px;box-shadow:var(--shadow);overflow:hidden}
+@media(max-width:700px){.calc-wrap{padding:18px;border-radius:18px}}
 .cur-row{display:flex;align-items:center;gap:11px;margin-bottom:18px;padding-bottom:18px;border-bottom:1px solid var(--line);flex-wrap:wrap}
 .cur-row label{font-size:13.5px;font-weight:600;color:var(--ink-soft)}
 select.cur{font-family:'Inter';font-size:15px;padding:9px 12px;border:1.5px solid var(--line);border-radius:10px;background:var(--cream);color:var(--ink);cursor:pointer}
@@ -96,9 +105,16 @@ select.cur:focus{outline:none;border-color:var(--coral)}
 .dhr{display:grid;grid-template-columns:1.4fr 1fr .8fr 1fr auto;gap:8px;margin-bottom:5px}
 .dhr span{font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft)}
 .drow{display:grid;grid-template-columns:1.4fr 1fr .8fr 1fr auto;gap:8px;margin-bottom:9px}
-@media(max-width:600px){.dhr{display:none}.drow{grid-template-columns:1fr 1fr;gap:8px;padding:12px;background:var(--cream);border-radius:12px;border:1px solid var(--line);margin-bottom:10px}.flbl{display:block!important}.drow .rm{grid-column:1/-1;justify-self:end}}
+@media(max-width:700px){
+  .dhr{display:none}
+  .drow{display:flex;flex-direction:column;gap:10px;background:var(--cream);border-radius:14px;border:1px solid var(--line);padding:14px;margin-bottom:12px;position:relative}
+  .drow .rm{position:absolute;top:10px;right:10px;background:var(--cream-deep);border-radius:8px}
+  .flbl{display:block!important}
+  .drow>div{width:100%}
+  .drow input.f{font-size:16px}
+}
 .flbl{display:none;font-size:11px;font-weight:600;color:var(--ink-soft);margin-bottom:3px;text-transform:uppercase;letter-spacing:.04em}
-input.f{width:100%;font-family:'Inter';font-size:15px;padding:11px 12px;border:1.5px solid var(--line);border-radius:10px;background:var(--cream);color:var(--ink);transition:border-color .15s,background .15s}
+input.f{width:100%;font-family:'Inter';font-size:16px;padding:12px 13px;border:1.5px solid var(--line);border-radius:10px;background:var(--cream);color:var(--ink);transition:border-color .15s,background .15s;-webkit-appearance:none}
 input.f:focus{outline:none;border-color:var(--coral);background:#fff}
 input.f::placeholder{color:#bdb4a1}
 .rm{background:none;border:none;cursor:pointer;color:#c4bba8;font-size:21px;line-height:1;padding:6px;border-radius:8px;transition:.15s}
@@ -114,10 +130,13 @@ input.f::placeholder{color:#bdb4a1}
 .method-note{font-size:13px;color:var(--ink-soft);margin-top:8px}
 .calc-btn{width:100%;margin-top:20px;background:linear-gradient(135deg,var(--coral) 0%,var(--coral-deep) 100%);color:#fff;border:none;padding:17px;border-radius:14px;font-weight:700;font-size:17px;cursor:pointer;font-family:'Inter';box-shadow:0 8px 22px rgba(242,104,60,.32);transition:transform .15s,box-shadow .2s}
 .calc-btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(242,104,60,.42)}
-.mbg{position:fixed;inset:0;background:rgba(28,36,52,.65);backdrop-filter:blur(4px);z-index:100;display:none;align-items:center;justify-content:center;padding:16px;opacity:0;transition:opacity .3s ease}
+.mbg{position:fixed;inset:0;background:rgba(28,36,52,.65);backdrop-filter:blur(4px);z-index:100;display:none;align-items:flex-end;justify-content:center;opacity:0;transition:opacity .3s ease}
+@media(min-width:600px){.mbg{align-items:center;padding:16px}}
 .mbg.open{display:flex}.mbg.vis{opacity:1}
-.modal{background:var(--cream);border-radius:24px;max-width:680px;width:100%;max-height:92vh;overflow-y:auto;box-shadow:0 24px 60px rgba(28,36,52,.3);transform:translateY(22px) scale(.97);transition:transform .35s cubic-bezier(.2,.7,.3,1),opacity .35s;opacity:0;position:relative}
+.modal{background:var(--cream);border-radius:24px 24px 0 0;max-width:680px;width:100%;max-height:95vh;overflow-y:auto;overflow-x:hidden;box-shadow:0 -8px 40px rgba(28,36,52,.25);transform:translateY(40px);transition:transform .38s cubic-bezier(.2,.7,.3,1),opacity .35s;opacity:0;position:relative}
+@media(min-width:600px){.modal{border-radius:24px;max-height:92vh;box-shadow:0 24px 60px rgba(28,36,52,.3);transform:translateY(22px) scale(.97)}}
 .mbg.vis .modal{transform:translateY(0) scale(1);opacity:1}
+@media(max-width:599px){.mbg.vis .modal{transform:translateY(0)}}
 .mhead{background:linear-gradient(160deg,var(--ink) 0%,#2a3550 100%);border-radius:24px 24px 0 0;padding:26px 24px 22px;position:relative;overflow:hidden;text-align:center}
 .mhead::after{content:"";position:absolute;right:-30px;bottom:-30px;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle at 35% 32%,rgba(255,255,255,.2) 0 20%,var(--amber) 21% 60%,var(--coral) 61%);opacity:.24}
 .mpeng{position:absolute;bottom:0;left:24px;width:72px;z-index:2;animation:pcelebrate .8s cubic-bezier(.2,.7,.3,1) both}
@@ -127,7 +146,10 @@ input.f::placeholder{color:#bdb4a1}
 @keyframes dpopin{0%{opacity:0;transform:scale(.82)}60%{transform:scale(1.04)}100%{opacity:1;transform:scale(1)}}
 .mhead .rm2{font-size:14px;color:#cfd6e6;position:relative;z-index:1}
 .mbody{padding:20px 22px}
+@media(max-width:599px){.mbody{padding:16px 16px}.macts{padding:0 16px 16px}}
 .sgrid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:14px}
+@media(max-width:380px){.sgrid{grid-template-columns:1fr 1fr;gap:7px}
+.stat .n{font-size:18px}.stat .l{font-size:10px}}
 .stat{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:13px 15px}
 .stat .n{font-family:'Fraunces',serif;font-size:21px;font-weight:600;color:var(--ink)}
 .stat .l{font-size:11px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.04em;margin-top:2px}
@@ -323,13 +345,27 @@ footer.site .disc{font-size:12px;color:#7c869c;max-width:72ch;margin-top:8px;lin
     <div class="step rev rev-4"><div class="step-n">4</div><div><h3>Put in any extra you can pay</h3><p>Anything on top of the smallest payments. Even a small amount moves your date closer. Try a few amounts and watch what happens.</p></div></div>
     <div class="step rev rev-1"><div class="step-n">5</div><div><h3>Hit the calculate button</h3><p>Your results appear in a popup with your debt free date, total interest, and a full month by month schedule.</p></div></div>
     <div class="step rev rev-2"><div class="step-n">6</div><div><h3>Enter your email and print your plan</h3><p>We send you the free Debt Payoff Starter Kit at the same time. Your plan is then ready to print and put somewhere you will see it.</p></div></div>
+    <div class="peng-row rev" style="margin-top:22px">
+      <svg class="peng-sm" viewBox="0 0 160 190" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="animation:pengbob 3.8s ease-in-out infinite;width:44px;flex:none;display:block">
+        <path d="M116 96 C132 104 134 126 122 138 C116 144 108 140 110 130 Z" fill="#2a3550"/>
+        <path d="M80 34 C112 34 126 62 126 104 C126 146 108 168 80 168 C52 168 34 146 34 104 C34 62 48 34 80 34 Z" fill="#1c2434"/>
+        <path d="M80 62 C100 62 110 82 110 108 C110 138 98 154 80 154 C62 154 50 138 50 108 C50 82 60 62 80 62 Z" fill="#faf6ef"/>
+        <circle cx="66" cy="86" r="8.5" fill="#fff"/><circle cx="94" cy="86" r="8.5" fill="#fff"/>
+        <circle cx="67.5" cy="87" r="4.2" fill="#1c2434"/><circle cx="95.5" cy="87" r="4.2" fill="#1c2434"/>
+        <circle cx="69" cy="85" r="1.4" fill="#fff"/><circle cx="97" cy="85" r="1.4" fill="#fff"/>
+        <path d="M80 96 L90 106 L80 114 L70 106 Z" fill="#f2683c"/>
+        <ellipse cx="66" cy="172" rx="14" ry="6" fill="#f7a23b"/><ellipse cx="94" cy="172" rx="14" ry="6" fill="#f7a23b"/>
+      </svg>
+      <div class="bubble" style="background:linear-gradient(135deg,#fff 0%,#fdf3ec 100%);border-color:var(--coral);font-size:14px"><strong style="color:var(--coral-deep)">You are ready.</strong> Scroll down and start with step one. I will be here the whole way.</div>
+    </div>
   </div>
 </div>
 </section>
 
-<section class="section" id="calc" style="border-top:2px solid var(--coral)">
+<section class="section" id="calc" style="border-top:2px solid var(--coral);background:linear-gradient(180deg,var(--cream-deep) 0%,var(--cream) 120px)">
 <div class="wrap">
-  <h2 class="rev" style="margin-bottom:18px">Your debt calculator</h2>
+  <h2 class="rev" style="margin-bottom:6px">Your debt calculator</h2>
+  <p class="rev" style="color:var(--ink-soft);margin-bottom:20px;font-size:15.5px">Fill in each debt below. Everything stays private in your browser.</p>
   <div class="calc-wrap">
     <div class="cur-row">
       <label for="currency">Your currency</label>
@@ -376,6 +412,19 @@ footer.site .disc{font-size:12px;color:#7c869c;max-width:72ch;margin-top:8px;lin
         <button type="button" data-m="avalanche">Avalanche</button>
       </div>
       <p class="method-note" id="methodNote">Snowball: pay the smallest balance first for a quick win.</p>
+    </div>
+    <div class="peng-row" style="margin-top:22px;margin-bottom:0">
+      <svg class="peng-sm" viewBox="0 0 160 190" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="animation:pengbob 3s ease-in-out infinite;display:block;width:44px;flex:none">
+        <path d="M44 96 C30 104 28 126 38 138 C44 144 52 140 50 130 Z" fill="#2a3550"/>
+        <path d="M80 34 C112 34 126 62 126 104 C126 146 108 168 80 168 C52 168 34 146 34 104 C34 62 48 34 80 34 Z" fill="#1c2434"/>
+        <path d="M80 62 C100 62 110 82 110 108 C110 138 98 154 80 154 C62 154 50 138 50 108 C50 82 60 62 80 62 Z" fill="#faf6ef"/>
+        <circle cx="66" cy="86" r="8.5" fill="#fff"/><circle cx="94" cy="86" r="8.5" fill="#fff"/>
+        <circle cx="67.5" cy="87" r="4.2" fill="#1c2434"/><circle cx="95.5" cy="87" r="4.2" fill="#1c2434"/>
+        <circle cx="69" cy="85" r="1.4" fill="#fff"/><circle cx="97" cy="85" r="1.4" fill="#fff"/>
+        <path d="M80 96 L90 106 L80 114 L70 106 Z" fill="#f2683c"/>
+        <ellipse cx="66" cy="172" rx="14" ry="6" fill="#f7a23b"/><ellipse cx="94" cy="172" rx="14" ry="6" fill="#f7a23b"/>
+      </svg>
+      <div class="bubble" style="font-size:14px">Ready? Hit the button below and I will show you your debt free date. You can change the numbers any time and recalculate as often as you want.</div>
     </div>
     <button class="calc-btn" id="calcBtn" type="button">Calculate my debt free date &#8594;</button>
   </div>
@@ -438,6 +487,17 @@ footer.site .disc{font-size:12px;color:#7c869c;max-width:72ch;margin-top:8px;lin
     <div class="cc snow rev rev-1"><span class="tag">Snowball</span><h3>Smallest balance first</h3><p>Order by balance, smallest first. Pay minimums on all, extra on the smallest.</p><ul><li>First win can come within weeks</li><li>Best if you have quit before</li><li>Keeps you going</li><li>Costs a little more interest</li></ul></div>
     <div class="cc aval rev rev-2"><span class="tag">Avalanche</span><h3>Highest rate first</h3><p>Order by interest rate, highest first. Pay minimums on all, extra on the priciest.</p><ul><li>Saves the most money overall</li><li>Best if one card has a punishing rate</li><li>First win can take longer</li><li>Needs more patience</li></ul></div>
   </div>
+  <div class="peng-row rev" style="margin-top:24px">
+    <svg class="peng-sm" viewBox="0 0 160 190" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="animation:pengbob 4.2s ease-in-out infinite;width:44px;flex:none;display:block">
+      <path d="M80 34 C112 34 126 62 126 104 C126 146 108 168 80 168 C52 168 34 146 34 104 C34 62 48 34 80 34 Z" fill="#1c2434"/>
+      <path d="M80 62 C100 62 110 82 110 108 C110 138 98 154 80 154 C62 154 50 138 50 108 C50 82 60 62 80 62 Z" fill="#faf6ef"/>
+      <circle cx="66" cy="86" r="8.5" fill="#fff"/><circle cx="94" cy="86" r="8.5" fill="#fff"/>
+      <circle cx="67.5" cy="87" r="4.2" fill="#1c2434"/><circle cx="95.5" cy="87" r="4.2" fill="#1c2434"/>
+      <path d="M80 96 L90 106 L80 114 L70 106 Z" fill="#f2683c"/>
+      <ellipse cx="66" cy="172" rx="14" ry="6" fill="#f7a23b"/><ellipse cx="94" cy="172" rx="14" ry="6" fill="#f7a23b"/>
+    </svg>
+    <div class="bubble" style="font-size:14px">Not sure which to pick? Go with the snowball. Most people do. The difference in interest is usually smaller than you think, and finishing matters more than optimising.</div>
+  </div>
 </div>
 </section>
 
@@ -476,6 +536,18 @@ footer.site .disc{font-size:12px;color:#7c869c;max-width:72ch;margin-top:8px;lin
 <div class="wrap-sm">
   <h2 class="rev">Questions people ask</h2>
   <p class="lead rev">The things worth knowing before you dive in.</p>
+  <div class="peng-row rev" style="margin-bottom:20px">
+    <svg class="peng-sm" viewBox="0 0 160 190" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="animation:pengbob 4.5s ease-in-out infinite;width:44px;flex:none;display:block">
+      <path d="M80 34 C112 34 126 62 126 104 C126 146 108 168 80 168 C52 168 34 146 34 104 C34 62 48 34 80 34 Z" fill="#1c2434"/>
+      <path d="M80 62 C100 62 110 82 110 108 C110 138 98 154 80 154 C62 154 50 138 50 108 C50 82 60 62 80 62 Z" fill="#faf6ef"/>
+      <circle cx="66" cy="86" r="8.5" fill="#fff"/><circle cx="94" cy="86" r="8.5" fill="#fff"/>
+      <circle cx="67.5" cy="87" r="4.2" fill="#1c2434"/><circle cx="95.5" cy="87" r="4.2" fill="#1c2434"/>
+      <circle cx="69" cy="85" r="1.4" fill="#fff"/><circle cx="97" cy="85" r="1.4" fill="#fff"/>
+      <path d="M80 96 L90 106 L80 114 L70 106 Z" fill="#f2683c"/>
+      <ellipse cx="66" cy="172" rx="14" ry="6" fill="#f7a23b"/><ellipse cx="94" cy="172" rx="14" ry="6" fill="#f7a23b"/>
+    </svg>
+    <div class="bubble">Got a question? Tap any one below to see the answer. And if it is not here, email us at info@clearpath.lifestyle and we will get back to you.</div>
+  </div>
   <details open><summary>Is this free and are my numbers private?</summary><div class="ano">Yes to both. No signup, no payment, no account. Everything you type is worked out inside your own browser on your own device. Your balances are never sent to us or anyone else. Close the tab and they are gone, so print your plan if you want to keep it.</div></details>
   <details><summary>Can I use this outside the United States?</summary><div class="ano">Yes. Pick your currency at the top of the calculator and every number on the page updates to match. The method works exactly the same wherever you live.</div></details>
   <details><summary>Which debts should I include?</summary><div class="ano">Include credit cards, store cards, personal loans, car loans, student loans, buy now pay later balances, medical bills, and money you owe family. Leave out your home loan for now. Most people tackle that separately after everything else is cleared.</div></details>
@@ -556,17 +628,17 @@ document.getElementById('income').addEventListener('input',updateBadge);
 document.getElementById('extra').addEventListener('input',updateBadge);
 
 function addDebt(n,b,r,m){debts.push({id:++uid,name:n||'',bal:(b===undefined?'':b),rate:(r===undefined?'':r),min:(m===undefined?'':m)});renderRows();}
-function seed(){addDebt('Store card',700,12,35);addDebt('Credit card',2300,24,60);addDebt('Car loan',4000,8,150);}
+function seed(){addDebt();addDebt();addDebt();}
 
 function renderRows(){
   var h=document.getElementById('debtRows');h.innerHTML='';
   debts.forEach(function(d){
     var row=document.createElement('div');row.className='drow';
-    row.innerHTML='<div><label class="flbl">What you owe it on</label><input class="f" data-id="'+d.id+'" data-k="name" type="text" placeholder="Card name" value="'+esc(d.name)+'"></div>'+
-      '<div><label class="flbl">Balance</label><input class="f" data-id="'+d.id+'" data-k="bal" type="number" inputmode="decimal" placeholder="0" value="'+d.bal+'"></div>'+
-      '<div><label class="flbl">Rate %</label><input class="f" data-id="'+d.id+'" data-k="rate" type="number" inputmode="decimal" placeholder="0" value="'+d.rate+'"></div>'+
-      '<div><label class="flbl">Min payment</label><input class="f" data-id="'+d.id+'" data-k="min" type="number" inputmode="decimal" placeholder="0" value="'+d.min+'"></div>'+
-      '<button class="rm" type="button" data-rm="'+d.id+'" aria-label="Remove">&times;</button>';
+    row.innerHTML='<div><label class="flbl">What you owe it on</label><input class="f" data-id="'+d.id+'" data-k="name" type="text" placeholder="e.g. Visa card" value="'+esc(d.name)+'"></div>'+
+      '<div><label class="flbl">Balance owed</label><input class="f" data-id="'+d.id+'" data-k="bal" type="number" inputmode="decimal" placeholder="e.g. 1500" value="'+d.bal+'"></div>'+
+      '<div><label class="flbl">Rate %</label><input class="f" data-id="'+d.id+'" data-k="rate" type="number" inputmode="decimal" placeholder="e.g. 19" value="'+d.rate+'"></div>'+
+      '<div><label class="flbl">Min payment</label><input class="f" data-id="'+d.id+'" data-k="min" type="number" inputmode="decimal" placeholder="e.g. 45" value="'+d.min+'"></div>'+
+      '<button class="rm" type="button" data-rm="'+d.id+'" aria-label="Remove this debt">&times;</button>';
     h.appendChild(row);
   });
 }
