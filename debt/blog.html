@@ -96,6 +96,28 @@
   .img-ph-content{position:absolute;inset:0;background:var(--cream-deep);border:2px dashed var(--line);border-radius:18px;display:flex;align-items:center;justify-content:center}
   .coming-soon-note{font-size:13px;color:var(--ink-soft);font-style:italic;margin-top:6px}
 
+
+  /* ── MOBILE FIXES ── */
+  body{overflow-x:hidden;max-width:100vw}
+  *{overflow-wrap:break-word;word-break:break-word}
+  input,select,textarea,button{touch-action:manipulation}
+  img{max-width:100%}
+  @media(max-width:480px){
+    .wrap,.wrap-sm,.wrap-narrow{padding-left:16px;padding-right:16px}
+    h1{font-size:clamp(24px,7vw,34px)}
+    h2{font-size:clamp(20px,5.5vw,26px)}
+    .section{padding:36px 0}
+    .hero{padding:32px 0 20px}
+    footer.site .fin{padding:0 16px}
+  }
+  @media(max-width:700px){
+    .nav-links{display:none}
+  }
+  /* prevent table overflow */
+  table{width:100%;display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  /* iOS zoom prevention on inputs */
+  input[type="text"],input[type="email"],input[type="number"],select{font-size:16px !important}
+
 </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6523820717153538" crossorigin="anonymous"></script>
 </head>
@@ -234,9 +256,9 @@
       <a href="/debt/about.html">About</a>
       <a href="/debt/contact.html">Contact</a>
       <a href="/debt/privacy.html">Privacy</a>
-      <a href="/debt/disclaimer.html">Disclaimer</a>
+      <a href="/debt/disclaimer.html">Disclaimer</a><a href="/debt/terms.html">Terms</a><a href="/debt/editorial-policy.html">Editorial Policy</a>
     </div>
-    <div class="fbottom">© <span id="yr"></span> Clearpath. All rights reserved. · info@clearpath.lifestyle</div>
+    <div class="fbottom">© <span id="yr"></span> Clearpath. All rights reserved. · hello@clearpath.click</div>
   </div>
 </footer>
 <script>document.getElementById("yr").textContent=new Date().getFullYear();</script>
