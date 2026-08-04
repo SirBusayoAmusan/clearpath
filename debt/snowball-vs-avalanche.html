@@ -3,133 +3,497 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Debt Snowball vs. Avalanche: Which One Will Actually Get You Out of Debt?  -  Clearpath</title>
-<meta name="description" content="Debt snowball vs avalanche explained simply. Learn which method pays off debt faster for your situation, with real numbers and no jargon.">
+<title>Debt Snowball vs. Debt Avalanche: Which Method Is Actually Better? | Clearpath</title>
+<meta name="description" content="Debt snowball vs avalanche explained clearly. Learn the real difference, see a side-by-side comparison with numbers, and find out which debt payoff method is right for your situation.">
 <meta name="robots" content="index, follow">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{--ink:#1c2434;--ink-soft:#3a4356;--cream:#faf6ef;--cream-deep:#f2ebdd;--coral:#f2683c;--coral-deep:#d94f24;--amber:#f7a23b;--mint:#2f8f6b;--blush:#f6c9c9;--line:#e4dccb;--card:#ffffff;--shadow:0 1px 2px rgba(28,36,52,.04),0 8px 28px rgba(28,36,52,.06);}
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{font-family:"Inter",system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.72;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-  .wrap{max-width:760px;margin:0 auto;padding:0 22px}
-  @media(max-width:480px){.wrap{padding:0 16px}}
-  h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:600;line-height:1.15;letter-spacing:-.01em}
-  .rev{opacity:0;transform:translateY(14px);transition:opacity .6s cubic-bezier(.2,.7,.3,1),transform .6s cubic-bezier(.2,.7,.3,1)}
-  .rev.in{opacity:1;transform:translateY(0)}
-  .rev-1{transition-delay:.06s}.rev-2{transition-delay:.14s}.rev-3{transition-delay:.22s}
-  header.site{border-bottom:1px solid var(--line);background:rgba(250,246,239,.94);backdrop-filter:blur(6px);position:sticky;top:0;z-index:50}
-  .nav{display:flex;align-items:center;justify-content:space-between;padding:15px 22px;max-width:1060px;margin:0 auto}
-  .brand{display:flex;align-items:center;gap:10px;font-family:"Fraunces",serif;font-weight:600;font-size:19px;color:var(--ink);text-decoration:none}
-  .brand .dot{width:26px;height:26px;border-radius:50%;background:radial-gradient(circle at 32% 30%,#fff 0 18%,var(--amber) 19% 55%,var(--coral) 56%);animation:dpulse 3.5s ease-in-out infinite}
-  @keyframes dpulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
-  .nav-links a{color:var(--ink-soft);text-decoration:none;font-size:13.5px;font-weight:500;margin-left:18px}
-  .nav-links a:hover{color:var(--coral-deep)}
-  #navTog{display:none}.hmb{display:none;width:36px;height:36px;border:none;background:var(--cream-deep);border-radius:9px;cursor:pointer;align-items:center;justify-content:center;flex:none}
-  .hmb span{display:block;width:16px;height:2px;background:var(--ink);border-radius:2px;position:relative}
-  .hmb span::before,.hmb span::after{content:"";position:absolute;left:0;width:16px;height:2px;background:var(--ink);border-radius:2px;transition:transform .2s}
-  .hmb span::before{top:-5px}.hmb span::after{top:5px}
-  #navTog:checked~.nav .hmb span{background:transparent}
-  #navTog:checked~.nav .hmb span::before{transform:translateY(5px) rotate(45deg)}
-  #navTog:checked~.nav .hmb span::after{transform:translateY(-5px) rotate(-45deg)}
-  .ndrop{display:none}
-  #navTog:checked~.ndrop{display:block;position:absolute;top:58px;left:0;right:0;background:var(--cream);border-bottom:1px solid var(--line);box-shadow:0 12px 24px rgba(28,36,52,.08);z-index:45}
-  .ndrop a{display:block;padding:13px 22px;color:var(--ink-soft);text-decoration:none;font-size:15px;border-top:1px solid var(--line)}
-  .ndrop a:first-child{border-top:none}
-  @media(max-width:700px){.nav-links{display:none}.hmb{display:flex}}
-  .article{padding:40px 0 20px;position:relative;overflow:hidden}
-  .blob{position:absolute;border-radius:50%;filter:blur(2px);opacity:.4;pointer-events:none;z-index:0}
-  .blob-1{width:180px;height:180px;background:radial-gradient(circle,var(--blush) 0%,transparent 70%);top:-30px;right:-40px;animation:bfloat 9s ease-in-out infinite}
-  .blob-2{width:120px;height:120px;background:radial-gradient(circle,var(--amber) 0%,transparent 70%);opacity:.22;top:140px;left:-40px;animation:bfloat 11s ease-in-out infinite reverse}
-  @keyframes bfloat{0%,100%{transform:translate(0,0)}50%{transform:translate(10px,-14px)}}
-  .article>.wrap{position:relative;z-index:1}
-  .eyebrow{display:inline-block;font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--coral-deep);background:var(--cream-deep);padding:6px 14px;border-radius:100px;margin-bottom:14px}
-  h1{font-size:clamp(28px,5vw,44px);margin-bottom:14px;line-height:1.1}
-  .lede{font-size:clamp(17px,2.5vw,20px);color:var(--ink-soft);margin-bottom:24px;max-width:58ch;line-height:1.6}
-  .meta{font-size:13px;color:var(--ink-soft);margin-bottom:20px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
-  .meta .read{background:var(--cream-deep);padding:3px 10px;border-radius:100px}
-  .hero-img{margin:20px 0;border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
-  .hero-img svg{display:block;width:100%;height:auto}
-  .prose h2{font-size:clamp(22px,3.4vw,28px);margin:32px 0 12px;color:var(--ink)}
-  .prose h3{font-size:19px;margin:22px 0 8px}
-  .prose p{margin-bottom:16px;color:var(--ink-soft);font-size:16px}
-  .prose strong{color:var(--ink)}
-  .prose a{color:var(--coral-deep);text-underline-offset:2px}
-  .ad-slot{margin:26px 0}.ad-inner{border:1px dashed var(--line);border-radius:12px;min-height:88px;display:flex;align-items:center;justify-content:center;color:#b9b09c;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;background:repeating-linear-gradient(45deg,transparent,transparent 12px,rgba(228,220,203,.18) 12px,rgba(228,220,203,.18) 24px)}
-  footer.site{background:var(--ink);color:#c3cad9;padding:40px 0 24px}
-  footer.site .fin{max-width:1060px;margin:0 auto;padding:0 22px}
-  footer.site .brand{color:#fff;margin-bottom:12px}
-  footer.site .flinks a{color:#c3cad9;text-decoration:none;font-size:14px;margin-right:17px;line-height:2.2}
-  footer.site .flinks a:hover{color:#fff}
-  footer.site .fbottom{border-top:1px solid #2f3a52;margin-top:17px;padding-top:15px;font-size:12.5px;color:#7c869c}
-  
-  @keyframes pengbob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-7px) rotate(-1.5deg)}}
-  @keyframes pwave{0%,60%,100%{transform:rotate(0)}72%{transform:rotate(-22deg)}86%{transform:rotate(5deg)}}
-  @keyframes pblink{0%,92%,100%{transform:scaleY(0)}94%,98%{transform:scaleY(1)}}
-  .peyelid{transform-origin:center;animation:pblink 5.5s infinite}
-  .percy-row{display:flex;align-items:flex-end;gap:12px;margin:22px 0}
-  .percy-bubble{background:var(--card);border:1px solid var(--line);border-radius:18px;border-bottom-left-radius:3px;padding:13px 17px;font-size:14.5px;color:var(--ink-soft);box-shadow:var(--shadow);flex:1;line-height:1.65}
-  .percy-bubble strong{color:var(--ink)}
-  .img-ph{margin:28px 0;border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
-  .img-ph-inner{position:relative;width:100%}
-  .img-ph-content{position:absolute;inset:0;background:var(--cream-deep);border:2px dashed var(--line);border-radius:18px;display:flex;align-items:center;justify-content:center}
-  @media(prefers-reduced-motion:reduce){
-    .peyelid{animation:none}
-    svg[style*="pengbob"]{animation:none!important}
-  }
-
-  .sharebar{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin:24px 0;padding:14px 16px;background:var(--cream-deep);border-radius:13px;border:1px solid var(--line)}
-  .sb-label{font-size:13px;font-weight:600;color:var(--ink-soft);white-space:nowrap}
-  .sb-btn{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;text-decoration:none;font-size:15px;transition:transform .15s ease;flex:none;border:none;cursor:pointer}
-  .sb-btn:hover{transform:translateY(-2px)}
-  .sb-pinterest{background:#E60023;color:#fff}
-  .sb-facebook{background:#1877F2;color:#fff;font-weight:700;font-family:serif}
-  .sb-x{background:#000;color:#fff}
-  .sb-whatsapp{background:#25D366;color:#fff}
-  .sb-copy{background:var(--ink);color:#fff}
-  .sb-copy-msg{font-size:12px;color:var(--mint);font-weight:600;display:none}
-
-  .toolcard{background:linear-gradient(160deg,var(--ink) 0%,#2a3550 100%);color:#fff;border-radius:18px;padding:28px;margin:32px 0;position:relative;overflow:hidden}
-  .toolcard::after{content:"";position:absolute;right:-30px;bottom:-30px;width:130px;height:130px;border-radius:50%;background:radial-gradient(circle at 35% 32%,rgba(255,255,255,.22) 0 20%,var(--amber) 21% 60%,var(--coral) 61%);opacity:.28}
-  .toolcard h3{color:#fff;font-size:21px;margin-bottom:8px;position:relative;z-index:1}
-  .toolcard p{color:#cfd6e6;font-size:15px;margin-bottom:16px;position:relative;z-index:1}
-  .toolcard a{display:inline-block;background:var(--coral);color:#fff;text-decoration:none;font-weight:600;font-size:15px;padding:12px 22px;border-radius:11px;position:relative;z-index:1;transition:transform .15s}
-  .toolcard a:hover{transform:translateY(-2px)}
-  blockquote{border-left:4px solid var(--coral);padding:14px 20px;margin:28px 0;background:var(--cream-deep);border-radius:0 12px 12px 0;font-style:italic;font-size:17px;color:var(--ink-soft)}
-  table.cmp{width:100%;border-collapse:collapse;margin:20px 0;font-size:15px}
-  table.cmp th{background:var(--ink);color:#fff;padding:11px 14px;text-align:left;font-family:"Fraunces",serif;font-weight:600}
-  table.cmp td{padding:10px 14px;border-bottom:1px solid var(--line);color:var(--ink-soft)}
-  table.cmp tr:hover td{background:var(--cream-deep)}
-  .related{margin:32px 0;padding:24px;background:var(--cream-deep);border-radius:16px;border:1px solid var(--line)}
-  .related h3{font-size:18px;margin-bottom:14px}
-  .related a{display:block;color:var(--coral-deep);text-decoration:none;font-weight:600;font-size:15px;padding:8px 0;border-bottom:1px solid var(--line)}
-  .related a:last-child{border-bottom:none;padding-bottom:0}
-  .related a:hover{color:var(--coral)}
-  .rc-cat{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-soft);background:var(--card);padding:2px 8px;border-radius:100px;margin-right:8px;vertical-align:middle}
-  .disc{font-size:12.5px;color:var(--ink-soft);margin-top:20px;line-height:1.6}
-  .optin{background:linear-gradient(155deg,#fff 0%,#fdf3ec 100%);border:1px solid var(--line);border-radius:20px;padding:28px;margin:32px 0;box-shadow:var(--shadow);position:relative;overflow:hidden}
-  .optin .kit{display:inline-block;font-size:11.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--coral-deep);background:#fff;padding:5px 12px;border-radius:100px;margin-bottom:11px;border:1px solid var(--line)}
-  .optin h3{font-size:21px;margin-bottom:7px}
-  .optin p.od{font-size:15px;color:var(--ink-soft);margin-bottom:16px}
-  .optin form{display:flex;gap:9px;flex-wrap:wrap;max-width:500px}
-  .optin input[type=email]{flex:1;min-width:190px;font-family:"Inter";font-size:16px;padding:12px 14px;border:1.5px solid var(--line);border-radius:11px;background:#fff}
-  .optin input[type=email]:focus{outline:none;border-color:var(--coral)}
-  .optin button{font-family:"Inter";font-size:15px;font-weight:600;padding:12px 20px;border-radius:11px;border:none;background:var(--coral);color:#fff;cursor:pointer;box-shadow:0 5px 14px rgba(242,104,60,.28);transition:.15s;white-space:nowrap}
-  .optin button:hover{transform:translateY(-1px)}
-  .optin .micro{font-size:12px;color:var(--ink-soft);margin-top:9px}
-  .optin .msg{margin-top:11px;font-size:14.5px;font-weight:600;display:none}
-  .optin .msg.ok{color:var(--mint);display:block}
-  .optin .msg.err{color:var(--coral-deep);display:block}
-
-  @media(prefers-reduced-motion:reduce){.rev{opacity:1;transform:none;transition:none}.blob{animation:none}}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6523820717153538" crossorigin="anonymous"></script>
+<style>
+:root{
+  --ink:#1c2434;--ink-soft:#3a4356;--cream:#faf6ef;--cream-deep:#f2ebdd;
+  --coral:#f2683c;--coral-deep:#d94f24;--amber:#f7a23b;--mint:#2f8f6b;
+  --blush:#f6c9c9;--line:#e4dccb;--card:#ffffff;
+  --shadow:0 1px 2px rgba(28,36,52,.04),0 8px 28px rgba(28,36,52,.06);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  background:var(--cream);
+  color:var(--ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+  /* prevent any horizontal scroll on mobile */
+  max-width:100vw;
+}
+
+/* ── TYPOGRAPHY ── */
+h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.15;letter-spacing:-.01em}
+
+/* ── LAYOUT ── */
+.wrap{
+  width:100%;
+  max-width:740px;
+  margin:0 auto;
+  padding:0 24px;
+}
+@media(max-width:480px){
+  .wrap{padding:0 18px}
+}
+
+/* ── REVEAL ANIMATIONS ── */
+.rev{opacity:0;transform:translateY(14px);transition:opacity .6s cubic-bezier(.2,.7,.3,1),transform .6s cubic-bezier(.2,.7,.3,1)}
+.rev.in{opacity:1;transform:translateY(0)}
+.rev-1{transition-delay:.06s}.rev-2{transition-delay:.14s}.rev-3{transition-delay:.22s}
+@media(prefers-reduced-motion:reduce){
+  .rev{opacity:1;transform:none;transition:none}
+  .blob,.peng-hero{animation:none}
+  .peyelid{animation:none}
+  svg[style*="pengbob"]{animation:none!important}
+}
+
+/* ── NAV ── */
+header.site{
+  border-bottom:1px solid var(--line);
+  background:rgba(250,246,239,.95);
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+  position:sticky;
+  top:0;
+  z-index:50;
+}
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 24px;
+  max-width:1060px;
+  margin:0 auto;
+  min-height:56px;
+}
+.brand{
+  display:flex;align-items:center;gap:10px;
+  font-family:'Fraunces',serif;font-weight:600;font-size:18px;
+  color:var(--ink);text-decoration:none;
+  flex-shrink:0;
+}
+.brand .dot{
+  width:24px;height:24px;border-radius:50%;flex-shrink:0;
+  background:radial-gradient(circle at 32% 30%,#fff 0 18%,var(--amber) 19% 55%,var(--coral) 56%);
+  animation:dpulse 3.5s ease-in-out infinite;
+}
+@keyframes dpulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.nav-links{display:flex;gap:0}
+.nav-links a{
+  color:var(--ink-soft);text-decoration:none;font-size:13.5px;
+  font-weight:500;margin-left:18px;white-space:nowrap;
+}
+.nav-links a:hover{color:var(--coral-deep)}
+#navTog{display:none}
+.hmb{
+  display:none;width:38px;height:38px;border:none;
+  background:var(--cream-deep);border-radius:9px;
+  cursor:pointer;align-items:center;justify-content:center;flex:none;
+  /* good tap target */
+  touch-action:manipulation;
+}
+.hmb span{display:block;width:16px;height:2px;background:var(--ink);border-radius:2px;position:relative}
+.hmb span::before,.hmb span::after{
+  content:"";position:absolute;left:0;width:16px;height:2px;
+  background:var(--ink);border-radius:2px;transition:transform .2s;
+}
+.hmb span::before{top:-5px}.hmb span::after{top:5px}
+#navTog:checked~.nav .hmb span{background:transparent}
+#navTog:checked~.nav .hmb span::before{transform:translateY(5px) rotate(45deg)}
+#navTog:checked~.nav .hmb span::after{transform:translateY(-5px) rotate(-45deg)}
+.ndrop{display:none}
+#navTog:checked~.ndrop{
+  display:block;position:absolute;top:56px;left:0;right:0;
+  background:var(--cream);border-bottom:1px solid var(--line);
+  box-shadow:0 12px 24px rgba(28,36,52,.08);z-index:45;
+}
+.ndrop a{
+  display:block;padding:14px 24px;color:var(--ink-soft);
+  text-decoration:none;font-size:15px;border-top:1px solid var(--line);
+  /* good tap target */
+  min-height:48px;display:flex;align-items:center;
+}
+.ndrop a:first-child{border-top:none}
+@media(max-width:700px){
+  .nav-links{display:none}
+  .hmb{display:flex}
+}
+
+/* ── ARTICLE HERO ── */
+.article{padding:36px 0 0;position:relative;overflow:hidden}
+.blob{
+  position:absolute;border-radius:50%;filter:blur(2px);
+  opacity:.4;pointer-events:none;z-index:0;
+}
+.blob-1{
+  width:160px;height:160px;
+  background:radial-gradient(circle,var(--blush) 0%,transparent 70%);
+  top:-20px;right:-30px;animation:bfloat 9s ease-in-out infinite;
+}
+.blob-2{
+  width:110px;height:110px;
+  background:radial-gradient(circle,var(--amber) 0%,transparent 70%);
+  opacity:.22;top:120px;left:-30px;
+  animation:bfloat 11s ease-in-out infinite reverse;
+}
+@keyframes bfloat{0%,100%{transform:translate(0,0)}50%{transform:translate(10px,-14px)}}
+.article>.wrap{position:relative;z-index:1}
+
+.eyebrow{
+  display:inline-block;font-size:11px;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;
+  color:var(--coral-deep);background:var(--cream-deep);
+  padding:5px 13px;border-radius:100px;margin-bottom:14px;
+}
+h1{
+  font-size:clamp(26px,5.5vw,42px);
+  margin-bottom:14px;line-height:1.1;
+}
+.lede{
+  font-size:clamp(16px,2.4vw,19px);
+  color:var(--ink-soft);margin-bottom:22px;
+  max-width:58ch;line-height:1.65;
+}
+.meta{
+  font-size:13px;color:var(--ink-soft);margin-bottom:24px;
+  display:flex;gap:10px;align-items:center;flex-wrap:wrap;
+}
+.meta .read{background:var(--cream-deep);padding:3px 10px;border-radius:100px}
+
+/* ── PROSE ── */
+.prose{padding-bottom:32px}
+.prose h2{
+  font-size:clamp(20px,3.2vw,26px);
+  margin:36px 0 12px;color:var(--ink);
+}
+.prose h3{font-size:18px;margin:22px 0 8px}
+.prose p{
+  margin-bottom:18px;color:var(--ink-soft);
+  font-size:16px;line-height:1.75;
+  /* prevent long words from breaking layout on mobile */
+  overflow-wrap:break-word;word-break:break-word;
+}
+.prose strong{color:var(--ink)}
+.prose a{color:var(--coral-deep);text-underline-offset:2px}
+
+/* ── TABLE ── */
+.table-wrap{
+  width:100%;overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  margin:24px 0;border-radius:14px;
+  border:1px solid var(--line);
+  /* subtle scroll hint */
+  box-shadow:inset -8px 0 12px -8px rgba(28,36,52,.06);
+}
+table.cmp{
+  width:100%;border-collapse:collapse;
+  font-size:15px;min-width:420px;
+}
+table.cmp th{
+  background:var(--ink);color:#fff;padding:12px 16px;
+  text-align:left;font-family:'Fraunces',serif;font-weight:600;
+  white-space:nowrap;
+}
+table.cmp th:first-child{border-radius:0}
+table.cmp td{
+  padding:11px 16px;border-bottom:1px solid var(--line);
+  color:var(--ink-soft);white-space:nowrap;
+}
+table.cmp tr:last-child td{border-bottom:none}
+table.cmp tr:hover td{background:var(--cream-deep)}
+@media(max-width:480px){
+  table.cmp th,table.cmp td{padding:10px 13px;font-size:14px}
+}
+
+/* ── BLOCKQUOTE ── */
+blockquote{
+  border-left:4px solid var(--coral);
+  padding:14px 20px;margin:28px 0;
+  background:var(--cream-deep);
+  border-radius:0 12px 12px 0;
+  font-style:italic;font-size:17px;
+  color:var(--ink-soft);
+  overflow-wrap:break-word;
+}
+
+/* ── IMAGES ── */
+.img-wrap{
+  margin:28px 0;border-radius:16px;
+  overflow:hidden;box-shadow:var(--shadow);
+  /* prevent image overflow on mobile */
+  width:100%;
+}
+.img-wrap img{
+  width:100%;height:auto;display:block;
+  /* smooth render */
+  image-rendering:auto;
+}
+
+/* ── AD SLOT ── */
+.ad-slot{margin:28px 0}
+.ad-inner{
+  border:1px dashed var(--line);border-radius:12px;min-height:88px;
+  display:flex;align-items:center;justify-content:center;
+  color:#b9b09c;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;
+  background:repeating-linear-gradient(45deg,transparent,transparent 12px,rgba(228,220,203,.18) 12px,rgba(228,220,203,.18) 24px);
+}
+
+/* ── PERCY ── */
+@keyframes pengbob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-7px) rotate(-1.5deg)}}
+@keyframes pwave{0%,60%,100%{transform:rotate(0)}72%{transform:rotate(-22deg)}86%{transform:rotate(5deg)}}
+@keyframes pblink{0%,92%,100%{transform:scaleY(0)}94%,98%{transform:scaleY(1)}}
+.peyelid{transform-origin:center;animation:pblink 5.5s infinite}
+.percy-row{
+  display:flex;align-items:flex-end;gap:12px;
+  margin:24px 0;
+  /* don't let it overflow */
+  overflow:hidden;
+}
+.percy-row svg{flex-shrink:0}
+.percy-bubble{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:18px;border-bottom-left-radius:3px;
+  padding:13px 16px;font-size:14.5px;color:var(--ink-soft);
+  box-shadow:var(--shadow);flex:1;line-height:1.65;
+  min-width:0;/* prevent flex overflow */
+  overflow-wrap:break-word;
+}
+.percy-bubble strong{color:var(--ink)}
+
+/* ── SHARE BAR ── */
+.sharebar{
+  display:flex;align-items:center;gap:9px;flex-wrap:wrap;
+  margin:28px 0;padding:14px 16px;
+  background:var(--cream-deep);border-radius:13px;border:1px solid var(--line);
+}
+.sb-label{font-size:13px;font-weight:600;color:var(--ink-soft);white-space:nowrap}
+.sb-btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:38px;height:38px;border-radius:50%;text-decoration:none;
+  font-size:15px;transition:transform .15s ease;flex:none;
+  border:none;cursor:pointer;touch-action:manipulation;
+}
+.sb-btn:hover{transform:translateY(-2px)}
+.sb-pinterest{background:#E60023;color:#fff}
+.sb-facebook{background:#1877F2;color:#fff;font-weight:700;font-family:serif}
+.sb-x{background:#000;color:#fff}
+.sb-whatsapp{background:#25D366;color:#fff}
+.sb-copy{background:var(--ink);color:#fff}
+.sb-copy-msg{font-size:12px;color:var(--mint);font-weight:600;display:none}
+
+/* ── TOOL CARD ── */
+.toolcard{
+  background:linear-gradient(160deg,var(--ink) 0%,#2a3550 100%);
+  color:#fff;border-radius:18px;padding:26px;
+  margin:32px 0;position:relative;overflow:hidden;
+}
+.toolcard::after{
+  content:"";position:absolute;right:-30px;bottom:-30px;
+  width:130px;height:130px;border-radius:50%;
+  background:radial-gradient(circle at 35% 32%,rgba(255,255,255,.22) 0 20%,var(--amber) 21% 60%,var(--coral) 61%);
+  opacity:.28;pointer-events:none;
+}
+.toolcard h3{color:#fff;font-size:20px;margin-bottom:8px;position:relative;z-index:1}
+.toolcard p{color:#cfd6e6;font-size:15px;margin-bottom:16px;position:relative;z-index:1}
+.toolcard a{
+  display:inline-block;background:var(--coral);color:#fff;
+  text-decoration:none;font-weight:600;font-size:15px;
+  padding:12px 22px;border-radius:11px;position:relative;z-index:1;
+  transition:transform .15s;touch-action:manipulation;
+}
+.toolcard a:hover{transform:translateY(-2px)}
+
+/* ── OPT-IN ── */
+.optin{
+  background:linear-gradient(155deg,#fff 0%,#fdf3ec 100%);
+  border:1px solid var(--line);border-radius:18px;
+  padding:26px;margin:32px 0;box-shadow:var(--shadow);
+}
+.optin .kit{
+  display:inline-block;font-size:11px;font-weight:600;
+  letter-spacing:.09em;text-transform:uppercase;
+  color:var(--coral-deep);background:#fff;
+  padding:5px 12px;border-radius:100px;margin-bottom:11px;
+  border:1px solid var(--line);
+}
+.optin h3{font-size:20px;margin-bottom:7px}
+.optin p.od{font-size:15px;color:var(--ink-soft);margin-bottom:16px}
+.optin form{display:flex;gap:9px;flex-wrap:wrap}
+.optin input[type=email]{
+  flex:1;min-width:0;width:100%;
+  font-family:'Inter';font-size:16px;
+  padding:13px 14px;border:1.5px solid var(--line);
+  border-radius:11px;background:#fff;
+  /* prevent iOS zoom */
+  font-size:16px;
+}
+.optin input[type=email]:focus{outline:none;border-color:var(--coral)}
+.optin button{
+  font-family:'Inter';font-size:15px;font-weight:600;
+  padding:13px 20px;border-radius:11px;border:none;
+  background:var(--coral);color:#fff;cursor:pointer;
+  box-shadow:0 5px 14px rgba(242,104,60,.28);
+  transition:.15s;white-space:nowrap;
+  touch-action:manipulation;
+}
+.optin button:hover{transform:translateY(-1px)}
+.optin .micro{font-size:12px;color:var(--ink-soft);margin-top:9px}
+.optin .msg{margin-top:11px;font-size:14px;font-weight:600;display:none}
+.optin .msg.ok{color:var(--mint);display:block}
+.optin .msg.err{color:var(--coral-deep);display:block}
+
+/* ── RELATED ── */
+.related{
+  margin:32px 0;padding:22px;
+  background:var(--cream-deep);border-radius:16px;border:1px solid var(--line);
+}
+.related h3{font-size:18px;margin-bottom:14px}
+.related a{
+  display:flex;align-items:center;gap:8px;
+  color:var(--coral-deep);text-decoration:none;
+  font-weight:600;font-size:15px;
+  padding:10px 0;border-bottom:1px solid var(--line);
+  min-height:44px;/* good tap target */
+  overflow-wrap:break-word;
+}
+.related a:last-child{border-bottom:none;padding-bottom:0}
+.related a:hover{color:var(--coral)}
+.rc-cat{
+  display:inline-block;font-size:10px;font-weight:700;
+  letter-spacing:.07em;text-transform:uppercase;color:var(--ink-soft);
+  background:var(--card);padding:2px 8px;border-radius:100px;
+  margin-right:4px;vertical-align:middle;white-space:nowrap;flex-shrink:0;
+}
+.disc{font-size:12.5px;color:var(--ink-soft);margin-top:20px;line-height:1.6}
+
+/* ── FOOTER ── */
+footer.site{background:var(--ink);color:#c3cad9;padding:40px 0 32px}
+footer.site .fin{max-width:1060px;margin:0 auto;padding:0 24px}
+footer.site .brand{color:#fff;margin-bottom:14px}
+footer.site .flinks{display:flex;flex-wrap:wrap;gap:4px 0}
+footer.site .flinks a{
+  color:#c3cad9;text-decoration:none;font-size:14px;
+  margin-right:16px;line-height:2.4;
+}
+footer.site .flinks a:hover{color:#fff}
+footer.site .fbottom{
+  border-top:1px solid #2f3a52;margin-top:18px;padding-top:16px;
+  font-size:12.5px;color:#7c869c;
+}
+@media(max-width:480px){
+  footer.site .fin{padding:0 18px}
+  footer.site .flinks a{font-size:13px;margin-right:12px}
+}
+
+  .author-box{display:flex;gap:16px;align-items:flex-start;background:var(--cream-deep);border:1px solid var(--line);border-radius:16px;padding:20px;margin:32px 0}
+  .author-avatar{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--coral),var(--amber));color:#fff;font-family:"Fraunces",serif;font-size:20px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .author-name{font-weight:700;font-size:15px;color:var(--ink);margin-bottom:2px}
+  .author-role{font-size:12.5px;color:var(--coral-deep);font-weight:600;margin-bottom:8px}
+  .author-desc{font-size:13.5px;color:var(--ink-soft);margin:0;line-height:1.6}
+  @media(max-width:480px){.author-box{flex-direction:column;gap:12px}}
+  .sources{margin:28px 0;padding:20px;background:var(--cream-deep);border-radius:14px;border:1px solid var(--line)}
+  .sources h3{font-family:"Inter";font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:11px;color:var(--ink-soft);margin-bottom:10px}
+  .sources ul{list-style:none;font-size:13.5px;color:var(--ink-soft)}
+  .sources li{padding:4px 0 4px 16px;position:relative}
+  .sources li::before{content:"--";position:absolute;left:0;color:var(--line)}
+  .meta-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:22px;font-size:13px;color:var(--ink-soft);padding-bottom:18px;border-bottom:1px solid var(--line)}
+  .meta-bar .al{font-weight:600;color:var(--ink);text-decoration:none}
+  .meta-bar .al:hover{color:var(--coral-deep)}
+  .meta-bar .ds{color:var(--line)}
+  .meta-bar .rt{background:var(--cream-deep);padding:3px 10px;border-radius:100px}
+  .hypo-note{background:#fff8e6;border:1px solid #f0dca0;border-radius:12px;padding:13px 16px;margin:16px 0 24px;font-size:13.5px;color:#7a6020;line-height:1.6}
+  .hypo-note strong{color:#5a4010}
+  .key-box{background:linear-gradient(135deg,#eef6f2,#f7f5f0);border:1px solid #cce4d8;border-radius:14px;padding:20px 22px;margin:28px 0}
+  .key-box h3{font-family:"Inter";font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:11px;color:var(--mint);margin-bottom:12px}
+  .key-box ul{list-style:none;font-size:15px;color:var(--ink-soft)}
+  .key-box li{padding:5px 0 5px 20px;position:relative}
+  .key-box li::before{content:"\2713";position:absolute;left:0;color:var(--mint);font-weight:700}
+  .faq-section{margin:28px 0}
+  .faq-section details{border:1px solid var(--line);border-radius:12px;margin-bottom:9px;background:var(--card);overflow:hidden}
+  .faq-section summary{padding:14px 17px;font-weight:600;font-size:15px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:11px;min-height:48px}
+  .faq-section summary::-webkit-details-marker{display:none}
+  .faq-section summary::after{content:"+";font-size:19px;color:var(--coral);font-weight:400;flex:none}
+  .faq-section details[open] summary::after{content:"\2013"}
+  .faq-section details[open] summary{border-bottom:1px solid var(--line)}
+  .faq-section .ano{padding:13px 17px 17px;color:var(--ink-soft);font-size:14.5px}
+  .comp-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:24px 0;border-radius:14px;border:1px solid var(--line)}
+  .comp-table{width:100%;border-collapse:collapse;font-size:14px;min-width:500px}
+  .comp-table th{background:var(--ink);color:#fff;padding:11px 14px;text-align:left;font-family:"Fraunces",serif;font-weight:600;white-space:nowrap}
+  .comp-table td{padding:10px 14px;border-bottom:1px solid var(--line);color:var(--ink-soft)}
+  .comp-table tr:last-child td{border-bottom:none}
+  .comp-table tr:hover td{background:var(--cream-deep)}
+  .snow-tag{display:inline-block;background:#fdeee7;color:var(--coral-deep);font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:3px 9px;border-radius:100px;margin-bottom:8px}
+  .aval-tag{display:inline-block;background:#e6f2ec;color:var(--mint);font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:3px 9px;border-radius:100px;margin-bottom:8px}
+  .method-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}
+  @media(max-width:560px){.method-cards{grid-template-columns:1fr}}
+  .method-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:var(--shadow)}
+  .method-card h3{font-size:18px;margin-bottom:8px}
+  .method-card p{font-size:14px;color:var(--ink-soft);margin-bottom:10px}
+  .method-card ul{list-style:none;font-size:13.5px}
+  .method-card li{padding:4px 0 4px 18px;position:relative;color:var(--ink-soft)}
+  .method-card li::before{content:"\2192";position:absolute;left:0;color:var(--coral)}
+  .author-box{display:flex;gap:16px;align-items:flex-start;background:var(--cream-deep);border:1px solid var(--line);border-radius:16px;padding:20px;margin:32px 0}
+  .author-avatar{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--coral),var(--amber));color:#fff;font-family:"Fraunces",serif;font-size:20px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .author-name{font-weight:700;font-size:15px;color:var(--ink);margin-bottom:2px}
+  .author-role{font-size:12.5px;color:var(--coral-deep);font-weight:600;margin-bottom:8px}
+  .author-desc{font-size:13.5px;color:var(--ink-soft);margin:0;line-height:1.6}
+  @media(max-width:480px){.author-box{flex-direction:column;gap:12px}}
+  .sources{margin:28px 0;padding:20px;background:var(--cream-deep);border-radius:14px;border:1px solid var(--line)}
+  .sources h3{font-family:"Inter";font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:11px;color:var(--ink-soft);margin-bottom:10px}
+  .sources ul{list-style:none;font-size:13.5px;color:var(--ink-soft)}
+  .sources li{padding:4px 0 4px 16px;position:relative}
+  .sources li::before{content:"--";position:absolute;left:0;color:var(--line)}
+  .meta-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:22px;font-size:13px;color:var(--ink-soft);padding-bottom:18px;border-bottom:1px solid var(--line)}
+  .meta-bar .al{font-weight:600;color:var(--ink);text-decoration:none}
+  .meta-bar .al:hover{color:var(--coral-deep)}
+  .meta-bar .ds{color:var(--line)}
+  .meta-bar .rt{background:var(--cream-deep);padding:3px 10px;border-radius:100px}
+  .hypo-note{background:#fff8e6;border:1px solid #f0dca0;border-radius:12px;padding:13px 16px;margin:16px 0 24px;font-size:13.5px;color:#7a6020;line-height:1.6}
+  .hypo-note strong{color:#5a4010}
+  .key-box{background:linear-gradient(135deg,#eef6f2,#f7f5f0);border:1px solid #cce4d8;border-radius:14px;padding:20px 22px;margin:28px 0}
+  .key-box h3{font-family:"Inter";font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:11px;color:var(--mint);margin-bottom:12px}
+  .key-box ul{list-style:none;font-size:15px;color:var(--ink-soft)}
+  .key-box li{padding:5px 0 5px 20px;position:relative}
+  .key-box li::before{content:"\2713";position:absolute;left:0;color:var(--mint);font-weight:700}
+  .faq-section{margin:28px 0}
+  .faq-section details{border:1px solid var(--line);border-radius:12px;margin-bottom:9px;background:var(--card);overflow:hidden}
+  .faq-section summary{padding:14px 17px;font-weight:600;font-size:15px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:11px;min-height:48px}
+  .faq-section summary::-webkit-details-marker{display:none}
+  .faq-section summary::after{content:"+";font-size:19px;color:var(--coral);font-weight:400;flex:none}
+  .faq-section details[open] summary::after{content:"\2013"}
+  .faq-section details[open] summary{border-bottom:1px solid var(--line)}
+  .faq-section .ano{padding:13px 17px 17px;color:var(--ink-soft);font-size:14.5px}
+  .comp-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:24px 0;border-radius:14px;border:1px solid var(--line)}
+  .comp-table{width:100%;border-collapse:collapse;font-size:14px;min-width:500px}
+  .comp-table th{background:var(--ink);color:#fff;padding:11px 14px;text-align:left;font-family:"Fraunces",serif;font-weight:600;white-space:nowrap}
+  .comp-table td{padding:10px 14px;border-bottom:1px solid var(--line);color:var(--ink-soft)}
+  .comp-table tr:last-child td{border-bottom:none}
+  .comp-table tr:hover td{background:var(--cream-deep)}
+  .snow-tag{display:inline-block;background:#fdeee7;color:var(--coral-deep);font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:3px 9px;border-radius:100px;margin-bottom:8px}
+  .aval-tag{display:inline-block;background:#e6f2ec;color:var(--mint);font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:3px 9px;border-radius:100px;margin-bottom:8px}
+  .method-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}
+  @media(max-width:560px){.method-cards{grid-template-columns:1fr}}
+  .method-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:var(--shadow)}
+  .method-card h3{font-size:18px;margin-bottom:8px}
+  .method-card p{font-size:14px;color:var(--ink-soft);margin-bottom:10px}
+  .method-card ul{list-style:none;font-size:13.5px}
+  .method-card li{padding:4px 0 4px 18px;position:relative;color:var(--ink-soft)}
+  .method-card li::before{content:"\2192";position:absolute;left:0;color:var(--coral)}
+  .founder-photo{width:80px;height:80px;border-radius:50%;object-fit:cover;border:3px solid var(--card);box-shadow:0 4px 14px rgba(28,36,52,.18);flex-shrink:0}
+  .author-photo{width:64px;height:64px;border-radius:50%;object-fit:cover;border:3px solid var(--card);box-shadow:0 4px 14px rgba(28,36,52,.18);flex-shrink:0}
+  .author-photo-lg{width:120px;height:120px;border-radius:50%;object-fit:cover;border:4px solid var(--line);box-shadow:0 6px 20px rgba(28,36,52,.14);display:block;margin-bottom:16px}
+</style>
 </head>
 <body>
 <header class="site" style="position:relative">
@@ -145,140 +509,204 @@
     <label for="navTog" class="hmb" aria-label="Menu"><span></span></label>
   </nav>
   <div class="ndrop">
-    <a href="/debt/index.html">Tracker</a><a href="/debt/blog.html">Guides</a>
-    <a href="/debt/about.html">About</a><a href="/debt/contact.html">Contact</a>
+    <a href="/debt/index.html">Tracker</a>
+    <a href="/debt/blog.html">Guides</a>
+    <a href="/debt/about.html">About</a>
+    <a href="/debt/contact.html">Contact</a>
   </div>
 </header>
-
 <main class="article">
   <div class="blob blob-1"></div><div class="blob blob-2"></div>
   <div class="wrap">
     <span class="eyebrow">Debt payoff</span>
-<h1>Debt Snowball vs. Avalanche: Which One Will Actually Get You Out of Debt?</h1>
-<div class="meta"><span>Clearpath Team</span><span class="read">7 min read</span></div>
-<p class="lede">Two methods. One pays less interest. The other keeps you from quitting. Here is how to pick the one that is actually right for you, not just the one that looks best on paper.</p>
-
-<div class="percy-row rev">
-  <svg viewBox="0 0 160 190" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:44px;flex:none;display:block;animation:pengbob 4s ease-in-out infinite">
-    <path d="M44 96 C28 104 26 128 36 140 C42 146 50 142 50 132 Z" fill="#2a3550" style="transform-origin:44px 118px;animation:pwave 3.5s ease-in-out infinite"/>
-    <path d="M116 96 C132 104 134 128 124 140 C118 146 110 142 110 132 Z" fill="#2a3550"/>
-    <path d="M80 34 C112 34 126 62 126 104 C126 146 108 168 80 168 C52 168 34 146 34 104 C34 62 48 34 80 34 Z" fill="#1c2434"/>
-    <path d="M80 62 C100 62 110 82 110 108 C110 138 98 154 80 154 C62 154 50 138 50 108 C50 82 60 62 80 62 Z" fill="#faf6ef"/>
-    <circle cx="66" cy="86" r="8.5" fill="#fff"/><circle cx="94" cy="86" r="8.5" fill="#fff"/>
-    <circle cx="67.5" cy="87" r="4.2" fill="#1c2434"/><circle cx="95.5" cy="87" r="4.2" fill="#1c2434"/>
-    <circle cx="69" cy="85" r="1.4" fill="#fff"/><circle cx="97" cy="85" r="1.4" fill="#fff"/>
-    <rect class="peyelid" x="57" y="78" width="18" height="10" rx="5" fill="#1c2434"/>
-    <rect class="peyelid" x="85" y="78" width="18" height="10" rx="5" fill="#1c2434"/>
-    <path d="M80 96 L90 106 L80 114 L70 106 Z" fill="#f2683c"/>
-    <ellipse cx="55" cy="102" rx="5" ry="3" fill="#f6c9c9" opacity=".5"/>
-    <ellipse cx="105" cy="102" rx="5" ry="3" fill="#f6c9c9" opacity=".5"/>
-    <ellipse cx="66" cy="172" rx="14" ry="6" fill="#f7a23b"/>
-    <ellipse cx="94" cy="172" rx="14" ry="6" fill="#f7a23b"/>
-  </svg>
-  <div class="percy-bubble">I am Percy. I will be with you through the whole thing. By the end of this article you will know exactly which method is right for you. Promise.</div>
+    <h1>Debt Snowball vs. Debt Avalanche: Which Method Is Actually Better?</h1>
+    <div class="meta-bar">
+  <a href="/debt/author.html" class="al">Oluwaseun Busayo Amusan</a>
+  <span class="ds">|</span>
+  <span>Published August 2026</span>
+  <span class="ds">|</span>
+  <span>Updated August 2026</span>
+  <span class="ds">|</span>
+  <span class="rt">9 min read</span>
 </div>
+    <p class="lede">One method saves more money. The other keeps more people motivated. Here is a clear, honest comparison of both debt payoff strategies so you can choose the right one for your situation.</p>
+    <div class="prose">
 
-<div class="prose">
-<p>If you have ever Googled how to pay off debt, you have probably hit these two terms. Debt snowball. Debt avalanche. They both work. But they work differently, and choosing the wrong one for your personality is one of the quietest reasons people give up on getting out of debt.</p>
+    <div class="percy-row rev"><svg viewBox="0 0 160 190" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:46px;flex:none;display:block;animation:pengbob 3.9s ease-in-out infinite">
+  <path d="M44 96 C28 104 26 128 36 140 C42 146 50 142 50 132 Z" fill="#2a3550" style="transform-origin:44px 118px;animation:pwave 3.5s ease-in-out infinite"/>
+  <path d="M116 96 C132 104 134 128 124 140 C118 146 110 142 110 132 Z" fill="#2a3550"/>
+  <path d="M80 34 C112 34 126 62 126 104 C126 146 108 168 80 168 C52 168 34 146 34 104 C34 62 48 34 80 34 Z" fill="#1c2434"/>
+  <path d="M80 62 C100 62 110 82 110 108 C110 138 98 154 80 154 C62 154 50 138 50 108 C50 82 60 62 80 62 Z" fill="#faf6ef"/>
+  <circle cx="66" cy="86" r="8.5" fill="#fff"/><circle cx="94" cy="86" r="8.5" fill="#fff"/>
+  <circle cx="67.5" cy="87" r="4.2" fill="#1c2434"/><circle cx="95.5" cy="87" r="4.2" fill="#1c2434"/>
+  <circle cx="69" cy="85" r="1.4" fill="#fff"/><circle cx="97" cy="85" r="1.4" fill="#fff"/>
+  <rect class="peyelid" x="57" y="78" width="18" height="10" rx="5" fill="#1c2434"/>
+  <rect class="peyelid" x="85" y="78" width="18" height="10" rx="5" fill="#1c2434"/>
+  <path d="M80 96 L90 106 L80 114 L70 106 Z" fill="#f2683c"/>
+  <ellipse cx="55" cy="102" rx="5" ry="3" fill="#f6c9c9" opacity=".5"/>
+  <ellipse cx="105" cy="102" rx="5" ry="3" fill="#f6c9c9" opacity=".5"/>
+  <ellipse cx="66" cy="172" rx="14" ry="6" fill="#f7a23b"/>
+  <ellipse cx="94" cy="172" rx="14" ry="6" fill="#f7a23b"/>
+</svg><div class="percy-bubble">Both methods work. The question is which one you will still be following six months from now. That is the whole decision.</div></div>
 
-<p>Let me break them both down, no jargon, and then help you pick.</p>
+    <p>If you have been searching for the best way to pay off debt, you have probably hit this debate already.</p>
+    <p>Debt snowball. Debt avalanche. Each side has passionate supporters. Each side will tell you the other one is wrong.</p>
+    <p>Here is the truth: both methods work. Thousands of people have become debt free using each of them. The difference between them is real, but it is smaller than the internet makes it sound. And the choice between them comes down to one thing: your personality, not the mathematics.</p>
+    <p>This article breaks down both methods clearly, shows you the real difference with numbers, and helps you decide which one is right for you.</p>
 
-<div class="img-ph rev">
-  <img src="/img-snowball-avalanche-desk.jpg" alt="Two notebooks side by side showing the debt snowball and debt avalanche methods written out" loading="lazy" decoding="async"
-       style="width:100%;height:auto;display:block;border-radius:18px;box-shadow:0 1px 2px rgba(28,36,52,.04),0 8px 28px rgba(28,36,52,.06)">
-</div>
+    <h2>What is the debt snowball method?</h2>
+    <p>The debt snowball method was popularised by personal finance writer Dave Ramsey. The idea is straightforward.</p>
+    <p>List your debts from the smallest balance to the largest. Pay the minimum on every debt so nothing falls behind. Then direct every extra dollar you can find toward the smallest balance until it is completely cleared.</p>
+    <p>Once it is gone, take everything you were paying on it and add it to the next smallest debt. The payment grows each time a debt clears. That growing payment is the snowball.</p>
+    <p>The logic is psychological rather than mathematical. Clearing a debt quickly gives you proof that the method works. That proof creates momentum. And momentum is what keeps people going through the months when progress is hard to feel.</p>
 
-<h2>The debt snowball: smallest balance first</h2>
-<p>The snowball ignores interest rates completely. You line your debts up from smallest balance to largest. Pay the minimum on every one of them. Then throw every spare bit of money at the smallest debt until it is gone.</p>
-<p>Once that first debt clears, you take the whole payment you were making on it and roll it onto the next smallest. That payment keeps growing. Each debt you clear frees up more money for the next one. That is the snowball.</p>
-<p>The idea is that clearing something, even a small thing, changes how you feel. It proves the system works. That feeling is what keeps people going through the long middle when motivation fades and the finish line feels far away.</p>
+    <div class="method-cards">
+      <div class="method-card">
+        <span class="snow-tag">Snowball</span>
+        <h3>Smallest balance first</h3>
+        <p>Order by balance, smallest to largest. Extra payment goes to the smallest every time.</p>
+        <ul>
+          <li>Quick first win, sometimes within weeks</li>
+          <li>Builds momentum and confidence early</li>
+          <li>Best if you have quit a plan before</li>
+          <li>Easier to stick with long term</li>
+          <li>Costs slightly more in interest overall</li>
+        </ul>
+      </div>
+      <div class="method-card">
+        <span class="aval-tag">Avalanche</span>
+        <h3>Highest rate first</h3>
+        <p>Order by interest rate, highest to lowest. Extra payment goes to the most expensive debt.</p>
+        <ul>
+          <li>Saves the most money in total interest</li>
+          <li>Mathematically the optimal choice</li>
+          <li>Best for highly disciplined people</li>
+          <li>First win can take a long time</li>
+          <li>Requires more patience to sustain</li>
+        </ul>
+      </div>
+    </div>
 
-<h2>The debt avalanche: highest rate first</h2>
-<p>The avalanche is the mathematician's choice. You order your debts by interest rate, highest first, and attack that one with everything extra you have got. The logic is simple. The highest rate is costing you the most money each month. Kill it first and you pay less in total.</p>
-<p>It works out cheaper on paper. Sometimes by a lot, sometimes by very little. The catch is that your most expensive debt might also be a large one. You could go months without clearing anything, without a single win to celebrate. That is where people lose heart.</p>
+    <div class="img-wrap rev"><img src="/img-snowball-avalanche-desk.jpg" alt="Two notebooks side by side showing the debt snowball and debt avalanche methods written out with example debts" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;border-radius:16px;box-shadow:0 1px 2px rgba(28,36,52,.04),0 8px 28px rgba(28,36,52,.06)"></div>
 
-<div class="ad-slot"><div class="ad-inner">Ad space</div></div>
+    <h2>What is the debt avalanche method?</h2>
+    <p>The debt avalanche takes the opposite approach to ordering.</p>
+    <p>Instead of looking at balance size, you look at interest rates. List your debts from the highest interest rate to the lowest. Pay the minimum on everything. Then put every extra dollar toward the debt with the highest rate.</p>
+    <p>The reasoning is mathematical. A high interest rate means more of your money goes to the lender every month instead of reducing your actual balance. By eliminating the most expensive debt first, you reduce the total interest paid over the life of your payoff plan.</p>
+    <p>In most cases, the avalanche method saves money. Sometimes a significant amount. But that saving comes at a cost: the first win takes longer, especially if your highest-rate debt also carries a large balance.</p>
 
-<h2>A real example with real numbers</h2>
-<p>Say you have three debts and you can pay an extra $200 a month on top of the minimum payments:</p>
-<table class="cmp">
-<tr><th>Debt</th><th>Balance</th><th>Rate</th><th>Minimum</th></tr>
-<tr><td>Store card</td><td>$700</td><td>12%</td><td>$35</td></tr>
-<tr><td>Credit card</td><td>$2,300</td><td>24%</td><td>$60</td></tr>
-<tr><td>Car loan</td><td>$4,000</td><td>8%</td><td>$150</td></tr>
-</table>
-<p>With the snowball you start on the store card. It is gone in about two months. That win arrives fast. Then the credit card, then the car loan.</p>
-<p>With the avalanche you start on the credit card because it has the highest rate at 24%. No quick win there, but you pay less interest over the life of the plan.</p>
-<p>For these specific numbers the interest difference is modest. For someone with a very large high-rate card and a small low-rate loan, the gap can be hundreds of dollars. Use our free tracker to run both on your own debts and see the real difference.</p>
+    <h2>A real example with both methods</h2>
+    <p>Take the same three debts and apply each method.</p>
+    <div class="table-wrap">
+      <table class="cmp">
+        <thead><tr><th>Debt</th><th>Balance</th><th>Rate</th><th>Min Payment</th></tr></thead>
+        <tbody>
+          <tr><td>Store Card</td><td>$700</td><td>12%</td><td>$35</td></tr>
+          <tr><td>Credit Card</td><td>$2,300</td><td>24%</td><td>$60</td></tr>
+          <tr><td>Car Loan</td><td>$4,000</td><td>8%</td><td>$150</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>With $200 extra per month available, here is how each method plays out.</p>
+    <p><strong>Debt snowball order:</strong> Store Card first (smallest balance), then Credit Card, then Car Loan. First win arrives in about two months. The store card is gone quickly, building early momentum.</p>
+    <p><strong>Debt avalanche order:</strong> Credit Card first (highest rate at 24%), then Store Card, then Car Loan. The first win takes considerably longer because the credit card has a much larger balance than the store card.</p>
+    <p>The avalanche method will save money in total interest paid. For these numbers, probably a few hundred dollars over the full payoff period. But the snowball delivers a visible win much earlier in the process.</p>
 
-<blockquote>"The best method is not the one that looks best in a spreadsheet. It is the one you will still be following in month nine."</blockquote>
-<div class="img-ph rev"><img src="/img-snowball-avalanche-desk.jpg" alt="Two notebooks showing the debt snowball and debt avalanche methods side by side on a desk" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;border-radius:18px;box-shadow:0 1px 2px rgba(28,36,52,.04),0 8px 28px rgba(28,36,52,.06)">
+    <div class="ad-slot"><div class="ad-inner">Ad space</div></div>
 
-<div class="percy-row rev">
-  <svg viewBox="0 0 160 190" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:44px;flex:none;display:block;animation:pengbob 3.8s ease-in-out infinite">
-    <path d="M44 96 C28 104 26 128 36 140 C42 146 50 142 50 132 Z" fill="#2a3550"/>
-    <path d="M116 96 C132 104 134 128 124 140 C118 146 110 142 110 132 Z" fill="#2a3550"/>
-    <path d="M80 34 C112 34 126 62 126 104 C126 146 108 168 80 168 C52 168 34 146 34 104 C34 62 48 34 80 34 Z" fill="#1c2434"/>
-    <path d="M80 62 C100 62 110 82 110 108 C110 138 98 154 80 154 C62 154 50 138 50 108 C50 82 60 62 80 62 Z" fill="#faf6ef"/>
-    <circle cx="66" cy="86" r="8.5" fill="#fff"/><circle cx="94" cy="86" r="8.5" fill="#fff"/>
-    <circle cx="67.5" cy="87" r="4.2" fill="#1c2434"/><circle cx="95.5" cy="87" r="4.2" fill="#1c2434"/>
-    <rect class="peyelid" x="57" y="78" width="18" height="10" rx="5" fill="#1c2434"/>
-    <rect class="peyelid" x="85" y="78" width="18" height="10" rx="5" fill="#1c2434"/>
-    <path d="M80 96 L90 106 L80 114 L70 106 Z" fill="#f2683c"/>
-    <ellipse cx="66" cy="172" rx="14" ry="6" fill="#f7a23b"/>
-    <ellipse cx="94" cy="172" rx="14" ry="6" fill="#f7a23b"/>
-  </svg>
-  <div class="percy-bubble">Honest confession: most people who say they are going to use the avalanche switch to the snowball after three months. There is no shame in that. Pick what you can finish.</div>
-</div>
+    <div class="percy-row rev"><svg viewBox="0 0 160 190" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:46px;flex:none;display:block;animation:pengbob 4.3s ease-in-out infinite">
+  <path d="M44 96 C28 104 26 128 36 140 C42 146 50 142 50 132 Z" fill="#2a3550"/>
+  <path d="M116 96 C132 104 134 128 124 140 C118 146 110 142 110 132 Z" fill="#2a3550"/>
+  <path d="M80 34 C112 34 126 62 126 104 C126 146 108 168 80 168 C52 168 34 146 34 104 C34 62 48 34 80 34 Z" fill="#1c2434"/>
+  <path d="M80 62 C100 62 110 82 110 108 C110 138 98 154 80 154 C62 154 50 138 50 108 C50 82 60 62 80 62 Z" fill="#faf6ef"/>
+  <circle cx="66" cy="86" r="8.5" fill="#fff"/><circle cx="94" cy="86" r="8.5" fill="#fff"/>
+  <circle cx="67.5" cy="87" r="4.2" fill="#1c2434"/><circle cx="95.5" cy="87" r="4.2" fill="#1c2434"/>
+  <rect class="peyelid" x="57" y="78" width="18" height="10" rx="5" fill="#1c2434"/>
+  <rect class="peyelid" x="85" y="78" width="18" height="10" rx="5" fill="#1c2434"/>
+  <path d="M80 96 L90 106 L80 114 L70 106 Z" fill="#f2683c"/>
+  <ellipse cx="66" cy="172" rx="14" ry="6" fill="#f7a23b"/>
+  <ellipse cx="94" cy="172" rx="14" ry="6" fill="#f7a23b"/>
+</svg><div class="percy-bubble">Here is what I tell people when they ask which one to choose. Run both methods through the free tracker with your own numbers. See the real interest difference for your specific situation. For some people it is hundreds of dollars. For others it is less than fifty. Knowing your own number makes the decision much easier.</div></div>
 
-<h2>How to actually choose</h2>
-<p>Ask yourself this one question: have you ever started a debt payoff plan and given up before the end?</p>
-<p>If the answer is yes, go with the snowball. The early win is not a gimmick. It is fuel. You need proof that the system works before you can trust it enough to keep going.</p>
-<p>If you have a genuinely punishing interest rate, say a card at 28% or higher, and you are disciplined enough to stay on a long plan without a quick win, try the avalanche. The savings are real and they matter more the worse your rates are.</p>
-<p>If your balances and rates are all fairly similar, it barely matters. Flip a coin and go. The method is not the hard part. Consistency is the hard part.</p>
+    <div class="img-wrap rev"><img src="/img-debt-payoff-plan.jpg" alt="A debt payoff plan on a desk showing debts listed in order with goals written on a sticky note beside it" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;border-radius:16px;box-shadow:0 1px 2px rgba(28,36,52,.04),0 8px 28px rgba(28,36,52,.06)"></div>
 
-<div class="img-ph rev"><img src="/img-debt-payoff-plan.jpg" alt="A handwritten debt payoff plan on a desk showing one debt crossed off, with the note 1 DOWN 2 TO GO written in green" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;border-radius:18px;box-shadow:0 1px 2px rgba(28,36,52,.04),0 8px 28px rgba(28,36,52,.06)"></div>
+    <h2>The real difference: behaviour not mathematics</h2>
+    <p>The most important thing to understand about this choice is that the gap between the two methods is almost never the biggest factor.</p>
+    <p>The biggest factor is whether you actually stick with the plan.</p>
+    <p>A person who chooses the avalanche method, stays motivated, and follows through completely will save more money than a person who chose the snowball and gave up after four months. Obviously.</p>
+    <p>But a person who chooses the snowball, builds momentum from early wins, and follows through for two years will finish far ahead of someone who chose the avalanche, lost motivation during the long first stretch, and abandoned the plan.</p>
+    <p>This is not a theoretical concern. Most people who attempt to pay off debt do not finish their original plan. They start, make progress for a few months, hit a motivational wall, and stop. The avalanche method, as effective as it is mathematically, has a longer runway to that first win. That makes it harder to sustain for people who need early evidence that the plan is working.</p>
 
-<h2>The thing that matters more than either method</h2>
-<p>Here is what nobody talks about. The gap between snowball and avalanche is usually a few hundred dollars and a month or two. The gap between having a plan and having no plan is measured in years and thousands.</p>
-<p>Pick one. Start today. Open the tracker, put in your debts, and let the calculator show you your debt free date. That date is the real motivation. Seeing it changes something.</p>
+    <h2>How to choose the right method for you</h2>
+    <p>Ask yourself one honest question: have you tried to pay off debt before and stopped before finishing?</p>
+    <p>If yes, choose the snowball. You already know that motivation is your challenge. Design a plan that addresses that directly.</p>
+    <p>If you have never tried, or if you completed a plan successfully before, the avalanche is worth considering, especially if you have one debt with a significantly higher rate than the others. That rate is the most expensive thing on your list and eliminating it quickly saves real money.</p>
+    <p>If your interest rates and balances are all fairly similar, the difference between the two methods will be small. In that case, the most important thing is simply picking one and starting. The method matters far less than the consistency.</p>
 
-<div class="percy-row rev">
-  <svg viewBox="0 0 160 190" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:44px;flex:none;display:block;animation:pengbob 4.5s ease-in-out infinite">
-    <path d="M30 80 C18 68 20 50 32 46 C38 44 42 50 38 58 Z" fill="#2a3550" transform="rotate(-30,34,62)"/>
-    <path d="M130 80 C142 68 140 50 128 46 C122 44 118 50 122 58 Z" fill="#2a3550" transform="rotate(30,126,62)"/>
-    <path d="M80 34 C112 34 126 62 126 104 C126 146 108 168 80 168 C52 168 34 146 34 104 C34 62 48 34 80 34 Z" fill="#1c2434"/>
-    <path d="M80 62 C100 62 110 82 110 108 C110 138 98 154 80 154 C62 154 50 138 50 108 C50 82 60 62 80 62 Z" fill="#faf6ef"/>
-    <circle cx="66" cy="86" r="8.5" fill="#fff"/><circle cx="94" cy="86" r="8.5" fill="#fff"/>
-    <circle cx="67.5" cy="87" r="4.2" fill="#1c2434"/><circle cx="95.5" cy="87" r="4.2" fill="#1c2434"/>
-    <rect class="peyelid" x="57" y="78" width="18" height="10" rx="5" fill="#1c2434"/>
-    <rect class="peyelid" x="85" y="78" width="18" height="10" rx="5" fill="#1c2434"/>
-    <path d="M80 96 L90 106 L80 114 L70 106 Z" fill="#f2683c"/>
-    <ellipse cx="66" cy="172" rx="14" ry="6" fill="#f7a23b"/>
-    <ellipse cx="94" cy="172" rx="14" ry="6" fill="#f7a23b"/>
-  </svg>
-  <div class="percy-bubble" style="background:linear-gradient(135deg,#fff,#fdf3ec);border-color:var(--coral)"><strong>Go find your date.</strong> Put your numbers in the free tracker and see the actual month you become debt free. It takes about five minutes and I promise it will surprise you.</div>
-</div>
+    <div class="faq-section">
+      <h3>Common questions</h3>
+      <details><summary>Can I switch methods partway through?</summary><div class="ano">Yes. Some people start with the snowball to build early momentum and switch to the avalanche once they have a few wins and greater confidence in the plan. There is no rule that says you must use the same method throughout.</div></details>
+      <details><summary>Which method is better for beginners?</summary><div class="ano">Most beginners benefit from the snowball method because the early wins help build a habit and prove that the system works before the longer, harder months arrive.</div></details>
+      <details><summary>Does the difference in interest saved matter for small debts?</summary><div class="ano">Often very little. For debts under $15,000 to $20,000 with rates that are relatively close together, the interest difference between the two methods is frequently under $200 over the full payoff period. Your consistency matters more than your method choice in most cases.</div></details>
+      <details><summary>What if I have a credit card with a very high rate?</summary><div class="ano">If one of your debts has a rate significantly higher than the others, say above 25 or 28 percent, the avalanche method saves more noticeably because you are eliminating the most expensive debt faster. In that specific situation, the avalanche argument becomes stronger.</div></details>
+    </div>
 
-</div>
+    <div class="img-wrap rev"><img src="/img-how-i-paid-off.jpg" alt="A woman reviewing her finances and comparing debt payoff options at a kitchen table with a laptop open" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;border-radius:16px;box-shadow:0 1px 2px rgba(28,36,52,.04),0 8px 28px rgba(28,36,52,.06)"></div>
+    <div class="key-box">
+      <h3>The bottom line</h3>
+      <ul>
+        <li>Snowball: smallest balance first. Wins arrive faster. Better for motivation.</li>
+        <li>Avalanche: highest rate first. Saves more money. Requires more patience.</li>
+        <li>The real difference in interest is often smaller than people expect</li>
+        <li>The method you will actually stick with is the better method for you</li>
+        <li>If you have tried and quit before, choose the snowball</li>
+        <li>If you have a very high-rate debt, the avalanche is worth the extra patience</li>
+      </ul>
+    </div>
+
+    <p>The free Clearpath tracker lets you run both methods against your own debts and see the real numbers for your situation. That comparison, with your actual balances and rates, is the best way to make this decision.</p>
+
+    <div class="percy-row rev"><svg viewBox="0 0 160 190" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:46px;flex:none;display:block;animation:pengbob 4.4s ease-in-out infinite">
+  <path d="M30 80 C18 68 20 50 32 46 C38 44 42 50 38 58 Z" fill="#2a3550" transform="rotate(-30,34,62)"/>
+  <path d="M130 80 C142 68 140 50 128 46 C122 44 118 50 122 58 Z" fill="#2a3550" transform="rotate(30,126,62)"/>
+  <path d="M80 34 C112 34 126 62 126 104 C126 146 108 168 80 168 C52 168 34 146 34 104 C34 62 48 34 80 34 Z" fill="#1c2434"/>
+  <path d="M80 62 C100 62 110 82 110 108 C110 138 98 154 80 154 C62 154 50 138 50 108 C50 82 60 62 80 62 Z" fill="#faf6ef"/>
+  <circle cx="66" cy="86" r="8.5" fill="#fff"/><circle cx="94" cy="86" r="8.5" fill="#fff"/>
+  <circle cx="67.5" cy="87" r="4.2" fill="#1c2434"/><circle cx="95.5" cy="87" r="4.2" fill="#1c2434"/>
+  <rect class="peyelid" x="57" y="78" width="18" height="10" rx="5" fill="#1c2434"/>
+  <rect class="peyelid" x="85" y="78" width="18" height="10" rx="5" fill="#1c2434"/>
+  <path d="M80 96 L90 106 L80 114 L70 106 Z" fill="#f2683c"/>
+  <ellipse cx="66" cy="172" rx="14" ry="6" fill="#f7a23b"/>
+  <ellipse cx="94" cy="172" rx="14" ry="6" fill="#f7a23b"/>
+</svg><div class="percy-bubble" style="background:linear-gradient(135deg,#fff,#fdf3ec);border-color:var(--coral)"><strong>Run both methods with your own numbers.</strong> The tracker shows you the interest difference and the timeline for each. Five minutes and you will know exactly which one makes sense for you.</div></div>
+    </div>
     <div class="sharebar">
   <span class="sb-label">Share this:</span>
-  <a class="sb-btn sb-pinterest" target="_blank" rel="noopener" aria-label="Share on Pinterest" href="https://pinterest.com/pin/create/button/?url=https%3A//www.clearpath.click/debt/snowball-vs-avalanche.html&description=Debt%20Snowball%20vs.%20Avalanche%3A%20Which%20One%20Will%20Actually%20Get%20You%20Out%20of%20Debt%3F">&#128204;</a>
-  <a class="sb-btn sb-facebook" target="_blank" rel="noopener" aria-label="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.clearpath.click/debt/snowball-vs-avalanche.html">f</a>
-  <a class="sb-btn sb-x" target="_blank" rel="noopener" aria-label="Share on X" href="https://twitter.com/intent/tweet?url=https%3A//www.clearpath.click/debt/snowball-vs-avalanche.html&text=Debt%20Snowball%20vs.%20Avalanche%3A%20Which%20One%20Will%20Actually%20Get%20You%20Out%20of%20Debt%3F">&#120143;</a>
-  <a class="sb-btn sb-whatsapp" target="_blank" rel="noopener" aria-label="Share on WhatsApp" href="https://api.whatsapp.com/send?text=Debt%20Snowball%20vs.%20Avalanche%3A%20Which%20One%20Will%20Actually%20Get%20You%20Out%20of%20Debt%3F%20https%3A//www.clearpath.click/debt/snowball-vs-avalanche.html">&#128172;</a>
-  <button class="sb-btn sb-copy" onclick="clearpathCopy(this)" aria-label="Copy link">&#128279;</button>
+  <a class="sb-btn sb-pinterest" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/button/?url=https://www.clearpath.click/debt/snowball-vs-avalanche.html&description=Debt+Snowball+vs.+Debt+Avalanche:+Which+Method+Is+Actually+Better?">&#128204;</a>
+  <a class="sb-btn sb-facebook" target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u=https://www.clearpath.click/debt/snowball-vs-avalanche.html">f</a>
+  <a class="sb-btn sb-x" target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?url=https://www.clearpath.click/debt/snowball-vs-avalanche.html&text=Debt+Snowball+vs.+Debt+Avalanche:+Which+Method+Is+Actually+Better?">&#120143;</a>
+  <a class="sb-btn sb-whatsapp" target="_blank" rel="noopener" href="https://api.whatsapp.com/send?text=Debt+Snowball+vs.+Debt+Avalanche:+Which+Method+Is+Actually+Better?+https://www.clearpath.click/debt/snowball-vs-avalanche.html">&#128172;</a>
+  <button class="sb-btn sb-copy" onclick="clearpathCopy(this)">&#128279;</button>
   <span class="sb-copy-msg">Copied!</span>
+</div>
+    <div class="sources"><h3>Sources</h3><ul><li>Consumer Financial Protection Bureau (CFPB) -- Debt repayment strategies and consumer education</li><li>Federal Trade Commission (FTC) -- Consumer debt management guidance</li><li>National Foundation for Credit Counseling (NFCC) -- Debt payoff method research and education</li><li>Federal Reserve -- Survey of Household Economics and Decisionmaking (SHED)</li></ul></div>
+    <div class="author-box rev">
+  <img src="/img-busayo-profile.jpg" alt="Oluwaseun Busayo Amusan" class="author-photo">
+  <div class="author-info">
+    <div class="author-name">Oluwaseun Busayo Amusan</div>
+    <div class="author-role">Founder, Clearpath</div>
+    <p class="author-desc">Oluwaseun Busayo Amusan is the founder of Clearpath and a fintech professional with hands-on experience building financial technology products. He has worked in consumer finance at companies including YALO Technologies, where he focused on making financial services more accessible and practical for everyday people. He writes about debt repayment, budgeting, and practical money management.</p>
+  </div>
 </div>
     <div class="toolcard rev">
   <h3>See your own debt free date</h3>
-  <p>Put your numbers into our free tracker and see the exact month you become debt free, a month by month plan, and how much interest you will save. Nothing is stored anywhere. Takes about five minutes.</p>
+  <p>Put your numbers into the free Clearpath tracker and see the exact month you could become debt free, your full payoff order, and how much interest you will save. Nothing is stored anywhere.</p>
   <a href="/debt/index.html">Open the free tracker &rarr;</a>
 </div>
     <div class="optin rev" id="optin">
   <span class="kit">Free starter kit</span>
   <h3>Get the Debt Payoff Starter Kit</h3>
-  <p class="od">A printable debt tracker, a payoff worksheet, and a short 30-day guide. Sent free to your inbox.</p>
+  <p class="od">A printable debt tracker, a payoff worksheet, and a 30-day guide. Free to your inbox.</p>
   <form id="optinForm" novalidate>
     <input type="email" id="optinEmail" name="email" placeholder="you@email.com" autocomplete="email" required>
     <button type="submit" id="optinBtn">Send me the kit</button>
@@ -286,37 +714,35 @@
   <p class="micro">No spam. Leave any time.</p>
   <p class="msg" id="optinMsg"></p>
 </div>
-    <div class="related rev"><h3>People also read</h3><a href="/debt/how-to-start-debt-snowball.html"><span class="rc-cat">Debt payoff</span>How to Start the Debt Snowball Method (Step by Step) &rarr;</a><a href="/debt/debt-snowball-real-example.html"><span class="rc-cat">Real story</span>Debt Snowball Method Explained with a Real-World Example &rarr;</a><a href="/debt/find-extra-money-for-debt.html"><span class="rc-cat">Fund Your Payoff</span>7 Realistic Ways to Find Extra Money for Debt &rarr;</a></div>
-    <p class="disc">This article is for general information only and is not financial advice. See our <a href="/debt/disclaimer.html">full disclaimer</a>.</p>
+    <div class="related rev"><h3>People also read</h3><a href="/debt/debt-snowball-real-example.html"><span class="rc-cat">Debt payoff</span>How the Debt Snowball Method Works: A Complete Example &rarr;</a><a href="/debt/how-to-start-debt-snowball.html"><span class="rc-cat">Debt payoff</span>How to Start the Debt Snowball Method, Step by Step &rarr;</a><a href="/debt/find-extra-money-for-debt.html"><span class="rc-cat">Fund your payoff</span>7 Realistic Ways to Find Extra Money for Debt &rarr;</a></div>
+    <p class="disc">This article is for general educational purposes only and does not constitute financial advice. See our <a href="/debt/disclaimer.html">full disclaimer</a>.</p>
   </div>
 </main>
-
 <footer class="site">
   <div class="fin">
     <span class="brand"><span class="dot"></span>Clearpath</span>
     <div class="flinks">
-      <a href="/debt/index.html">Debt tracker</a><a href="/debt/blog.html">Guides</a>
-      <a href="/debt/about.html">About</a><a href="/debt/contact.html">Contact</a>
-      <a href="/debt/privacy.html">Privacy</a><a href="/debt/disclaimer.html">Disclaimer</a>
+      <a href="/debt/index.html">Debt tracker</a>
+      <a href="/debt/blog.html">Guides</a>
+      <a href="/debt/about.html">About</a>
+      <a href="/debt/contact.html">Contact</a>
+      <a href="/debt/privacy.html">Privacy</a>
+      <a href="/debt/disclaimer.html">Disclaimer</a><a href="/debt/terms.html">Terms</a><a href="/debt/editorial-policy.html">Editorial Policy</a><a href="/debt/terms.html">Terms</a><a href="/debt/editorial-policy.html">Editorial Policy</a>
     </div>
     <div class="fbottom">&copy; <span id="yr"></span> Clearpath. All rights reserved.</div>
   </div>
 </footer>
-
 <script>
 function clearpathCopy(btn){
-  var url=window.location.href.split("#")[0];
-  navigator.clipboard.writeText(url).then(function(){
+  navigator.clipboard.writeText(window.location.href.split("#")[0]).then(function(){
     var m=btn.parentElement.querySelector(".sb-copy-msg");
     if(m){m.style.display="inline";setTimeout(function(){m.style.display="none";},2200);}
   }).catch(function(){});
 }
-</script>
-<script>
 (function(){
+  document.getElementById("yr").textContent=new Date().getFullYear();
   var form=document.getElementById("optinForm");
-  if(!form)return;
-  form.addEventListener("submit",function(ev){
+  if(form){form.addEventListener("submit",function(ev){
     ev.preventDefault();
     var val=(document.getElementById("optinEmail").value||"").trim();
     var msg=document.getElementById("optinMsg"),btn=document.getElementById("optinBtn");
@@ -326,15 +752,12 @@ function clearpathCopy(btn){
     fetch("https://script.google.com/macros/s/REPLACE_WITH_YOUR_DEPLOYMENT_ID/exec",{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({email:val,source:window.location.pathname})})
       .then(function(){msg.textContent="Your kit is on its way. Check your inbox.";msg.className="msg ok";})
       .catch(function(){btn.disabled=false;btn.textContent="Send me the kit";msg.textContent="Something went wrong. Please try again.";msg.className="msg err";});
-  });
+  });}
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target);}});},{threshold:0.1});
+    document.querySelectorAll(".rev").forEach(function(el){io.observe(el);});
+  }else{document.querySelectorAll(".rev").forEach(function(el){el.classList.add("in");});}
 })();
-</script>
-<script>
-document.getElementById("yr").textContent=new Date().getFullYear();
-if("IntersectionObserver" in window){
-  var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}})},{threshold:0.1});
-  document.querySelectorAll(".rev").forEach(function(el){io.observe(el);});
-}else{document.querySelectorAll(".rev").forEach(function(el){el.classList.add("in");});}
 </script>
 </body>
 </html>
