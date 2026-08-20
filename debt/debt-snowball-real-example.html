@@ -3,717 +3,1044 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>How the Debt Snowball Method Works: A Complete Example | Clearpath</title>
-<meta name="description" content="See exactly how the debt snowball method works with a full step-by-step example. Real numbers, a complete timeline, and a month-by-month breakdown of clearing over $10,000 in debt.">
+<title>How the Debt Snowball Method Works, With Real Numbers | Clearpath</title>
+<meta name="description" content="A complete worked example of the debt snowball method with real numbers: four debts, $10,000, and an 18 month timeline including the difficult middle stretch.">
+<meta property="og:title" content="How the Debt Snowball Method Works, With Real Numbers | Clearpath">
+<meta property="og:description" content="A complete worked example of the debt snowball method with real numbers: four debts, $10,000, and an 18 month timeline including the difficult middle stretch.">
 <meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.clearpath.click/debt/debt-snowball-real-example.html">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fraunces:ital,opsz,wght@1,9..144,500;1,9..144,600&display=swap" rel="stylesheet">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6523820717153538" crossorigin="anonymous"></script>
 <style>
+
+/* ═══════════════════════════════════════════════════════════════
+   CLEARPATH DESIGN SYSTEM v2
+   Deep navy base · Emerald primary · Amber accent · Light body
+   ═══════════════════════════════════════════════════════════════ */
 :root{
-  --ink:#1c2434;--ink-soft:#3a4356;--cream:#faf6ef;--cream-deep:#f2ebdd;
-  --coral:#f2683c;--coral-deep:#d94f24;--amber:#f7a23b;--mint:#2f8f6b;
-  --blush:#f6c9c9;--line:#e4dccb;--card:#ffffff;
-  --shadow:0 1px 2px rgba(28,36,52,.04),0 8px 28px rgba(28,36,52,.06);
+  /* dark scale */
+  --ink:#0A1020;
+  --ink-2:#111A2E;
+  --ink-3:#1B2740;
+  --ink-4:#2A3852;
+
+  /* light scale */
+  --paper:#FFFFFF;
+  --paper-2:#F8FAFB;
+  --paper-3:#EFF3F5;
+  --line:#E3E9ED;
+  --line-2:#D3DBE1;
+
+  /* text */
+  --text:#0A1020;
+  --text-2:#48566B;
+  --text-3:#7C8A9E;
+  --text-inv:#FFFFFF;
+  --text-inv-2:#9DB0C8;
+
+  /* brand */
+  --mint:#0FB981;
+  --mint-2:#0A9668;
+  --mint-lite:#DCFCEE;
+  --mint-glow:rgba(15,185,129,.28);
+
+  --amber:#F5A524;
+  --amber-lite:#FEF4E2;
+
+  --sky:#3B82F6;
+  --sky-lite:#E8F1FE;
+
+  /* effects */
+  --sh-1:0 1px 2px rgba(10,16,32,.04),0 2px 8px rgba(10,16,32,.04);
+  --sh-2:0 2px 4px rgba(10,16,32,.04),0 12px 28px rgba(10,16,32,.08);
+  --sh-3:0 4px 8px rgba(10,16,32,.05),0 24px 56px rgba(10,16,32,.12);
+  --sh-mint:0 8px 28px rgba(15,185,129,.30);
+
+  --r-xs:8px;--r-sm:12px;--r-md:16px;--r-lg:22px;--r-xl:30px;--r-full:999px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{
-  font-family:'Inter',system-ui,sans-serif;
-  background:var(--cream);
-  color:var(--ink);
-  line-height:1.75;
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  background:var(--paper);color:var(--text);
+  line-height:1.65;font-size:16px;
   -webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
-  /* prevent any horizontal scroll on mobile */
-  max-width:100vw;
+  overflow-x:hidden;max-width:100vw;
 }
+h1,h2,h3,h4{font-weight:800;line-height:1.08;letter-spacing:-.028em}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none;color:inherit}
+button,input,select{font-family:inherit;touch-action:manipulation}
+em.ser{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:600;letter-spacing:-.01em}
 
-/* ── TYPOGRAPHY ── */
-h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.15;letter-spacing:-.01em}
+/* ── LAYOUT ─────────────────────────────────────────── */
+.wrap{width:100%;max-width:1140px;margin:0 auto;padding:0 28px}
+.wrap-md{width:100%;max-width:900px;margin:0 auto;padding:0 28px}
+.wrap-sm{width:100%;max-width:680px;margin:0 auto;padding:0 28px}
+@media(max-width:560px){.wrap,.wrap-md,.wrap-sm{padding:0 20px}}
+.sec{padding:100px 0}
+.sec-sm{padding:72px 0}
+@media(max-width:768px){.sec{padding:68px 0}.sec-sm{padding:52px 0}}
 
-/* ── LAYOUT ── */
-.wrap{
-  width:100%;
-  max-width:740px;
-  margin:0 auto;
-  padding:0 24px;
-}
-@media(max-width:480px){
-  .wrap{padding:0 18px}
-}
+/* ── MOTION ─────────────────────────────────────────── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes scaleIn{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:none}}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes pulseRing{0%{box-shadow:0 0 0 0 var(--mint-glow)}70%{box-shadow:0 0 0 14px transparent}100%{box-shadow:0 0 0 0 transparent}}
+@keyframes shimmer{0%{background-position:-500px 0}100%{background-position:500px 0}}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-6px) rotate(-2deg)}}
+@keyframes wave{0%,55%,100%{transform:rotate(0)}70%{transform:rotate(-24deg)}85%{transform:rotate(6deg)}}
+@keyframes blink{0%,93%,100%{transform:scaleY(1)}96%{transform:scaleY(.08)}}
+@keyframes drawLine{from{stroke-dashoffset:1000}to{stroke-dashoffset:0}}
+@keyframes nudge{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}
+@keyframes gradShift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
 
-/* ── REVEAL ANIMATIONS ── */
-.rev{opacity:0;transform:translateY(14px);transition:opacity .6s cubic-bezier(.2,.7,.3,1),transform .6s cubic-bezier(.2,.7,.3,1)}
-.rev.in{opacity:1;transform:translateY(0)}
-.rev-1{transition-delay:.06s}.rev-2{transition-delay:.14s}.rev-3{transition-delay:.22s}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.07s}.d2{transition-delay:.14s}.d3{transition-delay:.21s}
+.d4{transition-delay:.28s}.d5{transition-delay:.35s}.d6{transition-delay:.42s}
 @media(prefers-reduced-motion:reduce){
-  .rev{opacity:1;transform:none;transition:none}
-  .blob,.peng-hero{animation:none}
-  .peyelid{animation:none}
-  svg[style*="pengbob"]{animation:none!important}
+  .rv{opacity:1;transform:none;transition:none}
+  *{animation:none!important}
 }
 
-/* ── NAV ── */
-header.site{
-  border-bottom:1px solid var(--line);
-  background:rgba(250,246,239,.95);
-  backdrop-filter:blur(6px);
-  -webkit-backdrop-filter:blur(6px);
-  position:sticky;
-  top:0;
-  z-index:50;
-}
-.nav{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:14px 24px;
-  max-width:1060px;
-  margin:0 auto;
-  min-height:56px;
-}
-.brand{
-  display:flex;align-items:center;gap:10px;
-  font-family:'Fraunces',serif;font-weight:600;font-size:18px;
-  color:var(--ink);text-decoration:none;
-  flex-shrink:0;
-}
-.brand .dot{
-  width:24px;height:24px;border-radius:50%;flex-shrink:0;
-  background:radial-gradient(circle at 32% 30%,#fff 0 18%,var(--amber) 19% 55%,var(--coral) 56%);
-  animation:dpulse 3.5s ease-in-out infinite;
-}
-@keyframes dpulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
-.nav-links{display:flex;gap:0}
-.nav-links a{
-  color:var(--ink-soft);text-decoration:none;font-size:13.5px;
-  font-weight:500;margin-left:18px;white-space:nowrap;
-}
-.nav-links a:hover{color:var(--coral-deep)}
+/* ── PERCY (sleek geometric) ───────────────────────── */
+.percy{display:block;flex:none;animation:bob 4.2s ease-in-out infinite}
+.percy .flip-l{transform-origin:22px 62px;animation:wave 3.8s ease-in-out infinite}
+.percy .eye{transform-origin:center;animation:blink 5.5s infinite}
+
+/* ── BUTTONS ────────────────────────────────────────── */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  font-weight:700;font-size:15.5px;letter-spacing:-.01em;
+  padding:16px 30px;border-radius:var(--r-full);border:none;cursor:pointer;
+  transition:transform .18s cubic-bezier(.16,1,.3,1),box-shadow .18s,background .18s;
+  white-space:nowrap}
+.btn:active{transform:translateY(0) scale(.985)}
+.btn-mint{background:var(--mint);color:#fff;box-shadow:var(--sh-mint)}
+.btn-mint:hover{transform:translateY(-2px);box-shadow:0 12px 34px rgba(15,185,129,.40);background:var(--mint-2)}
+.btn-dark{background:var(--ink);color:#fff;box-shadow:var(--sh-2)}
+.btn-dark:hover{transform:translateY(-2px);box-shadow:var(--sh-3)}
+.btn-ghost{background:transparent;color:var(--text);border:1.5px solid var(--line-2)}
+.btn-ghost:hover{border-color:var(--ink);transform:translateY(-2px)}
+.btn-ghost-lite{background:rgba(255,255,255,.08);color:#fff;border:1.5px solid rgba(255,255,255,.22)}
+.btn-ghost-lite:hover{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.4)}
+.btn-amber{background:var(--amber);color:var(--ink);box-shadow:0 8px 26px rgba(245,165,36,.34)}
+.btn-amber:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(245,165,36,.44)}
+.btn-lg{padding:19px 38px;font-size:17px}
+.btn-sm{padding:11px 20px;font-size:13.5px}
+.btn-block{width:100%}
+.btn .arw{transition:transform .2s}
+.btn:hover .arw{transform:translateX(4px)}
+
+/* ── EYEBROW / LABEL ───────────────────────────────── */
+.eyebrow{display:inline-flex;align-items:center;gap:8px;
+  font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--mint-2);background:var(--mint-lite);
+  padding:8px 16px;border-radius:var(--r-full);margin-bottom:22px}
+.eyebrow-dk{color:var(--mint);background:rgba(15,185,129,.14);border:1px solid rgba(15,185,129,.24)}
+.eyebrow .dot{width:6px;height:6px;border-radius:50%;background:currentColor;animation:pulseRing 2.4s infinite}
+
+.sec-title{font-size:clamp(30px,4.6vw,52px);margin-bottom:18px}
+.sec-lede{font-size:clamp(16px,1.9vw,19px);color:var(--text-2);max-width:52ch;line-height:1.62}
+.center{text-align:center}
+.center .sec-lede{margin-left:auto;margin-right:auto}
+
+/* ── NAV ────────────────────────────────────────────── */
+header.nav{position:sticky;top:0;z-index:200;
+  background:rgba(255,255,255,.86);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;
+  max-width:1140px;margin:0 auto;padding:13px 28px;min-height:66px}
+@media(max-width:560px){.nav-in{padding:12px 20px}}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:-.03em}
+.logo-mark{width:34px;height:34px;border-radius:10px;flex:none;
+  background:linear-gradient(140deg,var(--ink) 0%,var(--ink-3) 100%);
+  display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.logo-mark::after{content:"";position:absolute;width:14px;height:14px;border-radius:50%;
+  background:linear-gradient(140deg,var(--mint),var(--amber));filter:blur(1px)}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a{font-size:14.5px;font-weight:500;color:var(--text-2);transition:color .15s}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{display:flex;align-items:center;gap:12px}
 #navTog{display:none}
-.hmb{
-  display:none;width:38px;height:38px;border:none;
-  background:var(--cream-deep);border-radius:9px;
-  cursor:pointer;align-items:center;justify-content:center;flex:none;
-  /* good tap target */
-  touch-action:manipulation;
-}
-.hmb span{display:block;width:16px;height:2px;background:var(--ink);border-radius:2px;position:relative}
-.hmb span::before,.hmb span::after{
-  content:"";position:absolute;left:0;width:16px;height:2px;
-  background:var(--ink);border-radius:2px;transition:transform .2s;
-}
-.hmb span::before{top:-5px}.hmb span::after{top:5px}
-#navTog:checked~.nav .hmb span{background:transparent}
-#navTog:checked~.nav .hmb span::before{transform:translateY(5px) rotate(45deg)}
-#navTog:checked~.nav .hmb span::after{transform:translateY(-5px) rotate(-45deg)}
-.ndrop{display:none}
-#navTog:checked~.ndrop{
-  display:block;position:absolute;top:56px;left:0;right:0;
-  background:var(--cream);border-bottom:1px solid var(--line);
-  box-shadow:0 12px 24px rgba(28,36,52,.08);z-index:45;
-}
-.ndrop a{
-  display:block;padding:14px 24px;color:var(--ink-soft);
-  text-decoration:none;font-size:15px;border-top:1px solid var(--line);
-  /* good tap target */
-  min-height:48px;display:flex;align-items:center;
-}
-.ndrop a:first-child{border-top:none}
-@media(max-width:700px){
+.burger{display:none;width:40px;height:40px;border:1px solid var(--line);
+  background:var(--paper-2);border-radius:11px;cursor:pointer;
+  align-items:center;justify-content:center;flex:none}
+.burger span{display:block;width:16px;height:1.8px;background:var(--ink);border-radius:2px;position:relative}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:16px;height:1.8px;
+  background:var(--ink);border-radius:2px;transition:transform .22s}
+.burger span::before{top:-5.5px}.burger span::after{top:5.5px}
+#navTog:checked~.nav-in .burger span{background:transparent}
+#navTog:checked~.nav-in .burger span::before{transform:translateY(5.5px) rotate(45deg)}
+#navTog:checked~.nav-in .burger span::after{transform:translateY(-5.5px) rotate(-45deg)}
+.drop{display:none}
+#navTog:checked~.drop{display:block;position:absolute;top:100%;left:0;right:0;
+  background:var(--paper);border-bottom:1px solid var(--line);
+  box-shadow:var(--sh-2);animation:fadeIn .18s ease}
+.drop a{display:flex;align-items:center;padding:15px 24px;font-size:15.5px;font-weight:500;
+  color:var(--text-2);border-top:1px solid var(--line);min-height:54px}
+.drop .drop-cta{padding:16px 24px 20px;border-top:1px solid var(--line)}
+@media(max-width:900px){
   .nav-links{display:none}
-  .hmb{display:flex}
+  .nav-cta .btn{display:none}
+  .burger{display:flex}
 }
 
-/* ── ARTICLE HERO ── */
-.article{padding:36px 0 0;position:relative;overflow:hidden}
-.blob{
-  position:absolute;border-radius:50%;filter:blur(2px);
-  opacity:.4;pointer-events:none;z-index:0;
-}
-.blob-1{
-  width:160px;height:160px;
-  background:radial-gradient(circle,var(--blush) 0%,transparent 70%);
-  top:-20px;right:-30px;animation:bfloat 9s ease-in-out infinite;
-}
-.blob-2{
-  width:110px;height:110px;
-  background:radial-gradient(circle,var(--amber) 0%,transparent 70%);
-  opacity:.22;top:120px;left:-30px;
-  animation:bfloat 11s ease-in-out infinite reverse;
-}
-@keyframes bfloat{0%,100%{transform:translate(0,0)}50%{transform:translate(10px,-14px)}}
-.article>.wrap{position:relative;z-index:1}
+/* ── HERO ───────────────────────────────────────────── */
+.hero{position:relative;background:var(--ink);color:#fff;overflow:hidden;
+  padding:92px 0 0}
+.hero::before{content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(900px 520px at 78% 8%,rgba(15,185,129,.20),transparent 62%),
+    radial-gradient(700px 420px at 12% 86%,rgba(59,130,246,.14),transparent 60%),
+    radial-gradient(500px 300px at 50% 50%,rgba(245,165,36,.07),transparent 70%);
+  pointer-events:none}
+.hero-grid-bg{position:absolute;inset:0;opacity:.4;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+  background-size:56px 56px;
+  mask-image:radial-gradient(ellipse 90% 60% at 50% 30%,#000 20%,transparent 75%);
+  -webkit-mask-image:radial-gradient(ellipse 90% 60% at 50% 30%,#000 20%,transparent 75%)}
+.hero-in{position:relative;z-index:2;text-align:center;padding-bottom:92px}
+.hero h1{font-size:clamp(38px,7vw,76px);letter-spacing:-.042em;
+  max-width:15ch;margin:0 auto 24px;line-height:1.03}
+.hero h1 .hl{position:relative;display:inline-block;white-space:nowrap}
+.hero h1 .hl::after{content:"";position:absolute;left:-4px;right:-4px;bottom:6px;height:36%;
+  background:linear-gradient(90deg,var(--mint),rgba(15,185,129,.35));
+  border-radius:5px;z-index:-1;opacity:.9}
+.hero-sub{font-size:clamp(16.5px,2vw,20px);color:var(--text-inv-2);
+  max-width:50ch;margin:0 auto 38px;line-height:1.62}
+.hero-btns{display:flex;gap:13px;justify-content:center;flex-wrap:wrap;margin-bottom:26px}
+.hero-micro{font-size:13px;color:var(--text-3);display:flex;gap:20px;
+  justify-content:center;flex-wrap:wrap}
+.hero-micro span{display:flex;align-items:center;gap:6px}
+.hero-micro svg{flex:none;color:var(--mint)}
 
-.eyebrow{
-  display:inline-block;font-size:11px;font-weight:600;
-  letter-spacing:.12em;text-transform:uppercase;
-  color:var(--coral-deep);background:var(--cream-deep);
-  padding:5px 13px;border-radius:100px;margin-bottom:14px;
-}
-h1{
-  font-size:clamp(26px,5.5vw,42px);
-  margin-bottom:14px;line-height:1.1;
-}
-.lede{
-  font-size:clamp(16px,2.4vw,19px);
-  color:var(--ink-soft);margin-bottom:22px;
-  max-width:58ch;line-height:1.65;
-}
-.meta{
-  font-size:13px;color:var(--ink-soft);margin-bottom:24px;
-  display:flex;gap:10px;align-items:center;flex-wrap:wrap;
-}
-.meta .read{background:var(--cream-deep);padding:3px 10px;border-radius:100px}
+/* hero dashboard preview */
+.hero-preview{position:relative;z-index:2;max-width:940px;margin:0 auto;
+  padding:0 28px;transform:translateY(58px)}
+@media(max-width:560px){.hero-preview{padding:0 18px;transform:translateY(40px)}}
+.preview-card{background:linear-gradient(165deg,rgba(27,39,64,.96),rgba(17,26,46,.98));
+  border:1px solid rgba(255,255,255,.10);border-radius:var(--r-xl);
+  padding:26px;box-shadow:0 40px 90px rgba(0,0,0,.5);backdrop-filter:blur(20px)}
+@media(max-width:560px){.preview-card{padding:18px;border-radius:var(--r-lg)}}
+.pv-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px;gap:12px}
+.pv-label{font-size:11px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--text-3)}
+.pv-badge{font-size:11px;font-weight:700;color:var(--mint);background:rgba(15,185,129,.14);
+  padding:5px 11px;border-radius:var(--r-full);border:1px solid rgba(15,185,129,.24);white-space:nowrap}
+.pv-date{font-size:clamp(30px,5.4vw,50px);font-weight:800;letter-spacing:-.035em;
+  color:#fff;line-height:1;margin-bottom:6px}
+.pv-datesub{font-size:13.5px;color:var(--text-inv-2);margin-bottom:24px}
+.pv-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin-bottom:22px}
+@media(max-width:480px){.pv-stats{gap:8px}}
+.pv-stat{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);
+  border-radius:var(--r-sm);padding:14px 12px}
+@media(max-width:480px){.pv-stat{padding:11px 9px}}
+.pv-stat .v{font-size:clamp(16px,3.4vw,22px);font-weight:800;color:#fff;letter-spacing:-.02em;line-height:1.1}
+.pv-stat .v.mint{color:var(--mint)}
+.pv-stat .l{font-size:10.5px;color:var(--text-3);margin-top:3px;letter-spacing:.02em}
+.pv-chart{height:78px;position:relative;margin-bottom:20px}
+.pv-chart svg{width:100%;height:100%;overflow:visible}
+.pv-bars{display:flex;flex-direction:column;gap:9px}
+.pv-bar-row{display:flex;align-items:center;gap:11px}
+.pv-bar-name{font-size:12px;color:var(--text-inv-2);width:88px;flex:none;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+@media(max-width:480px){.pv-bar-name{width:64px;font-size:11px}}
+.pv-bar-track{flex:1;height:8px;background:rgba(255,255,255,.07);border-radius:var(--r-full);overflow:hidden}
+.pv-bar-fill{height:100%;border-radius:var(--r-full);width:0;
+  transition:width 1.4s cubic-bezier(.16,1,.3,1)}
+.pv-bar-pct{font-size:11.5px;font-weight:700;color:var(--mint);width:38px;text-align:right;flex:none}
 
-/* ── PROSE ── */
-.prose{padding-bottom:32px}
-.prose h2{
-  font-size:clamp(20px,3.2vw,26px);
-  margin:36px 0 12px;color:var(--ink);
-}
-.prose h3{font-size:18px;margin:22px 0 8px}
-.prose p{
-  margin-bottom:18px;color:var(--ink-soft);
-  font-size:16px;line-height:1.75;
-  /* prevent long words from breaking layout on mobile */
-  overflow-wrap:break-word;word-break:break-word;
-}
-.prose strong{color:var(--ink)}
-.prose a{color:var(--coral-deep);text-underline-offset:2px}
+/* ── TRUST MARQUEE ─────────────────────────────────── */
+.trust-bar{background:var(--paper-2);border-bottom:1px solid var(--line);
+  padding:92px 0 26px;overflow:hidden}
+.trust-label{text-align:center;font-size:12px;font-weight:600;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--text-3);margin-bottom:20px}
+.marquee{display:flex;overflow:hidden;
+  mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.marquee-track{display:flex;gap:14px;animation:marquee 34s linear infinite;flex:none;padding-right:14px}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.mq-item{display:flex;align-items:center;gap:8px;background:var(--paper);
+  border:1px solid var(--line);border-radius:var(--r-full);
+  padding:9px 17px;font-size:13.5px;color:var(--text-2);white-space:nowrap;
+  box-shadow:var(--sh-1)}
+.mq-item .mq-dot{width:7px;height:7px;border-radius:50%;background:var(--mint);flex:none}
+.mq-item b{color:var(--text);font-weight:600}
 
-/* ── TABLE ── */
-.table-wrap{
-  width:100%;overflow-x:auto;
-  -webkit-overflow-scrolling:touch;
-  margin:24px 0;border-radius:14px;
-  border:1px solid var(--line);
-  /* subtle scroll hint */
-  box-shadow:inset -8px 0 12px -8px rgba(28,36,52,.06);
-}
-table.cmp{
-  width:100%;border-collapse:collapse;
-  font-size:15px;min-width:420px;
-}
-table.cmp th{
-  background:var(--ink);color:#fff;padding:12px 16px;
-  text-align:left;font-family:'Fraunces',serif;font-weight:600;
-  white-space:nowrap;
-}
-table.cmp th:first-child{border-radius:0}
-table.cmp td{
-  padding:11px 16px;border-bottom:1px solid var(--line);
-  color:var(--ink-soft);white-space:nowrap;
-}
-table.cmp tr:last-child td{border-bottom:none}
-table.cmp tr:hover td{background:var(--cream-deep)}
-@media(max-width:480px){
-  table.cmp th,table.cmp td{padding:10px 13px;font-size:14px}
-}
+/* ── PROBLEM SECTION ───────────────────────────────── */
+.prob-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:52px}
+@media(max-width:860px){.prob-grid{grid-template-columns:1fr;gap:14px;max-width:520px;margin-left:auto;margin-right:auto}}
+.prob-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:30px 26px;transition:transform .25s cubic-bezier(.16,1,.3,1),box-shadow .25s,border-color .25s}
+.prob-card:hover{transform:translateY(-5px);box-shadow:var(--sh-2);border-color:var(--line-2)}
+.prob-q{font-size:19px;font-weight:700;letter-spacing:-.02em;margin-bottom:9px;line-height:1.25}
+.prob-a{font-size:14.5px;color:var(--text-2);line-height:1.62}
+.prob-ico{width:44px;height:44px;border-radius:13px;display:flex;align-items:center;
+  justify-content:center;margin-bottom:18px;font-size:20px}
 
-/* ── BLOCKQUOTE ── */
-blockquote{
-  border-left:4px solid var(--coral);
-  padding:14px 20px;margin:28px 0;
-  background:var(--cream-deep);
-  border-radius:0 12px 12px 0;
-  font-style:italic;font-size:17px;
-  color:var(--ink-soft);
-  overflow-wrap:break-word;
-}
-
-/* ── IMAGES ── */
-.img-wrap{
-  margin:28px 0;border-radius:16px;
-  overflow:hidden;box-shadow:var(--shadow);
-  /* prevent image overflow on mobile */
-  width:100%;
-}
-.img-wrap img{
-  width:100%;height:auto;display:block;
-  /* smooth render */
-  image-rendering:auto;
-}
-
-/* ── AD SLOT ── */
-.ad-slot{margin:28px 0}
-.ad-inner{
-  border:1px dashed var(--line);border-radius:12px;min-height:88px;
+/* ── HOW IT WORKS ──────────────────────────────────── */
+.how{background:var(--paper-2)}
+.how-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center;margin-top:48px}
+@media(max-width:900px){.how-wrap{grid-template-columns:1fr;gap:34px}}
+.steps{display:flex;flex-direction:column;gap:10px}
+.step{display:flex;gap:16px;padding:20px;border-radius:var(--r-md);cursor:pointer;
+  background:transparent;border:1px solid transparent;transition:all .28s cubic-bezier(.16,1,.3,1)}
+.step:hover{background:rgba(255,255,255,.6)}
+.step.on{background:var(--paper);border-color:var(--line);box-shadow:var(--sh-2)}
+.step-n{width:36px;height:36px;border-radius:11px;flex:none;
   display:flex;align-items:center;justify-content:center;
-  color:#b9b09c;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;
-  background:repeating-linear-gradient(45deg,transparent,transparent 12px,rgba(228,220,203,.18) 12px,rgba(228,220,203,.18) 24px);
-}
+  font-weight:800;font-size:14px;
+  background:var(--paper-3);color:var(--text-3);transition:all .28s}
+.step.on .step-n{background:var(--mint);color:#fff;box-shadow:var(--sh-mint)}
+.step-h{font-size:17.5px;font-weight:700;letter-spacing:-.02em;color:var(--text-2);transition:color .2s}
+.step.on .step-h{color:var(--text)}
+.step-b{display:grid;grid-template-rows:0fr;transition:grid-template-rows .34s cubic-bezier(.16,1,.3,1)}
+.step.on .step-b{grid-template-rows:1fr}
+.step-b>div{overflow:hidden;min-height:0}
+.step-b p{font-size:14.5px;color:var(--text-2);line-height:1.66;padding-top:7px}
 
-/* ── PERCY ── */
-@keyframes pengbob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-7px) rotate(-1.5deg)}}
-@keyframes pwave{0%,60%,100%{transform:rotate(0)}72%{transform:rotate(-22deg)}86%{transform:rotate(5deg)}}
-@keyframes pblink{0%,92%,100%{transform:scaleY(0)}94%,98%{transform:scaleY(1)}}
-.peyelid{transform-origin:center;animation:pblink 5.5s infinite}
-.percy-row{
-  display:flex;align-items:flex-end;gap:12px;
-  margin:24px 0;
-  /* don't let it overflow */
-  overflow:hidden;
-}
-.percy-row svg{flex-shrink:0}
-.percy-bubble{
-  background:var(--card);border:1px solid var(--line);
-  border-radius:18px;border-bottom-left-radius:3px;
-  padding:13px 16px;font-size:14.5px;color:var(--ink-soft);
-  box-shadow:var(--shadow);flex:1;line-height:1.65;
-  min-width:0;/* prevent flex overflow */
-  overflow-wrap:break-word;
-}
-.percy-bubble strong{color:var(--ink)}
+.how-visual{background:var(--ink);border-radius:var(--r-xl);padding:32px;
+  min-height:400px;display:flex;flex-direction:column;justify-content:center;
+  box-shadow:var(--sh-3);position:relative;overflow:hidden}
+@media(max-width:560px){.how-visual{padding:22px;min-height:340px;border-radius:var(--r-lg)}}
+.how-visual::before{content:"";position:absolute;inset:0;
+  background:radial-gradient(500px 300px at 80% 10%,rgba(15,185,129,.16),transparent 60%);pointer-events:none}
+.hv{display:none;position:relative;z-index:1}
+.hv.on{display:block;animation:fadeUp .4s cubic-bezier(.16,1,.3,1)}
+.hv-lbl{font-size:11px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--text-3);margin-bottom:16px}
+.dbt-row{display:flex;align-items:center;gap:13px;background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.07);border-radius:var(--r-sm);padding:14px 15px;margin-bottom:9px}
+.dbt-ico{width:38px;height:38px;border-radius:11px;flex:none;display:flex;
+  align-items:center;justify-content:center;font-size:17px}
+.dbt-info{flex:1;min-width:0}
+.dbt-nm{font-size:14px;font-weight:600;color:#fff}
+.dbt-rt{font-size:11.5px;color:var(--text-3)}
+.dbt-bal{font-size:16px;font-weight:800;color:#fff;letter-spacing:-.02em;white-space:nowrap}
+.dbt-total{display:flex;justify-content:space-between;align-items:center;
+  background:rgba(15,185,129,.12);border:1px solid rgba(15,185,129,.25);
+  border-radius:var(--r-sm);padding:14px 16px;margin-top:14px}
+.dbt-total .l{font-size:13px;color:var(--text-inv-2)}
+.dbt-total .v{font-size:20px;font-weight:800;color:var(--mint);letter-spacing:-.02em}
 
-/* ── SHARE BAR ── */
-.sharebar{
-  display:flex;align-items:center;gap:9px;flex-wrap:wrap;
-  margin:28px 0;padding:14px 16px;
-  background:var(--cream-deep);border-radius:13px;border:1px solid var(--line);
-}
-.sb-label{font-size:13px;font-weight:600;color:var(--ink-soft);white-space:nowrap}
-.sb-btn{
-  display:inline-flex;align-items:center;justify-content:center;
-  width:38px;height:38px;border-radius:50%;text-decoration:none;
-  font-size:15px;transition:transform .15s ease;flex:none;
-  border:none;cursor:pointer;touch-action:manipulation;
-}
-.sb-btn:hover{transform:translateY(-2px)}
-.sb-pinterest{background:#E60023;color:#fff}
-.sb-facebook{background:#1877F2;color:#fff;font-weight:700;font-family:serif}
-.sb-x{background:#000;color:#fff}
-.sb-whatsapp{background:#25D366;color:#fff}
-.sb-copy{background:var(--ink);color:#fff}
-.sb-copy-msg{font-size:12px;color:var(--mint);font-weight:600;display:none}
+.mth-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:420px){.mth-grid{grid-template-columns:1fr}}
+.mth{border-radius:var(--r-md);padding:18px 16px;border:1.5px solid rgba(255,255,255,.09);
+  background:rgba(255,255,255,.04)}
+.mth.pick{border-color:var(--mint);background:rgba(15,185,129,.10)}
+.mth-t{font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+  margin-bottom:12px;color:var(--text-3)}
+.mth.pick .mth-t{color:var(--mint)}
+.mth-l{list-style:none}
+.mth-l li{display:flex;align-items:center;gap:8px;font-size:12.5px;
+  padding:5px 0;color:var(--text-inv-2)}
+.mth-l li b{width:19px;height:19px;border-radius:50%;flex:none;font-size:10px;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.1);color:#fff;font-weight:700}
+.mth.pick .mth-l li b{background:var(--mint);color:#fff}
+.mth-note{font-size:11.5px;margin-top:11px;font-weight:600}
+.mth.pick .mth-note{color:var(--mint)}
+.mth:not(.pick) .mth-note{color:var(--text-3)}
 
-/* ── TOOL CARD ── */
-.toolcard{
-  background:linear-gradient(160deg,var(--ink) 0%,#2a3550 100%);
-  color:#fff;border-radius:18px;padding:26px;
-  margin:32px 0;position:relative;overflow:hidden;
-}
-.toolcard::after{
-  content:"";position:absolute;right:-30px;bottom:-30px;
-  width:130px;height:130px;border-radius:50%;
-  background:radial-gradient(circle at 35% 32%,rgba(255,255,255,.22) 0 20%,var(--amber) 21% 60%,var(--coral) 61%);
-  opacity:.28;pointer-events:none;
-}
-.toolcard h3{color:#fff;font-size:20px;margin-bottom:8px;position:relative;z-index:1}
-.toolcard p{color:#cfd6e6;font-size:15px;margin-bottom:16px;position:relative;z-index:1}
-.toolcard a{
-  display:inline-block;background:var(--coral);color:#fff;
-  text-decoration:none;font-weight:600;font-size:15px;
-  padding:12px 22px;border-radius:11px;position:relative;z-index:1;
-  transition:transform .15s;touch-action:manipulation;
-}
-.toolcard a:hover{transform:translateY(-2px)}
+.reveal-date{text-align:center;padding:8px 0}
+.rd-l{font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--amber);margin-bottom:10px}
+.rd-d{font-size:clamp(30px,6.4vw,46px);font-weight:800;color:#fff;letter-spacing:-.035em;line-height:1}
+.rd-s{font-size:13.5px;color:var(--text-inv-2);margin-top:10px;max-width:32ch;
+  margin-left:auto;margin-right:auto;line-height:1.55}
+.rd-bars{margin-top:24px;display:flex;flex-direction:column;gap:11px}
 
-/* ── OPT-IN ── */
-.optin{
-  background:linear-gradient(155deg,#fff 0%,#fdf3ec 100%);
-  border:1px solid var(--line);border-radius:18px;
-  padding:26px;margin:32px 0;box-shadow:var(--shadow);
-}
-.optin .kit{
-  display:inline-block;font-size:11px;font-weight:600;
-  letter-spacing:.09em;text-transform:uppercase;
-  color:var(--coral-deep);background:#fff;
-  padding:5px 12px;border-radius:100px;margin-bottom:11px;
-  border:1px solid var(--line);
-}
-.optin h3{font-size:20px;margin-bottom:7px}
-.optin p.od{font-size:15px;color:var(--ink-soft);margin-bottom:16px}
-.optin form{display:flex;gap:9px;flex-wrap:wrap}
-.optin input[type=email]{
-  flex:1;min-width:0;width:100%;
-  font-family:'Inter';font-size:16px;
-  padding:13px 14px;border:1.5px solid var(--line);
-  border-radius:11px;background:#fff;
-  /* prevent iOS zoom */
-  font-size:16px;
-}
-.optin input[type=email]:focus{outline:none;border-color:var(--coral)}
-.optin button{
-  font-family:'Inter';font-size:15px;font-weight:600;
-  padding:13px 20px;border-radius:11px;border:none;
-  background:var(--coral);color:#fff;cursor:pointer;
-  box-shadow:0 5px 14px rgba(242,104,60,.28);
-  transition:.15s;white-space:nowrap;
-  touch-action:manipulation;
-}
-.optin button:hover{transform:translateY(-1px)}
-.optin .micro{font-size:12px;color:var(--ink-soft);margin-top:9px}
-.optin .msg{margin-top:11px;font-size:14px;font-weight:600;display:none}
-.optin .msg.ok{color:var(--mint);display:block}
-.optin .msg.err{color:var(--coral-deep);display:block}
+/* ── CALC CTA BAND ─────────────────────────────────── */
+.calc-band{background:linear-gradient(135deg,var(--ink) 0%,var(--ink-3) 100%);
+  color:#fff;position:relative;overflow:hidden}
+.calc-band::before{content:"";position:absolute;inset:0;
+  background:radial-gradient(700px 400px at 85% 20%,rgba(15,185,129,.22),transparent 60%),
+             radial-gradient(500px 320px at 10% 90%,rgba(245,165,36,.10),transparent 60%)}
+.calc-band-in{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;
+  gap:52px;align-items:center}
+@media(max-width:880px){.calc-band-in{grid-template-columns:1fr;gap:34px;text-align:center}}
+.calc-band h2{font-size:clamp(28px,4.4vw,46px);margin-bottom:16px;color:#fff}
+.calc-band p{font-size:17px;color:var(--text-inv-2);margin-bottom:28px;max-width:44ch;line-height:1.6}
+@media(max-width:880px){.calc-band p{margin-left:auto;margin-right:auto}}
+.calc-band-btns{display:flex;gap:12px;flex-wrap:wrap}
+@media(max-width:880px){.calc-band-btns{justify-content:center}}
+.calc-mini{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.11);
+  border-radius:var(--r-xl);padding:26px;backdrop-filter:blur(14px)}
+.cm-title{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--text-3);margin-bottom:18px;text-align:left}
+.cm-field{margin-bottom:14px;text-align:left}
+.cm-lbl{display:block;font-size:12px;font-weight:600;color:var(--text-inv-2);margin-bottom:7px}
+.cm-inp{width:100%;background:rgba(255,255,255,.07);border:1.5px solid rgba(255,255,255,.13);
+  border-radius:var(--r-sm);padding:14px 15px;color:#fff;font-size:16px;font-weight:600;
+  transition:border-color .2s,background .2s}
+.cm-inp:focus{outline:none;border-color:var(--mint);background:rgba(255,255,255,.11)}
+.cm-inp::placeholder{color:var(--text-3);font-weight:400}
+.cm-row{display:flex;gap:11px}
+.cm-row .cm-field{flex:1;min-width:0}
+.cm-out{background:rgba(15,185,129,.13);border:1px solid rgba(15,185,129,.3);
+  border-radius:var(--r-sm);padding:16px;text-align:center;margin:16px 0 14px}
+.cm-out-l{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--mint);margin-bottom:5px}
+.cm-out-v{font-size:26px;font-weight:800;color:#fff;letter-spacing:-.03em}
+.cm-out-s{font-size:12px;color:var(--text-inv-2);margin-top:4px}
 
-/* ── RELATED ── */
-.related{
-  margin:32px 0;padding:22px;
-  background:var(--cream-deep);border-radius:16px;border:1px solid var(--line);
-}
-.related h3{font-size:18px;margin-bottom:14px}
-.related a{
-  display:flex;align-items:center;gap:8px;
-  color:var(--coral-deep);text-decoration:none;
-  font-weight:600;font-size:15px;
-  padding:10px 0;border-bottom:1px solid var(--line);
-  min-height:44px;/* good tap target */
-  overflow-wrap:break-word;
-}
-.related a:last-child{border-bottom:none;padding-bottom:0}
-.related a:hover{color:var(--coral)}
-.rc-cat{
-  display:inline-block;font-size:10px;font-weight:700;
-  letter-spacing:.07em;text-transform:uppercase;color:var(--ink-soft);
-  background:var(--card);padding:2px 8px;border-radius:100px;
-  margin-right:4px;vertical-align:middle;white-space:nowrap;flex-shrink:0;
-}
-.disc{font-size:12.5px;color:var(--ink-soft);margin-top:20px;line-height:1.6}
+/* ── COMPARISON ────────────────────────────────────── */
+.cmp-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:48px}
+@media(max-width:820px){.cmp-grid{grid-template-columns:1fr}}
+.cmp-card{border-radius:var(--r-xl);padding:34px 30px;border:1.5px solid var(--line);
+  background:var(--paper);position:relative;transition:transform .25s,box-shadow .25s}
+.cmp-card:hover{transform:translateY(-4px);box-shadow:var(--sh-2)}
+.cmp-card.best{border-color:var(--mint);box-shadow:0 0 0 1px var(--mint),var(--sh-2)}
+.cmp-tag{position:absolute;top:-12px;left:30px;background:var(--mint);color:#fff;
+  font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  padding:6px 14px;border-radius:var(--r-full);box-shadow:var(--sh-mint)}
+.cmp-h{font-size:23px;font-weight:800;letter-spacing:-.028em;margin-bottom:6px}
+.cmp-sub{font-size:14px;color:var(--text-2);margin-bottom:22px}
+.cmp-steps{list-style:none}
+.cmp-steps li{display:flex;gap:13px;padding:13px 0;border-bottom:1px solid var(--line)}
+.cmp-steps li:last-child{border-bottom:none}
+.cmp-n{width:28px;height:28px;border-radius:9px;flex:none;
+  display:flex;align-items:center;justify-content:center;
+  font-size:12px;font-weight:800;background:var(--paper-3);color:var(--text-2)}
+.cmp-card.best .cmp-n{background:var(--mint-lite);color:var(--mint-2)}
+.cmp-nm{font-size:14.5px;font-weight:700}
+.cmp-nt{font-size:12.5px;color:var(--text-3);margin-top:1px}
+.cmp-foot{margin-top:20px;padding-top:18px;border-top:1px solid var(--line);
+  font-size:13.5px;font-weight:600}
+.cmp-card.best .cmp-foot{color:var(--mint-2)}
+.cmp-card:not(.best) .cmp-foot{color:var(--text-3)}
 
-/* ── FOOTER ── */
-footer.site{background:var(--ink);color:#c3cad9;padding:40px 0 32px}
-footer.site .fin{max-width:1060px;margin:0 auto;padding:0 24px}
-footer.site .brand{color:#fff;margin-bottom:14px}
-footer.site .flinks{display:flex;flex-wrap:wrap;gap:4px 0}
-footer.site .flinks a{
-  color:#c3cad9;text-decoration:none;font-size:14px;
-  margin-right:16px;line-height:2.4;
-}
-footer.site .flinks a:hover{color:#fff}
-footer.site .fbottom{
-  border-top:1px solid #2f3a52;margin-top:18px;padding-top:16px;
-  font-size:12.5px;color:#7c869c;
-}
-@media(max-width:480px){
-  footer.site .fin{padding:0 18px}
-  footer.site .flinks a{font-size:13px;margin-right:12px}
-}
+/* ── FEATURES ──────────────────────────────────────── */
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}
+@media(max-width:900px){.feat-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.feat-grid{grid-template-columns:1fr}}
+.feat{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:30px 26px;transition:transform .25s cubic-bezier(.16,1,.3,1),box-shadow .25s,border-color .25s}
+.feat:hover{transform:translateY(-5px);box-shadow:var(--sh-2);border-color:var(--mint)}
+.feat-ico{width:46px;height:46px;border-radius:13px;display:flex;align-items:center;
+  justify-content:center;margin-bottom:18px;font-size:21px;transition:transform .25s}
+.feat:hover .feat-ico{transform:scale(1.08) rotate(-5deg)}
+.feat h3{font-size:18px;font-weight:700;letter-spacing:-.022em;margin-bottom:8px}
+.feat p{font-size:14.5px;color:var(--text-2);line-height:1.62}
 
-  .author-box{display:flex;gap:16px;align-items:flex-start;background:var(--cream-deep);border:1px solid var(--line);border-radius:16px;padding:20px;margin:32px 0}
-  .author-avatar{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--coral),var(--amber));color:#fff;font-family:"Fraunces",serif;font-size:20px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-  .author-name{font-weight:700;font-size:15px;color:var(--ink);margin-bottom:2px}
-  .author-role{font-size:12.5px;color:var(--coral-deep);font-weight:600;margin-bottom:8px}
-  .author-desc{font-size:13.5px;color:var(--ink-soft);margin:0;line-height:1.6}
-  @media(max-width:480px){.author-box{flex-direction:column;gap:12px}}
-  .sources{margin:28px 0;padding:20px;background:var(--cream-deep);border-radius:14px;border:1px solid var(--line)}
-  .sources h3{font-family:"Inter";font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:11px;color:var(--ink-soft);margin-bottom:10px}
-  .sources ul{list-style:none;font-size:13.5px;color:var(--ink-soft)}
-  .sources li{padding:4px 0 4px 16px;position:relative}
-  .sources li::before{content:"--";position:absolute;left:0;color:var(--line)}
-  .meta-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:22px;font-size:13px;color:var(--ink-soft);padding-bottom:18px;border-bottom:1px solid var(--line)}
-  .meta-bar .al{font-weight:600;color:var(--ink);text-decoration:none}
-  .meta-bar .al:hover{color:var(--coral-deep)}
-  .meta-bar .ds{color:var(--line)}
-  .meta-bar .rt{background:var(--cream-deep);padding:3px 10px;border-radius:100px}
-  .hypo-note{background:#fff8e6;border:1px solid #f0dca0;border-radius:12px;padding:13px 16px;margin:16px 0 24px;font-size:13.5px;color:#7a6020;line-height:1.6}
-  .hypo-note strong{color:#5a4010}
-  .key-box{background:linear-gradient(135deg,#eef6f2,#f7f5f0);border:1px solid #cce4d8;border-radius:14px;padding:20px 22px;margin:28px 0}
-  .key-box h3{font-family:"Inter";font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:11px;color:var(--mint);margin-bottom:12px}
-  .key-box ul{list-style:none;font-size:15px;color:var(--ink-soft)}
-  .key-box li{padding:5px 0 5px 20px;position:relative}
-  .key-box li::before{content:"\2713";position:absolute;left:0;color:var(--mint);font-weight:700}
-  .faq-section{margin:28px 0}
-  .faq-section details{border:1px solid var(--line);border-radius:12px;margin-bottom:9px;background:var(--card);overflow:hidden}
-  .faq-section summary{padding:14px 17px;font-weight:600;font-size:15px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:11px;min-height:48px}
-  .faq-section summary::-webkit-details-marker{display:none}
-  .faq-section summary::after{content:"+";font-size:19px;color:var(--coral);font-weight:400;flex:none}
-  .faq-section details[open] summary::after{content:"\2013"}
-  .faq-section details[open] summary{border-bottom:1px solid var(--line)}
-  .faq-section .ano{padding:13px 17px 17px;color:var(--ink-soft);font-size:14.5px}
-  .comp-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:24px 0;border-radius:14px;border:1px solid var(--line)}
-  .comp-table{width:100%;border-collapse:collapse;font-size:14px;min-width:500px}
-  .comp-table th{background:var(--ink);color:#fff;padding:11px 14px;text-align:left;font-family:"Fraunces",serif;font-weight:600;white-space:nowrap}
-  .comp-table td{padding:10px 14px;border-bottom:1px solid var(--line);color:var(--ink-soft)}
-  .comp-table tr:last-child td{border-bottom:none}
-  .comp-table tr:hover td{background:var(--cream-deep)}
-  .snow-tag{display:inline-block;background:#fdeee7;color:var(--coral-deep);font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:3px 9px;border-radius:100px;margin-bottom:8px}
-  .aval-tag{display:inline-block;background:#e6f2ec;color:var(--mint);font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:3px 9px;border-radius:100px;margin-bottom:8px}
-  .method-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}
-  @media(max-width:560px){.method-cards{grid-template-columns:1fr}}
-  .method-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:var(--shadow)}
-  .method-card h3{font-size:18px;margin-bottom:8px}
-  .method-card p{font-size:14px;color:var(--ink-soft);margin-bottom:10px}
-  .method-card ul{list-style:none;font-size:13.5px}
-  .method-card li{padding:4px 0 4px 18px;position:relative;color:var(--ink-soft)}
-  .method-card li::before{content:"\2192";position:absolute;left:0;color:var(--coral)}
-  .founder-photo{width:80px;height:80px;border-radius:50%;object-fit:cover;border:3px solid var(--card);box-shadow:0 4px 14px rgba(28,36,52,.18);flex-shrink:0}
-  .author-photo{width:64px;height:64px;border-radius:50%;object-fit:cover;border:3px solid var(--card);box-shadow:0 4px 14px rgba(28,36,52,.18);flex-shrink:0}
-  .author-photo-lg{width:120px;height:120px;border-radius:50%;object-fit:cover;border:4px solid var(--line);box-shadow:0 6px 20px rgba(28,36,52,.14);display:block;margin-bottom:16px}
+/* ── SPLIT IMAGE SECTION ───────────────────────────── */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
+@media(max-width:860px){.split{grid-template-columns:1fr;gap:32px}}
+.split-img{border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--sh-3);position:relative}
+.split-img img{width:100%;height:100%;object-fit:cover;display:block}
+.split-badge{position:absolute;bottom:20px;left:20px;right:20px;
+  background:rgba(255,255,255,.94);backdrop-filter:blur(12px);
+  border-radius:var(--r-md);padding:15px 18px;display:flex;align-items:center;gap:13px;
+  box-shadow:var(--sh-2)}
+.sb-ico{width:38px;height:38px;border-radius:11px;background:var(--mint-lite);
+  display:flex;align-items:center;justify-content:center;flex:none;font-size:17px}
+.sb-t{font-size:14px;font-weight:700;letter-spacing:-.015em}
+.sb-s{font-size:12.5px;color:var(--text-2)}
+
+/* ── PERCY BUBBLE ──────────────────────────────────── */
+.pbubble{display:flex;align-items:flex-end;gap:14px;max-width:600px;margin:0 auto}
+.pbubble-box{background:var(--paper);border:1px solid var(--line);
+  border-radius:var(--r-lg);border-bottom-left-radius:6px;padding:18px 22px;
+  font-size:15px;color:var(--text-2);box-shadow:var(--sh-1);flex:1;line-height:1.6;min-width:0}
+.pbubble-box b{color:var(--text);font-weight:700}
+.pbubble-dk .pbubble-box{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.11);
+  color:var(--text-inv-2)}
+.pbubble-dk .pbubble-box b{color:#fff}
+
+/* ── LEAD MAGNET ───────────────────────────────────── */
+.lead{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.lead::before{content:"";position:absolute;inset:0;
+  background:radial-gradient(800px 480px at 20% 15%,rgba(15,185,129,.18),transparent 60%),
+             radial-gradient(600px 400px at 90% 85%,rgba(59,130,246,.12),transparent 60%)}
+.lead-in{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;
+  gap:56px;align-items:center}
+@media(max-width:880px){.lead-in{grid-template-columns:1fr;gap:36px}}
+.lead h2{font-size:clamp(28px,4.4vw,46px);color:#fff;margin-bottom:18px}
+.lead-lede{font-size:17px;color:var(--text-inv-2);line-height:1.62;margin-bottom:14px}
+.lead-lede b{color:#fff;font-weight:600}
+.lead-hl{font-family:'Fraunces',serif;font-style:italic;font-weight:600;
+  font-size:clamp(20px,2.8vw,26px);color:var(--mint);margin:20px 0;line-height:1.35}
+.lead-list{list-style:none;margin:24px 0}
+.lead-list li{display:flex;align-items:flex-start;gap:11px;padding:9px 0;
+  font-size:15px;color:var(--text-inv-2)}
+.lead-list svg{flex:none;color:var(--mint);margin-top:3px}
+.lead-form-card{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.12);
+  border-radius:var(--r-xl);padding:32px 28px;backdrop-filter:blur(16px);
+  box-shadow:0 30px 70px rgba(0,0,0,.32)}
+@media(max-width:560px){.lead-form-card{padding:26px 22px}}
+.lfc-cover{width:100%;aspect-ratio:1.55/1;border-radius:var(--r-md);
+  background:linear-gradient(150deg,var(--ink-3),var(--ink-2));
+  border:1px solid rgba(255,255,255,.1);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:10px;margin-bottom:24px;position:relative;overflow:hidden}
+.lfc-cover::after{content:"";position:absolute;inset:0;
+  background:radial-gradient(300px 200px at 70% 20%,rgba(15,185,129,.2),transparent 65%)}
+.lfc-cover-badge{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--amber);position:relative;z-index:1}
+.lfc-cover-t{font-size:clamp(17px,3vw,21px);font-weight:800;color:#fff;text-align:center;
+  letter-spacing:-.025em;line-height:1.2;position:relative;z-index:1;padding:0 20px}
+.lfc-cover-s{font-size:11.5px;color:var(--text-3);position:relative;z-index:1}
+.lead-input{width:100%;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.16);
+  border-radius:var(--r-sm);padding:16px;color:#fff;font-size:16px;margin-bottom:11px;
+  transition:border-color .2s,background .2s}
+.lead-input:focus{outline:none;border-color:var(--mint);background:rgba(255,255,255,.12)}
+.lead-input::placeholder{color:var(--text-3)}
+.lead-micro{font-size:12.5px;color:var(--text-3);text-align:center;margin-top:12px}
+.lead-msg{font-size:13.5px;font-weight:600;text-align:center;margin-top:10px;display:none}
+.lead-msg.ok{color:var(--mint);display:block}
+.lead-msg.err{color:#F87171;display:block}
+.lead-proof{display:flex;align-items:center;justify-content:center;gap:9px;
+  margin-top:18px;padding:11px 16px;background:rgba(15,185,129,.10);
+  border:1px solid rgba(15,185,129,.2);border-radius:var(--r-full);
+  font-size:12.5px;color:var(--text-inv-2);opacity:0;transition:opacity .45s}
+.lead-proof.show{opacity:1}
+.lead-proof .lp-dot{width:7px;height:7px;border-radius:50%;background:var(--mint);
+  flex:none;animation:pulseRing 2.2s infinite}
+
+/* ── FAQ ───────────────────────────────────────────── */
+.faq-list{margin-top:44px;display:flex;flex-direction:column;gap:11px}
+.faq-i{border:1px solid var(--line);border-radius:var(--r-md);background:var(--paper);
+  overflow:hidden;transition:box-shadow .2s,border-color .2s}
+.faq-i:hover{border-color:var(--line-2)}
+.faq-i[open]{box-shadow:var(--sh-1);border-color:var(--line-2)}
+.faq-i summary{padding:20px 24px;font-weight:600;font-size:16px;cursor:pointer;
+  list-style:none;display:flex;justify-content:space-between;align-items:center;
+  gap:14px;min-height:60px;letter-spacing:-.015em}
+.faq-i summary::-webkit-details-marker{display:none}
+.faq-i summary::marker{content:""}
+.faq-i summary::after{content:"";width:11px;height:11px;flex:none;
+  border-right:2px solid var(--mint);border-bottom:2px solid var(--mint);
+  transform:rotate(45deg) translateY(-3px);transition:transform .24s}
+.faq-i[open] summary::after{transform:rotate(-135deg) translateY(-3px)}
+.faq-a{padding:0 24px 22px;font-size:15px;color:var(--text-2);line-height:1.7}
+
+/* ── ARTICLES ──────────────────────────────────────── */
+.art-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+@media(max-width:1000px){.art-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.art-grid{grid-template-columns:1fr}}
+.art{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:24px;display:flex;flex-direction:column;
+  transition:transform .25s cubic-bezier(.16,1,.3,1),box-shadow .25s,border-color .25s}
+.art:hover{transform:translateY(-5px);box-shadow:var(--sh-2);border-color:var(--mint)}
+.art-c{font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--mint-2);margin-bottom:11px}
+.art h3{font-size:16.5px;font-weight:700;letter-spacing:-.02em;line-height:1.32;
+  margin-bottom:auto;padding-bottom:16px}
+.art-r{font-size:13px;font-weight:600;color:var(--text-2);display:flex;align-items:center;gap:6px}
+.art:hover .art-r{color:var(--mint-2)}
+
+/* ── FINAL CTA ─────────────────────────────────────── */
+.final{background:linear-gradient(135deg,var(--mint) 0%,var(--mint-2) 100%);
+  color:#fff;text-align:center;position:relative;overflow:hidden}
+.final::before{content:"";position:absolute;inset:0;
+  background:radial-gradient(600px 400px at 20% 20%,rgba(255,255,255,.14),transparent 60%),
+             radial-gradient(500px 340px at 85% 85%,rgba(10,16,32,.16),transparent 60%)}
+.final-in{position:relative;z-index:1}
+.final h2{font-size:clamp(30px,5.2vw,54px);color:#fff;margin-bottom:18px;max-width:18ch;
+  margin-left:auto;margin-right:auto}
+.final p{font-size:18px;color:rgba(255,255,255,.88);max-width:44ch;
+  margin:0 auto 34px;line-height:1.6}
+.final-btns{display:flex;gap:13px;justify-content:center;flex-wrap:wrap}
+.btn-white{background:#fff;color:var(--mint-2);box-shadow:0 8px 28px rgba(0,0,0,.16)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(0,0,0,.22)}
+
+/* ── AD ────────────────────────────────────────────── */
+.ad-wrap{padding:36px 0;background:var(--paper-2)}
+.ad-box{border:1px dashed var(--line-2);border-radius:var(--r-md);min-height:92px;
+  display:flex;align-items:center;justify-content:center;color:var(--text-3);
+  font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+
+/* ── FOOTER ────────────────────────────────────────── */
+footer{background:var(--ink);color:var(--text-inv-2);padding:64px 0 30px}
+.ft-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:44px}
+@media(max-width:820px){.ft-top{grid-template-columns:1fr 1fr;gap:32px}}
+@media(max-width:480px){.ft-top{grid-template-columns:1fr;gap:26px}}
+.ft-brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;
+  color:#fff;letter-spacing:-.03em;margin-bottom:14px}
+.ft-desc{font-size:14px;line-height:1.65;max-width:34ch;color:var(--text-3)}
+.ft-h{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:#fff;margin-bottom:16px}
+.ft-l{display:flex;flex-direction:column;gap:11px}
+.ft-l a{font-size:14px;color:var(--text-inv-2);transition:color .15s}
+.ft-l a:hover{color:#fff}
+.ft-bot{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  font-size:13px;color:var(--text-3)}
+
+/* ── UTILITY ───────────────────────────────────────── */
+.bg-mint{background:var(--mint-lite);color:var(--mint-2)}
+.bg-amber{background:var(--amber-lite);color:#B45309}
+.bg-sky{background:var(--sky-lite);color:#1D4ED8}
+.bg-paper{background:var(--paper-3);color:var(--text-2)}
+
+
+/* ══ ARTICLE ══ */
+.a-hero{background:var(--ink);color:#fff;position:relative;overflow:hidden;padding:56px 0 60px}
+.a-hero::before{content:"";position:absolute;inset:0;
+  background:radial-gradient(760px 440px at 80% 6%,rgba(15,185,129,.18),transparent 62%),
+             radial-gradient(520px 340px at 8% 94%,rgba(59,130,246,.11),transparent 60%)}
+.a-hero-in{position:relative;z-index:2;max-width:720px;margin:0 auto;padding:0 28px}
+@media(max-width:560px){.a-hero-in{padding:0 20px}}
+.a-cat{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:800;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--mint);
+  background:rgba(15,185,129,.13);border:1px solid rgba(15,185,129,.24);
+  padding:7px 15px;border-radius:var(--r-full);margin-bottom:20px}
+.a-hero h1{font-size:clamp(29px,5vw,47px);letter-spacing:-.04em;line-height:1.08;margin-bottom:18px}
+.a-dek{font-size:clamp(16px,2vw,19px);color:var(--text-inv-2);line-height:1.6;margin-bottom:24px}
+.a-meta{display:flex;align-items:center;gap:13px;flex-wrap:wrap;
+  padding-top:20px;border-top:1px solid rgba(255,255,255,.1)}
+.a-av{width:40px;height:40px;border-radius:50%;object-fit:cover;
+  border:2px solid rgba(255,255,255,.16);flex:none}
+.a-by{font-size:14px;font-weight:600;color:#fff}
+.a-by a{color:#fff}
+.a-by a:hover{color:var(--mint)}
+.a-when{font-size:12.5px;color:var(--text-3)}
+.a-read{margin-left:auto;font-size:12px;font-weight:700;color:var(--text-inv-2);
+  background:rgba(255,255,255,.07);padding:6px 13px;border-radius:var(--r-full);white-space:nowrap}
+
+/* body */
+.a-wrap{max-width:720px;margin:0 auto;padding:0 28px}
+@media(max-width:560px){.a-wrap{padding:0 20px}}
+.a-body{padding:52px 0 40px}
+.a-body>p{font-size:17.5px;color:var(--text-2);line-height:1.78;margin-bottom:22px}
+.a-body>p:first-of-type{font-size:19px;color:var(--text)}
+.a-body p b,.a-body li b{color:var(--text);font-weight:700}
+.a-body h2{font-size:clamp(24px,3.6vw,34px);letter-spacing:-.032em;margin:52px 0 18px;line-height:1.16}
+.a-body h3{font-size:clamp(19px,2.6vw,23px);letter-spacing:-.026em;margin:34px 0 12px}
+.a-body a{color:var(--mint-2);font-weight:600;border-bottom:1px solid rgba(15,185,129,.3)}
+.a-body a:hover{border-bottom-color:var(--mint)}
+.a-body ul,.a-body ol{margin:0 0 22px;padding-left:0;list-style:none}
+.a-body ul li{font-size:17px;color:var(--text-2);line-height:1.72;
+  padding:8px 0 8px 30px;position:relative}
+.a-body ul li::before{content:"";position:absolute;left:6px;top:19px;
+  width:7px;height:7px;border-radius:50%;background:var(--mint)}
+.a-body ol{counter-reset:ol}
+.a-body ol li{counter-increment:ol;font-size:17px;color:var(--text-2);line-height:1.72;
+  padding:8px 0 8px 38px;position:relative}
+.a-body ol li::before{content:counter(ol);position:absolute;left:0;top:10px;
+  width:25px;height:25px;border-radius:8px;background:var(--mint-lite);color:var(--mint-2);
+  font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center}
+
+/* pull quote */
+.a-pull{background:linear-gradient(150deg,var(--mint-lite),var(--paper-2));
+  border-left:4px solid var(--mint);border-radius:0 var(--r-lg) var(--r-lg) 0;
+  padding:28px 30px;margin:36px 0}
+@media(max-width:560px){.a-pull{padding:22px 20px}}
+.a-pull p{font-family:'Fraunces',serif;font-style:italic;font-weight:600;
+  font-size:clamp(19px,2.6vw,23px);color:var(--mint-2);line-height:1.42;margin:0}
+
+/* key box */
+.a-key{background:var(--ink);border-radius:var(--r-lg);padding:30px 32px;margin:38px 0;color:#fff}
+@media(max-width:560px){.a-key{padding:24px 22px}}
+.a-key-t{font-size:12px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--mint);margin-bottom:16px}
+.a-key ul{list-style:none;margin:0;padding:0}
+.a-key li{display:flex;gap:12px;align-items:flex-start;padding:10px 0;
+  border-bottom:1px solid rgba(255,255,255,.08);font-size:15.5px;color:var(--text-inv-2);line-height:1.6}
+.a-key li:last-child{border-bottom:none}
+.a-key li::before{content:none}
+.a-key li i{width:21px;height:21px;border-radius:6px;flex:none;background:rgba(15,185,129,.17);
+  color:var(--mint);display:flex;align-items:center;justify-content:center;
+  font-style:normal;font-size:11px;font-weight:800;margin-top:2px}
+.a-key li b{color:#fff}
+
+/* table */
+.a-tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:30px 0;
+  border:1px solid var(--line);border-radius:var(--r-md)}
+.a-tbl{width:100%;border-collapse:collapse;font-size:14.5px;min-width:440px}
+.a-tbl th{background:var(--ink);color:#fff;padding:13px 16px;text-align:left;
+  font-weight:700;font-size:13px;white-space:nowrap}
+.a-tbl td{padding:12px 16px;border-bottom:1px solid var(--line);color:var(--text-2);white-space:nowrap}
+.a-tbl tr:last-child td{border-bottom:none}
+.a-tbl tr:last-child td{font-weight:700;color:var(--text);background:var(--paper-2)}
+
+/* callout */
+.a-note{display:flex;gap:14px;background:var(--amber-lite);border-radius:var(--r-md);
+  padding:20px 22px;margin:30px 0;align-items:flex-start}
+.a-note i{width:26px;height:26px;border-radius:8px;background:var(--amber);color:#fff;
+  flex:none;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:14px}
+.a-note p{font-size:15px;color:#7C4A03;line-height:1.65;margin:0!important}
+.a-note p b{color:#5C3703}
+
+/* tool card */
+.a-tool{background:linear-gradient(150deg,var(--ink) 0%,var(--ink-3) 100%);
+  border-radius:var(--r-xl);padding:34px 32px;margin:44px 0;color:#fff;
+  position:relative;overflow:hidden}
+@media(max-width:560px){.a-tool{padding:26px 22px}}
+.a-tool::before{content:"";position:absolute;inset:0;
+  background:radial-gradient(460px 300px at 82% 12%,rgba(15,185,129,.2),transparent 64%)}
+.a-tool>*{position:relative;z-index:1}
+.a-tool h3{font-size:clamp(20px,3vw,26px);color:#fff;margin:0 0 10px;letter-spacing:-.03em}
+.a-tool p{font-size:15.5px;color:var(--text-inv-2);line-height:1.62;margin-bottom:20px}
+
+/* faq */
+.a-faq{margin:44px 0}
+.a-faq h2{margin-bottom:20px}
+.a-faq details{border:1px solid var(--line);border-radius:var(--r-md);margin-bottom:10px;
+  background:var(--paper);overflow:hidden}
+.a-faq summary{padding:18px 22px;font-weight:600;font-size:16px;cursor:pointer;list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:13px;min-height:56px;
+  letter-spacing:-.015em}
+.a-faq summary::-webkit-details-marker{display:none}
+.a-faq summary::marker{content:""}
+.a-faq summary::after{content:"";width:10px;height:10px;flex:none;
+  border-right:2px solid var(--mint);border-bottom:2px solid var(--mint);
+  transform:rotate(45deg) translateY(-3px);transition:transform .24s}
+.a-faq details[open] summary::after{transform:rotate(-135deg) translateY(-3px)}
+.a-faq .fa{padding:0 22px 20px;font-size:15px;color:var(--text-2);line-height:1.7}
+
+/* sources + author */
+.a-src{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r-md);
+  padding:22px 24px;margin:36px 0}
+.a-src-t{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--text-3);margin-bottom:12px}
+.a-src ul{list-style:none;margin:0;padding:0}
+.a-src li{font-size:13.5px;color:var(--text-2);padding:5px 0 5px 16px;position:relative;line-height:1.55}
+.a-src li::before{content:"";position:absolute;left:0;top:13px;width:6px;height:1.5px;background:var(--line-2)}
+
+.a-auth{display:flex;gap:18px;background:var(--paper);border:1px solid var(--line);
+  border-radius:var(--r-lg);padding:26px;margin:36px 0;align-items:flex-start}
+@media(max-width:520px){.a-auth{flex-direction:column;gap:14px}}
+.a-auth img{width:56px;height:56px;border-radius:50%;object-fit:cover;flex:none;
+  border:2px solid var(--line)}
+.a-auth-n{font-size:16px;font-weight:800;letter-spacing:-.02em}
+.a-auth-r{font-size:12.5px;color:var(--mint-2);font-weight:700;margin-bottom:8px}
+.a-auth-b{font-size:14px;color:var(--text-2);line-height:1.65;margin:0}
+
+/* share */
+.a-share{display:flex;align-items:center;gap:9px;flex-wrap:wrap;
+  padding:20px 22px;background:var(--paper-2);border:1px solid var(--line);
+  border-radius:var(--r-md);margin:36px 0}
+.a-share-l{font-size:13.5px;font-weight:700;color:var(--text-2);margin-right:auto}
+.a-sb{width:38px;height:38px;border-radius:50%;display:inline-flex;align-items:center;
+  justify-content:center;font-size:15px;border:none;cursor:pointer;color:#fff;
+  transition:transform .18s}
+.a-sb:hover{transform:translateY(-2px)}
+.sb-p{background:#E60023}.sb-f{background:#1877F2;font-family:Georgia,serif;font-weight:800}
+.sb-x{background:#000}.sb-w{background:#25D366}.sb-c{background:var(--ink)}
+.a-copied{font-size:12.5px;color:var(--mint-2);font-weight:700;display:none}
+
+/* related */
+.a-rel{margin:40px 0}
+.a-rel-t{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--text-3);margin-bottom:16px}
+.a-rel-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.a-rel-grid{grid-template-columns:1fr}}
+.a-rel-c{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-md);
+  padding:20px;transition:transform .22s,box-shadow .22s,border-color .22s}
+.a-rel-c:hover{transform:translateY(-3px);box-shadow:var(--sh-2);border-color:var(--mint)}
+.a-rel-cat{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--mint-2);margin-bottom:8px}
+.a-rel-h{font-size:15.5px;font-weight:700;letter-spacing:-.02em;line-height:1.35}
+
+.a-disc{font-size:12.5px;color:var(--text-3);line-height:1.65;
+  padding-top:22px;border-top:1px solid var(--line);margin-top:8px}
+.a-disc a{color:var(--text-2);font-weight:600}
+
+/* progress bar */
+.a-prog{position:fixed;top:0;left:0;height:3px;background:var(--mint);z-index:300;
+  width:0;transition:width .1s linear}
+
+/* ══ BLOG INDEX ══ */
+.b-hero{background:var(--ink);color:#fff;position:relative;overflow:hidden;padding:64px 0 68px}
+.b-hero::before{content:"";position:absolute;inset:0;
+  background:radial-gradient(780px 460px at 78% 5%,rgba(15,185,129,.2),transparent 62%),
+             radial-gradient(560px 360px at 8% 95%,rgba(59,130,246,.12),transparent 60%)}
+.b-hero-in{position:relative;z-index:2;text-align:center}
+.b-hero h1{font-size:clamp(32px,5.4vw,54px);letter-spacing:-.042em;margin:0 auto 16px;max-width:16ch}
+.b-hero p{font-size:clamp(16px,1.9vw,19px);color:var(--text-inv-2);max-width:48ch;
+  margin:0 auto;line-height:1.6}
+.b-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:8px}
+@media(max-width:920px){.b-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.b-grid{grid-template-columns:1fr}}
+.b-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:28px 26px;display:flex;flex-direction:column;
+  transition:transform .26s cubic-bezier(.16,1,.3,1),box-shadow .26s,border-color .26s}
+.b-card:hover{transform:translateY(-6px);box-shadow:var(--sh-2);border-color:var(--mint)}
+.b-card.feat{grid-column:span 2;background:linear-gradient(150deg,var(--ink),var(--ink-3));
+  color:#fff;border-color:transparent;position:relative;overflow:hidden}
+@media(max-width:600px){.b-card.feat{grid-column:span 1}}
+.b-card.feat::before{content:"";position:absolute;inset:0;
+  background:radial-gradient(400px 260px at 84% 14%,rgba(15,185,129,.22),transparent 64%)}
+.b-card.feat>*{position:relative;z-index:1}
+.b-cat{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--mint-2);background:var(--mint-lite);
+  padding:5px 11px;border-radius:var(--r-full);margin-bottom:14px;align-self:flex-start}
+.b-card.feat .b-cat{color:var(--mint);background:rgba(15,185,129,.15);
+  border:1px solid rgba(15,185,129,.25)}
+.b-card h2{font-size:18px;font-weight:700;letter-spacing:-.025em;line-height:1.3;margin-bottom:9px}
+.b-card.feat h2{font-size:clamp(22px,3.2vw,29px);letter-spacing:-.032em;color:#fff}
+.b-card p{font-size:14.5px;color:var(--text-2);line-height:1.6;margin-bottom:auto;padding-bottom:16px}
+.b-card.feat p{color:var(--text-inv-2);font-size:16px}
+.b-rd{font-size:13px;font-weight:700;color:var(--text-2);display:flex;align-items:center;gap:6px}
+.b-card:hover .b-rd{color:var(--mint-2)}
+.b-card.feat .b-rd{color:var(--mint)}
+.b-time{font-size:12px;color:var(--text-3);margin-left:auto}
+
 </style>
 </head>
 <body>
-<header class="site" style="position:relative">
+<header class="nav">
   <input type="checkbox" id="navTog">
-  <nav class="nav">
-    <a href="/" class="brand"><span class="dot"></span>Clearpath</a>
-    <div class="nav-links">
-      <a href="/debt/index.html">Tracker</a>
-      <a href="/debt/blog.html">Guides</a>
+  <div class="nav-in">
+    <a href="/" class="logo"><span class="logo-mark"></span>Clearpath</a>
+    <nav class="nav-links">
+      <a href="/debt/index.html">Calculator</a>
+      <a href="/guide.html">Free guide</a>
+      <a href="/debt/blog.html" style="color:var(--text)">Guides</a>
       <a href="/debt/about.html">About</a>
-      <a href="/debt/contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="/debt/index.html" class="btn btn-mint btn-sm">Check my date <span class="arw">&rarr;</span></a>
+      <label for="navTog" class="burger" aria-label="Menu"><span></span></label>
     </div>
-    <label for="navTog" class="hmb" aria-label="Menu"><span></span></label>
-  </nav>
-  <div class="ndrop">
-    <a href="/debt/index.html">Tracker</a>
+  </div>
+  <div class="drop">
+    <a href="/debt/index.html">Calculator</a>
+    <a href="/guide.html">Free guide</a>
     <a href="/debt/blog.html">Guides</a>
     <a href="/debt/about.html">About</a>
     <a href="/debt/contact.html">Contact</a>
+    <div class="drop-cta"><a href="/debt/index.html" class="btn btn-mint btn-block">Check my debt-free date</a></div>
   </div>
 </header>
-<main class="article">
-  <div class="blob blob-1"></div><div class="blob blob-2"></div>
+<section class="a-hero">
+  <div class="a-hero-in">
+    <span class="a-cat">Real example</span>
+    <h1>How the Debt Snowball Method Works, With Real Numbers</h1>
+    <p class="a-dek">Four debts, ten thousand dollars, eighteen months. Here is what each month actually looked like, including the stretch in the middle where nothing seemed to happen.</p>
+    <div class="a-meta">
+      <img src="/img-busayo-profile.jpg" alt="Oluwaseun Busayo Amusan" class="a-av">
+      <div>
+        <div class="a-by"><a href="/debt/author.html">Oluwaseun Busayo Amusan</a></div>
+        <div class="a-when">Published August 2026 &nbsp;&middot;&nbsp; Updated August 2026</div>
+      </div>
+      <span class="a-read">11 min read</span>
+    </div>
+  </div>
+</section>
+<article class="a-wrap">
+  <div class="a-body">
+
+<p>Most explanations of the debt snowball stop at the definition. Smallest balance first, roll the payment, repeat. Which is accurate, and also completely useless if you are staring at four balances wondering where to start on Monday.</p>
+
+<p>So instead of explaining it again, let me walk you through what it actually looks like. Month by month. Including the boring bit in the middle that nobody writes about, which is honestly the part that decides whether you finish.</p>
+
+<div class="a-note"><i>&#9432;</i><p><b>Quick note.</b> The example below is made up to show how the method works in practice. The numbers are realistic but they are not a real person, and your own results will look different depending on your balances, rates, and how much you can put in.</p></div>
+
+<h2>Where this person started</h2>
+
+<p>Picture someone with four debts. Not because they were reckless, but because life happened. A stretch of lower income, a car that needed fixing twice in one year, and a couple of years of paying minimums and hoping it would sort itself out.</p>
+
+<p>One evening they finally wrote it all down.</p>
+
+<div class="a-tbl-wrap"><table class="a-tbl">
+<thead><tr><th>Debt</th><th>Balance</th><th>Rate</th><th>Minimum</th></tr></thead>
+<tbody>
+<tr><td>Store card</td><td>$700</td><td>26%</td><td>$35</td></tr>
+<tr><td>Credit card</td><td>$2,300</td><td>21%</td><td>$60</td></tr>
+<tr><td>Personal loan</td><td>$3,000</td><td>14%</td><td>$95</td></tr>
+<tr><td>Car loan</td><td>$4,000</td><td>8%</td><td>$150</td></tr>
+<tr><td>Total</td><td>$10,000</td><td></td><td>$340</td></tr>
+</tbody></table></div>
+
+<p>Ten thousand dollars, and three hundred and forty leaving the account every month just to stay level.</p>
+
+<p><b>Writing it out was the worst part.</b> For about ten minutes it felt significantly worse than not knowing. Then it flipped, because a number you can see is a problem you can work on. A vague dread is not.</p>
+
+<h2>Finding the extra money</h2>
+
+<p>Next came the unglamorous bit. They went through three months of bank statements and found roughly $260 a month that was leaving without doing much for them. A streaming service nobody watched. Takeaway five nights a week instead of two. A gym membership from a January that had long since passed.</p>
+
+<p>Nothing dramatic. No moving house, no selling the car. Just $260 that had been quietly leaking.</p>
+
+<p>Add that to the $340 already going out on minimums and you get about $600 a month to work with.</p>
+
+<h2>Why they picked the snowball</h2>
+
+<p>The avalanche would have saved more money. Paying the 26% store card and then the 21% credit card in strict rate order is mathematically tidier.</p>
+
+<p>But this person had tried to clear their debt twice before and stopped both times. Once at month three, once at month five. So the problem was never the maths. It was staying in the game long enough for the maths to matter.</p>
+
+<div class="a-pull"><p>They needed a win they could see, not an optimisation they had to take on faith.</p></div>
+
+<p>So: smallest balance first. The $700 store card went to the top of the list.</p>
+
+<div class="a-tool">
+  <h3>See your own debt-free date</h3>
+  <p>Reading about it only gets you so far. Put your actual numbers in and you will have a real date in about five minutes. Nothing gets stored, and there is no signup.</p>
+  <a href="/debt/index.html" class="btn btn-mint">Open the free calculator <span class="arw">&rarr;</span></a>
+</div>
+
+<h2>Months one and two: the first win</h2>
+
+<p>Every spare pound went at the store card. Minimums on everything else, no exceptions, because missing one would have triggered fees and undone the whole point.</p>
+
+<p>Six weeks in, the balance hit zero.</p>
+
+<p>Seven hundred dollars is not a life-changing amount of money. But for the first time in about three years, a debt had gone away completely rather than just shrinking a bit. The list got shorter. That mattered more than the sum involved.</p>
+
+<h2>How the snowball actually grows</h2>
+
+<p>Here is the part people misunderstand. When the store card cleared, that $35 minimum did not go back into normal spending. It got added to the credit card payment.</p>
+
+<p>So the credit card went from receiving $60 a month to receiving $60 plus $35 plus the $260 extra. A balance that had barely moved in two years started dropping properly.</p>
+
+<div class="a-tbl-wrap"><table class="a-tbl">
+<thead><tr><th>Stage</th><th>Target</th><th>Total going at it</th></tr></thead>
+<tbody>
+<tr><td>Months 1 to 2</td><td>Store card</td><td>$295</td></tr>
+<tr><td>Months 3 to 7</td><td>Credit card</td><td>$355</td></tr>
+<tr><td>Months 8 to 13</td><td>Personal loan</td><td>$450</td></tr>
+<tr><td>Months 14 to 18</td><td>Car loan</td><td>$600</td></tr>
+</tbody></table></div>
+
+<p>That growing number is the whole idea. It starts small and gets heavier every time something clears, which is why the last debt tends to fall much faster than people expect.</p>
+
+<h2>The middle, which nobody writes about</h2>
+
+<p>The credit card cleared around month seven. Then came the personal loan, and this is where it got hard.</p>
+
+<p>Three thousand dollars, no quick win in sight, and about six months of making the same payment into a number that came down slowly. The novelty of starting had worn off. The finish line was still a long way out.</p>
+
+<p><b>This is where both previous attempts had died.</b> Not because the plan stopped working, but because progress stopped feeling like progress.</p>
+
+<p>What got them through was writing it down every month. Balance, payment, projected date. Even when it felt like nothing was moving, the sheet said otherwise. That is a small thing but it is the difference between month nine and quitting.</p>
+
+<h2>The last stretch</h2>
+
+<p>Personal loan gone around month thirteen. Only the car loan left, and by now the full $600 was hitting it every month.</p>
+
+<p>Four thousand dollars that had felt permanent for years fell in under five months. Final payment went out at month eighteen.</p>
+
+<div class="a-key">
+  <div class="a-key-t">What actually made the difference</div>
+  <ul>
+    <li><i>1</i><span><b>Writing it all down.</b> Hidden debt always feels bigger than it is. A number on a page is workable.</span></li>
+    <li><i>2</i><span><b>Getting a fast first win.</b> Six weeks to a zero balance is proof, and proof carries you through the dull months.</span></li>
+    <li><i>3</i><span><b>Tracking every month.</b> When motivation went, the sheet was the only evidence it was working. That was enough.</span></li>
+    <li><i>4</i><span><b>Having a small buffer.</b> A car repair in month ten would have ended it. A few hundred set aside absorbed it instead.</span></li>
+  </ul>
+</div>
+
+<h2>What they would do differently</h2>
+
+<p>Two things, and they said both without hesitation.</p>
+
+<p><b>Build the buffer first.</b> They went aggressive from day one with nothing set aside, and got lucky that the expensive month landed when they had a bit of slack. Five hundred to a thousand held back would have removed that risk entirely.</p>
+
+<p><b>Start sooner.</b> The maths was never the hard part. The two years of not looking cost more than the interest did.</p>
+
+<h2>Trying this yourself</h2>
+
+<p>Your numbers will not match these. That is fine, because the method does not care about the amounts.</p>
+
+<p>Write down every debt. Order them smallest balance to largest. Work out what you can add on top of the minimums, even if it is thirty dollars. Point all of it at the top one. When it clears, move that whole payment down to the next.</p>
+
+<p>That is the entire thing. It is not clever, but it works often enough that it is worth doing properly.</p>
+
+<div class="a-tool" style="background:linear-gradient(150deg,#16223A,#0B1220)">
+  <h3>Want the whole system?</h3>
+  <p>The free kit covers three things: clearing your debt in the right order, building a budget that survives a bad month, and bringing in extra money online so it all finishes sooner.</p>
+  <a href="/guide.html" class="btn btn-amber">Get the free kit <span class="arw">&rarr;</span></a>
+</div>
+
+  </div>
+  <div class="a-share">
+  <span class="a-share-l">Found this useful? Pass it on.</span>
+  <a class="a-sb sb-p" target="_blank" rel="noopener" aria-label="Pinterest" href="https://pinterest.com/pin/create/button/?url=https://www.clearpath.click/debt/debt-snowball-real-example.html&description=How+the+Debt+Snowball+Method+Works,+With+Real+Numbers">&#128204;</a>
+  <a class="a-sb sb-f" target="_blank" rel="noopener" aria-label="Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://www.clearpath.click/debt/debt-snowball-real-example.html">f</a>
+  <a class="a-sb sb-x" target="_blank" rel="noopener" aria-label="X" href="https://twitter.com/intent/tweet?url=https://www.clearpath.click/debt/debt-snowball-real-example.html&text=How+the+Debt+Snowball+Method+Works,+With+Real+Numbers">&#120143;</a>
+  <a class="a-sb sb-w" target="_blank" rel="noopener" aria-label="WhatsApp" href="https://api.whatsapp.com/send?text=How+the+Debt+Snowball+Method+Works,+With+Real+Numbers+https://www.clearpath.click/debt/debt-snowball-real-example.html">&#128172;</a>
+  <button class="a-sb sb-c" onclick="cpCopy(this)" aria-label="Copy link">&#128279;</button>
+  <span class="a-copied">Copied</span>
+</div>
+  <div class="a-src"><div class="a-src-t">Sources</div><ul><li>Consumer Financial Protection Bureau, guidance on managing and repaying debt</li><li>National Foundation for Credit Counseling, debt repayment education</li><li>Federal Reserve, Survey of Household Economics and Decisionmaking</li></ul></div>
+  <div class="a-auth">
+  <img src="/img-busayo-profile.jpg" alt="Oluwaseun Busayo Amusan">
+  <div>
+    <div class="a-auth-n">Oluwaseun Busayo Amusan</div>
+    <div class="a-auth-r">Founder, Clearpath</div>
+    <p class="a-auth-b">I build financial tools for a living, most recently at YALO Technologies where I worked on making credit and financing reachable for ordinary people. I started Clearpath because the gap between knowing you should pay off debt and knowing what to do on Monday morning is bigger than most advice admits.</p>
+  </div>
+</div>
+  <div class="a-rel"><div class="a-rel-t">Read next</div><div class="a-rel-grid"><a href="/debt/snowball-vs-avalanche.html" class="a-rel-c"><div class="a-rel-cat">Strategy</div><div class="a-rel-h">Debt Snowball vs Avalanche: Which One Should You Pick?</div></a><a href="/debt/how-to-start-debt-snowball.html" class="a-rel-c"><div class="a-rel-cat">Getting started</div><div class="a-rel-h">How to Actually Start the Debt Snowball This Week</div></a><a href="/debt/find-extra-money-for-debt.html" class="a-rel-c"><div class="a-rel-cat">Extra money</div><div class="a-rel-h">7 Realistic Ways to Find Extra Money for Debt</div></a><a href="/debt/how-to-stop-living-paycheck-to-paycheck.html" class="a-rel-c"><div class="a-rel-cat">Budgeting</div><div class="a-rel-h">How to Stop Living Paycheck to Paycheck</div></a></div></div>
+  <p class="a-disc">This article is general information, not financial advice. Your situation is your own and it is worth talking to a qualified professional before making a big money decision. See the <a href="/debt/disclaimer.html">full disclaimer</a>.</p>
+</article>
+<div style="height:56px"></div>
+<footer>
   <div class="wrap">
-    <span class="eyebrow">Debt payoff</span>
-    <h1>How the Debt Snowball Method Works: A Complete Step-by-Step Example</h1>
-    <div class="meta-bar">
-  <a href="/debt/author.html" class="al">Oluwaseun Busayo Amusan</a>
-  <span class="ds">|</span>
-  <span>Published August 2026</span>
-  <span class="ds">|</span>
-  <span>Updated August 2026</span>
-  <span class="ds">|</span>
-  <span class="rt">12 min read</span>
-</div>
-    <p class="lede">A complete walk-through of the debt snowball method in action. Four debts. Eighteen months. Here is exactly what happened, month by month, including the hard parts.</p>
-    <div class="prose">
-
-    <div class="hypo-note"><strong>Please note:</strong> The scenario below is hypothetical and created to illustrate how the debt snowball method works in practice. Real names and situations are not used. Individual results will vary based on income, interest rates, and consistency.</div>
-
-    <div class="percy-row rev"><svg viewBox="0 0 160 190" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:46px;flex:none;display:block;animation:pengbob 4s ease-in-out infinite">
-  <path d="M44 96 C28 104 26 128 36 140 C42 146 50 142 50 132 Z" fill="#2a3550" style="transform-origin:44px 118px;animation:pwave 3.5s ease-in-out infinite"/>
-  <path d="M116 96 C132 104 134 128 124 140 C118 146 110 142 110 132 Z" fill="#2a3550"/>
-  <path d="M80 34 C112 34 126 62 126 104 C126 146 108 168 80 168 C52 168 34 146 34 104 C34 62 48 34 80 34 Z" fill="#1c2434"/>
-  <path d="M80 62 C100 62 110 82 110 108 C110 138 98 154 80 154 C62 154 50 138 50 108 C50 82 60 62 80 62 Z" fill="#faf6ef"/>
-  <circle cx="66" cy="86" r="8.5" fill="#fff"/><circle cx="94" cy="86" r="8.5" fill="#fff"/>
-  <circle cx="67.5" cy="87" r="4.2" fill="#1c2434"/><circle cx="95.5" cy="87" r="4.2" fill="#1c2434"/>
-  <circle cx="69" cy="85" r="1.4" fill="#fff"/><circle cx="97" cy="85" r="1.4" fill="#fff"/>
-  <rect class="peyelid" x="57" y="78" width="18" height="10" rx="5" fill="#1c2434"/>
-  <rect class="peyelid" x="85" y="78" width="18" height="10" rx="5" fill="#1c2434"/>
-  <path d="M80 96 L90 106 L80 114 L70 106 Z" fill="#f2683c"/>
-  <ellipse cx="55" cy="102" rx="5" ry="3" fill="#f6c9c9" opacity=".5"/>
-  <ellipse cx="105" cy="102" rx="5" ry="3" fill="#f6c9c9" opacity=".5"/>
-  <ellipse cx="66" cy="172" rx="14" ry="6" fill="#f7a23b"/>
-  <ellipse cx="94" cy="172" rx="14" ry="6" fill="#f7a23b"/>
-</svg><div class="percy-bubble">This is one of the most practical things I can show you. Not theory. A real-world walk-through with actual numbers. Take your time with it.</div></div>
-
-    <p>Most explanations of the debt snowball method stop at the definition.</p>
-    <p>Pay smallest balance first. Roll the payment. Repeat.</p>
-    <p>That makes sense on paper. But it does not show you what it actually feels like month by month. It does not show you the moment the first balance hits zero, or what happens when progress feels invisible for weeks at a time, or how the numbers change as the snowball grows.</p>
-    <p>This article does all of that.</p>
-    <p>We are going to walk through a complete hypothetical scenario, from the first day someone decides to get serious about debt, all the way to the moment they make their final payment.</p>
-
-    <h2>The starting point</h2>
-    <p>Imagine someone who has been carrying four debts for several years. Not because they were careless. Life happened. A period of reduced income, some unexpected costs, and a few years of paying minimums and hoping things would sort themselves out.</p>
-    <p>One day they sit down and write everything out for the first time.</p>
-    <div class="table-wrap">
-      <table class="cmp">
-        <thead><tr><th>Debt</th><th>Balance</th><th>Rate</th><th>Min Payment</th></tr></thead>
-        <tbody>
-          <tr><td>Store Card</td><td>$700</td><td>26%</td><td>$35</td></tr>
-          <tr><td>Credit Card</td><td>$2,300</td><td>21%</td><td>$60</td></tr>
-          <tr><td>Personal Loan</td><td>$3,000</td><td>14%</td><td>$95</td></tr>
-          <tr><td>Car Loan</td><td>$4,000</td><td>8%</td><td>$150</td></tr>
-          <tr><td><strong>Total</strong></td><td><strong>$10,000+</strong></td><td></td><td><strong>$340/month</strong></td></tr>
-        </tbody>
-      </table>
+    <div class="ft-top">
+      <div>
+        <div class="ft-brand"><span class="logo-mark"></span>Clearpath</div>
+        <p class="ft-desc">Free tools and honest guides to help you understand your debt, build a payoff plan, and get back in control of your money.</p>
+      </div>
+      <div>
+        <div class="ft-h">Tools</div>
+        <div class="ft-l">
+          <a href="/debt/index.html">Debt calculator</a>
+          <a href="/guide.html">Free guide</a>
+          <a href="/debt/blog.html">All guides</a>
+        </div>
+      </div>
+      <div>
+        <div class="ft-h">Company</div>
+        <div class="ft-l">
+          <a href="/debt/about.html">About</a>
+          <a href="/debt/author.html">Author</a>
+          <a href="/debt/contact.html">Contact</a>
+          <a href="/debt/editorial-policy.html">Editorial policy</a>
+        </div>
+      </div>
+      <div>
+        <div class="ft-h">Legal</div>
+        <div class="ft-l">
+          <a href="/debt/privacy.html">Privacy</a>
+          <a href="/debt/terms.html">Terms</a>
+          <a href="/debt/disclaimer.html">Disclaimer</a>
+        </div>
+      </div>
     </div>
-    <p>Ten thousand dollars. Three hundred and forty dollars leaving the account every month just to stand still.</p>
-    <p>Writing it all down feels uncomfortable at first. But it is also clarifying. For years the debt had felt like a vague, shapeless problem. Now it has specific numbers. And specific numbers can be worked with.</p>
-
-    <div class="img-wrap rev"><img src="/img-how-i-paid-off.jpg" alt="A person at a kitchen table reviewing their finances with a laptop and financial papers spread out in front of them" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;border-radius:16px;box-shadow:0 1px 2px rgba(28,36,52,.04),0 8px 28px rgba(28,36,52,.06)"></div>
-
-    <h2>Finding the extra money</h2>
-    <p>The next step is reviewing spending honestly. Not to judge past decisions. To find room to manoeuvre.</p>
-    <p>After looking through bank statements, this person finds they can free up about $260 extra a month. Not from dramatic sacrifice. A streaming service they barely use. Takeout reduced from five times a week to two. A few impulse buys cut out. Small things that feel minor individually but add up quickly.</p>
-    <p>Combined with the $340 already going to minimums, that gives them roughly $600 a month to attack the debt.</p>
-    <p>Now they need a strategy.</p>
-
-    <h2>Why they choose the debt snowball</h2>
-    <p>The debt avalanche would save more money in interest. Mathematically, it is the better choice. But mathematics is not always the deciding factor when motivation is the real challenge.</p>
-    <p>This person has tried to pay off debt before. Twice. Each time they started with energy and stopped when progress felt too slow.</p>
-    <p>So they choose the snowball. They need wins. Early ones. Small ones. The kind that prove the system works before they have to trust it through the long middle months.</p>
-    <p>Target number one: the store card. Balance $700.</p>
-
-    <div class="ad-slot"><div class="ad-inner">Ad space</div></div>
-
-    <h2>Month 1 and 2: the first win</h2>
-    <p>Every extra dollar goes to the store card. Minimums on everything else. Nothing else changes.</p>
-    <p>Six weeks later, the store card balance reaches zero.</p>
-    <p>That moment is easy to underestimate. Seven hundred dollars is not a life-changing amount. But it is the first time in years that a debt has disappeared completely rather than just shrinking slightly. The list is shorter. The proof is there. The system works.</p>
-
-    <div class="percy-row rev"><svg viewBox="0 0 160 190" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:46px;flex:none;display:block;animation:pengbob 4.2s ease-in-out infinite">
-  <path d="M44 96 C28 104 26 128 36 140 C42 146 50 142 50 132 Z" fill="#2a3550"/>
-  <path d="M116 96 C132 104 134 128 124 140 C118 146 110 142 110 132 Z" fill="#2a3550"/>
-  <path d="M80 34 C112 34 126 62 126 104 C126 146 108 168 80 168 C52 168 34 146 34 104 C34 62 48 34 80 34 Z" fill="#1c2434"/>
-  <path d="M80 62 C100 62 110 82 110 108 C110 138 98 154 80 154 C62 154 50 138 50 108 C50 82 60 62 80 62 Z" fill="#faf6ef"/>
-  <circle cx="66" cy="86" r="8.5" fill="#fff"/><circle cx="94" cy="86" r="8.5" fill="#fff"/>
-  <circle cx="67.5" cy="87" r="4.2" fill="#1c2434"/><circle cx="95.5" cy="87" r="4.2" fill="#1c2434"/>
-  <rect class="peyelid" x="57" y="78" width="18" height="10" rx="5" fill="#1c2434"/>
-  <rect class="peyelid" x="85" y="78" width="18" height="10" rx="5" fill="#1c2434"/>
-  <path d="M80 96 L90 106 L80 114 L70 106 Z" fill="#f2683c"/>
-  <ellipse cx="66" cy="172" rx="14" ry="6" fill="#f7a23b"/>
-  <ellipse cx="94" cy="172" rx="14" ry="6" fill="#f7a23b"/>
-</svg><div class="percy-bubble">This is the turning point most people do not see coming. The first zero balance changes how you see yourself. You stop being someone trying to get out of debt. You become someone who actually does it.</div></div>
-
-    <p>The confidence from that first win is worth more than the interest savings from any other method. That is not a feeling. It is a practical truth. Motivation is what keeps people going through eighteen months of consistent payments. And motivation comes from evidence.</p>
-
-    <h2>The snowball builds</h2>
-    <p>With the store card cleared, the $35 minimum that was going there rolls onto the credit card. The credit card had been receiving $60. It now receives $295 extra per month, plus whatever extra payment can be applied.</p>
-    <p>The credit card balance, which had barely moved for years, starts dropping noticeably. Month after month, the progress becomes visible.</p>
-    <p>Around month seven, the credit card is gone too.</p>
-    <p>Two debts cleared. Two remaining. For the first time, becoming debt free does not feel abstract. It feels achievable.</p>
-
-    <div class="table-wrap">
-      <table class="cmp">
-        <thead><tr><th>Debt</th><th>Cleared</th><th>Rolling payment at next stage</th></tr></thead>
-        <tbody>
-          <tr><td>Store Card ($700)</td><td>Month 2</td><td>$35 rolls to Credit Card</td></tr>
-          <tr><td>Credit Card ($2,300)</td><td>Month 7</td><td>$60+$35 rolls to Personal Loan</td></tr>
-          <tr><td>Personal Loan ($3,000)</td><td>Month 13</td><td>$95+$60+$35 rolls to Car Loan</td></tr>
-          <tr><td>Car Loan ($4,000)</td><td>Month 18</td><td>Debt free</td></tr>
-        </tbody>
-      </table>
+    <div class="ft-bot">
+      <span>&copy; <span id="yr"></span> Clearpath. All rights reserved.</span>
+      <span>hello@clearpath.click</span>
     </div>
-
-    <div class="img-wrap rev"><img src="/img-debt-payoff-plan.jpg" alt="A handwritten debt payoff plan on a desk showing the order of debts from smallest to largest with the first one crossed off" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;border-radius:16px;box-shadow:0 1px 2px rgba(28,36,52,.04),0 8px 28px rgba(28,36,52,.06)"></div>
-
-    <h2>The hardest part: the middle</h2>
-    <p>The personal loan is where things get hard.</p>
-    <p>Three thousand dollars. No quick win in sight. The excitement of starting has faded. The finish line is not yet visible. Month after month, payments go in and the balance comes down slowly.</p>
-    <p>This is the part of debt payoff that nobody talks about because it is not interesting. There is no dramatic breakthrough. Just consistency.</p>
-    <p>What keeps this person going is tracking progress. Every payment recorded. Every projected payoff date noted. When motivation disappears, the numbers remain. And sometimes the numbers are enough.</p>
-    <p>The personal loan clears around month thirteen.</p>
-    <p>One debt remaining.</p>
-
-    <h2>The final stretch</h2>
-    <p>By now the snowball is large. Every cleared debt has added its payment to the pile. The car loan, which once felt like a permanent fixture, starts falling fast.</p>
-    <p>Less than five months later, the final payment is made.</p>
-    <p>Eighteen months from the day they wrote everything down. Ten thousand dollars cleared. Four debts gone. One payment at a time.</p>
-
-    <div class="img-wrap rev"><img src="/img-fridge-tracker.jpg" alt="A debt payoff tracker pinned to a fridge with all four debts checked off and a debt-free date written at the top" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;border-radius:16px;box-shadow:0 1px 2px rgba(28,36,52,.04),0 8px 28px rgba(28,36,52,.06)"></div>
-
-    <h2>What made the difference</h2>
-    <p>Looking back, three things drove the result.</p>
-    <p><strong>Facing the numbers honestly.</strong> Writing everything down removed the ambiguity. Debt feels larger when it is hidden. Once it has a specific number, it becomes a problem you can solve rather than a fog you are living in.</p>
-    <p><strong>Getting a fast first win.</strong> The store card was gone in six weeks. That speed built confidence. It demonstrated that progress was real and repeatable. The rest of the journey ran on that early proof.</p>
-    <p><strong>Tracking everything consistently.</strong> Progress does not always feel real. You need to measure it to believe it. The people who stick with debt payoff plans are usually the ones who track them closely enough to see movement even when it does not feel visible.</p>
-
-    <div class="key-box">
-      <h3>Key takeaways from this example</h3>
-      <ul>
-        <li>The debt snowball works by clearing smallest balance first and rolling payments forward</li>
-        <li>The first win arrives faster than expected and changes your relationship with the plan</li>
-        <li>The middle phase is the hardest, tracking progress is what carries you through it</li>
-        <li>A small emergency buffer prevents unexpected costs from derailing the plan</li>
-        <li>No dramatic income increase was needed, just consistent use of $600 a month over 18 months</li>
-        <li>The total debt cleared was over $10,000, using a method anyone can apply</li>
-      </ul>
-    </div>
-
-    <h2>How to apply this to your own situation</h2>
-    <p>Your numbers will be different. Your income, balances, and interest rates are your own. But the method works the same way regardless of the amounts involved.</p>
-    <p>Write down every debt you have. Put them in order from smallest balance to largest. Work out how much extra you can send to the smallest one each month. Even if it is only $30 or $50, it is still a snowball. It just starts smaller.</p>
-    <p>The free Clearpath tracker can show you your own debt free date based on your actual numbers. It takes about five minutes to set up and nothing is stored anywhere.</p>
-
-    <div class="percy-row rev"><svg viewBox="0 0 160 190" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:46px;flex:none;display:block;animation:pengbob 4.4s ease-in-out infinite">
-  <path d="M30 80 C18 68 20 50 32 46 C38 44 42 50 38 58 Z" fill="#2a3550" transform="rotate(-30,34,62)"/>
-  <path d="M130 80 C142 68 140 50 128 46 C122 44 118 50 122 58 Z" fill="#2a3550" transform="rotate(30,126,62)"/>
-  <path d="M80 34 C112 34 126 62 126 104 C126 146 108 168 80 168 C52 168 34 146 34 104 C34 62 48 34 80 34 Z" fill="#1c2434"/>
-  <path d="M80 62 C100 62 110 82 110 108 C110 138 98 154 80 154 C62 154 50 138 50 108 C50 82 60 62 80 62 Z" fill="#faf6ef"/>
-  <circle cx="66" cy="86" r="8.5" fill="#fff"/><circle cx="94" cy="86" r="8.5" fill="#fff"/>
-  <circle cx="67.5" cy="87" r="4.2" fill="#1c2434"/><circle cx="95.5" cy="87" r="4.2" fill="#1c2434"/>
-  <rect class="peyelid" x="57" y="78" width="18" height="10" rx="5" fill="#1c2434"/>
-  <rect class="peyelid" x="85" y="78" width="18" height="10" rx="5" fill="#1c2434"/>
-  <path d="M80 96 L90 106 L80 114 L70 106 Z" fill="#f2683c"/>
-  <ellipse cx="66" cy="172" rx="14" ry="6" fill="#f7a23b"/>
-  <ellipse cx="94" cy="172" rx="14" ry="6" fill="#f7a23b"/>
-</svg><div class="percy-bubble" style="background:linear-gradient(135deg,#fff,#fdf3ec);border-color:var(--coral)"><strong>Put your own numbers in.</strong> The tracker will show you your debt free date, your payoff order, and how much interest you will save. That date is the most motivating thing I can give you.</div></div>
-    </div>
-    <div class="sharebar">
-  <span class="sb-label">Share this:</span>
-  <a class="sb-btn sb-pinterest" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/button/?url=https://www.clearpath.click/debt/debt-snowball-real-example.html&description=How+the+Debt+Snowball+Method+Works:+A+Complete+Example">&#128204;</a>
-  <a class="sb-btn sb-facebook" target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u=https://www.clearpath.click/debt/debt-snowball-real-example.html">f</a>
-  <a class="sb-btn sb-x" target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?url=https://www.clearpath.click/debt/debt-snowball-real-example.html&text=How+the+Debt+Snowball+Method+Works:+A+Complete+Example">&#120143;</a>
-  <a class="sb-btn sb-whatsapp" target="_blank" rel="noopener" href="https://api.whatsapp.com/send?text=How+the+Debt+Snowball+Method+Works:+A+Complete+Example+https://www.clearpath.click/debt/debt-snowball-real-example.html">&#128172;</a>
-  <button class="sb-btn sb-copy" onclick="clearpathCopy(this)">&#128279;</button>
-  <span class="sb-copy-msg">Copied!</span>
-</div>
-    <div class="sources"><h3>Sources</h3><ul><li>Consumer Financial Protection Bureau (CFPB) -- Debt management and repayment resources</li><li>National Foundation for Credit Counseling (NFCC) -- Debt payoff strategy education</li><li>Federal Reserve -- Survey of Household Economics and Decisionmaking (SHED)</li></ul></div>
-    <div class="author-box rev">
-  <img src="/img-busayo-profile.jpg" alt="Oluwaseun Busayo Amusan" class="author-photo">
-  <div class="author-info">
-    <div class="author-name">Oluwaseun Busayo Amusan</div>
-    <div class="author-role">Founder, Clearpath</div>
-    <p class="author-desc">Oluwaseun Busayo Amusan is the founder of Clearpath and a fintech professional with hands-on experience building financial technology products. He has worked in consumer finance at companies including YALO Technologies, where he focused on making financial services more accessible and practical for everyday people. He writes about debt repayment, budgeting, and practical money management.</p>
-  </div>
-</div>
-    <div class="toolcard rev">
-  <h3>See your own debt free date</h3>
-  <p>Put your numbers into the free Clearpath tracker and see the exact month you could become debt free, your full payoff order, and how much interest you will save. Nothing is stored anywhere.</p>
-  <a href="/debt/index.html">Open the free tracker &rarr;</a>
-</div>
-    <div class="optin rev" id="optin">
-  <span class="kit">Free starter kit</span>
-  <h3>Get the Debt Payoff Starter Kit</h3>
-  <p class="od">A printable debt tracker, a payoff worksheet, and a 30-day guide. Free to your inbox.</p>
-  <form id="optinForm" novalidate>
-    <input type="email" id="optinEmail" name="email" placeholder="you@email.com" autocomplete="email" required>
-    <button type="submit" id="optinBtn">Send me the kit</button>
-  </form>
-  <p class="micro">No spam. Leave any time.</p>
-  <p class="msg" id="optinMsg"></p>
-</div>
-    <div class="related rev"><h3>People also read</h3><a href="/debt/snowball-vs-avalanche.html"><span class="rc-cat">Debt payoff</span>Debt Snowball vs. Avalanche: Which Is Actually Better? &rarr;</a><a href="/debt/how-to-start-debt-snowball.html"><span class="rc-cat">Debt payoff</span>How to Start the Debt Snowball Method, Step by Step &rarr;</a><a href="/debt/find-extra-money-for-debt.html"><span class="rc-cat">Fund your payoff</span>7 Realistic Ways to Find Extra Money for Debt &rarr;</a><a href="/debt/how-to-stop-living-paycheck-to-paycheck.html"><span class="rc-cat">Budgeting</span>How to Stop Living Paycheck to Paycheck: A Step-by-Step Plan &rarr;</a></div>
-    <p class="disc">This article is for general educational purposes only and does not constitute financial advice. See our <a href="/debt/disclaimer.html">full disclaimer</a>.</p>
-  </div>
-</main>
-<footer class="site">
-  <div class="fin">
-    <span class="brand"><span class="dot"></span>Clearpath</span>
-    <div class="flinks">
-      <a href="/debt/index.html">Debt tracker</a>
-      <a href="/debt/blog.html">Guides</a>
-      <a href="/debt/about.html">About</a>
-      <a href="/debt/contact.html">Contact</a>
-      <a href="/debt/privacy.html">Privacy</a>
-      <a href="/debt/disclaimer.html">Disclaimer</a><a href="/debt/terms.html">Terms</a><a href="/debt/editorial-policy.html">Editorial Policy</a>
-    </div>
-    <div class="fbottom">&copy; <span id="yr"></span> Clearpath. All rights reserved.</div>
+    <p style="font-size:12px;color:var(--text-3);margin-top:16px;line-height:1.6;max-width:70ch">
+      Clearpath provides educational information and planning tools for personal finance. It is not financial, legal, or tax advice. Individual results vary. Consider speaking with a qualified professional before making significant financial decisions.
+    </p>
   </div>
 </footer>
 <script>
-function clearpathCopy(btn){
-  navigator.clipboard.writeText(window.location.href.split("#")[0]).then(function(){
-    var m=btn.parentElement.querySelector(".sb-copy-msg");
-    if(m){m.style.display="inline";setTimeout(function(){m.style.display="none";},2200);}
+document.getElementById('yr').textContent=new Date().getFullYear();
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.rv:not(.in)').forEach(function(el){ io.observe(el); });
+}else{ document.querySelectorAll('.rv').forEach(function(el){ el.classList.add('in'); }); }
+document.querySelectorAll('.drop a').forEach(function(a){
+  a.addEventListener('click',function(){ var t=document.getElementById('navTog'); if(t) t.checked=false; });
+});
+function cpCopy(b){
+  navigator.clipboard.writeText(location.href.split('#')[0]).then(function(){
+    var m=b.parentElement.querySelector('.a-copied');
+    if(m){m.style.display='inline';setTimeout(function(){m.style.display='none';},2000);}
   }).catch(function(){});
 }
 (function(){
-  document.getElementById("yr").textContent=new Date().getFullYear();
-  var form=document.getElementById("optinForm");
-  if(form){form.addEventListener("submit",function(ev){
-    ev.preventDefault();
-    var val=(document.getElementById("optinEmail").value||"").trim();
-    var msg=document.getElementById("optinMsg"),btn=document.getElementById("optinBtn");
-    msg.className="msg";
-    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)){msg.textContent="Please enter a valid email address.";msg.className="msg err";return;}
-    btn.disabled=true;btn.textContent="Sending";
-    fetch("https://script.google.com/macros/s/REPLACE_WITH_YOUR_DEPLOYMENT_ID/exec",{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({email:val,source:window.location.pathname})})
-      .then(function(){msg.textContent="Your kit is on its way. Check your inbox.";msg.className="msg ok";})
-      .catch(function(){btn.disabled=false;btn.textContent="Send me the kit";msg.textContent="Something went wrong. Please try again.";msg.className="msg err";});
-  });}
-  if("IntersectionObserver" in window){
-    var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target);}});},{threshold:0.1});
-    document.querySelectorAll(".rev").forEach(function(el){io.observe(el);});
-  }else{document.querySelectorAll(".rev").forEach(function(el){el.classList.add("in");});}
+  var bar=document.createElement('div'); bar.className='a-prog'; document.body.appendChild(bar);
+  window.addEventListener('scroll',function(){
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    bar.style.width=(h>0?(window.scrollY/h)*100:0)+'%';
+  },{passive:true});
 })();
 </script>
 </body>
