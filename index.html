@@ -166,14 +166,6 @@ input#navTog{display:none}
 .pji-sub{font-size:9.5px;color:rgba(255,255,255,.4)}
 .pji-pct{font-size:10px;color:var(--mint);font-weight:700;white-space:nowrap}
 
-/* ── DEBT STATS BANNER ───────────────────────────────────────────── */
-.stats-banner{background:var(--ink);padding:52px 0;margin:0}
-.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;max-width:860px;margin:0 auto}
-@media(max-width:580px){.stats-grid{grid-template-columns:1fr;gap:16px;padding:0 24px}}
-.stat-item{text-align:center;padding:24px}
-.stat-num{font-family:'Fraunces',serif;font-size:clamp(36px,6vw,56px);font-weight:700;color:var(--amber);
-  display:block;line-height:1}
-.stat-label{font-size:14px;color:#8fa4c8;margin-top:8px;display:block}
 
 /* ── SECTION LABEL ───────────────────────────────────────────────── */
 .sec-label{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;
@@ -182,10 +174,9 @@ input#navTog{display:none}
 .sec-label::before{content:"";width:24px;height:2px;background:var(--coral);border-radius:2px}
 
 /* ── QUOTE BAND ──────────────────────────────────────────────────── */
-.quote-band{background:linear-gradient(135deg,var(--coral) 0%,var(--coral-deep) 100%);
-  padding:56px 0;text-align:center;overflow:hidden;position:relative}
-.quote-band::before{content:"";position:absolute;inset:0;
-  background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+.quote-band{background-image:linear-gradient(135deg,rgba(242,104,60,.88) 0%,rgba(217,79,36,.93) 100%),url('/img-abstract-wave.jpg');
+  background-size:cover;background-position:center;
+  padding:64px 0;text-align:center;overflow:hidden;position:relative}
 .quote-band blockquote{font-family:'Fraunces',serif;font-size:clamp(22px,4vw,36px);
   color:#fff;font-style:italic;max-width:18ch;margin:0 auto 14px;line-height:1.2;
   position:relative;z-index:1}
@@ -193,6 +184,21 @@ input#navTog{display:none}
   text-underline-offset:6px;font-style:normal;color:var(--amber)}
 .quote-band cite{font-size:13px;color:rgba(255,255,255,.7);font-style:normal;
   letter-spacing:.08em;text-transform:uppercase;position:relative;z-index:1;display:block}
+
+
+/* ── JOURNEY VISUAL BREAK ── */
+.journey-visual{position:relative;height:clamp(280px,42vw,440px);overflow:hidden}
+.journey-visual img{width:100%;height:100%;object-fit:cover;display:block}
+.journey-visual::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(15,21,32,.15) 0%,rgba(15,21,32,.55) 100%)}
+.journey-caption{position:absolute;bottom:0;left:0;right:0;padding:32px 28px;z-index:1}
+.journey-caption p{font-family:'Fraunces',serif;font-style:italic;color:#fff;
+  font-size:clamp(18px,3vw,26px);max-width:32ch;line-height:1.35;
+  text-shadow:0 2px 12px rgba(0,0,0,.3)}
+
+/* ── LIFESTYLE PHOTO PANELS ── */
+.lifestyle-panel{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-md)}
+.lifestyle-panel img{width:100%;height:100%;object-fit:cover;display:block}
 
 /* ── HOW IT WORKS (INTERACTIVE MINI CALC) ───────────────────────── */
 .how-section{padding:80px 0;background:#fff}
@@ -409,6 +415,14 @@ input#navTog{display:none}
 .founder-byline{font-size:14px;font-weight:600;color:var(--ink-soft)}
 .founder-byline span{color:var(--mint);font-weight:700}
 
+
+.lifestyle-section{padding:64px 0 80px;background:var(--cream-deep)}
+.lifestyle-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;margin-top:32px}
+@media(max-width:720px){.lifestyle-grid{grid-template-columns:1fr}}
+.lifestyle-panel{position:relative;min-height:320px}
+.lifestyle-panel.tall{min-height:420px}
+@media(max-width:720px){.lifestyle-panel,.lifestyle-panel.tall{min-height:260px}}
+
 /* ── FEATURES GRID ───────────────────────────────────────────────── */
 .features-section{padding:80px 0;background:#fff}
 .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:40px}
@@ -541,6 +555,9 @@ footer.site .fin{max-width:1060px;margin:0 auto;padding:0 28px}
   transition:width 1.4s cubic-bezier(.4,0,.2,1)}
 
 /* milestones */
+.result-hero-img{margin-top:18px;border-radius:16px;overflow:hidden;
+  position:relative;z-index:1;max-height:150px}
+.result-hero-img img{width:100%;height:150px;object-fit:cover;display:block;opacity:.92}
 .milestones-section{padding:22px 24px}
 .milestones-section h3{font-family:'Inter';font-weight:700;font-size:14px;
   text-transform:uppercase;letter-spacing:.07em;color:var(--ink-soft);margin-bottom:12px}
@@ -728,20 +745,20 @@ footer.site .fin{max-width:1060px;margin:0 auto;padding:0 28px}
 
   </section>
 
-<!-- ── STATS BANNER ──────────────────────────────────────────────────── -->
-<section class="stats-banner">
-  <div class="stats-grid">
-    <div class="stat-item rev"><span class="stat-num">$1.7T</span><span class="stat-label">US consumer credit card debt in 2026</span></div>
-    <div class="stat-item rev rev-2"><span class="stat-num">80%</span><span class="stat-label">of debt payoff is about behaviour, not math</span></div>
-    <div class="stat-item rev rev-3"><span class="stat-num">5 min</span><span class="stat-label">to see your exact debt-free date with Clearpath</span></div>
-  </div>
-</section>
-
 <!-- ── QUOTE ─────────────────────────────────────────────────────────── -->
 <section class="quote-band">
   <div class="wrap-xs">
     <blockquote class="rev in">"The secret to getting out of debt is not to earn more. It's to <em>face the number.</em>"</blockquote>
     <cite class="rev in"> -  Oluwaseun Amusan, founder of Clearpath</cite>
+  </div>
+</section>
+
+
+<!-- ── JOURNEY VISUAL BREAK ──────────────────────────────────────────── -->
+<section class="journey-visual rev">
+  <img src="/img-winding-road.jpg" alt="A winding road leading toward a bright horizon, representing the path out of debt" loading="lazy">
+  <div class="journey-caption">
+    <p>"Every payment is a step on a road that leads somewhere. You just have to keep walking it."</p>
   </div>
 </section>
 
@@ -1002,6 +1019,23 @@ footer.site .fin{max-width:1060px;margin:0 auto;padding:0 28px}
   </div>
 </section>
 
+
+<!-- ── LIFESTYLE PHOTOS ─────────────────────────────────────────────── -->
+<section class="lifestyle-section">
+  <div class="wrap">
+    <span class="sec-label rev">Real life, real progress</span>
+    <h2 class="rev" style="font-size:clamp(24px,4vw,36px)">Managing money together, or on your own</h2>
+    <div class="lifestyle-grid">
+      <div class="lifestyle-panel tall rev rev-1">
+        <img src="/img-couple-laptop-charts.jpg" alt="A couple reviewing their finances together at home, smiling while looking at a laptop showing financial charts" loading="lazy">
+      </div>
+      <div class="lifestyle-panel rev rev-2">
+        <img src="/img-man-laptop-charts.jpg" alt="A man reviewing his financial dashboard on a laptop at home with a cup of coffee" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ── FEATURES ───────────────────────────────────────────────────────── -->
 <section class="features-section">
   <div class="wrap">
@@ -1137,6 +1171,9 @@ footer.site .fin{max-width:1060px;margin:0 auto;padding:0 28px}
         <div class="rs-stat"><span class="rs-val" id="resTotal">-</span><div class="rs-lbl">Total you pay</div></div>
       </div>
       <div class="result-progress"><div class="result-progress-fill" id="resProgressFill"></div></div>
+      <div class="result-hero-img">
+        <img src="/img-couple-laptop-charts.jpg" alt="A couple celebrating their financial progress together" loading="lazy">
+      </div>
     </div>
 
     <!-- Payoff order -->
@@ -1156,113 +1193,140 @@ footer.site .fin{max-width:1060px;margin:0 auto;padding:0 28px}
       </table>
     </div>
 
-    <!-- Sign-up gate -->
-    <div class="signup-gate" id="sgGate">
-      <div class="sg-header">
-        <div class="sg-title" style="font-size:clamp(22px,4.5vw,28px);line-height:1.2">Get Your Money Under Control. <em style="font-style:italic;color:var(--coral-deep)">Build the life you want.</em></div>
-        <p class="sg-sub" style="max-width:42ch">Track your debt. Plan your spending. Learn how to make money and build wealth through practical financial education.</p>
-      </div>
-
-      <button class="big-cta" onclick="focusSignupEmail()" style="margin:18px 0 6px">Get Started for free</button>
-      <p style="text-align:center;font-size:13px;color:var(--ink-soft);margin-bottom:22px">One simple place to understand, manage, and grow your money.</p>
-
-      <div class="sg-app-preview">
-        <img src="/img-app-phone-hand.jpg" alt="The Clearpath app showing net worth, total debt, monthly budget, and your financial journey progress" loading="lazy">
-      </div>
-
-      <div class="sg-benefits" style="margin-top:22px">
-        <div class="sg-benefit"><span class="sg-tick">&#10003;</span> Save your debt plan</div>
-        <div class="sg-benefit"><span class="sg-tick">&#10003;</span> Track progress monthly</div>
-        <div class="sg-benefit"><span class="sg-tick">&#10003;</span> Monitor essential spending</div>
-        <div class="sg-benefit"><span class="sg-tick">&#10003;</span> Payment reminders</div>
-      </div>
-      <button class="google-btn" onclick="submitGoogle()">
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" style="flex:none"><path d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.875 2.684-6.615z" fill="#4285F4"/><path d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 0 0 9 18z" fill="#34A853"/><path d="M3.964 10.71A5.41 5.41 0 0 1 3.682 9c0-.593.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 0 0 0 9c0 1.452.348 2.827.957 4.042l3.007-2.332z" fill="#FBBC05"/><path d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 0 0 .957 4.958L3.964 7.29C4.672 5.163 6.656 3.58 9 3.58z" fill="#EA4335"/></svg>
-        Continue with Google
+    <!-- Break + scroll gimmick between debt result and guide pitch -->
+    <div class="modal-break">
+      <div class="modal-break-line"></div>
+      <button class="scroll-nudge" onclick="scrollToGuide()">
+        <span>Your next step</span>
+        <svg width="14" height="14" viewBox="0 0 14 14" class="nudge-arrow"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
-      <div class="or-divider"><span>or use email</span></div>
-      <div class="email-form-row">
-        <input type="email" id="sgEmail" placeholder="you@email.com" autocomplete="email">
-        <button onclick="submitSgEmail()">Create account</button>
-      </div>
-      <p class="email-micro">Free forever. No credit card. Takes 30 seconds.</p>
-      <p class="email-msg" id="sgMsg"></p>
     </div>
 
-    <!-- Pricing gate (shown after email) -->
-    <div class="pricing-gate" id="pgGate">
-      <div class="pricing-check-header">
-        <div class="pch-tick">&#10003;</div>
-        <div class="pch-title">Account created!</div>
-        <div class="pch-sub">Your plan is saved. Choose your Clearpath plan.</div>
+    <!-- Guide download gate -->
+    <div class="signup-gate" id="sgGate">
+
+      <div class="guide-hero">
+        <span class="guide-eyebrow">Free guide</span>
+        <h2 class="guide-title">Stop Throwing Money at Your Debt</h2>
+        <p class="guide-lede"><strong>You have probably already tried to "just pay more."</strong> But when several bills are demanding your attention, knowing what you owe is not always the problem.</p>
+        <p class="guide-lede-strong">It is knowing what to pay first.</p>
+        <p class="guide-sub">Our free debt payoff guide shows you how to organise your debts, choose the right payoff strategy, and create a plan you can actually follow.</p>
       </div>
-      <div class="plan-grid">
-        <div class="plan-card">
-          <div class="plan-name">Free</div>
-          <div class="plan-price">$0 <span>/ forever</span></div>
-          <ul class="plan-features">
-            <li>Debt calculator</li>
-            <li>Save &amp; monitor plan</li>
-            <li>All currencies</li>
-            <li class="no">Spending tracker</li>
-            <li class="no">Budget builder</li>
-            <li class="no">Income multiplier</li>
-          </ul>
-          <button class="plan-btn free-b" onclick="closeResult()">Continue free</button>
+
+      <div class="guide-email-card" id="guideCard">
+        <div class="email-form-row">
+          <input type="email" id="sgEmail" placeholder="you@email.com" autocomplete="email">
+          <button onclick="submitSgEmail()">Show Me How to Get Out of Debt &rarr;</button>
         </div>
-        <div class="plan-card featured">
-          <div class="plan-badge">&#128293; Most popular</div>
-          <div class="plan-name">Pro</div>
-          <div class="plan-price">$11 <span>/ month</span></div>
-          <div class="plan-social">65,704 people on Pro</div>
-          <ul class="plan-features">
-            <li>Everything in Free</li>
-            <li>Track spending (rent, groceries, insurance)</li>
-            <li>Monthly budget builder</li>
-            <li>Debt progress alerts</li>
-            <li>Minimum payment warnings</li>
-            <li class="no">Income multiplier</li>
-          </ul>
-          <button class="plan-btn pro-b" onclick="openWealthModal()">Get Pro &mdash; $11/mo</button>
-        </div>
-        <div class="plan-card wealth-c">
-          <div class="plan-name">Wealth</div>
-          <div class="plan-price">$25 <span>/ month</span></div>
-          <div class="plan-social" style="color:var(--amber)">Build income too</div>
-          <ul class="plan-features">
-            <li>Everything in Pro</li>
-            <li>30-day Income Multiplier</li>
-            <li>Pinterest traffic toolkit</li>
-            <li>Meta Ads guide</li>
-            <li>AI product builder course</li>
-            <li>1-on-1 setup call</li>
-          </ul>
-          <button class="plan-btn wealth-b" onclick="goWealth()">Get Wealth &mdash; $25/mo</button>
-        </div>
+        <p class="email-micro">Free. No credit card. No judgment.</p>
+        <p class="email-msg" id="sgMsg"></p>
       </div>
-      <p class="pricing-note">Cancel any time. Secure checkout via Stripe.</p>
+
+      <div class="social-toast" id="socialToast">
+        <span class="st-dot"></span>
+        <span id="socialToastText">Sarah from Chicago just downloaded the guide</span>
+      </div>
+
+      <div class="guide-body">
+
+        <div class="guide-block">
+          <h3>Making payments is not the same as making progress</h3>
+          <p>You pay one bill. Then another. Then another. And somehow, at the end of the month, you still feel like you are standing in the same place.</p>
+          <p><strong>That is the frustrating part.</strong> Not necessarily the debt itself. It is working hard to get rid of it and not knowing if you are actually moving in the right direction.</p>
+          <div class="guide-need-box">
+            <p class="gnb-title">You do not need to pay everything at once. You need to know:</p>
+            <ul>
+              <li>What to pay first</li>
+              <li>What to pay next</li>
+              <li>How much to put toward each debt</li>
+              <li>When you will finally see the numbers start moving</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="guide-block">
+          <h3>Get clear on your way out</h3>
+          <p>You do not need another lecture about budgeting. You do not need someone telling you to stop spending money. And you definitely do not need to feel ashamed about how you got here.</p>
+          <p class="guide-emphasis">You need a plan.</p>
+        </div>
+
+        <div class="guide-steps">
+          <div class="gs-item"><div class="gs-num">01</div><div><div class="gs-title">See exactly where you stand</div><p>Bring all your debts together so you can see the full picture instead of keeping a mental list of everything you owe.</p></div></div>
+          <div class="gs-item"><div class="gs-num">02</div><div><div class="gs-title">Know what to pay first</div><p>Not every debt deserves the same priority. Learn how to decide where your extra money should go.</p></div></div>
+          <div class="gs-item"><div class="gs-num">03</div><div><div class="gs-title">Choose your payoff strategy</div><p>Understand the Debt Snowball and Debt Avalanche methods and decide which approach makes the most sense for you.</p></div></div>
+          <div class="gs-item"><div class="gs-num">04</div><div><div class="gs-title">Build a realistic plan</div><p>Turn your income, expenses, and existing payments into a debt payoff plan you can actually maintain.</p></div></div>
+          <div class="gs-item"><div class="gs-num">05</div><div><div class="gs-title">Track your progress</div><p>Know what to look for each month so you can see whether you are genuinely moving closer to being debt-free.</p></div></div>
+          <div class="gs-item"><div class="gs-num">06</div><div><div class="gs-title">Avoid starting over</div><p>Understand the common mistakes that can keep you stuck in the cycle of paying debt, running short, borrowing again, and starting over.</p></div></div>
+        </div>
+
+        <div class="guide-quote-block">
+          <p>Imagine opening your banking app and not immediately feeling that sinking feeling. You know what you owe. You know what you are paying. You know which debt you are attacking next.</p>
+          <p class="gqb-strong">That is what a plan gives you: clarity.</p>
+        </div>
+
+        <div class="guide-block">
+          <h3>"I have tried to get out of debt before."</h3>
+          <p>Maybe you have made a budget. Maybe you have promised yourself you would stop borrowing. Maybe you started paying aggressively, only for an unexpected expense to throw everything off.</p>
+          <p>That does not mean you are incapable of getting out of debt. It means you may have been trying to solve a complicated problem without a clear system.</p>
+          <p class="guide-emphasis">This time, start with clarity.</p>
+        </div>
+
+        <div class="guide-block no-shame">
+          <h3>No shame. No unrealistic promises.</h3>
+          <p>We are not going to tell you that skipping coffee will magically make you debt-free. We are not going to promise you will eliminate thousands overnight. And we are not here to judge how you got into debt.</p>
+          <p class="guide-emphasis">We are here to help you figure out how to get out. One decision. One payment. One step at a time.</p>
+        </div>
+
+        <div class="guide-email-card" id="guideCard2">
+          <p class="gec-lead">Get the free debt payoff guide and take your first step toward getting back in control.</p>
+          <div class="email-form-row">
+            <input type="email" id="sgEmail2" placeholder="you@email.com" autocomplete="email">
+            <button onclick="submitSgEmail(2)">Show Me How to Get Out of Debt &rarr;</button>
+          </div>
+          <p class="email-micro">Free. No credit card required. Delivered straight to your inbox.</p>
+          <p class="email-msg" id="sgMsg2"></p>
+        </div>
+
+        <div class="guide-next-steps">
+          <h3>What happens next?</h3>
+          <div class="gns-row">
+            <div class="gns-item"><div class="gns-num">1</div><div class="gns-title">Enter your email</div><p>Tell us where to send your guide.</p></div>
+            <div class="gns-item"><div class="gns-num">2</div><div class="gns-title">Get the guide</div><p>We will send it straight to your inbox.</p></div>
+            <div class="gns-item"><div class="gns-num">3</div><div class="gns-title">Take your first step</div><p>Organise your debts, choose your strategy, and start building your plan.</p></div>
+          </div>
+        </div>
+
+        <div class="guide-faq">
+          <h3>Frequently asked questions</h3>
+          <details><summary>Is the guide really free?</summary><div class="gfaq-ans">Yes. You will not need a credit card or payment details to get it.</div></details>
+          <details><summary>What if I have several debts?</summary><div class="gfaq-ans">That is exactly what the guide is designed to help you with. You will learn how to bring everything together and decide which debt to prioritise.</div></details>
+          <details><summary>What is the difference between Debt Snowball and Debt Avalanche?</summary><div class="gfaq-ans">The Debt Snowball focuses on paying off your smallest balances first, while the Debt Avalanche prioritises debts with the highest interest rates. The guide explains both approaches so you can choose the one that fits you.</div></details>
+          <details><summary>What if I do not earn very much?</summary><div class="gfaq-ans">You do not need a perfect income to start. The goal is to create a realistic plan around your actual financial situation.</div></details>
+          <details><summary>Will this guarantee that I become debt-free?</summary><div class="gfaq-ans">No. We will not make unrealistic promises. The guide gives you a practical framework for understanding your debt and creating a plan to work toward becoming debt-free.</div></details>
+        </div>
+
+        <div class="guide-final">
+          <p class="gf-lead">Your debt might feel like one enormous problem right now.</p>
+          <p class="gf-strong">It is not.</p>
+          <p>It is a series of balances. A series of payments. A series of decisions. And you can start with just one.</p>
+          <p class="gf-emphasis">Know what to pay first.</p>
+          <div class="guide-email-card" id="guideCard3">
+            <div class="email-form-row">
+              <input type="email" id="sgEmail3" placeholder="you@email.com" autocomplete="email">
+              <button onclick="submitSgEmail(3)">Show Me How to Get Out of Debt &rarr;</button>
+            </div>
+            <p class="email-micro">Your first step toward feeling in control again.</p>
+            <p class="email-msg" id="sgMsg3"></p>
+          </div>
+        </div>
+
+      </div>
     </div>
+
+    
   </div>
 </div>
 
-<!-- ── WEALTH MODAL ────────────────────────────────────────────────────── -->
-<div id="wealthModal" style="display:none;position:fixed;inset:0;background:rgba(15,21,32,.7);z-index:600;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)">
-  <div style="background:#fff;max-width:500px;width:100%;border-radius:24px;padding:32px 28px;max-height:90vh;overflow-y:auto">
-    <div style="text-align:center;margin-bottom:20px">
-      <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);margin-bottom:6px">Clearpath Wealth</div>
-      <h2 style="font-size:clamp(20px,4vw,28px);margin-bottom:8px">The 30-Day Income Multiplier</h2>
-      <p style="color:var(--ink-soft);font-size:14px">You know when you will be debt free. This helps you get there faster by building a second income stream while you pay down debt.</p>
-      <div style="font-family:'Fraunces',serif;font-size:40px;font-weight:700;color:var(--coral);margin-top:12px">$25 <span style="font-size:16px;color:var(--ink-soft);font-family:'Inter';font-weight:400">/ month</span></div>
-    </div>
-    <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:22px">
-      <div style="display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--line)"><span style="font-size:20px">&#128204;</span><div><strong style="display:block;font-size:14px">Pinterest Traffic Machine</strong><span style="font-size:12.5px;color:var(--ink-soft)">90-day Pinterest playbook, keyword bank, pin templates, and daily schedule.</span></div></div>
-      <div style="display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--line)"><span style="font-size:20px">&#128227;</span><div><strong style="display:block;font-size:14px">Meta Ads for Digital Products</strong><span style="font-size:12.5px;color:var(--ink-soft)">Step-by-step guide to run your first profitable Facebook or Instagram ad.</span></div></div>
-      <div style="display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--line)"><span style="font-size:20px">&#129302;</span><div><strong style="display:block;font-size:14px">AI Web App Builder</strong><span style="font-size:12.5px;color:var(--ink-soft)">Create and sell AI-powered apps with free tools. No coding required.</span></div></div>
-      <div style="display:flex;gap:12px;align-items:flex-start;padding:12px 0"><span style="font-size:20px">&#128222;</span><div><strong style="display:block;font-size:14px">1-on-1 Setup Call (30 min)</strong><span style="font-size:12.5px;color:var(--ink-soft)">A live session to build your income plan based on your time and situation.</span></div></div>
-    </div>
-    <button onclick="goWealth()" style="width:100%;padding:16px;font-family:'Fraunces',serif;font-size:18px;font-weight:600;background:linear-gradient(135deg,var(--amber),#c47d0e);color:#fff;border:none;border-radius:13px;cursor:pointer;box-shadow:0 6px 18px rgba(247,162,59,.3);margin-bottom:10px">Start Clearpath Wealth &mdash; $25/month</button>
-    <button onclick="closeWealthModal()" style="display:block;text-align:center;font-size:13px;color:var(--ink-soft);cursor:pointer;background:none;border:none;width:100%;padding:6px">Just Pro for $11/month instead</button>
-  </div>
 </div>
 
 <script>
@@ -1428,16 +1492,14 @@ function showResult(dfd, months, interest, total, cleared, schedule){
     lastM=s.month;
   });
 
-  // reset gates
-  document.getElementById('sgGate').style.display='block';
-  document.getElementById('pgGate').style.display='none';
-
   // open
   var overlay = document.getElementById('resultModal');
   overlay.style.display='flex';
   document.body.style.overflow='hidden';
   // scroll sheet to top
   setTimeout(function(){ overlay.querySelector('.result-sheet').scrollTop=0; },50);
+  // start social proof toast rotation
+  startToastRotation();
 }
 
 function escHtml(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -1461,49 +1523,96 @@ function toggleSched(){
 }
 
 /* ── SIGN-UP ────────────────────────────────────────────────────── */
-function showPricing(){
-  document.getElementById('sgGate').style.display='none';
-  var pg=document.getElementById('pgGate');
-  pg.style.display='block';
-  pg.scrollIntoView({behavior:'smooth',block:'nearest'});
+
+/* ── SOCIAL PROOF TOAST ── */
+var socialProofPool = [
+  ["Sarah","Chicago"],["Michael","Dallas"],["Jennifer","Atlanta"],["David","Phoenix"],
+  ["Ashley","Denver"],["Christopher","Seattle"],["Jessica","Boston"],["Matthew","Nashville"],
+  ["Amanda","Portland"],["Daniel","Austin"],["Emily","San Diego"],["James","Charlotte"],
+  ["Melissa","Columbus"],["Robert","Detroit"],["Lauren","Minneapolis"],["Ryan","Tampa"],
+  ["Rachel","Orlando"],["Kevin","Las Vegas"],["Stephanie","Sacramento"],["Brian","Kansas City"],
+  ["Nicole","Baltimore"],["Justin","St Louis"],["Samantha","Pittsburgh"],["Andrew","Cincinnati"],
+  ["Michelle","Milwaukee"],["Joshua","Indianapolis"],["Kimberly","Salt Lake City"],["Brandon","Raleigh"],
+  ["Tiffany","New Orleans"],["Jonathan","Richmond"],
+  ["Jamal","Atlanta"],["Aisha","Houston"],["DeShawn","Memphis"],["Keisha","Detroit"],
+  ["Marcus","Chicago"],["Imani","Washington DC"],["Terrell","Baltimore"],["Nia","Philadelphia"],
+  ["Malik","Atlanta"],["Ebony","Charlotte"],["Andre","New Orleans"],["Latoya","Birmingham"],
+  ["Darnell","Cleveland"],["Simone","Oakland"],["Xavier","Newark"],
+  ["Oliver","London"],["Charlotte","Manchester"],["George","Birmingham"],["Amelia","Leeds"],
+  ["Jack","Glasgow"],["Isla","Liverpool"],["Harry","Bristol"],["Grace","Edinburgh"],
+  ["Freddie","Sheffield"],["Poppy","Cardiff"],["Thomas","Newcastle"],["Emily","Belfast"],
+  ["Sophie","Nottingham"],["Alfie","Leicester"],
+  ["Camille","Paris"],["Lucas","Lyon"],["Manon","Marseille"],["Hugo","Toulouse"],
+  ["Chloe","Nice"],["Louis","Nantes"],["Emma","Strasbourg"],["Nathan","Bordeaux"],
+  ["Lea","Lille"],["Gabriel","Rennes"],
+  ["Lukas","Berlin"],["Anna","Munich"],["Felix","Hamburg"],["Mia","Cologne"],
+  ["Leon","Frankfurt"],["Emma","Stuttgart"],["Paul","Dusseldorf"],["Lena","Leipzig"],
+  ["Jonas","Dortmund"],["Sophie","Essen"],
+  ["Chidi","Lagos"],["Ngozi","Abuja"],["Emeka","Port Harcourt"],["Adaeze","Ibadan"],
+  ["Tunde","Lagos"],["Folake","Kano"],["Ifeanyi","Enugu"],["Chinwe","Benin City"],
+  ["Yusuf","Kaduna"],["Amara","Lagos"],["Obinna","Abuja"],["Bukola","Lagos"],
+  ["Kelechi","Owerri"],["Halima","Kano"],["Segun","Ibadan"],
+  ["Priya","Toronto"],["Wei","Vancouver"],["Sofia","Mexico City"],["Liam","Dublin"],
+  ["Olivia","Sydney"],["Noah","Melbourne"],["Zainab","Karachi"],["Arjun","Mumbai"],
+  ["Yuki","Tokyo"],["Carlos","Madrid"],["Giulia","Rome"],["Erik","Stockholm"],
+  ["Fatima","Dubai"],["Kwame","Accra"],["Thabo","Johannesburg"],["Isabella","Sao Paulo"],
+  ["Ravi","Bangalore"],["Aiyana","Auckland"],["Mateus","Lisbon"],["Ana","Barcelona"],
+  ["Ivan","Warsaw"],["Elin","Oslo"],["Katarina","Zagreb"],["Miguel","Buenos Aires"]
+];
+var stIndex = Math.floor(Math.random()*socialProofPool.length);
+function showNextToast(){
+  var toast = document.getElementById('socialToast');
+  var textEl = document.getElementById('socialToastText');
+  if(!toast || !textEl) return;
+  toast.classList.remove('show');
+  setTimeout(function(){
+    stIndex = (stIndex+1) % socialProofPool.length;
+    var pair = socialProofPool[stIndex];
+    textEl.textContent = pair[0] + ' from ' + pair[1] + ' just downloaded the guide';
+    toast.classList.add('show');
+  }, 350);
 }
-function submitGoogle(){ showPricing(); }
-function focusSignupEmail(){
-  var el = document.getElementById('sgEmail');
-  if(el){ el.scrollIntoView({behavior:'smooth',block:'center'}); setTimeout(function(){el.focus();},400); }
+var toastInterval = null;
+function startToastRotation(){
+  if(toastInterval) return;
+  showNextToast();
+  toastInterval = setInterval(showNextToast, 6000 + Math.random()*2000);
 }
-function submitSgEmail(){
-  var val=(document.getElementById('sgEmail').value||'').trim();
-  var msg=document.getElementById('sgMsg');
-  msg.className='email-msg';
+
+function scrollToGuide(){
+  var el = document.getElementById('sgGate');
+  if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function submitSgEmail(n){
+  var suffix = n ? String(n) : '';
+  var emailEl = document.getElementById('sgEmail'+suffix);
+  var msgEl = document.getElementById('sgMsg'+suffix);
+  var val = (emailEl.value||'').trim();
+  msgEl.className='email-msg';
   if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)){
-    msg.textContent='Please enter a valid email.';msg.className='email-msg err';return;
+    msgEl.textContent='Please enter a valid email.';msgEl.className='email-msg err';return;
   }
-  var btn=document.querySelector('#sgGate .email-form-row button');
-  if(btn){btn.disabled=true;btn.textContent='Creating...';}
+  var card = emailEl.closest('.guide-email-card');
+  var btn = card ? card.querySelector('.email-form-row button') : null;
+  var originalText = btn ? btn.textContent : '';
+  if(btn){btn.disabled=true;btn.textContent='Sending...';}
   fetch('https://script.google.com/macros/s/REPLACE_WITH_YOUR_DEPLOYMENT_ID/exec',{
     method:'POST',mode:'no-cors',
     headers:{'Content-Type':'text/plain;charset=utf-8'},
-    body:JSON.stringify({email:val,source:'/',plan:'free'})
-  }).then(function(){ showPricing(); })
-    .catch(function(){if(btn){btn.disabled=false;btn.textContent='Create account';}msg.textContent='Something went wrong.';msg.className='email-msg err';});
+    body:JSON.stringify({email:val,source:'/',type:'debt_guide'})
+  }).then(function(){
+    msgEl.textContent='Check your inbox! Your guide is on its way.';
+    msgEl.className='email-msg ok';
+    if(btn){btn.textContent='Sent! Check your email';}
+  }).catch(function(){
+    if(btn){btn.disabled=false;btn.textContent=originalText;}
+    msgEl.textContent='Something went wrong. Please try again.';
+    msgEl.className='email-msg err';
+  });
 }
 
-/* ── WEALTH MODAL ────────────────────────────────────────────────── */
-function openWealthModal(){
-  document.getElementById('wealthModal').style.display='flex';
-}
-function closeWealthModal(){
-  document.getElementById('wealthModal').style.display='none';
-  // go to pro stripe
-  window.open('https://clearpath.click/pro','_blank');
-}
-function goWealth(){
-  window.open('https://clearpath.click/wealth','_blank');
-}
-document.getElementById('wealthModal').addEventListener('click',function(e){
-  if(e.target===this) this.style.display='none';
-});
+
 </script>
 </body>
 </html>
