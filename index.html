@@ -3,363 +3,1422 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clearpath - Free Debt Payoff Tools, Trackers &amp; Budgeting Tips</title>
-<meta name="description" content="Clearpath builds free, private tools that help you plan your way out of debt and build better money habits. Start with our debt snowball tracker.">
-<meta property="og:title" content="Clearpath - Free Money Tools That Actually Help">
-<meta property="og:description" content="Free, private tools for getting out of debt and building money habits that stick. No signup, nothing stored.">
+<title>Clearpath  -  See Your Debt-Free Date. Free. Private. No Signup.</title>
+<meta name="description" content="Clearpath helps you understand your debt, build a payoff plan, and see your exact debt-free date. Free tools, no account required, nothing stored.">
+<meta property="og:title" content="Clearpath  -  Your Clear Path Out of Debt">
+<meta property="og:description" content="Free debt snowball calculator. See your debt-free date in 5 minutes. No signup. Nothing stored.">
 <meta name="robots" content="index, follow">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --ink:#1c2434;--ink-soft:#3a4356;--cream:#faf6ef;--cream-deep:#f2ebdd;
-    --coral:#f2683c;--coral-deep:#d94f24;--amber:#f7a23b;--mint:#2f8f6b;
-    --blush:#f6c9c9;--blush-deep:#e88fa0;
-    --line:#e4dccb;--card:#ffffff;--shadow:0 1px 2px rgba(28,36,52,.04),0 8px 28px rgba(28,36,52,.06);
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
-  h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.1;letter-spacing:-.01em}
-
-  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.3,1),transform .7s cubic-bezier(.2,.7,.3,1)}
-  .reveal.in{opacity:1;transform:translateY(0)}
-  .reveal-1{transition-delay:.05s}.reveal-2{transition-delay:.14s}.reveal-3{transition-delay:.23s}.reveal-4{transition-delay:.32s}
-
-  header.site{border-bottom:1px solid var(--line);background:rgba(250,246,239,.92);backdrop-filter:blur(6px);position:sticky;top:0;z-index:50}
-  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1040px;margin:0 auto}
-  .brand{display:flex;align-items:center;gap:10px;font-family:'Fraunces',serif;font-weight:600;font-size:20px;color:var(--ink);text-decoration:none}
-  .brand .dot{width:28px;height:28px;border-radius:50%;background:radial-gradient(circle at 32% 30%,#fff 0 18%,var(--amber) 19% 55%,var(--coral) 56%);box-shadow:inset 0 0 0 1px rgba(0,0,0,.04);animation:softPulse 3.5s ease-in-out infinite}
-  .nav a.link{color:var(--ink-soft);text-decoration:none;font-size:14px;font-weight:500;margin-left:22px;position:relative}
-  .nav a.link::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--coral);border-radius:2px;transition:width .2s ease}
-  .nav a.link:hover{color:var(--coral-deep)}
-  .nav a.link:hover::after{width:100%}
-  @keyframes softPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
-
-  .blob{position:absolute;border-radius:50%;filter:blur(2px);opacity:.5;pointer-events:none;z-index:0}
-  .blob-1{width:220px;height:220px;background:radial-gradient(circle,var(--blush) 0%,transparent 70%);top:-40px;right:-60px;animation:floatSlow 9s ease-in-out infinite}
-  .blob-2{width:160px;height:160px;background:radial-gradient(circle,var(--amber) 0%,transparent 70%);opacity:.28;bottom:-30px;left:-40px;animation:floatSlow 11s ease-in-out infinite reverse}
-  @keyframes floatSlow{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(12px,-16px) scale(1.05)}}
-
-  .hero{padding:70px 0 46px;text-align:center;position:relative;overflow:hidden}
-  .eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--coral-deep);background:var(--cream-deep);padding:7px 16px;border-radius:100px;margin-bottom:24px;position:relative;z-index:1}
-  .eyebrow .spark{display:inline-block;animation:sparkle 2.4s ease-in-out infinite}
-  @keyframes sparkle{0%,100%{transform:scale(1) rotate(0deg);opacity:1}50%{transform:scale(1.3) rotate(15deg);opacity:.7}}
-  .hero h1{font-size:clamp(38px,6.2vw,64px);max-width:16ch;margin:0 auto 20px;position:relative;z-index:1}
-  .hero h1 em{font-style:italic;color:var(--coral-deep);position:relative;white-space:nowrap}
-  .hero h1 em::after{content:"";position:absolute;left:-2%;right:-2%;bottom:6px;height:10px;background:var(--blush);opacity:.55;z-index:-1;border-radius:6px;transform:skewX(-6deg)}
-  .hero p.sub{font-size:clamp(16px,2.2vw,19px);color:var(--ink-soft);max-width:52ch;margin:0 auto;position:relative;z-index:1}
-  .hero .cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px;position:relative;z-index:1}
-  .btn{font-family:'Inter';font-size:14.5px;font-weight:600;padding:13px 24px;border-radius:100px;text-decoration:none;display:inline-block;transition:transform .15s ease,box-shadow .2s ease}
-  .btn-primary{background:var(--coral);color:#fff;box-shadow:0 8px 20px rgba(242,104,60,.3)}
-  .btn-primary:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 12px 26px rgba(242,104,60,.4)}
-  .btn-ghost{background:#fff;color:var(--ink);border:1.5px solid var(--line)}
-  .btn-ghost:hover{border-color:var(--blush-deep);color:var(--coral-deep);transform:translateY(-2px)}
-
-  .articles{padding:14px 0 54px}
-  .articles .sec-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:22px;flex-wrap:wrap;gap:10px}
-  .articles h2.sec{font-size:14px;font-family:'Inter';font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-soft)}
-  .articles .seeall{font-size:13.5px;font-weight:600;color:var(--coral-deep);text-decoration:none}
-  .articles .seeall:hover{text-decoration:underline}
-  .art-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
-  .art-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;box-shadow:var(--shadow);transition:transform .2s cubic-bezier(.2,.7,.3,1),box-shadow .25s ease,border-color .2s ease}
-  .art-card:hover{transform:translateY(-5px) rotate(-.3deg);box-shadow:0 16px 34px rgba(232,143,160,.22);border-color:var(--blush-deep)}
-  .art-card .cat{font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--coral-deep);margin-bottom:10px}
-  .art-card h3{font-size:16.5px;line-height:1.3;margin-bottom:8px}
-  .art-card .rd{font-size:12.5px;font-weight:600;color:var(--ink-soft);margin-top:auto}
-  .art-card:hover .rd{color:var(--coral-deep)}
-
-  .tools{padding:20px 0 60px;position:relative}
-  .tools h2.sec{text-align:center;font-size:14px;font-family:'Inter';font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-soft);margin-bottom:26px}
-  .tool-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
-  .tool-card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:30px;box-shadow:var(--shadow);text-decoration:none;color:var(--ink);display:flex;flex-direction:column;transition:transform .25s cubic-bezier(.2,.7,.3,1),box-shadow .25s ease,border-color .2s ease}
-  .tool-card.live:hover{transform:translateY(-6px);box-shadow:0 18px 36px rgba(242,104,60,.16);border-color:var(--coral)}
-  .tool-icon{width:52px;height:52px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:18px;transition:transform .3s ease}
-  .tool-card.live:hover .tool-icon{transform:scale(1.12) rotate(-6deg)}
-  .tool-card h3{font-size:23px;margin-bottom:8px}
-  .tool-card p{font-size:15px;color:var(--ink-soft);margin-bottom:18px;flex:1}
-  .tool-tag{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:100px;align-self:flex-start}
-  .tool-card.live .tool-tag{background:#e6f2ec;color:var(--mint)}
-  .tool-card.soon{opacity:.7}
-  .tool-card.soon .tool-tag{background:var(--cream-deep);color:var(--ink-soft)}
-  .tool-card.soon{cursor:default}
-  .go{font-weight:600;color:var(--coral-deep);font-size:15px;margin-top:4px;display:inline-flex;align-items:center;gap:5px}
-  .tool-card.live:hover .go{gap:9px}
-  .go span{transition:transform .2s ease}
-
-  .why{padding:56px 0;border-top:1px solid var(--line);position:relative}
-  .why h2{text-align:center;font-size:clamp(26px,4vw,36px);margin-bottom:36px}
-  .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:26px}
-  .why-item{text-align:center;transition:transform .25s ease}
-  .why-item:hover{transform:translateY(-4px)}
-  .why-item .wi{font-size:32px;margin-bottom:12px;display:inline-block;transition:transform .3s ease}
-  .why-item:hover .wi{transform:scale(1.15) rotate(-8deg)}
-  .why-item h3{font-size:19px;margin-bottom:6px}
-  .why-item p{font-size:14.5px;color:var(--ink-soft)}
-
-  footer.site{background:var(--ink);color:#c3cad9;padding:44px 0 28px;margin-top:20px}
-  .ad-slot{margin:10px 0 40px}
-  .ad-inner{border:1px dashed var(--line);border-radius:12px;min-height:90px;display:flex;align-items:center;justify-content:center;color:#b9b09c;font-size:12px;letter-spacing:.08em;text-transform:uppercase;background:repeating-linear-gradient(45deg,transparent,transparent 12px,rgba(228,220,203,.18) 12px,rgba(228,220,203,.18) 24px)}
-  footer.site .fin{max-width:1040px;margin:0 auto;padding:0 24px}
-  footer.site .brand{color:#fff;margin-bottom:14px}
-  footer.site .flinks a{color:#c3cad9;text-decoration:none;font-size:14.5px;margin-right:20px;line-height:2.2}
-  footer.site .flinks a:hover{color:#fff}
-  footer.site .fbottom{border-top:1px solid #2f3a52;margin-top:20px;padding-top:18px;font-size:13px;color:#7c869c}
-
-  .hamburger{display:none;flex:none;width:38px;height:38px;border:none;background:var(--cream-deep);border-radius:10px;cursor:pointer;position:relative;align-items:center;justify-content:center}
-  .hamburger span{display:block;width:18px;height:2px;background:var(--ink);border-radius:2px;position:relative;transition:transform .2s ease,opacity .2s ease}
-  .hamburger span::before,.hamburger span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--ink);border-radius:2px;transition:transform .2s ease}
-  .hamburger span::before{top:-6px}
-  .hamburger span::after{top:6px}
-  #navToggle{display:none}
-  #navToggle:checked ~ .nav .hamburger span{background:transparent}
-  #navToggle:checked ~ .nav .hamburger span::before{transform:translateY(6px) rotate(45deg)}
-  #navToggle:checked ~ .nav .hamburger span::after{transform:translateY(-6px) rotate(-45deg)}
-  .nav-drop{display:none}
-  #navToggle:checked ~ .nav-drop{display:block}
-  @media(max-width:640px){
-    .nav a.link{display:none}
-    .hamburger{display:flex}
-    .nav-drop{position:absolute;top:64px;left:0;right:0;background:var(--cream);border-bottom:1px solid var(--line);box-shadow:0 12px 24px rgba(28,36,52,.08);z-index:40;animation:dropIn .18s ease}
-    .nav-drop a{display:block;padding:14px 24px;color:var(--ink-soft);text-decoration:none;font-size:15px;font-weight:500;border-top:1px solid var(--line)}
-    .nav-drop a:first-child{border-top:none}
-    .nav-drop a:hover{color:var(--coral-deep);background:var(--cream-deep)}
-  }
-  @keyframes dropIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
-
-  @media(prefers-reduced-motion:reduce){
-    .reveal{opacity:1;transform:none;transition:none}
-    .blob,.eyebrow .spark,.brand .dot{animation:none}
-  }
-
-  @keyframes pengbob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-7px) rotate(-1.5deg)}}
-  @keyframes pwave{0%,60%,100%{transform:rotate(0)}72%{transform:rotate(-22deg)}86%{transform:rotate(5deg)}}
-  @keyframes pblink{0%,92%,100%{transform:scaleY(0)}94%,98%{transform:scaleY(1)}}
-  .peyelid{transform-origin:center;animation:pblink 5.5s infinite}
-  .percy-row{display:flex;align-items:flex-end;gap:12px;margin:22px 0}
-  .percy-bubble{background:var(--card);border:1px solid var(--line);border-radius:18px;border-bottom-left-radius:3px;padding:13px 17px;font-size:15px;color:var(--ink-soft);box-shadow:var(--shadow);flex:1;line-height:1.65}
-  .percy-bubble strong{color:var(--ink)}
-  .img-ph{border-radius:18px;overflow:hidden;box-shadow:var(--shadow);margin:8px 0}
-  .img-ph-inner{position:relative;width:100%}
-  .img-ph-content{position:absolute;inset:0;background:var(--cream-deep);border:2px dashed var(--line);border-radius:18px;display:flex;align-items:center;justify-content:center}
-
-
-  /* ── MOBILE FIXES ── */
-  body{overflow-x:hidden;max-width:100vw}
-  *{overflow-wrap:break-word;word-break:break-word}
-  input,select,textarea,button{touch-action:manipulation}
-  img{max-width:100%}
-  @media(max-width:480px){
-    .wrap,.wrap-sm,.wrap-narrow{padding-left:16px;padding-right:16px}
-    h1{font-size:clamp(24px,7vw,34px)}
-    h2{font-size:clamp(20px,5.5vw,26px)}
-    .section{padding:36px 0}
-    .hero{padding:32px 0 20px}
-    footer.site .fin{padding:0 16px}
-  }
-  @media(max-width:700px){
-    .nav-links{display:none}
-  }
-  /* prevent table overflow */
-  table{width:100%;display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
-  /* iOS zoom prevention on inputs */
-  input[type="text"],input[type="email"],input[type="number"],select{font-size:16px !important}
-
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,400;9..144,0,600;9..144,0,700;9..144,1,400;9..144,1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6523820717153538" crossorigin="anonymous"></script>
+<style>
+/* ── TOKENS ──────────────────────────────────────────────────────── */
+:root{
+  --ink:#1c2434;--ink-soft:#3a4356;
+  --cream:#faf6ef;--cream-deep:#f2ebdd;--cream-card:#fffdf9;
+  --coral:#f2683c;--coral-deep:#d94f24;--coral-light:#fdeee7;
+  --amber:#f7a23b;--amber-light:#fef3e0;
+  --mint:#2f8f6b;--mint-light:#e6f2ec;
+  --blush:#f6c9c9;--line:#e4dccb;
+  --shadow-sm:0 1px 3px rgba(28,36,52,.06),0 4px 12px rgba(28,36,52,.06);
+  --shadow-md:0 2px 4px rgba(28,36,52,.04),0 12px 32px rgba(28,36,52,.10);
+  --shadow-lg:0 4px 6px rgba(28,36,52,.04),0 20px 48px rgba(28,36,52,.14);
+  --r-sm:12px;--r-md:18px;--r-lg:24px;--r-xl:32px;
+}
+*{box-sizing:border-box;margin:0;padding:0;overflow-wrap:break-word;word-break:break-word}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:var(--ink);
+  line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;max-width:100vw}
+h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.1;letter-spacing:-.015em}
+img{max-width:100%;height:auto;display:block}
+button,input,select,textarea{touch-action:manipulation}
+
+/* ── LAYOUT ─────────────────────────────────────────────────────── */
+.wrap{width:100%;max-width:1060px;margin:0 auto;padding:0 28px}
+.wrap-sm{width:100%;max-width:740px;margin:0 auto;padding:0 28px}
+.wrap-xs{width:100%;max-width:580px;margin:0 auto;padding:0 28px}
+@media(max-width:480px){.wrap,.wrap-sm,.wrap-xs{padding:0 18px}}
+
+/* ── ANIMATIONS ─────────────────────────────────────────────────── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes floatBlob{0%,100%{transform:translate(0,0)}50%{transform:translate(14px,-18px)}}
+@keyframes softPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+@keyframes sparkle{0%,100%{transform:scale(1) rotate(0)}50%{transform:scale(1.3) rotate(15deg)}}
+@keyframes pengbob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px) rotate(-1.5deg)}}
+@keyframes pwave{0%,60%,100%{transform:rotate(0)}72%{transform:rotate(-22deg)}86%{transform:rotate(5deg)}}
+@keyframes pblink{0%,92%,100%{transform:scaleY(0)}94%,98%{transform:scaleY(1)}}
+@keyframes popIn{0%{opacity:0;transform:scale(.88) translateY(20px)}100%{opacity:1;transform:scale(1) translateY(0)}}
+@keyframes slideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+@keyframes countUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes shimmer{0%{background-position:-400px 0}100%{background-position:400px 0}}
+
+.rev{opacity:0;transform:translateY(20px);
+  transition:opacity .65s cubic-bezier(.2,.7,.3,1),transform .65s cubic-bezier(.2,.7,.3,1)}
+.rev.in{opacity:1;transform:none}
+.rev-1{transition-delay:.06s}.rev-2{transition-delay:.14s}.rev-3{transition-delay:.22s}.rev-4{transition-delay:.30s}
+@media(prefers-reduced-motion:reduce){.rev{opacity:1;transform:none;transition:none}}
+
+/* ── NAV ─────────────────────────────────────────────────────────── */
+header.site{border-bottom:1px solid var(--line);background:rgba(250,246,239,.94);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  position:sticky;top:0;z-index:100}
+.nav{display:flex;align-items:center;justify-content:space-between;
+  padding:14px 28px;max-width:1060px;margin:0 auto;min-height:58px}
+.brand{display:flex;align-items:center;gap:10px;font-family:'Fraunces',serif;
+  font-weight:700;font-size:20px;color:var(--ink);text-decoration:none;flex-shrink:0}
+.brand .dot{width:26px;height:26px;border-radius:50%;flex-shrink:0;
+  background:radial-gradient(circle at 32% 30%,#fff 0 18%,var(--amber) 19% 55%,var(--coral) 56%);
+  animation:softPulse 3.5s ease-in-out infinite}
+.nav-links{display:flex;align-items:center;gap:0}
+.nav-links a{color:var(--ink-soft);text-decoration:none;font-size:13.5px;
+  font-weight:500;margin-left:22px;transition:color .15s}
+.nav-links a:hover{color:var(--coral-deep)}
+.nav-cta{background:var(--coral);color:#fff !important;padding:9px 18px;
+  border-radius:100px;font-weight:600 !important;font-size:13px !important;
+  margin-left:22px !important;box-shadow:0 4px 12px rgba(242,104,60,.3);transition:transform .15s,box-shadow .15s !important}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 7px 18px rgba(242,104,60,.38) !important}
+input#navTog{display:none}
+.hmb{display:none;width:38px;height:38px;border:none;background:var(--cream-deep);
+  border-radius:10px;cursor:pointer;align-items:center;justify-content:center;flex:none}
+.hmb span{display:block;width:16px;height:2px;background:var(--ink);border-radius:2px;position:relative}
+.hmb span::before,.hmb span::after{content:"";position:absolute;left:0;width:16px;height:2px;
+  background:var(--ink);border-radius:2px;transition:transform .2s}
+.hmb span::before{top:-5px}.hmb span::after{top:5px}
+#navTog:checked~.nav .hmb span{background:transparent}
+#navTog:checked~.nav .hmb span::before{transform:translateY(5px) rotate(45deg)}
+#navTog:checked~.nav .hmb span::after{transform:translateY(-5px) rotate(-45deg)}
+.ndrop{display:none}
+#navTog:checked~.ndrop{display:block;position:absolute;top:58px;left:0;right:0;
+  background:var(--cream);border-bottom:1px solid var(--line);
+  box-shadow:0 14px 28px rgba(28,36,52,.1);z-index:99}
+.ndrop a{display:flex;align-items:center;padding:14px 24px;color:var(--ink-soft);
+  text-decoration:none;font-size:15px;font-weight:500;
+  border-top:1px solid var(--line);min-height:50px}
+@media(max-width:700px){.nav-links{display:none}.hmb{display:flex}}
+
+/* ── HERO ─────────────────────────────────────────────────────────── */
+.hero{padding:80px 0 60px;text-align:center;position:relative;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.35;pointer-events:none;z-index:0}
+.blob-1{width:340px;height:340px;background:var(--blush);top:-80px;right:-80px;animation:floatBlob 9s ease-in-out infinite}
+.blob-2{width:240px;height:240px;background:var(--amber);opacity:.2;bottom:-40px;left:-60px;animation:floatBlob 11s ease-in-out infinite reverse}
+.blob-3{width:180px;height:180px;background:var(--mint-light, #e6f2ec);opacity:.3;top:50%;left:10%;animation:floatBlob 13s ease-in-out infinite}
+
+.hero-badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--coral-deep);
+  background:var(--coral-light);padding:7px 18px;border-radius:100px;
+  margin-bottom:28px;position:relative;z-index:1;border:1px solid rgba(242,104,60,.2)}
+.hero-badge .spark{animation:sparkle 2.4s ease-in-out infinite}
+.hero h1{font-size:clamp(40px,7vw,72px);max-width:14ch;margin:0 auto 22px;
+  position:relative;z-index:1;line-height:1.05}
+.hero h1 em{font-style:italic;color:var(--coral-deep);position:relative;white-space:nowrap}
+.hero h1 em::after{content:"";position:absolute;left:-3px;right:-3px;bottom:8px;
+  height:12px;background:var(--blush);opacity:.5;z-index:-1;border-radius:8px;transform:skewX(-5deg)}
+.hero-sub{font-size:clamp(16px,2.2vw,20px);color:var(--ink-soft);
+  max-width:50ch;margin:0 auto 36px;line-height:1.65;position:relative;z-index:1}
+.hero-cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;
+  position:relative;z-index:1;margin-bottom:56px}
+.btn-hero{font-family:'Inter';font-size:16px;font-weight:700;padding:16px 32px;
+  border-radius:100px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;
+  transition:transform .15s,box-shadow .15s}
+.btn-primary{background:linear-gradient(135deg,var(--coral),var(--coral-deep));color:#fff;
+  box-shadow:0 8px 24px rgba(242,104,60,.35)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(242,104,60,.45)}
+.btn-ghost{background:#fff;color:var(--ink);border:1.5px solid var(--line)}
+.btn-ghost:hover{border-color:var(--coral);color:var(--coral-deep);transform:translateY(-2px)}
+
+/* ── TRUST STRIP ─────────────────────────────────────────────────── */
+.trust-strip{display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap;
+  margin-top:0;position:relative;z-index:1}
+.trust-item{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--ink-soft);font-weight:500}
+.trust-dot{width:7px;height:7px;border-radius:50%;background:var(--mint)}
+
+/* ── PHONE MOCKUP ────────────────────────────────────────────────── */
+.phone-hero{position:relative;z-index:1;margin:52px auto 0;max-width:340px}
+.phone-shell{background:linear-gradient(160deg,#1a2332 0%,#0f1520 100%);
+  border-radius:44px;padding:14px;box-shadow:0 32px 80px rgba(15,21,32,.45),0 0 0 1px rgba(255,255,255,.08);
+  position:relative}
+.phone-shell::before{content:"";position:absolute;top:16px;left:50%;transform:translateX(-50%);
+  width:100px;height:4px;background:rgba(255,255,255,.15);border-radius:2px}
+.phone-screen{background:#0f1520;border-radius:32px;overflow:hidden;padding:20px 18px 18px}
+.phone-status{display:flex;justify-content:space-between;margin-bottom:18px;color:rgba(255,255,255,.5);font-size:11px}
+.phone-greet{font-family:'Fraunces',serif;font-size:20px;color:#fff;margin-bottom:3px;font-weight:600}
+.phone-sub-text{font-size:11.5px;color:rgba(255,255,255,.5);margin-bottom:16px}
+.phone-net-card{background:linear-gradient(135deg,rgba(47,143,107,.25),rgba(47,143,107,.12));
+  border:1px solid rgba(47,143,107,.3);border-radius:16px;padding:14px 16px;margin-bottom:12px}
+.phone-net-label{font-size:10px;color:rgba(255,255,255,.5);letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px}
+.phone-net-amount{font-family:'Fraunces',serif;font-size:26px;color:#fff;font-weight:700}
+.phone-net-delta{font-size:11px;color:#2f8f6b;margin-top:2px}
+.phone-stats-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px;margin-bottom:12px}
+.phone-stat{background:rgba(255,255,255,.06);border-radius:12px;padding:10px 10px;border:1px solid rgba(255,255,255,.06)}
+.phone-stat .ps-icon{font-size:14px;margin-bottom:4px}
+.phone-stat .ps-label{font-size:9px;color:rgba(255,255,255,.4);letter-spacing:.04em;display:block}
+.phone-stat .ps-val{font-size:12px;color:#fff;font-weight:600}
+.phone-journey-label{font-size:10.5px;color:rgba(255,255,255,.5);margin-bottom:7px;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+.phone-journey-item{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.05);
+  border-radius:12px;padding:9px 10px;margin-bottom:6px;border:1px solid rgba(255,255,255,.05)}
+.phone-journey-item:last-child{margin-bottom:0}
+.pji-text{flex:1}
+.pji-title{font-size:11px;color:#fff;font-weight:600}
+.pji-sub{font-size:9.5px;color:rgba(255,255,255,.4)}
+.pji-pct{font-size:10px;color:var(--mint);font-weight:700;white-space:nowrap}
+
+/* ── DEBT STATS BANNER ───────────────────────────────────────────── */
+.stats-banner{background:var(--ink);padding:52px 0;margin:0}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;max-width:860px;margin:0 auto}
+@media(max-width:580px){.stats-grid{grid-template-columns:1fr;gap:16px;padding:0 24px}}
+.stat-item{text-align:center;padding:24px}
+.stat-num{font-family:'Fraunces',serif;font-size:clamp(36px,6vw,56px);font-weight:700;color:var(--amber);
+  display:block;line-height:1}
+.stat-label{font-size:14px;color:#8fa4c8;margin-top:8px;display:block}
+
+/* ── SECTION LABEL ───────────────────────────────────────────────── */
+.sec-label{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--coral-deep);
+  margin-bottom:12px}
+.sec-label::before{content:"";width:24px;height:2px;background:var(--coral);border-radius:2px}
+
+/* ── QUOTE BAND ──────────────────────────────────────────────────── */
+.quote-band{background:linear-gradient(135deg,var(--coral) 0%,var(--coral-deep) 100%);
+  padding:56px 0;text-align:center;overflow:hidden;position:relative}
+.quote-band::before{content:"";position:absolute;inset:0;
+  background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+.quote-band blockquote{font-family:'Fraunces',serif;font-size:clamp(22px,4vw,36px);
+  color:#fff;font-style:italic;max-width:18ch;margin:0 auto 14px;line-height:1.2;
+  position:relative;z-index:1}
+.quote-band blockquote em{text-decoration:underline;text-decoration-style:wavy;
+  text-underline-offset:6px;font-style:normal;color:var(--amber)}
+.quote-band cite{font-size:13px;color:rgba(255,255,255,.7);font-style:normal;
+  letter-spacing:.08em;text-transform:uppercase;position:relative;z-index:1;display:block}
+
+/* ── HOW IT WORKS (INTERACTIVE MINI CALC) ───────────────────────── */
+.how-section{padding:80px 0;background:#fff}
+.how-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+@media(max-width:760px){.how-grid{grid-template-columns:1fr;gap:36px}}
+
+.how-steps{display:flex;flex-direction:column;gap:0}
+.how-step{display:flex;gap:16px;padding:20px 0;border-bottom:1px solid var(--line);cursor:pointer;
+  transition:all .2s;position:relative}
+.how-step:last-child{border-bottom:none}
+.how-step.active{padding-left:12px}
+.how-step.active::before{content:"";position:absolute;left:0;top:20px;bottom:20px;
+  width:3px;background:var(--coral);border-radius:2px}
+.step-circle{width:36px;height:36px;border-radius:50%;border:2px solid var(--line);
+  display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;
+  font-weight:700;font-size:15px;color:var(--ink-soft);flex:none;transition:all .2s;margin-top:2px}
+.how-step.active .step-circle{background:var(--coral);border-color:var(--coral);color:#fff}
+.step-content h3{font-size:18px;margin-bottom:4px;color:var(--ink-soft);transition:color .2s}
+.how-step.active .step-content h3{color:var(--ink)}
+.step-content p{font-size:14.5px;color:var(--ink-soft);line-height:1.6;
+  max-height:0;overflow:hidden;transition:max-height .3s ease,opacity .3s}
+.how-step.active .step-content p{max-height:80px;opacity:1}
+.step-content p{opacity:0}
+
+.how-visual{background:var(--cream);border-radius:var(--r-xl);padding:32px;
+  box-shadow:var(--shadow-md);min-height:360px;display:flex;flex-direction:column;justify-content:center}
+.hv-panel{display:none;animation:fadeUp .35s ease}
+.hv-panel.show{display:block}
+
+/* mini debt cards inside how-visual */
+.mini-debt-list{display:flex;flex-direction:column;gap:10px;margin-bottom:20px}
+.mini-debt{display:flex;align-items:center;gap:12px;background:#fff;border-radius:12px;
+  padding:12px 16px;border:1px solid var(--line);box-shadow:var(--shadow-sm)}
+.md-icon{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;
+  justify-content:center;font-size:18px;flex:none}
+.md-info{flex:1;min-width:0}
+.md-name{font-size:13.5px;font-weight:600}
+.md-rate{font-size:11.5px;color:var(--ink-soft)}
+.md-bal{font-family:'Fraunces',serif;font-size:16px;font-weight:600;color:var(--ink);white-space:nowrap}
+
+/* method comparison inside how-visual */
+.method-compare{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:400px){.method-compare{grid-template-columns:1fr}}
+.mc-card{border-radius:14px;padding:16px;border:2px solid var(--line)}
+.mc-card.snow{border-color:var(--coral);background:var(--coral-light)}
+.mc-card.aval{border-color:var(--line);background:#fff}
+.mc-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  margin-bottom:8px}
+.mc-card.snow .mc-label{color:var(--coral-deep)}
+.mc-card.aval .mc-label{color:var(--ink-soft)}
+.mc-order{list-style:none}
+.mc-order li{display:flex;align-items:center;gap:7px;font-size:12.5px;
+  padding:4px 0;color:var(--ink-soft)}
+.mc-order li .mcn{width:18px;height:18px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;
+  background:rgba(28,36,52,.12);color:var(--ink);flex:none}
+.mc-card.snow .mc-order li .mcn{background:var(--coral);color:#fff}
+
+/* date reveal in how-visual */
+.date-reveal{text-align:center;padding:24px}
+.dr-label{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-soft);margin-bottom:8px}
+.dr-date{font-family:'Fraunces',serif;font-size:clamp(32px,6vw,52px);font-weight:700;
+  color:var(--coral);animation:countUp .5s ease}
+.dr-sub{font-size:14px;color:var(--ink-soft);margin-top:8px;line-height:1.5}
+.dr-bars{display:flex;flex-direction:column;gap:8px;margin:20px 0}
+.dr-bar-wrap{display:flex;align-items:center;gap:10px}
+.dr-bar-label{font-size:12px;color:var(--ink-soft);width:100px;text-align:right;flex:none}
+.dr-bar-track{flex:1;height:10px;background:var(--line);border-radius:5px;overflow:hidden}
+.dr-bar-fill{height:100%;border-radius:5px;animation:slideUp .8s ease}
+.fill-coral{background:var(--coral)}
+.fill-mint{background:var(--mint)}
+
+/* ── DEBT EXAMPLE SECTION ────────────────────────────────────────── */
+.example-section{padding:80px 0;background:var(--cream)}
+.debt-cards-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:36px 0}
+@media(max-width:600px){.debt-cards-row{grid-template-columns:1fr;gap:12px}}
+.debt-eg-card{background:#fff;border-radius:var(--r-md);padding:24px 20px;
+  border:1px solid var(--line);box-shadow:var(--shadow-sm);text-align:center;
+  transition:transform .2s,box-shadow .2s}
+.debt-eg-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.dec-amount{font-family:'Fraunces',serif;font-size:clamp(28px,5vw,42px);font-weight:700;
+  color:var(--ink);display:block;margin-bottom:4px}
+.dec-name{font-weight:600;font-size:15px;margin-bottom:8px}
+.dec-badge{display:inline-block;padding:4px 12px;border-radius:100px;
+  font-size:11.5px;font-weight:700;background:var(--cream-deep);color:var(--ink-soft)}
+.dec-badge.high{background:#fdeee7;color:var(--coral-deep)}
+.dec-badge.zero{background:var(--mint-light);color:var(--mint)}
+
+/* snowball vs avalanche comparison */
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:32px}
+@media(max-width:640px){.compare-grid{grid-template-columns:1fr}}
+.cmp-card{border-radius:var(--r-md);padding:24px 22px;border:2px solid var(--line)}
+.cmp-card.featured{border-color:var(--coral);background:var(--coral-light)}
+.cmp-eyebrow{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  margin-bottom:8px;display:block}
+.cmp-card.featured .cmp-eyebrow{color:var(--coral-deep)}
+.cmp-card:not(.featured) .cmp-eyebrow{color:var(--ink-soft)}
+.cmp-card h3{font-size:20px;margin-bottom:12px}
+.cmp-list{list-style:none}
+.cmp-list li{display:flex;gap:10px;padding:7px 0;border-bottom:1px solid rgba(228,220,203,.6);font-size:14.5px}
+.cmp-list li:last-child{border-bottom:none}
+.cmp-num{width:28px;height:28px;border-radius:50%;border:2px solid var(--line);
+  display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;flex:none;margin-top:1px}
+.cmp-card.featured .cmp-num{background:var(--coral);border-color:var(--coral);color:#fff}
+.cmp-item-name{font-weight:700;color:var(--ink)}
+.cmp-item-note{font-size:12.5px;color:var(--ink-soft)}
+
+/* ── CALCULATOR CTA STRIP ────────────────────────────────────────── */
+.calc-strip{padding:80px 0;background:#fff;border-top:1px solid var(--line)}
+.calc-strip-inner{text-align:center;max-width:640px;margin:0 auto}
+.calc-strip h2{font-size:clamp(28px,5vw,44px);margin-bottom:14px}
+.calc-strip p{font-size:17px;color:var(--ink-soft);margin-bottom:32px;line-height:1.65}
+.calc-inputs-preview{background:var(--cream);border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:28px;margin-bottom:28px;text-align:left}
+.cip-row{display:flex;gap:12px;margin-bottom:12px;flex-wrap:wrap}
+.cip-row:last-child{margin-bottom:0}
+.cip-field{flex:1;min-width:140px}
+.cip-label-row{display:flex;align-items:center;gap:6px;margin-bottom:5px}
+.cip-label{font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft)}
+.cip-tip{width:16px;height:16px;border-radius:50%;background:var(--ink-soft);color:#fff;
+  font-size:9px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;
+  cursor:help;position:relative}
+.cip-tip:hover::after{content:attr(data-tip);position:absolute;bottom:calc(100% + 6px);
+  left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;font-size:11px;
+  padding:6px 10px;border-radius:8px;white-space:nowrap;font-family:'Inter';font-weight:400;
+  font-style:normal;z-index:10;pointer-events:none;max-width:220px;white-space:normal;text-align:center}
+.cip-input{width:100%;font-family:'Inter';font-size:16px;padding:11px 14px;
+  border:1.5px solid var(--line);border-radius:11px;background:#fff;
+  color:var(--ink);transition:border-color .15s}
+.cip-input:focus{outline:none;border-color:var(--coral);background:#fff}
+.cip-input::placeholder{color:#b5a99a;font-size:14px}
+.big-cta{width:100%;padding:18px;font-family:'Fraunces',serif;font-size:20px;font-weight:600;
+  background:linear-gradient(135deg,var(--coral),var(--coral-deep));color:#fff;
+  border:none;border-radius:14px;cursor:pointer;
+  box-shadow:0 8px 24px rgba(242,104,60,.32);
+  transition:transform .15s,box-shadow .15s;letter-spacing:.01em}
+.big-cta:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(242,104,60,.42)}
+.big-cta:active{transform:none}
+.calc-note{font-size:12.5px;color:var(--ink-soft);margin-top:12px}
+
+/* ── FOUNDER SECTION ─────────────────────────────────────────────── */
+.founder-section{padding:80px 0;background:var(--cream-deep)}
+.founder-inner{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;
+  max-width:760px;margin:0 auto}
+@media(max-width:600px){.founder-inner{grid-template-columns:1fr;text-align:center}}
+.founder-avatar{width:96px;height:96px;border-radius:50%;
+  object-fit:cover;border:4px solid #fff;
+  box-shadow:0 8px 24px rgba(28,36,52,.18);flex:none}
+@media(max-width:600px){.founder-avatar{margin:0 auto}}
+.founder-text blockquote{font-family:'Fraunces',serif;font-size:clamp(19px,3vw,24px);
+  font-style:italic;line-height:1.4;margin-bottom:14px;color:var(--ink)}
+.founder-text blockquote em{color:var(--coral-deep);font-style:normal;
+  border-bottom:2px solid var(--coral);padding-bottom:1px}
+.founder-byline{font-size:14px;font-weight:600;color:var(--ink-soft)}
+.founder-byline span{color:var(--mint);font-weight:700}
+
+/* ── FEATURES GRID ───────────────────────────────────────────────── */
+.features-section{padding:80px 0;background:#fff}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:40px}
+.feat-card{background:var(--cream);border:1px solid var(--line);border-radius:var(--r-md);
+  padding:28px 24px;transition:transform .2s,box-shadow .2s,border-color .2s}
+.feat-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-md);border-color:var(--coral)}
+.feat-icon{font-size:28px;margin-bottom:16px;display:block}
+.feat-card h3{font-size:19px;margin-bottom:8px}
+.feat-card p{font-size:14px;color:var(--ink-soft);line-height:1.6}
+
+/* ── GLOSSARY ─────────────────────────────────────────────────────── */
+.gloss-section{padding:64px 0;background:var(--cream)}
+.gloss-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:16px;margin-top:32px}
+.gloss-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-sm);
+  padding:20px;box-shadow:var(--shadow-sm)}
+.gloss-card h4{font-family:'Inter';font-weight:700;font-size:14px;margin-bottom:6px;color:var(--ink)}
+.gloss-card p{font-size:13.5px;color:var(--ink-soft);line-height:1.6}
+
+/* ── FAQ ──────────────────────────────────────────────────────────── */
+.faq-section{padding:64px 0;background:#fff}
+.faq-list{margin-top:28px;display:flex;flex-direction:column;gap:10px}
+.faq-item{border:1px solid var(--line);border-radius:var(--r-md);
+  background:var(--cream);overflow:hidden}
+.faq-item summary{padding:18px 22px;font-weight:600;font-size:16px;cursor:pointer;
+  list-style:none;display:flex;justify-content:space-between;align-items:center;
+  gap:12px;min-height:56px;transition:background .15s}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";font-size:22px;color:var(--coral);font-weight:300;flex:none;
+  transition:transform .2s}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item[open] summary{background:#fff;border-bottom:1px solid var(--line)}
+.faq-ans{padding:16px 22px;font-size:15px;color:var(--ink-soft);line-height:1.7}
+
+/* ── ARTICLES STRIP ───────────────────────────────────────────────── */
+.articles-section{padding:64px 0;background:var(--cream-deep)}
+.art-scroll{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+  gap:16px;margin-top:28px}
+.art-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);
+  padding:22px;text-decoration:none;color:var(--ink);box-shadow:var(--shadow-sm);
+  display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.art-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.art-cat{font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--coral-deep);margin-bottom:8px}
+.art-card h3{font-size:17px;line-height:1.3;margin-bottom:auto;padding-bottom:14px}
+.art-rd{font-size:13px;font-weight:600;color:var(--coral-deep)}
+
+/* ── FINAL CTA BAND ───────────────────────────────────────────────── */
+.final-cta{padding:88px 0;background:linear-gradient(160deg,var(--ink) 0%,#1a2844 100%);
+  text-align:center;position:relative;overflow:hidden}
+.final-cta::before{content:"";position:absolute;inset:0;
+  background:radial-gradient(ellipse at 70% 40%,rgba(242,104,60,.18) 0%,transparent 60%)}
+.final-cta h2{font-size:clamp(28px,5vw,48px);color:#fff;margin-bottom:14px;position:relative;z-index:1}
+.final-cta h2 em{font-style:italic;color:var(--amber)}
+.final-cta p{font-size:17px;color:#8fa4c8;margin-bottom:36px;position:relative;z-index:1;max-width:42ch;margin-left:auto;margin-right:auto}
+.final-cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1}
+.btn-amber{background:linear-gradient(135deg,var(--amber),#e09018);color:var(--ink);
+  font-family:'Inter';font-size:16px;font-weight:700;padding:16px 32px;border-radius:100px;
+  text-decoration:none;display:inline-block;
+  box-shadow:0 8px 24px rgba(247,162,59,.35);transition:transform .15s,box-shadow .15s}
+.btn-amber:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(247,162,59,.45)}
+.btn-outline-white{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.3);
+  font-family:'Inter';font-size:16px;font-weight:600;padding:16px 32px;border-radius:100px;
+  text-decoration:none;display:inline-block;transition:all .15s}
+.btn-outline-white:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+
+/* ── AD + FOOTER ──────────────────────────────────────────────────── */
+.ad-slot{margin:0;padding:24px 0}
+.ad-inner{border:1px dashed var(--line);border-radius:12px;min-height:90px;
+  display:flex;align-items:center;justify-content:center;color:#b9b09c;
+  font-size:11.5px;letter-spacing:.08em;text-transform:uppercase}
+footer.site{background:var(--ink);color:#c3cad9;padding:44px 0 28px}
+footer.site .fin{max-width:1060px;margin:0 auto;padding:0 28px}
+.fbrand{display:flex;align-items:center;gap:9px;font-family:'Fraunces',serif;
+  font-weight:700;font-size:18px;color:#fff;margin-bottom:14px}
+.flinks{display:flex;flex-wrap:wrap;gap:0}
+.flinks a{color:#c3cad9;text-decoration:none;font-size:14px;margin-right:18px;line-height:2.4}
+.flinks a:hover{color:#fff}
+.fbottom{border-top:1px solid #2f3a52;margin-top:18px;padding-top:16px;
+  font-size:12.5px;color:#7c869c}
+@media(max-width:480px){footer.site .fin{padding:0 18px}.flinks a{font-size:13px}}
+
+/* ── PERCY ────────────────────────────────────────────────────────── */
+.peyelid{transform-origin:center;animation:pblink 5.5s infinite}
+.percy-row{display:flex;align-items:flex-end;gap:12px;margin:20px 0}
+.percy-row svg{flex-shrink:0}
+.percy-bubble{background:#fff;border:1px solid var(--line);border-radius:18px;
+  border-bottom-left-radius:3px;padding:14px 18px;font-size:15px;color:var(--ink-soft);
+  box-shadow:var(--shadow-sm);flex:1;line-height:1.65;min-width:0}
+.percy-bubble strong{color:var(--ink)}
+
+/* ── RESULT MODAL (full screen experience) ────────────────────────── */
+.result-overlay{display:none;position:fixed;inset:0;background:rgba(15,21,32,.75);
+  z-index:500;align-items:flex-end;justify-content:center;
+  backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.result-overlay.open{display:flex;animation:fadeUp .3s ease}
+@media(min-width:640px){.result-overlay{align-items:center;padding:24px}}
+.result-sheet{background:var(--cream);width:100%;max-width:660px;
+  max-height:95vh;overflow-y:auto;-webkit-overflow-scrolling:touch;
+  border-radius:28px 28px 0 0;position:relative}
+@media(min-width:640px){.result-sheet{border-radius:28px;max-height:90vh}}
+.sheet-handle{width:40px;height:4px;background:var(--line);border-radius:3px;
+  margin:14px auto 0;display:block}
+@media(min-width:640px){.sheet-handle{display:none}}
+
+/* result top hero */
+.result-top{background:linear-gradient(160deg,#1a2333 0%,#0d1521 100%);
+  padding:36px 28px 28px;text-align:center;position:relative;overflow:hidden}
+.result-top::after{content:"";position:absolute;right:-30px;bottom:-30px;
+  width:160px;height:160px;border-radius:50%;
+  background:radial-gradient(circle at 35% 32%,rgba(255,255,255,.18) 0 20%,var(--amber) 21% 60%,var(--coral) 61%);
+  opacity:.25;pointer-events:none}
+.result-confetti{font-size:40px;display:block;margin-bottom:12px;animation:popIn .5s cubic-bezier(.36,.07,.19,.97)}
+.result-date-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--amber);margin-bottom:8px;display:block}
+.result-date{font-family:'Fraunces',serif;font-size:clamp(34px,8vw,52px);font-weight:700;
+  color:#fff;line-height:1;position:relative;z-index:1}
+.result-tagline{font-size:14px;color:#8fa4c8;margin-top:10px;font-style:italic;position:relative;z-index:1}
+.result-stats-row{display:flex;gap:2px;margin-top:20px;position:relative;z-index:1}
+.rs-stat{flex:1;background:rgba(255,255,255,.07);padding:14px 8px;
+  text-align:center;border-radius:10px;transition:background .2s}
+.rs-stat:hover{background:rgba(255,255,255,.12)}
+.rs-val{font-family:'Fraunces',serif;font-size:20px;font-weight:700;color:var(--amber);
+  display:block;animation:countUp .6s ease}
+.rs-lbl{font-size:10px;color:#6a82a8;margin-top:3px;letter-spacing:.04em}
+.result-progress{height:6px;background:rgba(255,255,255,.1);border-radius:6px;
+  margin:20px 0 0;overflow:hidden;position:relative;z-index:1}
+.result-progress-fill{height:100%;border-radius:6px;width:0;
+  background:linear-gradient(90deg,var(--mint),var(--amber));
+  transition:width 1.4s cubic-bezier(.4,0,.2,1)}
+
+/* milestones */
+.milestones-section{padding:22px 24px}
+.milestones-section h3{font-family:'Inter';font-weight:700;font-size:14px;
+  text-transform:uppercase;letter-spacing:.07em;color:var(--ink-soft);margin-bottom:12px}
+.milestone{display:flex;align-items:center;gap:12px;background:#fff;
+  border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin-bottom:8px;
+  animation:slideUp .4s ease}
+.milestone:last-child{margin-bottom:0}
+.m-num{width:30px;height:30px;border-radius:50%;
+  background:linear-gradient(140deg,var(--amber),var(--coral));
+  color:#fff;font-size:12px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;flex:none}
+.m-info{flex:1;min-width:0}
+.m-name{font-weight:700;font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.m-cleared{font-size:12px;color:var(--ink-soft)}
+.m-date{font-size:13px;font-weight:700;color:var(--mint);white-space:nowrap}
+
+/* schedule toggle */
+.sched-toggle-btn{width:calc(100% - 48px);margin:4px 24px 8px;background:none;
+  border:1.5px solid var(--line);border-radius:11px;padding:12px 18px;
+  font-family:'Inter';font-size:14px;font-weight:600;color:var(--ink-soft);
+  cursor:pointer;display:flex;align-items:center;justify-content:space-between;
+  touch-action:manipulation;transition:.15s}
+.sched-toggle-btn:hover{border-color:var(--coral);color:var(--coral-deep)}
+.sched-arr{transition:transform .2s}
+.sched-toggle-btn.open .sched-arr{transform:rotate(180deg)}
+.sched-wrap{display:none;padding:0 24px 4px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.sched-wrap.show{display:block}
+.sched-table{width:100%;border-collapse:collapse;font-size:13px;min-width:380px}
+.sched-table th{background:var(--ink);color:#fff;padding:9px 12px;
+  text-align:left;font-family:'Fraunces',serif;font-weight:600}
+.sched-table td{padding:7px 12px;border-bottom:1px solid var(--line);color:var(--ink-soft)}
+.sched-table tr:last-child td{border-bottom:none}
+.sched-table tr.cleared td{color:var(--mint);font-weight:600}
+
+/* sign-up gate */
+.signup-gate{padding:24px 24px 12px;border-top:1px solid var(--line)}
+.sg-header{text-align:center;margin-bottom:18px}
+.sg-icon{font-size:28px;margin-bottom:8px;display:block}
+.sg-title{font-family:'Fraunces',serif;font-size:22px;margin-bottom:5px}
+.sg-sub{font-size:14px;color:var(--ink-soft);max-width:38ch;margin:0 auto;line-height:1.6}
+.sg-benefits{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0}
+@media(max-width:380px){.sg-benefits{grid-template-columns:1fr}}
+.sg-benefit{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--ink-soft);
+  background:var(--cream);border-radius:9px;padding:9px 11px}
+.sg-tick{color:var(--mint);font-weight:700;font-size:14px;flex:none}
+.google-btn{width:100%;display:flex;align-items:center;justify-content:center;gap:10px;
+  padding:13px 20px;border:1.5px solid var(--line);border-radius:12px;
+  background:#fff;font-family:'Inter';font-size:15px;font-weight:600;color:var(--ink);
+  cursor:pointer;touch-action:manipulation;transition:.15s;margin-bottom:12px}
+.google-btn:hover{border-color:var(--coral);box-shadow:0 4px 14px rgba(0,0,0,.08)}
+.or-divider{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.or-divider::before,.or-divider::after{content:"";flex:1;height:1px;background:var(--line)}
+.or-divider span{font-size:11.5px;color:var(--ink-soft);font-weight:600;white-space:nowrap}
+.email-form-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.email-form-row input{flex:1;min-width:0;font-family:'Inter';font-size:16px;
+  padding:12px 14px;border:1.5px solid var(--line);border-radius:11px;background:#fff;
+  color:var(--ink)}
+.email-form-row input:focus{outline:none;border-color:var(--coral)}
+.email-form-row button{font-family:'Inter';font-size:14px;font-weight:700;
+  padding:12px 18px;border-radius:11px;border:none;background:var(--coral);color:#fff;
+  cursor:pointer;touch-action:manipulation;white-space:nowrap;
+  box-shadow:0 4px 12px rgba(242,104,60,.28);transition:.15s}
+.email-form-row button:hover{transform:translateY(-1px)}
+.email-micro{font-size:11.5px;color:var(--ink-soft);margin-bottom:4px}
+.email-msg{font-size:13px;font-weight:600;min-height:18px;margin-top:4px;display:none}
+.email-msg.ok{color:var(--mint);display:block}
+.email-msg.err{color:var(--coral-deep);display:block}
+
+/* pricing (shown after email) */
+.pricing-gate{display:none;padding:20px 24px 24px;border-top:1px solid var(--line)}
+.pricing-check-header{text-align:center;margin-bottom:18px;
+  background:linear-gradient(160deg,var(--ink) 0%,#1a2844 100%);
+  border-radius:var(--r-md);padding:22px;color:#fff}
+.pch-tick{width:44px;height:44px;border-radius:50%;background:var(--mint);
+  color:#fff;font-size:20px;display:flex;align-items:center;justify-content:center;
+  margin:0 auto 10px;box-shadow:0 4px 12px rgba(47,143,107,.4)}
+.pch-title{font-family:'Fraunces',serif;font-size:22px;margin-bottom:4px}
+.pch-sub{font-size:13.5px;color:#8fa4c8}
+.plan-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:14px}
+@media(max-width:540px){.plan-grid{grid-template-columns:1fr}}
+.plan-card{border:2px solid var(--line);border-radius:var(--r-md);padding:18px 14px;
+  background:#fff;position:relative;display:flex;flex-direction:column}
+.plan-card.featured{border-color:var(--coral);box-shadow:0 0 0 1px var(--coral)}
+.plan-card.wealth-c{border-color:var(--amber);background:linear-gradient(160deg,#fffbf0,#fff)}
+.plan-badge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);
+  white-space:nowrap;background:linear-gradient(135deg,var(--coral),var(--coral-deep));
+  color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+  padding:4px 13px;border-radius:100px;box-shadow:0 4px 10px rgba(242,104,60,.3)}
+.plan-name{font-family:'Fraunces',serif;font-size:15px;font-weight:600;margin-bottom:3px}
+.plan-price{font-family:'Fraunces',serif;font-size:26px;font-weight:700;
+  color:var(--ink);margin-bottom:2px;line-height:1.1}
+.plan-price span{font-size:12px;font-weight:400;color:var(--ink-soft);font-family:'Inter'}
+.plan-social{font-size:10.5px;color:var(--mint);font-weight:600;margin-bottom:10px}
+.plan-features{list-style:none;flex:1;margin-bottom:14px;
+  border-top:1px solid var(--line);padding-top:10px;margin-top:8px}
+.plan-features li{font-size:12px;color:var(--ink-soft);
+  padding:4px 0 4px 17px;position:relative;line-height:1.4}
+.plan-features li::before{content:"✓";position:absolute;left:0;color:var(--mint);font-weight:700}
+.plan-features li.no::before{content:"–";color:#ccc}
+.plan-features li.no{color:#bbb}
+.plan-btn{width:100%;padding:11px 8px;border-radius:11px;border:none;
+  font-family:'Inter';font-size:13px;font-weight:700;cursor:pointer;
+  touch-action:manipulation;transition:.15s}
+.plan-btn.free-b{background:var(--cream-deep);color:var(--ink)}
+.plan-btn.pro-b{background:linear-gradient(135deg,var(--coral),var(--coral-deep));
+  color:#fff;box-shadow:0 4px 12px rgba(242,104,60,.3)}
+.plan-btn.pro-b:hover{transform:translateY(-1px)}
+.plan-btn.wealth-b{background:linear-gradient(135deg,var(--amber),#c47d0e);color:#fff}
+.plan-btn.wealth-b:hover{transform:translateY(-1px)}
+.pricing-note{text-align:center;font-size:11.5px;color:var(--ink-soft);margin-top:8px}
+
+/* ── MOBILE OVERFLOW SAFETY ───────────────────────────────────────── */
+@media(max-width:480px){
+  .hero{padding:52px 0 40px}
+  .how-section,.calc-strip,.features-section,.example-section,
+  .founder-section,.gloss-section,.faq-section,.articles-section,.final-cta{padding:56px 0}
+  .phone-hero{max-width:280px}
+  .stats-grid{padding:0 20px}
+  .big-cta{font-size:17px;padding:16px}
+}
+</style>
 </head>
 <body>
 
-<header class="site" style="position:relative"><input type="checkbox" id="navToggle">
+<!-- ── NAV ──────────────────────────────────────────────────────────── -->
+<header class="site" style="position:relative">
+  <input type="checkbox" id="navTog">
   <nav class="nav">
     <a href="/" class="brand"><span class="dot"></span>Clearpath</a>
-    <div>
-      <a href="/debt/index.html" class="link">Debt tracker</a>
-      <a href="/debt/blog.html" class="link">Guides</a>
-      <a href="/debt/about.html" class="link">About</a>
-      <a href="/debt/contact.html" class="link">Contact</a>
-    </div><label for="navToggle" class="hamburger" aria-label="Menu"><span></span></label>
-  </nav><div class="nav-drop"><a href="/debt/index.html">Debt tracker</a><a href="/debt/blog.html">Guides</a><a href="/debt/about.html">About</a><a href="/debt/contact.html">Contact</a></div>
+    <div class="nav-links">
+      <a href="/debt/index.html">Tracker</a>
+      <a href="/debt/blog.html">Guides</a>
+      <a href="/debt/about.html">About</a>
+      <a href="/debt/contact.html">Contact</a>
+      <a href="/debt/index.html" class="nav-cta">Check my debt date →</a>
+    </div>
+    <label for="navTog" class="hmb" aria-label="Menu"><span></span></label>
+  </nav>
+  <div class="ndrop">
+    <a href="/debt/index.html">Debt Tracker</a>
+    <a href="/debt/blog.html">Guides</a>
+    <a href="/debt/about.html">About</a>
+    <a href="/debt/contact.html">Contact</a>
+  </div>
 </header>
 
+<!-- ── HERO ─────────────────────────────────────────────────────────── -->
 <section class="hero">
   <div class="blob blob-1"></div>
   <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
   <div class="wrap">
-    <span class="eyebrow reveal in"><span class="spark">✦</span> Free · Private · No signup</span>
-    <h1 class="reveal in">Take the <em>clear path</em> with your money.</h1>
-    <p class="sub reveal in">Simple, free tools that help you figure out your debt, plan your payoff, and build money habits that actually stick. Nothing you enter ever leaves your device. No signup. No catch.</p>
-    <div class="cta-row reveal in">
-      <a href="/debt/index.html" class="btn btn-primary">Try the free tracker →</a>
-      <a href="#articles" class="btn btn-ghost">Read the guides</a>
+    <span class="hero-badge rev in"><span class="spark">✦</span> Free &nbsp;·&nbsp; Private &nbsp;·&nbsp; No signup</span>
+    <h1 class="rev in">You don't need to be good with money to get out of <em>debt.</em></h1>
+    <p class="hero-sub rev in">You just need a clear picture of where you are and a simple plan for where you are going. Clearpath shows you both  -  in under five minutes.</p>
+    <div class="hero-cta-row rev in">
+      <a href="#calculator" class="btn-hero btn-primary">See my debt-free date →</a>
+      <a href="/debt/blog.html" class="btn-hero btn-ghost">Read the guides</a>
+    </div>
+    <div class="trust-strip rev in">
+      <span class="trust-item"><span class="trust-dot"></span>Nothing you enter is ever stored</span>
+      <span class="trust-item"><span class="trust-dot"></span>No account required</span>
+      <span class="trust-item"><span class="trust-dot"></span>Works in any currency</span>
     </div>
   </div>
 
-    <div class="percy-row reveal in" style="max-width:540px;margin:28px auto 0">
-      <svg viewBox="0 0 160 190" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:48px;flex:none;display:block;animation:pengbob 3.8s ease-in-out infinite">
-  <path d="M44 96 C28 104 26 128 36 140 C42 146 50 142 50 132 Z" fill="#2a3550" style="transform-origin:44px 118px;animation:pwave 3.5s ease-in-out infinite"/>
-  <path d="M116 96 C132 104 134 128 124 140 C118 146 110 142 110 132 Z" fill="#2a3550"/>
-  <path d="M80 34 C112 34 126 62 126 104 C126 146 108 168 80 168 C52 168 34 146 34 104 C34 62 48 34 80 34 Z" fill="#1c2434"/>
-  <path d="M80 62 C100 62 110 82 110 108 C110 138 98 154 80 154 C62 154 50 138 50 108 C50 82 60 62 80 62 Z" fill="#faf6ef"/>
-  <circle cx="66" cy="86" r="8.5" fill="#fff"/><circle cx="94" cy="86" r="8.5" fill="#fff"/>
-  <circle cx="67.5" cy="87" r="4.2" fill="#1c2434"/><circle cx="95.5" cy="87" r="4.2" fill="#1c2434"/>
-  <circle cx="69" cy="85" r="1.4" fill="#fff"/><circle cx="97" cy="85" r="1.4" fill="#fff"/>
-  <rect class="peyelid" x="57" y="78" width="18" height="10" rx="5" fill="#1c2434"/>
-  <rect class="peyelid" x="85" y="78" width="18" height="10" rx="5" fill="#1c2434"/>
-  <path d="M80 96 L90 106 L80 114 L70 106 Z" fill="#f2683c"/>
-  <ellipse cx="55" cy="102" rx="5" ry="3" fill="#f6c9c9" opacity=".5"/>
-  <ellipse cx="105" cy="102" rx="5" ry="3" fill="#f6c9c9" opacity=".5"/>
-  <ellipse cx="66" cy="172" rx="14" ry="6" fill="#f7a23b"/>
-  <ellipse cx="94" cy="172" rx="14" ry="6" fill="#f7a23b"/>
-</svg>
-      <div class="percy-bubble">Hi, I am Percy. I will be your guide around here. Start with the free tracker or pick an article below. Either way, I am glad you are here.</div>
-    </div>
-</section>
-
-<section class="articles" id="articles">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <h2 class="sec">Start here</h2>
-      <a href="/debt/blog.html" class="seeall">See all guides →</a>
-    </div>
-    <div class="img-ph rev"><img src="/img-blog-laptop.jpg" alt="A woman sitting at her desk reading the Clearpath debt guides on her laptop, with a notebook of debt payoff goals beside her" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;border-radius:18px;box-shadow:0 1px 2px rgba(28,36,52,.04),0 8px 28px rgba(28,36,52,.06);"></div>
-    <div class="art-grid">
-
-      <a href="/debt/debt-snowball-real-example.html" class="art-card reveal reveal-1">
-        <span class="cat">Real story</span>
-        <h3>Debt Snowball Method Explained with a Real-World Example</h3>
-        <span class="rd">Read the story →</span>
-      </a>
-
-      <a href="/debt/snowball-vs-avalanche.html" class="art-card reveal reveal-2">
-        <span class="cat">Debt payoff</span>
-        <h3>Debt Snowball vs. Avalanche: Which Is Faster?</h3>
-        <span class="rd">Read the guide →</span>
-      </a>
-
-      <a href="/debt/how-to-start-debt-snowball.html" class="art-card reveal reveal-3">
-        <span class="cat">Debt payoff</span>
-        <h3>How to Start the Debt Snowball Method</h3>
-        <span class="rd">Read the guide →</span>
-      </a>
-
-      <a href="/debt/find-extra-money-for-debt.html" class="art-card reveal reveal-4">
-        <span class="cat">Money tips</span>
-        <h3>7 Ways to Find Extra Money for Debt</h3>
-        <span class="rd">Read the guide →</span>
-      </a>
-
+  <!-- Phone mockup -->
+  <div class="phone-hero rev">
+    <div class="phone-shell">
+      <div class="phone-screen">
+        <div class="phone-status"><span>9:41</span><span>Clearpath</span></div>
+        <div class="phone-greet">Good morning, Busayo 👋</div>
+        <div class="phone-sub-text">Here is your money overview</div>
+        <div class="phone-net-card">
+          <div class="phone-net-label">Total Debt Remaining</div>
+          <div class="phone-net-amount">$11,200</div>
+          <div class="phone-net-delta">↓ $450 paid off this month</div>
+        </div>
+        <div class="phone-stats-row">
+          <div class="phone-stat"><div class="ps-icon">❄️</div><span class="ps-label">Method</span><span class="ps-val">Snowball</span></div>
+          <div class="phone-stat"><div class="ps-icon">📅</div><span class="ps-label">Free in</span><span class="ps-val">18 mo</span></div>
+          <div class="phone-stat"><div class="ps-icon">💰</div><span class="ps-label">Saved</span><span class="ps-val">$840</span></div>
+        </div>
+        <div class="phone-journey-label">Your journey</div>
+        <div class="phone-journey-item">
+          <span style="font-size:16px">📋</span>
+          <div class="pji-text"><div class="pji-title">Track your debt</div><div class="pji-sub">Know when you will be free</div></div>
+          <span class="pji-pct">70%</span>
+        </div>
+        <div class="phone-journey-item">
+          <span style="font-size:16px">📊</span>
+          <div class="pji-text"><div class="pji-title">Budget your money</div><div class="pji-sub">Plan and save more</div></div>
+          <span class="pji-pct">40%</span>
+        </div>
+        <div class="phone-journey-item">
+          <span style="font-size:16px">📚</span>
+          <div class="pji-text"><div class="pji-title">Learn and grow</div><div class="pji-sub">Build income skills</div></div>
+          <span class="pji-pct">20%</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section style="padding:10px 0 0">
-  <div class="wrap">
-    <div class="percy-row reveal" style="max-width:620px;margin:0 auto">
-      <svg viewBox="0 0 160 190" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:44px;flex:none;display:block;animation:pengbob 4.2s ease-in-out infinite">
-        <path d="M44 96 C28 104 26 128 36 140 C42 146 50 142 50 132 Z" fill="#2a3550"/>
-        <path d="M116 96 C132 104 134 128 124 140 C118 146 110 142 110 132 Z" fill="#2a3550"/>
-        <path d="M80 34 C112 34 126 62 126 104 C126 146 108 168 80 168 C52 168 34 146 34 104 C34 62 48 34 80 34 Z" fill="#1c2434"/>
-        <path d="M80 62 C100 62 110 82 110 108 C110 138 98 154 80 154 C62 154 50 138 50 108 C50 82 60 62 80 62 Z" fill="#faf6ef"/>
-        <circle cx="66" cy="86" r="8.5" fill="#fff"/><circle cx="94" cy="86" r="8.5" fill="#fff"/>
-        <circle cx="67.5" cy="87" r="4.2" fill="#1c2434"/><circle cx="95.5" cy="87" r="4.2" fill="#1c2434"/>
-        <rect class="peyelid" x="57" y="78" width="18" height="10" rx="5" fill="#1c2434"/>
-        <rect class="peyelid" x="85" y="78" width="18" height="10" rx="5" fill="#1c2434"/>
-        <path d="M80 96 L90 106 L80 114 L70 106 Z" fill="#f2683c"/>
-        <ellipse cx="66" cy="172" rx="14" ry="6" fill="#f7a23b"/>
-        <ellipse cx="94" cy="172" rx="14" ry="6" fill="#f7a23b"/>
-      </svg>
-      <div class="percy-bubble">All our tools are free. No trial, no credit card, no account. Just open, use, and go. The tracker is where I would start if I were you.</div>
-    </div>
+<!-- ── STATS BANNER ──────────────────────────────────────────────────── -->
+<section class="stats-banner">
+  <div class="stats-grid">
+    <div class="stat-item rev"><span class="stat-num">$1.7T</span><span class="stat-label">US consumer credit card debt in 2026</span></div>
+    <div class="stat-item rev rev-2"><span class="stat-num">80%</span><span class="stat-label">of debt payoff is about behaviour, not math</span></div>
+    <div class="stat-item rev rev-3"><span class="stat-num">5 min</span><span class="stat-label">to see your exact debt-free date with Clearpath</span></div>
   </div>
 </section>
-<section class="tools">
+
+<!-- ── QUOTE ─────────────────────────────────────────────────────────── -->
+<section class="quote-band">
+  <div class="wrap-xs">
+    <blockquote class="rev in">"The secret to getting out of debt is not to earn more. It's to <em>face the number.</em>"</blockquote>
+    <cite class="rev in"> -  Oluwaseun Amusan, founder of Clearpath</cite>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ──────────────────────────────────────────────────── -->
+<section class="how-section" id="how">
   <div class="wrap">
-    <h2 class="sec reveal">Our tools</h2>
-    <div class="img-ph reveal"><img src="/img-tracker-ui.jpg" alt="The Clearpath debt calculator showing currency selector, income field, and debt input rows with placeholder text" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;border-radius:18px;box-shadow:0 1px 2px rgba(28,36,52,.04),0 8px 28px rgba(28,36,52,.06);"></div>
-    <div class="tool-grid">
+    <span class="sec-label rev">How it works</span>
+    <h2 class="rev" style="font-size:clamp(28px,5vw,44px);margin-bottom:8px">Three steps to your debt-free date</h2>
+    <p class="rev" style="font-size:17px;color:var(--ink-soft);margin-bottom:44px;max-width:46ch">No complicated spreadsheets. No financial degree required. Just your numbers.</p>
 
-      <a href="/debt/index.html" class="tool-card live reveal reveal-1">
-        <div class="tool-icon" style="background:#fdeee7">❄️</div>
-        <span class="tool-tag">Live now</span>
-        <h3>Debt Snowball Tracker</h3>
-        <p>Enter your debts and instantly see your debt-free date, total interest, and a printable month-by-month payoff plan. Compare snowball vs avalanche in one tap.</p>
-        <span class="go">Open the tracker <span>→</span></span>
-      </a>
-
-      <div class="tool-card reveal reveal-2" style="border-style:dashed;background:transparent;box-shadow:none;display:flex;align-items:center;justify-content:center;min-height:140px">
-        <p style="text-align:center;color:var(--ink-soft);font-size:15px;line-height:1.6">More free tools are in the works.<br>Subscribe below to hear when they land.</p>
+    <div class="how-grid">
+      <div class="how-steps rev">
+        <div class="how-step active" onclick="showStep(0,this)">
+          <div class="step-circle">1</div>
+          <div class="step-content">
+            <h3>Add your debts</h3>
+            <p>List each debt: the balance, interest rate, and monthly payment. Include credit cards, loans, medical bills. Leave out your home loan for now.</p>
+          </div>
+        </div>
+        <div class="how-step" onclick="showStep(1,this)">
+          <div class="step-circle">2</div>
+          <div class="step-content">
+            <h3>Choose your strategy</h3>
+            <p>Snowball pays smallest balance first  -  quick wins, proven motivation. Avalanche pays highest rate first  -  saves more interest. Both work. Pick the one you will stick with.</p>
+          </div>
+        </div>
+        <div class="how-step" onclick="showStep(2,this)">
+          <div class="step-circle">3</div>
+          <div class="step-content">
+            <h3>See your date</h3>
+            <p>Clearpath shows you the exact month your last debt hits zero, your full payoff order, total interest saved, and a month-by-month schedule.</p>
+          </div>
+        </div>
       </div>
 
+      <div class="how-visual rev rev-2">
+        <!-- Panel 0: Debt list -->
+        <div class="hv-panel show" id="hv0">
+          <p style="font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:14px">Your debts, organised</p>
+          <div class="mini-debt-list">
+            <div class="mini-debt"><div class="md-icon" style="background:#fdeee7">💳</div><div class="md-info"><div class="md-name">Credit Card</div><div class="md-rate">21% APR</div></div><div class="md-bal">$2,300</div></div>
+            <div class="mini-debt"><div class="md-icon" style="background:#e6f2ec">🏥</div><div class="md-info"><div class="md-name">Medical Bill</div><div class="md-rate">0% APR</div></div><div class="md-bal">$750</div></div>
+            <div class="mini-debt"><div class="md-icon" style="background:#fef3e0">🚗</div><div class="md-info"><div class="md-name">Car Loan</div><div class="md-rate">8% APR</div></div><div class="md-bal">$4,000</div></div>
+          </div>
+          <div style="background:var(--ink);border-radius:10px;padding:12px 16px;display:flex;justify-content:space-between">
+            <span style="color:#8fa4c8;font-size:13px">Total debt</span>
+            <span style="color:var(--amber);font-family:'Fraunces',serif;font-size:18px;font-weight:700">$7,050</span>
+          </div>
+        </div>
+        <!-- Panel 1: Method comparison -->
+        <div class="hv-panel" id="hv1">
+          <p style="font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:14px">Snowball vs Avalanche</p>
+          <div class="method-compare">
+            <div class="mc-card snow">
+              <div class="mc-label">❄️ Snowball</div>
+              <ul class="mc-order">
+                <li><span class="mcn">1</span>Medical $750</li>
+                <li><span class="mcn">2</span>Credit $2,300</li>
+                <li><span class="mcn">3</span>Car $4,000</li>
+              </ul>
+              <div style="font-size:11px;color:var(--coral-deep);margin-top:10px;font-weight:600">Quick first win ✓</div>
+            </div>
+            <div class="mc-card aval">
+              <div class="mc-label">🏔 Avalanche</div>
+              <ul class="mc-order">
+                <li><span class="mcn">1</span>Credit 21%</li>
+                <li><span class="mcn">2</span>Car 8%</li>
+                <li><span class="mcn">3</span>Medical 0%</li>
+              </ul>
+              <div style="font-size:11px;color:var(--ink-soft);margin-top:10px;font-weight:600">Saves more interest</div>
+            </div>
+          </div>
+          <div style="background:var(--cream);border-radius:10px;padding:11px 14px;margin-top:10px;font-size:13px;color:var(--ink-soft)">
+            <strong style="color:var(--ink)">Not sure?</strong> Start with Snowball. Most people finish it.
+          </div>
+        </div>
+        <!-- Panel 2: Date reveal -->
+        <div class="hv-panel" id="hv2">
+          <div class="date-reveal">
+            <div class="dr-label">Your debt-free date</div>
+            <div class="dr-date">March 2028</div>
+            <div class="dr-sub">Based on $7,050 in debt + $150 extra per month using the Snowball method</div>
+            <div class="dr-bars">
+              <div class="dr-bar-wrap"><span class="dr-bar-label">Medical $750</span><div class="dr-bar-track"><div class="dr-bar-fill fill-coral" style="width:100%;transition-delay:.2s"></div></div></div>
+              <div class="dr-bar-wrap"><span class="dr-bar-label">Credit $2,300</span><div class="dr-bar-track"><div class="dr-bar-fill fill-coral" style="width:62%;transition-delay:.4s"></div></div></div>
+              <div class="dr-bar-wrap"><span class="dr-bar-label">Car $4,000</span><div class="dr-bar-track"><div class="dr-bar-fill fill-mint" style="width:28%;transition-delay:.6s"></div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="why">
+<!-- ── EXAMPLE DEBTS ──────────────────────────────────────────────────── -->
+<section class="example-section">
   <div class="wrap">
-    <h2 class="reveal">Why people trust Clearpath</h2>
-    <div class="why-grid">
-      <div class="why-item reveal reveal-1"><div class="wi">🔒</div><h3>Truly private</h3><p>Your numbers stay on your device. We never see them, store them, or sell them. Open the tab and they are gone.</p></div>
-      <div class="why-item reveal reveal-2"><div class="wi">💸</div><h3>Always free</h3><p>No subscriptions, no paywalls, no account. Just open a tool and start. Nothing to sign up for, ever.</p></div>
-      <div class="why-item reveal reveal-3"><div class="wi">📱</div><h3>Works everywhere</h3><p>Built for your phone first. Works just as well on a laptop. Works anywhere, any time.</p></div>
-      <div class="why-item reveal reveal-4"><div class="wi">🎯</div><h3>Actually useful</h3><p>Built to help you make a real decision or a real plan - not to sell you something.</p></div>
+    <span class="sec-label rev">A real example</span>
+    <h2 class="rev" style="font-size:clamp(26px,4.5vw,40px);margin-bottom:10px">Let's say you have three debts</h2>
+    <p class="rev" style="font-size:17px;color:var(--ink-soft);max-width:50ch">Looking at them separately feels overwhelming. Clearpath puts them in order and shows you where to start.</p>
+
+    <div class="debt-cards-row rev">
+      <div class="debt-eg-card">
+        <span class="dec-amount">$750</span>
+        <div class="dec-name">Medical Bill</div>
+        <span class="dec-badge zero">0% Interest</span>
+        <div style="margin-top:10px;font-size:12.5px;color:var(--mint);font-weight:600">❄️ Snowball: pay first</div>
+      </div>
+      <div class="debt-eg-card">
+        <span class="dec-amount">$2,000</span>
+        <div class="dec-name">Credit Card</div>
+        <span class="dec-badge high">18% Interest</span>
+        <div style="margin-top:10px;font-size:12.5px;color:var(--coral-deep);font-weight:600">🏔 Avalanche: pay first</div>
+      </div>
+      <div class="debt-eg-card">
+        <span class="dec-amount">$10,000</span>
+        <div class="dec-name">Student Loan</div>
+        <span class="dec-badge">6% Interest</span>
+        <div style="margin-top:10px;font-size:12.5px;color:var(--ink-soft);font-weight:600">Both: tackle last</div>
+      </div>
+    </div>
+
+    <div class="compare-grid rev">
+      <div class="cmp-card featured">
+        <span class="cmp-eyebrow">❄️ Snowball Method  -  Smallest first</span>
+        <h3>Quick wins. Proven motivation.</h3>
+        <ul class="cmp-list">
+          <li><span class="cmp-num">1</span><div><div class="cmp-item-name">$750 medical bill</div><div class="cmp-item-note">Cleared fast  -  proof the plan works</div></div></li>
+          <li><span class="cmp-num">2</span><div><div class="cmp-item-name">$2,000 credit card</div><div class="cmp-item-note">Bigger payment from win #1</div></div></li>
+          <li><span class="cmp-num">3</span><div><div class="cmp-item-name">$10,000 student loan</div><div class="cmp-item-note">Full snowball behind it</div></div></li>
+        </ul>
+      </div>
+      <div class="cmp-card">
+        <span class="cmp-eyebrow">🏔 Avalanche Method  -  Highest rate first</span>
+        <h3>Saves the most money in interest.</h3>
+        <ul class="cmp-list">
+          <li><span class="cmp-num">1</span><div><div class="cmp-item-name">$2,000 credit card (18%)</div><div class="cmp-item-note">Most expensive debt to carry</div></div></li>
+          <li><span class="cmp-num">2</span><div><div class="cmp-item-name">$10,000 student loan (6%)</div><div class="cmp-item-note">Long stretch, no early win</div></div></li>
+          <li><span class="cmp-num">3</span><div><div class="cmp-item-name">$750 medical (0%)</div><div class="cmp-item-note">Easiest left for last</div></div></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="rev" style="text-align:center;margin-top:28px">
+      <p style="font-size:16px;color:var(--ink-soft);margin-bottom:16px">The best method is the one <strong>you will actually follow for 18 months.</strong></p>
+      <a href="#calculator" class="btn-hero btn-primary" style="display:inline-flex">Run the numbers for my debts →</a>
     </div>
   </div>
 </section>
 
+<!-- ── INTERACTIVE CALCULATOR ────────────────────────────────────────── -->
+<section class="calc-strip" id="calculator">
+  <div class="wrap-sm">
+    <div class="calc-strip-inner">
+      <span class="sec-label" style="justify-content:center;margin-bottom:10px">Free calculator</span>
+      <h2>Find your <em style="font-style:italic;color:var(--coral-deep)">exact</em> debt-free date</h2>
+      <p>Enter your debts below and hit the button. Your date appears immediately. Nothing is saved or sent anywhere.</p>
+
+      <div class="calc-inputs-preview rev" id="homeCalcForm">
+        <!-- Debt row 1 -->
+        <div class="cip-row" id="hcRow1">
+          <div class="cip-field" style="flex:2">
+            <div class="cip-label-row">
+              <span class="cip-label">Debt name</span>
+              <span class="cip-tip" data-tip="What is this debt? e.g. Visa card, car loan, student loan">?</span>
+            </div>
+            <input type="text" class="cip-input hc-name" placeholder="e.g. Credit card">
+          </div>
+          <div class="cip-field">
+            <div class="cip-label-row">
+              <span class="cip-label">Balance</span>
+              <span class="cip-tip" data-tip="How much do you still owe today? Check your latest statement.">?</span>
+            </div>
+            <input type="text" class="cip-input hc-bal" placeholder="e.g. 2,500" inputmode="decimal">
+          </div>
+          <div class="cip-field">
+            <div class="cip-label-row">
+              <span class="cip-label">Rate % <span style="font-weight:400;color:var(--ink-soft);font-size:10px">(annual)</span></span>
+              <span class="cip-tip" data-tip="Your APR  -  the yearly interest rate. Find it on your statement. If your lender quotes monthly, multiply by 12.">?</span>
+            </div>
+            <input type="text" class="cip-input hc-rate" placeholder="e.g. 19" inputmode="decimal">
+          </div>
+          <div class="cip-field">
+            <div class="cip-label-row">
+              <span class="cip-label">Monthly payment</span>
+              <span class="cip-tip" data-tip="The amount you pay each month. Use your minimum payment if unsure  -  you can add extra below.">?</span>
+            </div>
+            <input type="text" class="cip-input hc-pmt" placeholder="e.g. 75" inputmode="decimal">
+          </div>
+        </div>
+
+        <!-- Debt row 2 -->
+        <div class="cip-row" id="hcRow2" style="display:none">
+          <div class="cip-field" style="flex:2"><input type="text" class="cip-input hc-name" placeholder="e.g. Student loan"></div>
+          <div class="cip-field"><input type="text" class="cip-input hc-bal" placeholder="e.g. 8,000" inputmode="decimal"></div>
+          <div class="cip-field"><input type="text" class="cip-input hc-rate" placeholder="e.g. 6" inputmode="decimal"></div>
+          <div class="cip-field"><input type="text" class="cip-input hc-pmt" placeholder="e.g. 120" inputmode="decimal"></div>
+        </div>
+
+        <!-- Debt row 3 -->
+        <div class="cip-row" id="hcRow3" style="display:none">
+          <div class="cip-field" style="flex:2"><input type="text" class="cip-input hc-name" placeholder="e.g. Car loan"></div>
+          <div class="cip-field"><input type="text" class="cip-input hc-bal" placeholder="e.g. 4,000" inputmode="decimal"></div>
+          <div class="cip-field"><input type="text" class="cip-input hc-rate" placeholder="e.g. 8" inputmode="decimal"></div>
+          <div class="cip-field"><input type="text" class="cip-input hc-pmt" placeholder="e.g. 150" inputmode="decimal"></div>
+        </div>
+
+        <!-- Extra row + add button -->
+        <div class="cip-row" style="align-items:center;flex-wrap:wrap;gap:12px">
+          <button onclick="addHCRow()" style="font-family:'Inter';font-size:13px;font-weight:600;color:var(--mint);background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:5px;padding:0">
+            <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M7 4v6M4 7h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Add another debt
+          </button>
+          <div class="cip-field" style="min-width:160px;margin-left:auto">
+            <div class="cip-label-row">
+              <span class="cip-label">Extra each month</span>
+              <span class="cip-tip" data-tip="Any extra you can pay on top of your minimums. Even $50 extra can move your debt-free date by months.">?</span>
+            </div>
+            <input type="text" id="hcExtra" class="cip-input" placeholder="0 (optional)" inputmode="decimal">
+          </div>
+        </div>
+      </div>
+
+      <button class="big-cta rev" onclick="homeCalcRun()">
+        Calculate my debt-free date &rarr;
+      </button>
+      <p class="calc-note rev">Your numbers stay in your browser. Nothing is ever stored or shared.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOUNDER ─────────────────────────────────────────────────────────── -->
+<section class="founder-section">
+  <div class="wrap">
+    <div class="founder-inner rev">
+      <img src="/img-busayo-profile.jpg" alt="Oluwaseun Busayo Amusan, founder of Clearpath" class="founder-avatar">
+      <div class="founder-text">
+        <blockquote>"Understanding your money should not require you to be a <em>financial expert.</em> I built Clearpath for people who just need a clear starting point."</blockquote>
+        <div class="founder-byline">Oluwaseun Busayo Amusan &nbsp;·&nbsp; <span>Founder, Clearpath</span><br><span style="font-weight:400;color:var(--ink-soft)">Fintech professional, YALO Technologies</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FEATURES ───────────────────────────────────────────────────────── -->
+<section class="features-section">
+  <div class="wrap">
+    <span class="sec-label rev">What you get</span>
+    <h2 class="rev" style="font-size:clamp(26px,4vw,38px)">One place to understand your debt</h2>
+    <div class="features-grid">
+      <div class="feat-card rev rev-1"><span class="feat-icon">📊</span><h3>Track your debt</h3><p>Keep all your balances, rates, and payments in one place. Finally see the complete picture.</p></div>
+      <div class="feat-card rev rev-2"><span class="feat-icon">🗓</span><h3>Your exact debt-free date</h3><p>See the specific month your last debt hits zero. A concrete date is far more motivating than a vague goal.</p></div>
+      <div class="feat-card rev rev-3"><span class="feat-icon">❄️</span><h3>Snowball &amp; avalanche</h3><p>Compare both strategies side by side. See the real difference for your specific debts before you choose.</p></div>
+      <div class="feat-card rev rev-4"><span class="feat-icon">📅</span><h3>Month-by-month plan</h3><p>A full schedule showing every payment, every cleared debt, and every month you get closer to zero.</p></div>
+      <div class="feat-card rev"><span class="feat-icon">🔒</span><h3>Completely private</h3><p>Nothing you type is ever sent or stored. Close the tab and your numbers are gone. No account, no catch.</p></div>
+      <div class="feat-card rev rev-1"><span class="feat-icon">🌍</span><h3>Any currency</h3><p>Works in dollars, pounds, euros, naira, and 8 other currencies. The method is the same wherever you live.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── GLOSSARY ────────────────────────────────────────────────────────── -->
+<section class="gloss-section">
+  <div class="wrap">
+    <span class="sec-label rev">Learn as you go</span>
+    <h2 class="rev" style="font-size:clamp(24px,4vw,36px)">Personal finance, explained like you're a person</h2>
+    <p class="rev" style="font-size:16px;color:var(--ink-soft);margin-bottom:0;max-width:50ch">You should not need to know what APR means before you can make a smart decision about your money. So here.</p>
+    <div class="gloss-grid">
+      <div class="gloss-card rev"><h4>APR</h4><p>Annual Percentage Rate. The yearly cost of borrowing, as a percentage. Higher APR means more of your monthly payment goes to the lender instead of reducing your balance.</p></div>
+      <div class="gloss-card rev rev-1"><h4>Monthly payment</h4><p>The amount you pay each month. The minimum is the smallest amount to avoid penalty. Paying more than the minimum always reduces your balance faster.</p></div>
+      <div class="gloss-card rev rev-2"><h4>Balance</h4><p>The total amount you currently owe on a debt. Not what you originally borrowed  -  what is left after all your payments so far.</p></div>
+      <div class="gloss-card rev rev-3"><h4>Debt-free date</h4><p>The specific month your last debt reaches zero, based on your current payments and the strategy you choose. This is what Clearpath shows you.</p></div>
+      <div class="gloss-card rev rev-4"><h4>Debt snowball</h4><p>A payoff strategy where you attack the smallest balance first. Clears one debt quickly, builds momentum, and keeps most people motivated long enough to finish.</p></div>
+      <div class="gloss-card rev"><h4>Principal</h4><p>The original amount borrowed, before any interest. When you make a payment, part goes to interest first, then the rest reduces your principal.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ────────────────────────────────────────────────────────────── -->
+<section class="faq-section" id="faq">
+  <div class="wrap-sm">
+    <span class="sec-label rev">Questions</span>
+    <h2 class="rev" style="font-size:clamp(24px,4vw,36px)">Things worth knowing</h2>
+    <div class="faq-list">
+      <details class="faq-item rev"><summary>Is Clearpath completely free?</summary><div class="faq-ans">Yes. The debt calculator, payoff planner, and all guides are free. No trial, no credit card, no account. Open a tool and start. The core tools will always be free.</div></details>
+      <details class="faq-item rev"><summary>Are my debt numbers private?</summary><div class="faq-ans">Completely. Everything you enter runs inside your browser. Nothing is sent to our servers, stored in a database, or accessible to anyone. Close the tab and the data is gone.</div></details>
+      <details class="faq-item rev"><summary>Which method should I use  -  snowball or avalanche?</summary><div class="faq-ans">If you have quit a debt plan before, choose snowball. The early win on the smallest debt keeps most people going. If you are highly disciplined and want to save the most money in interest, try avalanche. The free calculator lets you compare both with your real numbers.</div></details>
+      <details class="faq-item rev"><summary>Can I use this if my lender gives me a monthly rate?</summary><div class="faq-ans">Yes. The full tracker at clearpath.click/debt has a rate toggle that lets you switch between annual and monthly rates. If your rate is 2.5% per month, switch to Monthly and enter 2.5. The calculator handles the conversion correctly.</div></details>
+      <details class="faq-item rev"><summary>How accurate is the debt-free date?</summary><div class="faq-ans">It is a solid estimate based on your numbers. It assumes your rates stay the same and you keep paying the same amount. Treat it as a strong planning guide. Even a rough date is far more useful than no date at all  -  it gives you a target to work toward.</div></details>
+      <details class="faq-item rev"><summary>Can I use Clearpath for student loans, car loans, or medical debt?</summary><div class="faq-ans">Yes to all of them. You can include any type of non-mortgage debt. Leave your home loan out for now  -  most people handle that separately after clearing everything else.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ── ARTICLES ────────────────────────────────────────────────────────── -->
+<section class="articles-section">
+  <div class="wrap">
+    <span class="sec-label rev">Learn</span>
+    <h2 class="rev" style="font-size:clamp(24px,4vw,36px);margin-bottom:6px">Guides that actually help</h2>
+    <p class="rev" style="font-size:16px;color:var(--ink-soft);margin-bottom:24px">Written for real people making real financial decisions.</p>
+    <div class="art-scroll">
+      <a href="/debt/debt-snowball-real-example.html" class="art-card rev rev-1">
+        <div class="art-cat">Real story</div>
+        <h3>How the Debt Snowball Works: A Complete Step-by-Step Example</h3>
+        <div class="art-rd">Read the guide &rarr;</div>
+      </a>
+      <a href="/debt/snowball-vs-avalanche.html" class="art-card rev rev-2">
+        <div class="art-cat">Debt payoff</div>
+        <h3>Debt Snowball vs. Debt Avalanche: Which Is Actually Better?</h3>
+        <div class="art-rd">Read the guide &rarr;</div>
+      </a>
+      <a href="/debt/how-to-stop-living-paycheck-to-paycheck.html" class="art-card rev rev-3">
+        <div class="art-cat">Budgeting</div>
+        <h3>How to Stop Living Paycheck to Paycheck: 7 Steps That Work</h3>
+        <div class="art-rd">Read the guide &rarr;</div>
+      </a>
+      <a href="/debt/find-extra-money-for-debt.html" class="art-card rev rev-4">
+        <div class="art-cat">Fund your payoff</div>
+        <h3>7 Realistic Ways to Find Extra Money to Pay Off Debt</h3>
+        <div class="art-rd">Read the guide &rarr;</div>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:24px">
+      <a href="/debt/blog.html" style="color:var(--coral-deep);font-weight:600;text-decoration:none;font-size:15px">See all guides &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── AD SLOT ─────────────────────────────────────────────────────────── -->
 <div class="wrap"><div class="ad-slot"><div class="ad-inner">Ad space</div></div></div>
 
-<div class="wrap">
-  <div class="percy-row reveal" style="margin:32px auto;max-width:640px;padding:0">
-    <svg viewBox="0 0 160 190" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:52px;flex:none;display:block;animation:pengbob 4.4s ease-in-out infinite">
-  <path d="M30 80 C18 68 20 50 32 46 C38 44 42 50 38 58 Z" fill="#2a3550" transform="rotate(-30,34,62)"/>
-  <path d="M130 80 C142 68 140 50 128 46 C122 44 118 50 122 58 Z" fill="#2a3550" transform="rotate(30,126,62)"/>
-  <path d="M80 34 C112 34 126 62 126 104 C126 146 108 168 80 168 C52 168 34 146 34 104 C34 62 48 34 80 34 Z" fill="#1c2434"/>
-  <path d="M80 62 C100 62 110 82 110 108 C110 138 98 154 80 154 C62 154 50 138 50 108 C50 82 60 62 80 62 Z" fill="#faf6ef"/>
-  <circle cx="66" cy="86" r="8.5" fill="#fff"/><circle cx="94" cy="86" r="8.5" fill="#fff"/>
-  <circle cx="67.5" cy="87" r="4.2" fill="#1c2434"/><circle cx="95.5" cy="87" r="4.2" fill="#1c2434"/>
-  <rect class="peyelid" x="57" y="78" width="18" height="10" rx="5" fill="#1c2434"/>
-  <rect class="peyelid" x="85" y="78" width="18" height="10" rx="5" fill="#1c2434"/>
-  <path d="M80 96 L90 106 L80 114 L70 106 Z" fill="#f2683c"/>
-  <ellipse cx="55" cy="102" rx="5" ry="3" fill="#f6c9c9" opacity=".5"/>
-  <ellipse cx="105" cy="102" rx="5" ry="3" fill="#f6c9c9" opacity=".5"/>
-  <ellipse cx="66" cy="172" rx="14" ry="6" fill="#f7a23b"/>
-  <ellipse cx="94" cy="172" rx="14" ry="6" fill="#f7a23b"/>
-</svg>
-    <div class="percy-bubble" style="background:linear-gradient(135deg,#fff,#fdf3ec);border-color:var(--coral)"><strong>Ready to see your debt free date?</strong> Open the free tracker, put in your debts, and I will show you the exact month you clear everything. Takes about five minutes and it might just change your whole week.</div>
+<!-- ── FINAL CTA ───────────────────────────────────────────────────────── -->
+<section class="final-cta">
+  <div class="wrap-sm">
+    <h2 class="rev in">You don't need to have it all figured out. <em>Just start.</em></h2>
+    <p class="rev in">See what you owe. Understand your options. Make a plan. The first step is knowing the number.</p>
+    <div class="final-cta-btns rev in">
+      <a href="#calculator" class="btn-amber">Calculate my debt-free date</a>
+      <a href="/debt/blog.html" class="btn-outline-white">Read the guides</a>
+    </div>
   </div>
-</div>
+</section>
+
+<!-- ── FOOTER ──────────────────────────────────────────────────────────── -->
 <footer class="site">
   <div class="fin">
-    <span class="brand"><span class="dot"></span>Clearpath</span>
+    <div class="fbrand"><span class="dot" style="width:22px;height:22px;border-radius:50%;background:radial-gradient(circle at 32% 30%,#fff 0 18%,var(--amber) 19% 55%,var(--coral) 56%)"></span>Clearpath</div>
     <div class="flinks">
       <a href="/debt/index.html">Debt tracker</a>
       <a href="/debt/blog.html">Guides</a>
       <a href="/debt/about.html">About</a>
+      <a href="/debt/author.html">Author</a>
       <a href="/debt/contact.html">Contact</a>
       <a href="/debt/privacy.html">Privacy</a>
-      <a href="/debt/disclaimer.html">Disclaimer</a><a href="/debt/terms.html">Terms</a><a href="/debt/editorial-policy.html">Editorial Policy</a>
+      <a href="/debt/disclaimer.html">Disclaimer</a>
+      <a href="/debt/terms.html">Terms</a>
+      <a href="/debt/editorial-policy.html">Editorial Policy</a>
     </div>
-    <div class="fbottom">© <span id="yr"></span> Clearpath. All rights reserved. · hello@clearpath.click</div>
+    <div class="fbottom">&copy; <span id="yr"></span> Clearpath. All rights reserved. &nbsp;&middot;&nbsp; hello@clearpath.click<br>
+    Clearpath provides educational tools for personal finance planning. Not a substitute for professional financial advice.</div>
   </div>
 </footer>
+
+<!-- ── RESULT MODAL ────────────────────────────────────────────────────── -->
+<div class="result-overlay" id="resultModal" role="dialog" aria-modal="true">
+  <div class="result-sheet">
+    <span class="sheet-handle"></span>
+
+    <!-- Top hero -->
+    <div class="result-top">
+      <span class="result-confetti">&#127881;</span>
+      <span class="result-date-label">Your debt-free date</span>
+      <div class="result-date" id="resDFD">...</div>
+      <div class="result-tagline">Every payment brings this closer. Keep going.</div>
+      <div class="result-stats-row">
+        <div class="rs-stat"><span class="rs-val" id="resMonths">-</span><div class="rs-lbl">Months to go</div></div>
+        <div class="rs-stat"><span class="rs-val" id="resInterest">-</span><div class="rs-lbl">Interest saved</div></div>
+        <div class="rs-stat"><span class="rs-val" id="resTotal">-</span><div class="rs-lbl">Total you pay</div></div>
+      </div>
+      <div class="result-progress"><div class="result-progress-fill" id="resProgressFill"></div></div>
+    </div>
+
+    <!-- Payoff order -->
+    <div class="milestones-section">
+      <h3>Your payoff order</h3>
+      <div id="resMilestones"></div>
+    </div>
+
+    <!-- Schedule -->
+    <button class="sched-toggle-btn" id="schedBtn" onclick="toggleSched()">
+      Show full month-by-month schedule <span class="sched-arr">&#9660;</span>
+    </button>
+    <div class="sched-wrap" id="schedWrap">
+      <table class="sched-table">
+        <thead><tr><th>Month</th><th>Debt</th><th>Payment</th><th>Balance left</th><th>Note</th></tr></thead>
+        <tbody id="schedBody"></tbody>
+      </table>
+    </div>
+
+    <!-- Sign-up gate -->
+    <div class="signup-gate" id="sgGate">
+      <div class="sg-header">
+        <span class="sg-icon">&#128640;</span>
+        <div class="sg-title">Save your plan and track progress</div>
+        <p class="sg-sub">Your plan disappears when you close this. Create a free account to save it and monitor your debt every month.</p>
+      </div>
+      <div class="sg-benefits">
+        <div class="sg-benefit"><span class="sg-tick">&#10003;</span> Save your debt plan</div>
+        <div class="sg-benefit"><span class="sg-tick">&#10003;</span> Track progress monthly</div>
+        <div class="sg-benefit"><span class="sg-tick">&#10003;</span> Monitor essential spending</div>
+        <div class="sg-benefit"><span class="sg-tick">&#10003;</span> Payment reminders</div>
+      </div>
+      <button class="google-btn" onclick="submitGoogle()">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" style="flex:none"><path d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.875 2.684-6.615z" fill="#4285F4"/><path d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 0 0 9 18z" fill="#34A853"/><path d="M3.964 10.71A5.41 5.41 0 0 1 3.682 9c0-.593.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 0 0 0 9c0 1.452.348 2.827.957 4.042l3.007-2.332z" fill="#FBBC05"/><path d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 0 0 .957 4.958L3.964 7.29C4.672 5.163 6.656 3.58 9 3.58z" fill="#EA4335"/></svg>
+        Continue with Google
+      </button>
+      <div class="or-divider"><span>or use email</span></div>
+      <div class="email-form-row">
+        <input type="email" id="sgEmail" placeholder="you@email.com" autocomplete="email">
+        <button onclick="submitSgEmail()">Create account</button>
+      </div>
+      <p class="email-micro">Free forever. No credit card. Takes 30 seconds.</p>
+      <p class="email-msg" id="sgMsg"></p>
+    </div>
+
+    <!-- Pricing gate (shown after email) -->
+    <div class="pricing-gate" id="pgGate">
+      <div class="pricing-check-header">
+        <div class="pch-tick">&#10003;</div>
+        <div class="pch-title">Account created!</div>
+        <div class="pch-sub">Your plan is saved. Choose your Clearpath plan.</div>
+      </div>
+      <div class="plan-grid">
+        <div class="plan-card">
+          <div class="plan-name">Free</div>
+          <div class="plan-price">$0 <span>/ forever</span></div>
+          <ul class="plan-features">
+            <li>Debt calculator</li>
+            <li>Save &amp; monitor plan</li>
+            <li>All currencies</li>
+            <li class="no">Spending tracker</li>
+            <li class="no">Budget builder</li>
+            <li class="no">Income multiplier</li>
+          </ul>
+          <button class="plan-btn free-b" onclick="closeResult()">Continue free</button>
+        </div>
+        <div class="plan-card featured">
+          <div class="plan-badge">&#128293; Most popular</div>
+          <div class="plan-name">Pro</div>
+          <div class="plan-price">$11 <span>/ month</span></div>
+          <div class="plan-social">65,704 people on Pro</div>
+          <ul class="plan-features">
+            <li>Everything in Free</li>
+            <li>Track spending (rent, groceries, insurance)</li>
+            <li>Monthly budget builder</li>
+            <li>Debt progress alerts</li>
+            <li>Minimum payment warnings</li>
+            <li class="no">Income multiplier</li>
+          </ul>
+          <button class="plan-btn pro-b" onclick="openWealthModal()">Get Pro &mdash; $11/mo</button>
+        </div>
+        <div class="plan-card wealth-c">
+          <div class="plan-name">Wealth</div>
+          <div class="plan-price">$25 <span>/ month</span></div>
+          <div class="plan-social" style="color:var(--amber)">Build income too</div>
+          <ul class="plan-features">
+            <li>Everything in Pro</li>
+            <li>30-day Income Multiplier</li>
+            <li>Pinterest traffic toolkit</li>
+            <li>Meta Ads guide</li>
+            <li>AI product builder course</li>
+            <li>1-on-1 setup call</li>
+          </ul>
+          <button class="plan-btn wealth-b" onclick="goWealth()">Get Wealth &mdash; $25/mo</button>
+        </div>
+      </div>
+      <p class="pricing-note">Cancel any time. Secure checkout via Stripe.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ── WEALTH MODAL ────────────────────────────────────────────────────── -->
+<div id="wealthModal" style="display:none;position:fixed;inset:0;background:rgba(15,21,32,.7);z-index:600;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)">
+  <div style="background:#fff;max-width:500px;width:100%;border-radius:24px;padding:32px 28px;max-height:90vh;overflow-y:auto">
+    <div style="text-align:center;margin-bottom:20px">
+      <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);margin-bottom:6px">Clearpath Wealth</div>
+      <h2 style="font-size:clamp(20px,4vw,28px);margin-bottom:8px">The 30-Day Income Multiplier</h2>
+      <p style="color:var(--ink-soft);font-size:14px">You know when you will be debt free. This helps you get there faster by building a second income stream while you pay down debt.</p>
+      <div style="font-family:'Fraunces',serif;font-size:40px;font-weight:700;color:var(--coral);margin-top:12px">$25 <span style="font-size:16px;color:var(--ink-soft);font-family:'Inter';font-weight:400">/ month</span></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:22px">
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--line)"><span style="font-size:20px">&#128204;</span><div><strong style="display:block;font-size:14px">Pinterest Traffic Machine</strong><span style="font-size:12.5px;color:var(--ink-soft)">90-day Pinterest playbook, keyword bank, pin templates, and daily schedule.</span></div></div>
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--line)"><span style="font-size:20px">&#128227;</span><div><strong style="display:block;font-size:14px">Meta Ads for Digital Products</strong><span style="font-size:12.5px;color:var(--ink-soft)">Step-by-step guide to run your first profitable Facebook or Instagram ad.</span></div></div>
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--line)"><span style="font-size:20px">&#129302;</span><div><strong style="display:block;font-size:14px">AI Web App Builder</strong><span style="font-size:12.5px;color:var(--ink-soft)">Create and sell AI-powered apps with free tools. No coding required.</span></div></div>
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:12px 0"><span style="font-size:20px">&#128222;</span><div><strong style="display:block;font-size:14px">1-on-1 Setup Call (30 min)</strong><span style="font-size:12.5px;color:var(--ink-soft)">A live session to build your income plan based on your time and situation.</span></div></div>
+    </div>
+    <button onclick="goWealth()" style="width:100%;padding:16px;font-family:'Fraunces',serif;font-size:18px;font-weight:600;background:linear-gradient(135deg,var(--amber),#c47d0e);color:#fff;border:none;border-radius:13px;cursor:pointer;box-shadow:0 6px 18px rgba(247,162,59,.3);margin-bottom:10px">Start Clearpath Wealth &mdash; $25/month</button>
+    <button onclick="closeWealthModal()" style="display:block;text-align:center;font-size:13px;color:var(--ink-soft);cursor:pointer;background:none;border:none;width:100%;padding:6px">Just Pro for $11/month instead</button>
+  </div>
+</div>
+
 <script>
-document.getElementById("yr").textContent=new Date().getFullYear();
-if("IntersectionObserver" in window){
-  var els=document.querySelectorAll(".reveal:not(.in)");
-  var io=new IntersectionObserver(function(entries){
-    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
-  },{threshold:0.15});
-  els.forEach(function(el){ io.observe(el); });
+/* ── YEAR ───────────────────────────────────────────────────────── */
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+/* ── SCROLL REVEAL ──────────────────────────────────────────────── */
+if('IntersectionObserver' in window){
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:0.08});
+  document.querySelectorAll('.rev:not(.in)').forEach(function(el){ io.observe(el); });
+}else{ document.querySelectorAll('.rev').forEach(function(el){ el.classList.add('in'); }); }
+
+/* ── HOW IT WORKS STEPS ─────────────────────────────────────────── */
+function showStep(idx, el){
+  document.querySelectorAll('.how-step').forEach(function(s){ s.classList.remove('active'); });
+  document.querySelectorAll('.hv-panel').forEach(function(p){ p.classList.remove('show'); });
+  el.classList.add('active');
+  var panel = document.getElementById('hv'+idx);
+  if(panel) panel.classList.add('show');
 }
+
+/* ── HOME CALC HELPERS ──────────────────────────────────────────── */
+var hcRowCount = 1;
+function addHCRow(){
+  hcRowCount++;
+  if(hcRowCount <= 3){
+    var r = document.getElementById('hcRow'+hcRowCount);
+    if(r){ r.style.display='flex'; r.querySelector('input').focus(); }
+  }
+}
+
+function addCommasInp(inp){
+  inp.addEventListener('input', function(){
+    var raw = this.value.replace(/[^0-9.]/g,'');
+    var parts = raw.split('.');
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g,',');
+    var start = this.selectionStart, prev = this.value.length;
+    this.value = parts.length>1 ? parts[0]+'.'+parts[1] : parts[0];
+    try{ this.setSelectionRange(start+(this.value.length-prev),start+(this.value.length-prev)); }catch(e){}
+  });
+}
+document.querySelectorAll('.hc-bal,.hc-pmt').forEach(addCommasInp);
+addCommasInp(document.getElementById('hcExtra'));
+
+function parseN(s){ return parseFloat((s||'').replace(/,/g,'')) || 0; }
+
+var MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+function monthYear(d){ return MONTHS[d.getMonth()] + ' ' + d.getFullYear(); }
+
+function fmtMoney(n){ return '$' + Math.round(n).toLocaleString('en-US'); }
+
+/* ── SNOWBALL CALC ENGINE ───────────────────────────────────────── */
+function homeCalcRun(){
+  var debts = [];
+  for(var i=1;i<=3;i++){
+    var row = document.getElementById('hcRow'+i);
+    if(!row || row.style.display==='none') continue;
+    var inputs = row.querySelectorAll('input');
+    var bal = parseN(inputs[1].value);
+    var rate = parseFloat(inputs[2].value)||0;
+    var pmt = parseN(inputs[3].value);
+    var name = inputs[0].value.trim()||('Debt '+i);
+    if(bal>0 && pmt>0) debts.push({name:name,balance:bal,apr:rate,payment:pmt,cleared:false});
+  }
+  var extra = parseN(document.getElementById('hcExtra').value);
+  if(debts.length===0){ alert('Please enter at least one debt with a balance and monthly payment.'); return; }
+
+  // sort snowball: smallest first
+  debts.sort(function(a,b){ return a.balance-b.balance; });
+
+  var month = new Date(); month = new Date(month.getFullYear(), month.getMonth()+1, 1);
+  var totalInterest=0, totalPaid=0, cleared=[], schedule=[], safeguard=0;
+  var pool = debts.map(function(d){ return Object.assign({},d); });
+
+  while(pool.some(function(d){ return d.balance>0; }) && safeguard++<600){
+    var target = pool.filter(function(d){ return d.balance>0; }).sort(function(a,b){ return a.balance-b.balance; })[0];
+    var remainingExtra = extra;
+
+    pool.forEach(function(d){
+      if(d.balance<=0) return;
+      var mr = d.apr/100/12;
+      var interest = d.balance*mr;
+      totalInterest+=interest;
+      var pay = Math.min(d.payment, d.balance+interest);
+      if(d===target) pay = Math.min(pay+remainingExtra, d.balance+interest);
+      d.balance = Math.max(0, d.balance+interest-pay);
+      totalPaid+=pay;
+      var note='';
+      if(d.balance<=0.01 && !d.cleared){
+        d.cleared=true;
+        note='&#127881; Cleared!';
+        cleared.push({name:d.name,date:monthYear(month),order:cleared.length+1});
+      }
+      schedule.push({month:monthYear(month),name:d.name,payment:pay,balance:d.balance,note:note});
+    });
+    month = new Date(month.getFullYear(), month.getMonth()+1, 1);
+  }
+
+  var dfd = cleared.length ? cleared[cleared.length-1].date : 'Keep paying...';
+  var uniqueMonths = [];
+  schedule.forEach(function(s){ if(!uniqueMonths.includes(s.month)) uniqueMonths.push(s.month); });
+  var numMonths = uniqueMonths.length;
+
+  showResult(dfd, numMonths, totalInterest, totalPaid, cleared, schedule);
+}
+
+/* ── RENDER RESULT MODAL ────────────────────────────────────────── */
+function showResult(dfd, months, interest, total, cleared, schedule){
+  document.getElementById('resDFD').textContent = dfd;
+  document.getElementById('resMonths').textContent = months;
+  document.getElementById('resInterest').textContent = fmtMoney(interest);
+  document.getElementById('resTotal').textContent = fmtMoney(total);
+
+  // progress bar (shows journey start ~8%)
+  setTimeout(function(){
+    var f = document.getElementById('resProgressFill');
+    if(f) f.style.width='8%';
+  }, 400);
+
+  // milestones
+  var mDiv = document.getElementById('resMilestones');
+  mDiv.innerHTML='';
+  cleared.forEach(function(c){
+    var el=document.createElement('div');
+    el.className='milestone';
+    el.innerHTML='<div class="m-num">'+c.order+'</div>'+
+      '<div class="m-info"><div class="m-name">'+escHtml(c.name)+'</div><div class="m-cleared">Cleared</div></div>'+
+      '<div class="m-date">'+c.date+'</div>';
+    mDiv.appendChild(el);
+  });
+
+  // schedule
+  var tbody=document.getElementById('schedBody');
+  tbody.innerHTML='';
+  var lastM='';
+  schedule.forEach(function(s){
+    var tr=document.createElement('tr');
+    if(s.note) tr.className='cleared';
+    tr.innerHTML='<td>'+(s.month!==lastM?s.month:'')+'</td>'+
+      '<td>'+escHtml(s.name)+'</td>'+
+      '<td>'+fmtMoney(s.payment)+'</td>'+
+      '<td>'+fmtMoney(s.balance)+'</td>'+
+      '<td>'+(s.note||'')+'</td>';
+    tbody.appendChild(tr);
+    lastM=s.month;
+  });
+
+  // reset gates
+  document.getElementById('sgGate').style.display='block';
+  document.getElementById('pgGate').style.display='none';
+
+  // open
+  var overlay = document.getElementById('resultModal');
+  overlay.style.display='flex';
+  document.body.style.overflow='hidden';
+  // scroll sheet to top
+  setTimeout(function(){ overlay.querySelector('.result-sheet').scrollTop=0; },50);
+}
+
+function escHtml(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+function closeResult(){
+  document.getElementById('resultModal').style.display='none';
+  document.body.style.overflow='';
+}
+
+// close on overlay click
+document.getElementById('resultModal').addEventListener('click',function(e){
+  if(e.target===this) closeResult();
+});
+
+function toggleSched(){
+  var w=document.getElementById('schedWrap');
+  var b=document.getElementById('schedBtn');
+  var open=w.classList.toggle('show');
+  b.classList.toggle('open',open);
+  b.childNodes[0].nodeValue=open?'Hide month-by-month schedule \n':'Show full month-by-month schedule \n';
+}
+
+/* ── SIGN-UP ────────────────────────────────────────────────────── */
+function showPricing(){
+  document.getElementById('sgGate').style.display='none';
+  var pg=document.getElementById('pgGate');
+  pg.style.display='block';
+  pg.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+function submitGoogle(){ showPricing(); }
+function submitSgEmail(){
+  var val=(document.getElementById('sgEmail').value||'').trim();
+  var msg=document.getElementById('sgMsg');
+  msg.className='email-msg';
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)){
+    msg.textContent='Please enter a valid email.';msg.className='email-msg err';return;
+  }
+  var btn=document.querySelector('#sgGate .email-form-row button');
+  if(btn){btn.disabled=true;btn.textContent='Creating...';}
+  fetch('https://script.google.com/macros/s/REPLACE_WITH_YOUR_DEPLOYMENT_ID/exec',{
+    method:'POST',mode:'no-cors',
+    headers:{'Content-Type':'text/plain;charset=utf-8'},
+    body:JSON.stringify({email:val,source:'/',plan:'free'})
+  }).then(function(){ showPricing(); })
+    .catch(function(){if(btn){btn.disabled=false;btn.textContent='Create account';}msg.textContent='Something went wrong.';msg.className='email-msg err';});
+}
+
+/* ── WEALTH MODAL ────────────────────────────────────────────────── */
+function openWealthModal(){
+  document.getElementById('wealthModal').style.display='flex';
+}
+function closeWealthModal(){
+  document.getElementById('wealthModal').style.display='none';
+  // go to pro stripe
+  window.open('https://clearpath.click/pro','_blank');
+}
+function goWealth(){
+  window.open('https://clearpath.click/wealth','_blank');
+}
+document.getElementById('wealthModal').addEventListener('click',function(e){
+  if(e.target===this) this.style.display='none';
+});
 </script>
 </body>
 </html>
