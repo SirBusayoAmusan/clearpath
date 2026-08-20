@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clearpath - Know Your Debt-Free Date in Under 5 Minutes</title>
-<meta name="description" content="Clearpath is a free debt payoff calculator and planner. See your exact debt-free date, compare snowball vs avalanche, and get a plan you can actually follow.">
-<meta property="og:title" content="Clearpath - Know Your Debt-Free Date">
-<meta property="og:description" content="Free debt payoff calculator. See your exact debt-free date in under 5 minutes. Nothing stored, no signup.">
+<title>Free Debt, Budget and Extra Income Kit - Get Out and Stay Out | Clearpath</title>
+<meta name="description" content="A free 3-part kit: work out what debt to pay first, build a budget that survives a bad month, and bring in extra money online so you finish years sooner.">
+<meta property="og:title" content="Free Debt, Budget and Extra Income Kit - Get Out and Stay Out | Clearpath">
+<meta property="og:description" content="A free 3-part kit: work out what debt to pay first, build a budget that survives a bad month, and bring in extra money online so you finish years sooner.">
 <meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.clearpath.click/guide.html">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -16,6 +17,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fraunces:ital,opsz,wght@1,9..144,500;1,9..144,600&display=swap" rel="stylesheet">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6523820717153538" crossorigin="anonymous"></script>
 <style>
+
 /* ═══════════════════════════════════════════════════════════════
    CLEARPATH DESIGN SYSTEM v2
    Deep navy base · Emerald primary · Amber accent · Light body
@@ -578,20 +580,201 @@ footer{background:var(--ink);color:var(--text-inv-2);padding:64px 0 30px}
 .bg-amber{background:var(--amber-lite);color:#B45309}
 .bg-sky{background:var(--sky-lite);color:#1D4ED8}
 .bg-paper{background:var(--paper-3);color:var(--text-2)}
+
+
+/* ══ GUIDE LANDING ══ */
+.g-hero{background:var(--ink);color:#fff;position:relative;overflow:hidden;padding:72px 0 82px}
+.g-hero::before{content:"";position:absolute;inset:0;
+  background:radial-gradient(860px 500px at 76% 4%,rgba(15,185,129,.22),transparent 62%),
+             radial-gradient(620px 400px at 6% 96%,rgba(59,130,246,.13),transparent 60%)}
+.g-hero-grid{position:absolute;inset:0;opacity:.35;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+  background-size:54px 54px;
+  mask-image:radial-gradient(ellipse 85% 65% at 50% 25%,#000 20%,transparent 78%);
+  -webkit-mask-image:radial-gradient(ellipse 85% 65% at 50% 25%,#000 20%,transparent 78%)}
+.g-hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1.06fr .94fr;
+  gap:56px;align-items:center}
+@media(max-width:900px){.g-hero-in{grid-template-columns:1fr;gap:40px}}
+.g-hero h1{font-size:clamp(32px,5.6vw,56px);letter-spacing:-.042em;line-height:1.05;margin-bottom:20px}
+.g-hero h1 .hl{position:relative;display:inline-block}
+.g-hero h1 .hl::after{content:"";position:absolute;left:-3px;right:-3px;bottom:5px;height:32%;
+  background:linear-gradient(90deg,var(--mint),rgba(15,185,129,.32));border-radius:5px;z-index:-1}
+.g-lede{font-size:17px;color:var(--text-inv-2);line-height:1.64;margin-bottom:14px}
+.g-lede b{color:#fff;font-weight:600}
+.g-punch{font-family:'Fraunces',serif;font-style:italic;font-weight:600;
+  font-size:clamp(20px,3vw,27px);color:var(--mint);margin:20px 0;line-height:1.32}
+.g-micro{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;color:var(--text-3);margin-top:18px}
+.g-micro span{display:flex;align-items:center;gap:6px}
+.g-micro svg{color:var(--mint);flex:none}
+
+.g-parts-row{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 4px}
+.g-part-pill{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;
+  padding:8px 15px;border-radius:var(--r-full);border:1px solid rgba(255,255,255,.14);
+  background:rgba(255,255,255,.05);color:var(--text-inv-2)}
+.g-part-pill i{width:18px;height:18px;border-radius:6px;font-style:normal;font-size:10px;
+  font-weight:800;display:flex;align-items:center;justify-content:center;color:#fff;flex:none}
+
+.g-cover-wrap{perspective:1500px}
+.g-cover{aspect-ratio:1/1.3;border-radius:var(--r-lg);position:relative;overflow:hidden;
+  background:linear-gradient(155deg,#16223A 0%,#0B1220 100%);
+  border:1px solid rgba(255,255,255,.11);
+  box-shadow:0 40px 90px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.05) inset;
+  display:flex;flex-direction:column;justify-content:space-between;padding:32px 28px;
+  transform:rotateY(-7deg) rotateX(2deg);transition:transform .5s cubic-bezier(.16,1,.3,1);
+  animation:floatY 6s ease-in-out infinite}
+.g-cover:hover{transform:rotateY(0) rotateX(0)}
+@media(max-width:900px){.g-cover{transform:none;max-width:330px;margin:0 auto;animation:none}}
+.g-cover::before{content:"";position:absolute;inset:0;
+  background:radial-gradient(320px 220px at 78% 12%,rgba(15,185,129,.26),transparent 66%)}
+.g-cover::after{content:"";position:absolute;left:0;top:0;bottom:0;width:9px;
+  background:linear-gradient(180deg,var(--mint) 0 33%,var(--sky) 33% 66%,var(--amber) 66%)}
+.g-cov-badge{display:inline-block;font-size:9.5px;font-weight:800;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--amber);position:relative;z-index:1}
+.g-cov-mid{position:relative;z-index:1}
+.g-cov-t{font-size:clamp(22px,3.3vw,30px);font-weight:800;letter-spacing:-.035em;
+  line-height:1.1;color:#fff;margin-bottom:14px}
+.g-cov-parts{display:flex;flex-direction:column;gap:7px}
+.g-cov-part{display:flex;align-items:center;gap:9px;font-size:11.5px;color:var(--text-inv-2)}
+.g-cov-part b{width:16px;height:16px;border-radius:5px;font-size:9px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;color:#fff;flex:none}
+.g-cov-bot{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;
+  padding-top:18px;border-top:1px solid rgba(255,255,255,.12);gap:12px}
+.g-cov-brand{display:flex;align-items:center;gap:8px;font-weight:800;font-size:13.5px;color:#fff;letter-spacing:-.02em}
+.g-cov-pages{font-size:11px;color:var(--text-3);white-space:nowrap}
+
+.g-form{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.13);
+  border-radius:var(--r-lg);padding:22px;margin-top:24px;backdrop-filter:blur(14px)}
+@media(max-width:900px){.g-form{max-width:440px;margin-left:auto;margin-right:auto}}
+
+.g-strip{background:var(--paper-2);border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);padding:22px 0}
+
+/* ══ THREE PARTS ══ */
+.parts{display:flex;flex-direction:column;gap:22px;margin-top:52px}
+.part{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-xl);
+  overflow:hidden;transition:box-shadow .3s,transform .3s cubic-bezier(.16,1,.3,1)}
+.part:hover{box-shadow:var(--sh-2);transform:translateY(-3px)}
+.part-head{display:flex;align-items:flex-start;gap:20px;padding:30px 32px;
+  border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+@media(max-width:600px){.part-head{padding:24px 22px;gap:15px}}
+.part-head::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px}
+.part-1 .part-head::before{background:var(--mint)}
+.part-2 .part-head::before{background:var(--sky)}
+.part-3 .part-head::before{background:var(--amber)}
+.part-num{width:52px;height:52px;border-radius:15px;flex:none;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  font-weight:900;line-height:1;color:#fff}
+@media(max-width:600px){.part-num{width:44px;height:44px;border-radius:13px}}
+.part-num small{font-size:8px;font-weight:800;letter-spacing:.1em;opacity:.85;margin-bottom:1px}
+.part-num span{font-size:19px;letter-spacing:-.03em}
+@media(max-width:600px){.part-num span{font-size:16px}}
+.part-1 .part-num{background:linear-gradient(140deg,var(--mint),var(--mint-2))}
+.part-2 .part-num{background:linear-gradient(140deg,#60A5FA,var(--sky))}
+.part-3 .part-num{background:linear-gradient(140deg,#FBBF24,var(--amber))}
+.part-ttl{font-size:clamp(20px,3vw,26px);font-weight:800;letter-spacing:-.03em;
+  margin-bottom:6px;line-height:1.15}
+.part-sub{font-size:15px;color:var(--text-2);line-height:1.6}
+.part-tag{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.1em;
+  text-transform:uppercase;padding:5px 11px;border-radius:var(--r-full);margin-bottom:9px}
+.part-1 .part-tag{background:var(--mint-lite);color:var(--mint-2)}
+.part-2 .part-tag{background:var(--sky-lite);color:#1D4ED8}
+.part-3 .part-tag{background:var(--amber-lite);color:#B45309}
+.part-body{padding:26px 32px 30px}
+@media(max-width:600px){.part-body{padding:22px}}
+.part-chaps{display:grid;grid-template-columns:1fr 1fr;gap:10px 24px}
+@media(max-width:680px){.part-chaps{grid-template-columns:1fr}}
+.chap-item{display:flex;align-items:flex-start;gap:11px;padding:9px 0;
+  font-size:14.5px;color:var(--text-2);line-height:1.55}
+.chap-item i{width:20px;height:20px;border-radius:6px;flex:none;font-style:normal;
+  font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.part-1 .chap-item i{background:var(--mint-lite);color:var(--mint-2)}
+.part-2 .chap-item i{background:var(--sky-lite);color:#1D4ED8}
+.part-3 .chap-item i{background:var(--amber-lite);color:#B45309}
+.chap-item b{color:var(--text);font-weight:600}
+.part-note{margin-top:20px;padding:15px 18px;border-radius:var(--r-md);
+  font-size:14px;line-height:1.6;display:flex;gap:11px;align-items:flex-start}
+.part-1 .part-note{background:var(--mint-lite);color:var(--mint-2)}
+.part-2 .part-note{background:var(--sky-lite);color:#1D4ED8}
+.part-3 .part-note{background:var(--amber-lite);color:#B45309}
+.part-note b{font-weight:700}
+.part-note svg{flex:none;margin-top:1px}
+
+.stack{background:var(--ink);border-radius:var(--r-xl);padding:38px 36px;color:#fff;
+  position:relative;overflow:hidden;margin-top:52px}
+@media(max-width:600px){.stack{padding:28px 22px}}
+.stack::before{content:"";position:absolute;inset:0;
+  background:radial-gradient(560px 340px at 82% 10%,rgba(15,185,129,.2),transparent 64%)}
+.stack>*{position:relative;z-index:1}
+.stack-t{font-size:clamp(21px,3.2vw,28px);font-weight:800;letter-spacing:-.03em;margin-bottom:8px}
+.stack-s{font-size:15px;color:var(--text-inv-2);margin-bottom:24px}
+.stack-list{list-style:none}
+.stack-list li{display:flex;align-items:center;gap:14px;padding:13px 0;
+  border-bottom:1px solid rgba(255,255,255,.08);font-size:15.5px;color:var(--text-inv-2)}
+.stack-list li:last-child{border-bottom:none}
+.stack-list li svg{flex:none;color:var(--mint)}
+.stack-list li b{color:#fff;font-weight:600}
+.stack-price{margin-top:24px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);
+  display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.stack-now{font-size:30px;font-weight:900;color:var(--mint);letter-spacing:-.03em}
+.stack-note{font-size:13.5px;color:var(--text-inv-2)}
+
+.g-story{max-width:660px;margin:0 auto}
+.g-story h2{font-size:clamp(26px,4vw,40px);margin-bottom:20px;letter-spacing:-.032em}
+.g-story p{font-size:17px;color:var(--text-2);line-height:1.75;margin-bottom:18px}
+.g-story p b{color:var(--text);font-weight:700}
+.g-em{font-family:'Fraunces',serif;font-style:italic;font-weight:600;
+  font-size:clamp(20px,2.9vw,27px);color:var(--mint-2);margin:26px 0;line-height:1.34;display:block}
+.g-list{list-style:none;background:var(--ink);border-radius:var(--r-lg);padding:28px 30px;margin:28px 0}
+@media(max-width:560px){.g-list{padding:24px 22px}}
+.g-list-t{font-size:15px;font-weight:700;color:#fff;margin-bottom:16px;letter-spacing:-.015em}
+.g-list li{display:flex;align-items:flex-start;gap:12px;padding:11px 0;
+  border-bottom:1px solid rgba(255,255,255,.08);font-size:15.5px;color:var(--text-inv-2)}
+.g-list li:last-child{border-bottom:none}
+.g-list li i{width:22px;height:22px;border-radius:7px;flex:none;background:rgba(15,185,129,.16);
+  color:var(--mint);display:flex;align-items:center;justify-content:center;
+  font-style:normal;font-size:11px;font-weight:800;margin-top:2px}
+.g-quote{background:linear-gradient(150deg,var(--mint-lite),var(--paper-2));
+  border-left:4px solid var(--mint);border-radius:0 var(--r-lg) var(--r-lg) 0;
+  padding:30px 32px;margin:34px 0}
+@media(max-width:560px){.g-quote{padding:24px 22px}}
+.g-quote p{font-size:16.5px;color:var(--text-2);line-height:1.7;margin-bottom:12px}
+.g-quote p:last-child{margin-bottom:0}
+.g-quote .qb{font-family:'Fraunces',serif;font-style:italic;font-weight:600;
+  font-size:21px;color:var(--mint-2)}
+
+.g-next{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+@media(max-width:640px){.g-next{grid-template-columns:1fr}}
+.g-next-c{text-align:center;background:var(--paper);border:1px solid var(--line);
+  border-radius:var(--r-lg);padding:30px 22px}
+.g-next-n{width:40px;height:40px;border-radius:12px;margin:0 auto 14px;
+  background:linear-gradient(140deg,var(--mint),var(--mint-2));color:#fff;
+  font-size:16px;font-weight:800;display:flex;align-items:center;justify-content:center;
+  box-shadow:var(--sh-mint)}
+.g-next-t{font-size:16.5px;font-weight:700;letter-spacing:-.02em;margin-bottom:6px}
+.g-next-p{font-size:14px;color:var(--text-2);line-height:1.6}
+
+.g-final{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.g-final::before{content:"";position:absolute;inset:0;
+  background:radial-gradient(700px 420px at 25% 15%,rgba(15,185,129,.2),transparent 62%),
+             radial-gradient(560px 360px at 88% 88%,rgba(245,165,36,.1),transparent 62%)}
+.g-final-in{position:relative;z-index:1;text-align:center;max-width:620px;margin:0 auto}
+.g-final h2{font-size:clamp(28px,4.8vw,46px);color:#fff;margin-bottom:16px;letter-spacing:-.035em}
+.g-final .g-em{color:var(--mint);display:block}
+.g-final-form{max-width:440px;margin:28px auto 0}
+
 </style>
 </head>
 <body>
-
-<!-- ══════ NAV ══════ -->
 <header class="nav">
   <input type="checkbox" id="navTog">
   <div class="nav-in">
     <a href="/" class="logo"><span class="logo-mark"></span>Clearpath</a>
     <nav class="nav-links">
       <a href="/debt/index.html">Calculator</a>
-      <a href="#how">How it works</a>
+      <a href="/guide.html" style="color:var(--text)">Free guide</a>
       <a href="/debt/blog.html">Guides</a>
-      <a href="#guide">Free guide</a>
+      <a href="/debt/about.html">About</a>
     </nav>
     <div class="nav-cta">
       <a href="/debt/index.html" class="btn btn-mint btn-sm">Check my date <span class="arw">&rarr;</span></a>
@@ -600,434 +783,295 @@ footer{background:var(--ink);color:var(--text-inv-2);padding:64px 0 30px}
   </div>
   <div class="drop">
     <a href="/debt/index.html">Calculator</a>
-    <a href="#how">How it works</a>
+    <a href="/guide.html">Free guide</a>
     <a href="/debt/blog.html">Guides</a>
-    <a href="#guide">Free guide</a>
     <a href="/debt/about.html">About</a>
+    <a href="/debt/contact.html">Contact</a>
     <div class="drop-cta"><a href="/debt/index.html" class="btn btn-mint btn-block">Check my debt-free date</a></div>
   </div>
 </header>
 
-<!-- ══════ HERO ══════ -->
-<section class="hero">
-  <div class="hero-grid-bg"></div>
-  <div class="wrap hero-in">
-    <span class="eyebrow eyebrow-dk rv in"><span class="dot"></span>Free forever &nbsp;·&nbsp; Nothing stored</span>
-    <h1 class="rv in">Know the exact month you become <span class="hl">debt free</span></h1>
-    <p class="hero-sub rv in d1">Add your debts, choose a payoff strategy, and Clearpath shows you the date, the order, and the plan. Takes about five minutes.</p>
-    <div class="hero-btns rv in d2">
-      <a href="/debt/index.html" class="btn btn-mint btn-lg">Calculate my date <span class="arw">&rarr;</span></a>
-      <a href="#guide" class="btn btn-ghost-lite btn-lg">Get the free guide</a>
-    </div>
-    <div class="hero-micro rv in d3">
-      <span><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M11.7 4L5.5 10.2 2.3 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>No signup required</span>
-      <span><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M11.7 4L5.5 10.2 2.3 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Runs in your browser</span>
-      <span><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M11.7 4L5.5 10.2 2.3 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Works in 12 currencies</span>
-    </div>
-  </div>
+<section class="g-hero">
+  <div class="g-hero-grid"></div>
+  <div class="wrap g-hero-in">
+    <div>
+      <span class="eyebrow eyebrow-dk rv in"><span class="dot"></span>Free 3-part kit</span>
+      <h1 class="rv in">Get out of debt. Stay out. Then <span class="hl">get ahead.</span></h1>
+      <p class="g-lede rv in d1"><b>Most debt advice stops at "pay more."</b> Which is fine, except it never tells you where that extra money is supposed to come from.</p>
+      <p class="g-punch rv in d2">So this covers all three parts.</p>
+      <p class="g-lede rv in d3">How to clear what you owe in the right order. How to build a budget that survives a bad month. And how to bring in extra money online so the whole thing finishes years sooner.</p>
 
-  <div class="hero-preview rv in d4">
-    <div class="preview-card">
-      <div class="pv-top">
-        <span class="pv-label">Your payoff plan</span>
-        <span class="pv-badge">&#10003; Snowball method</span>
+      <div class="g-parts-row rv in d3">
+        <span class="g-part-pill"><i style="background:var(--mint)">1</i>Clear the debt</span>
+        <span class="g-part-pill"><i style="background:var(--sky)">2</i>Budget that holds</span>
+        <span class="g-part-pill"><i style="background:var(--amber)">3</i>Earn more online</span>
       </div>
-      <div class="pv-date" id="pvDate">March 2028</div>
-      <div class="pv-datesub">18 months from today &nbsp;·&nbsp; $10,000 cleared</div>
-      <div class="pv-stats">
-        <div class="pv-stat"><div class="v" id="pvS1">18</div><div class="l">Months left</div></div>
-        <div class="pv-stat"><div class="v mint" id="pvS2">$1,247</div><div class="l">Interest saved</div></div>
-        <div class="pv-stat"><div class="v" id="pvS3">4</div><div class="l">Debts to clear</div></div>
+
+      <div class="g-form rv in d4">
+        <input type="email" class="lead-input" id="leadEmail" placeholder="you@email.com" autocomplete="email">
+<button class="btn btn-mint btn-block" onclick="submitLead('')">Send me the free kit <span class="arw">&rarr;</span></button>
+<p class="lead-micro">Free. No card. All three parts at once.</p>
+<p class="lead-msg" id="leadMsg"></p>
+        <div class="lead-proof" id="leadProof" style="margin-top:16px"><span class="lp-dot"></span><span id="leadProofText">Sarah from Chicago just downloaded it</span></div>
       </div>
-      <div class="pv-chart">
-        <svg viewBox="0 0 400 78" preserveAspectRatio="none">
-          <defs>
-            <linearGradient id="gArea" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#0FB981" stop-opacity=".32"/>
-              <stop offset="100%" stop-color="#0FB981" stop-opacity="0"/>
-            </linearGradient>
-          </defs>
-          <path d="M0,6 C60,10 90,26 140,32 C190,38 220,52 270,60 C320,68 360,72 400,74 L400,78 L0,78 Z" fill="url(#gArea)"/>
-          <path id="chartLine" d="M0,6 C60,10 90,26 140,32 C190,38 220,52 270,60 C320,68 360,72 400,74"
-                stroke="#0FB981" stroke-width="2.5" fill="none" stroke-linecap="round"
-                stroke-dasharray="1000" stroke-dashoffset="1000"/>
-          <circle cx="400" cy="74" r="4.5" fill="#0FB981"/>
-          <circle cx="400" cy="74" r="9" fill="#0FB981" opacity=".22"/>
-        </svg>
+      <div class="g-micro rv in d5">
+        <span><svg width="14" height="14" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Free forever</span>
+        <span><svg width="14" height="14" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>No credit card</span>
+        <span><svg width="14" height="14" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Straight to your inbox</span>
       </div>
-      <div class="pv-bars">
-        <div class="pv-bar-row"><span class="pv-bar-name">Store card</span><div class="pv-bar-track"><div class="pv-bar-fill" data-w="100" style="background:linear-gradient(90deg,#0FB981,#34D399)"></div></div><span class="pv-bar-pct">100%</span></div>
-        <div class="pv-bar-row"><span class="pv-bar-name">Credit card</span><div class="pv-bar-track"><div class="pv-bar-fill" data-w="72" style="background:linear-gradient(90deg,#0FB981,#34D399)"></div></div><span class="pv-bar-pct">72%</span></div>
-        <div class="pv-bar-row"><span class="pv-bar-name">Personal loan</span><div class="pv-bar-track"><div class="pv-bar-fill" data-w="41" style="background:linear-gradient(90deg,#F5A524,#FBBF24)"></div></div><span class="pv-bar-pct" style="color:#F5A524">41%</span></div>
-        <div class="pv-bar-row"><span class="pv-bar-name">Car loan</span><div class="pv-bar-track"><div class="pv-bar-fill" data-w="18" style="background:linear-gradient(90deg,#3B82F6,#60A5FA)"></div></div><span class="pv-bar-pct" style="color:#3B82F6">18%</span></div>
+    </div>
+
+    <div class="g-cover-wrap rv in d2">
+      <div class="g-cover">
+        <span class="g-cov-badge">The Clearpath Kit</span>
+        <div class="g-cov-mid">
+          <div class="g-cov-t">Get Out of Debt, and Actually Stay Out</div>
+          <div class="g-cov-parts">
+            <span class="g-cov-part"><b style="background:var(--mint)">1</b>Clear what you owe</span>
+            <span class="g-cov-part"><b style="background:var(--sky)">2</b>Build a budget that holds</span>
+            <span class="g-cov-part"><b style="background:var(--amber)">3</b>Earn extra money online</span>
+          </div>
+        </div>
+        <div class="g-cov-bot">
+          <span class="g-cov-brand"><span class="logo-mark" style="width:24px;height:24px;border-radius:7px"></span>Clearpath</span>
+          <span class="g-cov-pages">3 parts &nbsp;&middot;&nbsp; free PDF</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══════ TRUST MARQUEE ══════ -->
-<div class="trust-bar">
-  <div class="trust-label">People using Clearpath right now</div>
-  <div class="marquee"><div class="marquee-track" id="mqTrack"></div></div>
+<div class="g-strip">
+  <div class="wrap" style="text-align:center">
+    <div class="pbubble"><svg class="percy" width="48" viewBox="0 0 100 122" fill="none" aria-hidden="true">
+  <path class="flip-l" d="M18 58 C7 65 5 85 13 93 C18 98 24 93 24 84Z" fill="#1B2740"/>
+  <path d="M82 58 C93 65 95 85 87 93 C82 98 76 93 76 84Z" fill="#1B2740"/>
+  <path d="M50 6 C73 6 85 27 85 62 C85 93 70 113 50 113 C30 113 15 93 15 62 C15 27 27 6 50 6Z" fill="#0A1020"/>
+  <ellipse cx="50" cy="72" rx="23" ry="35" fill="#F8FAFB"/>
+  <circle class="eye" cx="39" cy="47" r="6" fill="#fff"/>
+  <circle class="eye" cx="61" cy="47" r="6" fill="#fff"/>
+  <circle cx="40" cy="48" r="3" fill="#0A1020"/>
+  <circle cx="62" cy="48" r="3" fill="#0A1020"/>
+  <path d="M50 56 L58 64 L50 71 L42 64Z" fill="#F5A524"/>
+  <ellipse cx="39" cy="116" rx="10" ry="4.5" fill="#F5A524"/>
+  <ellipse cx="61" cy="116" rx="10" ry="4.5" fill="#F5A524"/>
+</svg><div class="pbubble-box"><b>Why three parts?</b> Because paying off debt on its own is a treadmill. You clear a card, life happens, and it fills back up. The budget stops that. The income part is what makes the whole thing finish years earlier instead of just eventually.</div></div>
+  </div>
 </div>
 
-<!-- ══════ PROBLEM ══════ -->
 <section class="sec">
+  <div class="wrap g-story">
+    <span class="eyebrow rv">The honest problem</span>
+    <h2 class="rv d1">Paying more only works if there is more to pay with</h2>
+    <p class="rv d2">You already know you should throw extra at your smallest balance. That is not the bit that stops people.</p>
+    <p class="rv d2"><b>The bit that stops people is that there is nothing left.</b> The money runs out before the month does, and every plan you have read quietly assumes it does not.</p>
+    <span class="g-em rv d3">So we fixed the order. Clear it, protect it, then grow it.</span>
+    <ul class="g-list rv d3">
+      <div class="g-list-t">What this kit actually solves</div>
+      <li><i>1</i>You do not know which debt to attack first, so nothing feels like progress</li>
+      <li><i>2</i>Your budget collapses the first time something unexpected shows up</li>
+      <li><i>3</i>There is no spare money, and no realistic plan for creating any</li>
+      <li><i>4</i>You clear a balance, then it quietly fills back up six months later</li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec" style="background:var(--paper-2)">
   <div class="wrap">
     <div class="center">
-      <span class="eyebrow rv">The real problem</span>
-      <h2 class="sec-title rv d1">Making payments is not the same as <em class="ser">making progress</em></h2>
-      <p class="sec-lede rv d2">You pay one bill. Then another. And at the end of the month you still feel like you are standing in the same place. That is usually not a discipline problem. It is a clarity problem.</p>
+      <span class="eyebrow rv">What is inside</span>
+      <h2 class="sec-title rv d1">Three parts. Read in order.</h2>
+      <p class="sec-lede rv d2">Each part works on its own, but they are sequenced deliberately. Part one buys you clarity, part two buys you stability, and part three buys you speed.</p>
     </div>
-    <div class="prob-grid">
-      <div class="prob-card rv d1">
-        <div class="prob-ico bg-amber">&#128184;</div>
-        <div class="prob-q">"How much do I actually owe?"</div>
-        <div class="prob-a">Balances sit across different apps, statements, and portals. Nobody ever sees the real total in one place.</div>
+
+    <div class="parts">
+
+      <div class="part part-1 rv d1">
+        <div class="part-head">
+          <div class="part-num"><small>PART</small><span>1</span></div>
+          <div>
+            <span class="part-tag">Clear what you owe</span>
+            <div class="part-ttl">Work out what to pay first</div>
+            <p class="part-sub">Get every balance in one place, pick a payoff order that fits how you actually behave, and stop guessing whether any of it is landing.</p>
+          </div>
+        </div>
+        <div class="part-body">
+          <div class="part-chaps">
+            <div class="chap-item"><i>1</i><span><b>See the whole picture.</b> Every balance, rate, and payment in one view. Uncomfortable for ten minutes, then a relief.</span></div>
+            <div class="chap-item"><i>2</i><span><b>Snowball or avalanche.</b> Both work. One suits you, and it usually comes down to whether you have quit a plan before.</span></div>
+            <div class="chap-item"><i>3</i><span><b>Set your payoff order.</b> Exactly where the extra goes, and what happens the month a balance finally clears.</span></div>
+            <div class="chap-item"><i>4</i><span><b>Find your real date.</b> How to read the number, and which levers genuinely move it forward.</span></div>
+            <div class="chap-item"><i>5</i><span><b>Handle the awkward ones.</b> Buy now pay later, family loans, medical bills, and debts with no clear rate.</span></div>
+            <div class="chap-item"><i>6</i><span><b>Ask for a lower rate.</b> The ten minute phone call most people never make, including what to actually say.</span></div>
+          </div>
+          <div class="part-note"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>You finish this part with</b> a written payoff order, a date to aim at, and no more mental guesswork about which bill matters most.</span></div>
+        </div>
       </div>
-      <div class="prob-card rv d2">
-        <div class="prob-ico bg-sky">&#129513;</div>
-        <div class="prob-q">"Which debt should I pay first?"</div>
-        <div class="prob-a">Smallest balance or highest rate? Get this wrong and you can spend a year working hard with almost nothing to show for it.</div>
+
+      <div class="part part-2 rv d2">
+        <div class="part-head">
+          <div class="part-num"><small>PART</small><span>2</span></div>
+          <div>
+            <span class="part-tag">Keep it from coming back</span>
+            <div class="part-ttl">Build a budget that survives real life</div>
+            <p class="part-sub">Most budgets fail because they are written for a version of you who never has a bad week. This one is built to absorb the bad weeks.</p>
+          </div>
+        </div>
+        <div class="part-body">
+          <div class="part-chaps">
+            <div class="chap-item"><i>1</i><span><b>Find your real number.</b> What actually comes in and goes out, including the irregular things everyone forgets.</span></div>
+            <div class="chap-item"><i>2</i><span><b>Fixed, flexible, forgotten.</b> The three spending buckets, and why the third one is where your money is hiding.</span></div>
+            <div class="chap-item"><i>3</i><span><b>The buffer that saves the plan.</b> Why a small cushion beats an aggressive payment, and the number to aim for.</span></div>
+            <div class="chap-item"><i>4</i><span><b>Budgeting on income that moves.</b> For freelancers, commission, shift work, and anyone without a fixed salary.</span></div>
+            <div class="chap-item"><i>5</i><span><b>Cut without misery.</b> Where the meaningful money actually sits, and what to leave alone so you stick with it.</span></div>
+            <div class="chap-item"><i>6</i><span><b>Automate the boring parts.</b> Set it up once so following the plan needs no willpower by month three.</span></div>
+            <div class="chap-item"><i>7</i><span><b>The monthly check-in.</b> Fifteen minutes, four numbers, and what to do when one of them looks wrong.</span></div>
+            <div class="chap-item"><i>8</i><span><b>Getting back on after a slip.</b> What to do the month it all goes sideways, because at some point it will.</span></div>
+          </div>
+          <div class="part-note"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>You finish this part with</b> a working monthly budget, a small buffer plan, and a routine that stops the debt quietly rebuilding.</span></div>
+        </div>
       </div>
-      <div class="prob-card rv d3">
-        <div class="prob-ico bg-mint">&#128197;</div>
-        <div class="prob-q">"When will this actually end?"</div>
-        <div class="prob-a">Without a date, debt feels permanent. With a date, it becomes a countdown you can plan around.</div>
+
+      <div class="part part-3 rv d3">
+        <div class="part-head">
+          <div class="part-num"><small>PART</small><span>3</span></div>
+          <div>
+            <span class="part-tag">Finish years sooner</span>
+            <div class="part-ttl">Bring in extra money online</div>
+            <p class="part-sub">There is a limit to how much you can cut. There is no fixed limit on what you can earn. This part closes the gap from the other side.</p>
+          </div>
+        </div>
+        <div class="part-body">
+          <div class="part-chaps">
+            <div class="chap-item"><i>1</i><span><b>What an extra 200 a month does.</b> Run it against your own payoff date first, so you know exactly what you are aiming at and why.</span></div>
+            <div class="chap-item"><i>2</i><span><b>Sell what you already know.</b> Turning a skill you use at work into paid freelance work, without building a personal brand.</span></div>
+            <div class="chap-item"><i>3</i><span><b>Digital products that sell.</b> Templates, planners, and spreadsheets. What people genuinely buy, and what sits there unsold.</span></div>
+            <div class="chap-item"><i>4</i><span><b>Where to list it.</b> Etsy, Gumroad, and Payhip compared honestly, including the fees nobody mentions upfront.</span></div>
+            <div class="chap-item"><i>5</i><span><b>Getting your first buyers.</b> Free traffic through Pinterest and search, written for someone with no audience at all.</span></div>
+            <div class="chap-item"><i>6</i><span><b>Using AI without wasting time.</b> The specific tasks worth handing over, and the places where it makes your work worse.</span></div>
+            <div class="chap-item"><i>7</i><span><b>Your first 30 days.</b> A week by week plan to get from nothing to a listing that is live and findable.</span></div>
+            <div class="chap-item"><i>8</i><span><b>Where the money goes.</b> Splitting extra income between debt, buffer, and the next thing, so it does not just evaporate.</span></div>
+          </div>
+          <div class="part-note"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>You finish this part with</b> one realistic income idea picked, a 30 day plan, and a rule for exactly where every extra pound or dollar lands.</span></div>
+        </div>
       </div>
+
     </div>
-    <div class="center" style="margin-top:44px">
-      <a href="/debt/index.html" class="btn btn-dark btn-lg rv d4">Answer all three in 5 minutes <span class="arw">&rarr;</span></a>
+
+    <div class="stack rv">
+      <div class="stack-t">Everything you get, at no cost</div>
+      <p class="stack-s">We are not going to invent a fake retail price and cross it out. But here is what is actually in the box.</p>
+      <ul class="stack-list">
+        <li><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Part 1:</b> The payoff system, 6 chapters</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Part 2:</b> The budget that holds, 8 chapters</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Part 3:</b> Earning extra online, 8 chapters</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Printable debt tracker</b> for the fridge or your desk</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Monthly budget worksheet</b> you can fill in by hand or on a screen</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>30 day income plan</b> broken into weekly steps</span></li>
+      </ul>
+      <div class="stack-price">
+        <span class="stack-now">Free</span>
+        <span class="stack-note">Because the tools here are free too, and this is the same idea.</span>
+      </div>
+      <div style="margin-top:24px">
+        <a href="#get" class="btn btn-mint btn-lg btn-block">Send me the free kit <span class="arw">&rarr;</span></a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ══════ HOW IT WORKS ══════ -->
-<section class="sec how" id="how">
+<section class="sec">
+  <div class="wrap g-story">
+    <div class="g-quote rv">
+      <p>Picture opening your banking app and not getting that small drop in your stomach.</p>
+      <p>You know what you owe. You know what is going out. You know which debt you are hitting next, and there is a bit coming in on the side that is speeding the whole thing up.</p>
+      <p class="qb">That is the difference between surviving your money and running it.</p>
+    </div>
+
+    <h2 class="rv d1" style="margin-top:48px">"I have tried this before"</h2>
+    <p class="rv d2">Maybe you built a budget. Maybe you swore off borrowing. Maybe you went hard at it for two months and then the car needed something expensive and the whole thing fell over.</p>
+    <p class="rv d2">None of that means you cannot do this. It usually means you were handed one third of a system and told it was the whole thing.</p>
+    <span class="g-em rv d3">A payoff plan with no budget behind it is a treadmill. A budget with no extra income is a ceiling.</span>
+    <p class="rv d3">You need all three working together, which is exactly why the kit is built this way.</p>
+  </div>
+</section>
+
+<div class="ad-wrap"><div class="wrap"><div class="ad-box">Advertisement</div></div></div>
+
+<section class="sec" style="background:var(--paper-2)">
+  <div class="wrap g-story">
+    <span class="eyebrow rv">What we will not do</span>
+    <h2 class="rv d1">No shame, and no silly promises</h2>
+    <p class="rv d2">We are not going to tell you that skipping your coffee makes you debt free. It does not, and you already knew that.</p>
+    <p class="rv d2">Part three is not a get rich thing either. Nobody is promising you thousands a month. The realistic target is a few hundred, applied consistently, and that is genuinely enough to move a payoff date by a year or more.</p>
+    <p class="rv d3">And we are not interested in how you ended up here. Most people get into debt for boring, ordinary, entirely human reasons.</p>
+    <span class="g-em rv d3">We just want to help you work out how to get out, and then stay out.</span>
+    <div class="rv d4" style="margin-top:32px">
+      <div class="pbubble"><svg class="percy" width="48" viewBox="0 0 100 122" fill="none" aria-hidden="true">
+  <path class="flip-l" d="M18 58 C7 65 5 85 13 93 C18 98 24 93 24 84Z" fill="#1B2740"/>
+  <path d="M82 58 C93 65 95 85 87 93 C82 98 76 93 76 84Z" fill="#1B2740"/>
+  <path d="M50 6 C73 6 85 27 85 62 C85 93 70 113 50 113 C30 113 15 93 15 62 C15 27 27 6 50 6Z" fill="#0A1020"/>
+  <ellipse cx="50" cy="72" rx="23" ry="35" fill="#F8FAFB"/>
+  <circle class="eye" cx="39" cy="47" r="6" fill="#fff"/>
+  <circle class="eye" cx="61" cy="47" r="6" fill="#fff"/>
+  <circle cx="40" cy="48" r="3" fill="#0A1020"/>
+  <circle cx="62" cy="48" r="3" fill="#0A1020"/>
+  <path d="M50 56 L58 64 L50 71 L42 64Z" fill="#F5A524"/>
+  <ellipse cx="39" cy="116" rx="10" ry="4.5" fill="#F5A524"/>
+  <ellipse cx="61" cy="116" rx="10" ry="4.5" fill="#F5A524"/>
+</svg><div class="pbubble-box"><b>Honestly?</b> The people who finish are rarely the ones with the most discipline. They are the ones who knew what to do next when things got dull. That is the whole trick, and it is why part two exists.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
   <div class="wrap">
     <div class="center">
       <span class="eyebrow rv">How it works</span>
-      <h2 class="sec-title rv d1">Three steps. No spreadsheets.</h2>
-      <p class="sec-lede rv d2">Tap through each step to see exactly what happens.</p>
+      <h2 class="sec-title rv d1" style="font-size:clamp(24px,3.4vw,36px)">Three steps and you are away</h2>
     </div>
-    <div class="how-wrap">
-      <div class="steps rv">
-        <div class="step on" onclick="setStep(0,this)">
-          <div class="step-n">1</div>
-          <div>
-            <div class="step-h">Add your debts</div>
-            <div class="step-b"><div><p>Enter the balance, interest rate, and monthly payment for each debt. Credit cards, car loans, student loans, medical bills, buy now pay later. Leave your mortgage out for now.</p></div></div>
-          </div>
-        </div>
-        <div class="step" onclick="setStep(1,this)">
-          <div class="step-n">2</div>
-          <div>
-            <div class="step-h">Pick your strategy</div>
-            <div class="step-b"><div><p>Snowball clears the smallest balance first, which gives you a win early. Avalanche targets the highest rate first, which saves more interest. Clearpath shows you both with your real numbers.</p></div></div>
-          </div>
-        </div>
-        <div class="step" onclick="setStep(2,this)">
-          <div class="step-n">3</div>
-          <div>
-            <div class="step-h">Get your date and your plan</div>
-            <div class="step-b"><div><p>You get the exact month your final debt hits zero, the order to attack them in, how much interest you save, and a full month-by-month schedule you can follow.</p></div></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="how-visual rv d2">
-        <div class="hv on" id="hv0">
-          <div class="hv-lbl">Everything in one place</div>
-          <div class="dbt-row"><div class="dbt-ico bg-amber">&#128179;</div><div class="dbt-info"><div class="dbt-nm">Credit card</div><div class="dbt-rt">21.0% APR &nbsp;·&nbsp; $60/mo</div></div><div class="dbt-bal">$2,300</div></div>
-          <div class="dbt-row"><div class="dbt-ico bg-mint">&#127973;</div><div class="dbt-info"><div class="dbt-nm">Medical bill</div><div class="dbt-rt">0.0% APR &nbsp;·&nbsp; $50/mo</div></div><div class="dbt-bal">$750</div></div>
-          <div class="dbt-row"><div class="dbt-ico bg-sky">&#128663;</div><div class="dbt-info"><div class="dbt-nm">Car loan</div><div class="dbt-rt">8.0% APR &nbsp;·&nbsp; $150/mo</div></div><div class="dbt-bal">$4,000</div></div>
-          <div class="dbt-total"><span class="l">Total debt</span><span class="v">$7,050</span></div>
-        </div>
-
-        <div class="hv" id="hv1">
-          <div class="hv-lbl">Compare both methods</div>
-          <div class="mth-grid">
-            <div class="mth pick">
-              <div class="mth-t">&#10052; Snowball</div>
-              <ul class="mth-l">
-                <li><b>1</b>Medical $750</li>
-                <li><b>2</b>Credit $2,300</li>
-                <li><b>3</b>Car $4,000</li>
-              </ul>
-              <div class="mth-note">First win in 6 weeks</div>
-            </div>
-            <div class="mth">
-              <div class="mth-t">&#127956; Avalanche</div>
-              <ul class="mth-l">
-                <li><b>1</b>Credit 21%</li>
-                <li><b>2</b>Car 8%</li>
-                <li><b>3</b>Medical 0%</li>
-              </ul>
-              <div class="mth-note">Saves $84 more</div>
-            </div>
-          </div>
-          <div class="dbt-total" style="background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.09)">
-            <span class="l" style="font-size:12.5px;line-height:1.5">Most people finish the one that gives them a win early.</span>
-          </div>
-        </div>
-
-        <div class="hv" id="hv2">
-          <div class="reveal-date">
-            <div class="rd-l">Your debt-free date</div>
-            <div class="rd-d">March 2028</div>
-            <div class="rd-s">Based on $7,050 in debt plus $150 extra each month</div>
-          </div>
-          <div class="rd-bars">
-            <div class="pv-bar-row"><span class="pv-bar-name">Medical</span><div class="pv-bar-track"><div class="pv-bar-fill hvbar" data-w="100" style="background:linear-gradient(90deg,#0FB981,#34D399)"></div></div><span class="pv-bar-pct">Done</span></div>
-            <div class="pv-bar-row"><span class="pv-bar-name">Credit card</span><div class="pv-bar-track"><div class="pv-bar-fill hvbar" data-w="64" style="background:linear-gradient(90deg,#0FB981,#34D399)"></div></div><span class="pv-bar-pct">64%</span></div>
-            <div class="pv-bar-row"><span class="pv-bar-name">Car loan</span><div class="pv-bar-track"><div class="pv-bar-fill hvbar" data-w="27" style="background:linear-gradient(90deg,#F5A524,#FBBF24)"></div></div><span class="pv-bar-pct" style="color:#F5A524">27%</span></div>
-          </div>
-        </div>
-      </div>
+    <div class="g-next">
+      <div class="g-next-c rv d1"><div class="g-next-n">1</div><div class="g-next-t">Drop your email in</div><p class="g-next-p">Just so we know where to send it. Nothing else needed.</p></div>
+      <div class="g-next-c rv d2"><div class="g-next-n">2</div><div class="g-next-t">Check your inbox</div><p class="g-next-p">All three parts arrive together in a minute or two. Peek in spam if it hides.</p></div>
+      <div class="g-next-c rv d3"><div class="g-next-n">3</div><div class="g-next-t">Start with part one</div><p class="g-next-p">Get everything into one place first. The other two build on that.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ══════ CALCULATOR BAND ══════ -->
-<section class="sec calc-band">
-  <div class="wrap calc-band-in">
-    <div>
-      <span class="eyebrow eyebrow-dk rv"><span class="dot"></span>Free calculator</span>
-      <h2 class="rv d1">Try it right now with one debt</h2>
-      <p class="rv d2">Enter a single balance to see how it works. The full calculator handles unlimited debts, both strategies, and gives you a complete month-by-month schedule.</p>
-      <div class="calc-band-btns rv d3">
-        <a href="/debt/index.html" class="btn btn-mint btn-lg">Open full calculator <span class="arw">&rarr;</span></a>
-        <a href="#guide" class="btn btn-ghost-lite btn-lg">Get the guide</a>
-      </div>
-    </div>
-    <div class="calc-mini rv d2">
-      <div class="cm-title">Quick estimate</div>
-      <div class="cm-field">
-        <label class="cm-lbl" for="qBal">What do you owe?</label>
-        <input type="text" class="cm-inp" id="qBal" placeholder="2,500" inputmode="decimal" value="2,500">
-      </div>
-      <div class="cm-row">
-        <div class="cm-field">
-          <label class="cm-lbl" for="qRate">Rate % (yearly)</label>
-          <input type="text" class="cm-inp" id="qRate" placeholder="19" inputmode="decimal" value="19">
-        </div>
-        <div class="cm-field">
-          <label class="cm-lbl" for="qPay">Monthly payment</label>
-          <input type="text" class="cm-inp" id="qPay" placeholder="150" inputmode="decimal" value="150">
-        </div>
-      </div>
-      <div class="cm-out">
-        <div class="cm-out-l">Paid off by</div>
-        <div class="cm-out-v" id="qOut">Aug 2028</div>
-        <div class="cm-out-s" id="qOutSub">19 months &nbsp;·&nbsp; $412 interest</div>
-      </div>
-      <a href="/debt/index.html" class="btn btn-mint btn-block">Add all my debts <span class="arw">&rarr;</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- ══════ COMPARISON ══════ -->
-<section class="sec">
-  <div class="wrap">
-    <div class="center">
-      <span class="eyebrow rv">Snowball vs Avalanche</span>
-      <h2 class="sec-title rv d1">Two strategies. <em class="ser">One is right for you.</em></h2>
-      <p class="sec-lede rv d2">Say you have three debts. Here is how each method orders them, and what that means in practice.</p>
-    </div>
-    <div class="cmp-grid">
-      <div class="cmp-card best rv d1">
-        <span class="cmp-tag">Most people finish this one</span>
-        <div class="cmp-h">&#10052;&#65039; Debt Snowball</div>
-        <div class="cmp-sub">Smallest balance first, regardless of rate</div>
-        <ul class="cmp-steps">
-          <li><span class="cmp-n">1</span><div><div class="cmp-nm">$750 medical bill</div><div class="cmp-nt">Cleared in about 6 weeks. Proof the plan works.</div></div></li>
-          <li><span class="cmp-n">2</span><div><div class="cmp-nm">$2,000 credit card</div><div class="cmp-nt">Now gets the medical payment rolled into it.</div></div></li>
-          <li><span class="cmp-n">3</span><div><div class="cmp-nm">$10,000 student loan</div><div class="cmp-nt">Full snowball hits it. Falls faster than expected.</div></div></li>
-        </ul>
-        <div class="cmp-foot">Best if you have started a payoff plan before and stopped</div>
-      </div>
-      <div class="cmp-card rv d2">
-        <div class="cmp-h">&#127956; Debt Avalanche</div>
-        <div class="cmp-sub">Highest interest rate first, regardless of balance</div>
-        <ul class="cmp-steps">
-          <li><span class="cmp-n">1</span><div><div class="cmp-nm">$2,000 credit card (18%)</div><div class="cmp-nt">Most expensive debt. Takes a few months.</div></div></li>
-          <li><span class="cmp-n">2</span><div><div class="cmp-nm">$10,000 student loan (6%)</div><div class="cmp-nt">Long stretch with no visible win.</div></div></li>
-          <li><span class="cmp-n">3</span><div><div class="cmp-nm">$750 medical (0%)</div><div class="cmp-nt">Cheapest debt saved for last.</div></div></li>
-        </ul>
-        <div class="cmp-foot">Best if you are disciplined and want maximum interest savings</div>
-      </div>
-    </div>
-    <div class="center" style="margin-top:40px">
-      <div class="pbubble rv d3" style="margin-bottom:28px">
-        <svg class="percy" width="52" viewBox="0 0 100 122" fill="none">
-          <path class="flip-l" d="M18 58 C7 65 5 85 13 93 C18 98 24 93 24 84Z" fill="#1B2740"/>
-          <path d="M82 58 C93 65 95 85 87 93 C82 98 76 93 76 84Z" fill="#1B2740"/>
-          <path d="M50 6 C73 6 85 27 85 62 C85 93 70 113 50 113 C30 113 15 93 15 62 C15 27 27 6 50 6Z" fill="#0A1020"/>
-          <ellipse cx="50" cy="72" rx="23" ry="35" fill="#F8FAFB"/>
-          <circle class="eye" cx="39" cy="47" r="6" fill="#fff"/>
-          <circle class="eye" cx="61" cy="47" r="6" fill="#fff"/>
-          <circle cx="40" cy="48" r="3" fill="#0A1020"/>
-          <circle cx="62" cy="48" r="3" fill="#0A1020"/>
-          <path d="M50 56 L58 64 L50 71 L42 64Z" fill="#F5A524"/>
-          <ellipse cx="39" cy="116" rx="10" ry="4.5" fill="#F5A524"/>
-          <ellipse cx="61" cy="116" rx="10" ry="4.5" fill="#F5A524"/>
-        </svg>
-        <div class="pbubble-box"><b>My honest take:</b> the difference in interest is usually smaller than people expect. The difference in whether you actually finish is not. Run both with your numbers and pick the one you believe you will stick with.</div>
-      </div>
-      <a href="/debt/index.html" class="btn btn-mint btn-lg rv d4">Compare both with my debts <span class="arw">&rarr;</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- ══════ SPLIT / LIFESTYLE ══════ -->
 <section class="sec" style="background:var(--paper-2)">
-  <div class="wrap split">
-    <div class="split-img rv">
-      <img src="/img-couple-laptop-charts.jpg" alt="A couple reviewing their debt payoff plan together on a laptop at home" loading="lazy">
-      <div class="split-badge">
-        <div class="sb-ico">&#127881;</div>
-        <div>
-          <div class="sb-t">Debt free: March 2028</div>
-          <div class="sb-s">18 months &nbsp;·&nbsp; $1,247 interest saved</div>
-        </div>
-      </div>
-    </div>
-    <div>
-      <span class="eyebrow rv">What changes</span>
-      <h2 class="sec-title rv d1" style="font-size:clamp(26px,3.6vw,40px)">A date turns debt into a <em class="ser">countdown</em></h2>
-      <p class="sec-lede rv d2" style="margin-bottom:26px">Before you have a date, every payment feels like it disappears into a hole. After you have one, every payment moves a number you can see.</p>
-      <ul class="lead-list rv d3" style="margin:0 0 30px">
-        <li><svg width="19" height="19" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="color:var(--text-2)">You stop guessing whether you are making progress</span></li>
-        <li><svg width="19" height="19" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="color:var(--text-2)">You know exactly where every extra dollar should go</span></li>
-        <li><svg width="19" height="19" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="color:var(--text-2)">You can see what one extra payment actually does</span></li>
-      </ul>
-      <a href="/debt/index.html" class="btn btn-dark btn-lg rv d4">Find my date <span class="arw">&rarr;</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- ══════ FEATURES ══════ -->
-<section class="sec">
-  <div class="wrap">
-    <div class="center">
-      <span class="eyebrow rv">Everything included</span>
-      <h2 class="sec-title rv d1">Built to be useful, not to upsell you</h2>
-      <p class="sec-lede rv d2">Every feature below is free. No trial, no card, no account.</p>
-    </div>
-    <div class="feat-grid">
-      <div class="feat rv d1"><div class="feat-ico bg-mint">&#128197;</div><h3>Exact debt-free date</h3><p>The specific month your last debt hits zero, not a vague estimate or a range.</p></div>
-      <div class="feat rv d2"><div class="feat-ico bg-amber">&#10052;&#65039;</div><h3>Both strategies</h3><p>Compare snowball and avalanche side by side using your real balances and rates.</p></div>
-      <div class="feat rv d3"><div class="feat-ico bg-sky">&#128202;</div><h3>Month-by-month plan</h3><p>Every payment, every cleared debt, and every milestone laid out in a full schedule.</p></div>
-      <div class="feat rv d4"><div class="feat-ico bg-mint">&#128274;</div><h3>Genuinely private</h3><p>Everything runs in your browser. Nothing is sent anywhere or stored. Close the tab and it is gone.</p></div>
-      <div class="feat rv d5"><div class="feat-ico bg-amber">&#127758;</div><h3>12 currencies</h3><p>Dollars, pounds, euros, naira, rand, rupees, and more. Annual or monthly rate input.</p></div>
-      <div class="feat rv d6"><div class="feat-ico bg-sky">&#128241;</div><h3>Built for phones</h3><p>Designed mobile first. Works just as well on a laptop, but it does not assume one.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════ AD ══════ -->
-<div class="ad-wrap"><div class="wrap"><div class="ad-box">Advertisement</div></div></div>
-
-<!-- ══════ LEAD MAGNET ══════ -->
-<section class="sec lead" id="guide">
-  <div class="wrap lead-in">
-    <div>
-      <span class="eyebrow eyebrow-dk rv"><span class="dot"></span>Free guide</span>
-      <h2 class="rv d1">Stop throwing money at your debt</h2>
-      <p class="lead-lede rv d2"><b>You have probably already tried to just pay more.</b> But when several bills are demanding your attention, knowing what you owe is not always the problem.</p>
-      <p class="lead-hl rv d2">It is knowing what to pay first.</p>
-      <p class="lead-lede rv d3">The free guide shows you how to organise your debts, choose the right payoff strategy, and build a plan you can actually follow.</p>
-      <ul class="lead-list rv d4">
-        <li><svg width="19" height="19" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>See exactly where you stand today</li>
-        <li><svg width="19" height="19" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Decide which debt deserves your extra money</li>
-        <li><svg width="19" height="19" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Build a plan that survives a bad month</li>
-        <li><svg width="19" height="19" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Avoid the mistakes that restart the cycle</li>
-      </ul>
-      <div class="pbubble pbubble-dk rv d5" style="max-width:none">
-        <svg class="percy" width="46" viewBox="0 0 100 122" fill="none">
-          <path class="flip-l" d="M18 58 C7 65 5 85 13 93 C18 98 24 93 24 84Z" fill="#2A3852"/>
-          <path d="M82 58 C93 65 95 85 87 93 C82 98 76 93 76 84Z" fill="#2A3852"/>
-          <path d="M50 6 C73 6 85 27 85 62 C85 93 70 113 50 113 C30 113 15 93 15 62 C15 27 27 6 50 6Z" fill="#111A2E"/>
-          <ellipse cx="50" cy="72" rx="23" ry="35" fill="#F8FAFB"/>
-          <circle class="eye" cx="39" cy="47" r="6" fill="#fff"/>
-          <circle class="eye" cx="61" cy="47" r="6" fill="#fff"/>
-          <circle cx="40" cy="48" r="3" fill="#0A1020"/>
-          <circle cx="62" cy="48" r="3" fill="#0A1020"/>
-          <path d="M50 56 L58 64 L50 71 L42 64Z" fill="#F5A524"/>
-          <ellipse cx="39" cy="116" rx="10" ry="4.5" fill="#F5A524"/>
-          <ellipse cx="61" cy="116" rx="10" ry="4.5" fill="#F5A524"/>
-        </svg>
-        <div class="pbubble-box"><b>No shame, no unrealistic promises.</b> Skipping coffee will not make you debt free. A clear order of attack might.</div>
-      </div>
-    </div>
-
-    <div class="lead-form-card rv d2">
-      <div class="lfc-cover">
-        <span class="lfc-cover-badge">Clearpath Guide</span>
-        <span class="lfc-cover-t">Stop Throwing Money at Your Debt</span>
-        <span class="lfc-cover-s">6 chapters &nbsp;·&nbsp; free PDF</span>
-      </div>
-      <input type="email" class="lead-input" id="leadEmail" placeholder="you@email.com" autocomplete="email">
-      <button class="btn btn-mint btn-block" onclick="submitLead()">Show me how to get out of debt <span class="arw">&rarr;</span></button>
-      <p class="lead-micro">Free. No credit card. No judgment.</p>
-      <p class="lead-msg" id="leadMsg"></p>
-      <div class="lead-proof" id="leadProof">
-        <span class="lp-dot"></span><span id="leadProofText">Sarah from Chicago just downloaded it</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════ FAQ ══════ -->
-<section class="sec">
   <div class="wrap-sm">
     <div class="center">
-      <span class="eyebrow rv">Questions</span>
-      <h2 class="sec-title rv d1">Things worth knowing</h2>
+      <span class="eyebrow rv">Fair questions</span>
+      <h2 class="sec-title rv d1" style="font-size:clamp(24px,3.4vw,36px)">Before you hand over your email</h2>
     </div>
     <div class="faq-list">
-      <details class="faq-i rv"><summary>Is Clearpath actually free?</summary><div class="faq-a">Yes. The calculator, the payoff planner, the guides, and the free guide are all free. No trial, no card, no account required.</div></details>
-      <details class="faq-i rv"><summary>Are my numbers private?</summary><div class="faq-a">Completely. Everything you enter into the calculator runs inside your browser. Nothing is transmitted to a server, stored in a database, or visible to anyone including us. Close the tab and the data is gone.</div></details>
-      <details class="faq-i rv"><summary>Which method should I use, snowball or avalanche?</summary><div class="faq-a">If you have started a debt payoff plan before and stopped, choose snowball. The early win on the smallest balance is what keeps most people going. If you are disciplined and want maximum interest savings, avalanche will save you more. The calculator shows both with your actual numbers so you can decide with real figures.</div></details>
-      <details class="faq-i rv"><summary>My lender quotes a monthly rate, not annual. Does that work?</summary><div class="faq-a">Yes. The full calculator has a toggle so you can switch between annual APR and monthly rate. If your car finance is 2.5% per month, switch to monthly and enter 2.5. The maths handles the rest correctly.</div></details>
-      <details class="faq-i rv"><summary>How accurate is the debt-free date?</summary><div class="faq-a">It is a strong estimate based on the numbers you enter. It assumes your rates stay the same and you keep paying the same amount. Treat it as a planning target rather than a guarantee. Even an approximate date is far more useful than no date, because it gives you something concrete to aim at.</div></details>
-      <details class="faq-i rv"><summary>Can I include student loans, car loans, and medical debt?</summary><div class="faq-a">Yes, all of them. Any non-mortgage debt can go in. Most people leave the mortgage out and handle it separately once everything else is cleared.</div></details>
+      <details class="faq-i rv"><summary>Is it genuinely free?</summary><div class="faq-a">Yes. All three parts, no card, no trial, no upsell hiding on page four. You give an email, you get the kit.</div></details>
+      <details class="faq-i rv"><summary>Do I have to read all three parts?</summary><div class="faq-a">No, and plenty of people will not. If you only want the payoff order, part one does that on its own. But part two is what stops the debt rebuilding, and part three is what makes the date move properly, so they are worth the extra twenty minutes.</div></details>
+      <details class="faq-i rv"><summary>Is part three a get rich quick thing?</summary><div class="faq-a">No. It is a realistic look at earning a few hundred extra a month online, mostly through selling something simple or freelancing a skill you already have. No crypto, no dropshipping, and no promises about quitting your job. Just extra money aimed at your balance.</div></details>
+      <details class="faq-i rv"><summary>What if I have a lot of debts?</summary><div class="faq-a">Then this is exactly what it is for. Part one starts by getting everything into one view, which is the step most people skip and the one that matters most when several balances are involved.</div></details>
+      <details class="faq-i rv"><summary>What if I do not earn much?</summary><div class="faq-a">You do not need a big income to start. Part two is built around what you actually have rather than what you wish you had, and part three exists precisely because cutting has a floor while earning does not.</div></details>
+      <details class="faq-i rv"><summary>Will this guarantee I get out of debt?</summary><div class="faq-a">No, and anyone promising that is selling something. What it gives you is a clear order of attack, a budget that can take a hit, and a realistic way to bring in more. That combination is usually the missing piece.</div></details>
+      <details class="faq-i rv"><summary>How many emails will you send me?</summary><div class="faq-a">Not many, and you can leave any time with one click. We would rather you stay because it is useful than because you forgot how to unsubscribe.</div></details>
     </div>
   </div>
 </section>
 
-<!-- ══════ ARTICLES ══════ -->
-<section class="sec-sm" style="background:var(--paper-2)">
-  <div class="wrap">
-    <div class="center">
-      <span class="eyebrow rv">Learn more</span>
-      <h2 class="sec-title rv d1" style="font-size:clamp(26px,3.6vw,40px)">Guides that actually help</h2>
+<section class="sec g-final" id="get">
+  <div class="wrap g-final-in">
+    <span class="eyebrow eyebrow-dk rv"><span class="dot"></span>Last thing</span>
+    <h2 class="rv d1">Your debt probably feels like one enormous problem</h2>
+    <span class="g-em rv d2">It is not.</span>
+    <p class="g-lede rv d2" style="max-width:40ch;margin-left:auto;margin-right:auto">It is a handful of balances, a budget that needs fixing, and a gap that extra income can close. Three problems, and all three have answers.</p>
+    <div class="g-final-form rv d3">
+      <input type="email" class="lead-input" id="leadEmail2" placeholder="you@email.com" autocomplete="email">
+<button class="btn btn-mint btn-block" onclick="submitLead('2')">Send me the free kit <span class="arw">&rarr;</span></button>
+<p class="lead-micro">Free. No card. All three parts at once.</p>
+<p class="lead-msg" id="leadMsg2"></p>
     </div>
-    <div class="art-grid">
-      <a href="/debt/debt-snowball-real-example.html" class="art rv d1"><div class="art-c">Real example</div><h3>How the Debt Snowball Works: A Complete Step-by-Step Example</h3><div class="art-r">Read <span class="arw">&rarr;</span></div></a>
-      <a href="/debt/snowball-vs-avalanche.html" class="art rv d2"><div class="art-c">Strategy</div><h3>Debt Snowball vs Avalanche: Which Is Actually Better?</h3><div class="art-r">Read <span class="arw">&rarr;</span></div></a>
-      <a href="/debt/how-to-stop-living-paycheck-to-paycheck.html" class="art rv d3"><div class="art-c">Budgeting</div><h3>How to Stop Living Paycheck to Paycheck: 7 Steps</h3><div class="art-r">Read <span class="arw">&rarr;</span></div></a>
-      <a href="/debt/find-extra-money-for-debt.html" class="art rv d4"><div class="art-c">Extra income</div><h3>7 Realistic Ways to Find Extra Money for Debt</h3><div class="art-r">Read <span class="arw">&rarr;</span></div></a>
-    </div>
-    <div class="center" style="margin-top:32px">
-      <a href="/debt/blog.html" class="btn btn-ghost rv d5">See all guides <span class="arw">&rarr;</span></a>
-    </div>
+    <p style="font-size:13px;color:var(--text-3);margin-top:22px">Or if you would rather see your date first, <a href="/debt/index.html" style="color:var(--mint);font-weight:600">try the free calculator</a>.</p>
   </div>
 </section>
 
-<!-- ══════ FINAL CTA ══════ -->
-<section class="sec final">
-  <div class="wrap-sm final-in">
-    <h2 class="rv in">You do not need to have it all figured out</h2>
-    <p class="rv in d1">You just need to know what comes next. Start with the number, then take one step.</p>
-    <div class="final-btns rv in d2">
-      <a href="/debt/index.html" class="btn btn-white btn-lg">Calculate my debt-free date <span class="arw">&rarr;</span></a>
-      <a href="#guide" class="btn btn-ghost-lite btn-lg">Get the free guide</a>
-    </div>
-  </div>
-</section>
-
-<!-- ══════ FOOTER ══════ -->
 <footer>
   <div class="wrap">
     <div class="ft-top">
@@ -1039,7 +1083,7 @@ footer{background:var(--ink);color:var(--text-inv-2);padding:64px 0 30px}
         <div class="ft-h">Tools</div>
         <div class="ft-l">
           <a href="/debt/index.html">Debt calculator</a>
-          <a href="#guide">Free guide</a>
+          <a href="/guide.html">Free guide</a>
           <a href="/debt/blog.html">All guides</a>
         </div>
       </div>
@@ -1070,78 +1114,17 @@ footer{background:var(--ink);color:var(--text-inv-2);padding:64px 0 30px}
     </p>
   </div>
 </footer>
-
 <script>
-/* ── YEAR ── */
 document.getElementById('yr').textContent=new Date().getFullYear();
-
-/* ── SCROLL REVEAL ── */
 if('IntersectionObserver' in window){
   var io=new IntersectionObserver(function(es){
     es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
   },{threshold:.08,rootMargin:'0px 0px -40px 0px'});
   document.querySelectorAll('.rv:not(.in)').forEach(function(el){ io.observe(el); });
-}else{
-  document.querySelectorAll('.rv').forEach(function(el){ el.classList.add('in'); });
-}
-
-/* ── HERO ANIMATIONS ── */
-window.addEventListener('load',function(){
-  setTimeout(function(){
-    var ln=document.getElementById('chartLine');
-    if(ln) ln.style.animation='drawLine 1.8s cubic-bezier(.16,1,.3,1) forwards';
-    document.querySelectorAll('.preview-card .pv-bar-fill').forEach(function(b,i){
-      setTimeout(function(){ b.style.width=b.dataset.w+'%'; }, 260+i*130);
-    });
-  },420);
+}else{ document.querySelectorAll('.rv').forEach(function(el){ el.classList.add('in'); }); }
+document.querySelectorAll('.drop a').forEach(function(a){
+  a.addEventListener('click',function(){ var t=document.getElementById('navTog'); if(t) t.checked=false; });
 });
-
-/* ── HOW IT WORKS STEPS ── */
-function setStep(i,el){
-  document.querySelectorAll('.step').forEach(function(s){s.classList.remove('on')});
-  document.querySelectorAll('.hv').forEach(function(p){p.classList.remove('on')});
-  el.classList.add('on');
-  var pnl=document.getElementById('hv'+i);
-  if(pnl){
-    pnl.classList.add('on');
-    pnl.querySelectorAll('.hvbar').forEach(function(b,k){
-      b.style.width='0%';
-      setTimeout(function(){ b.style.width=b.dataset.w+'%'; },90+k*110);
-    });
-  }
-}
-
-/* ── NUMBER FORMATTING ── */
-function commafy(el){
-  el.addEventListener('input',function(){
-    var raw=this.value.replace(/[^0-9.]/g,'');
-    if(!raw){this.value='';return;}
-    var p=raw.split('.');
-    p[0]=p[0].replace(/\B(?=(\d{3})+(?!\d))/g,',');
-    this.value=p.length>1?p[0]+'.'+p[1]:p[0];
-  });
-}
-function num(v){ return parseFloat((v||'').replace(/,/g,''))||0; }
-
-/* ── QUICK CALCULATOR ── */
-var MO=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-var qB=document.getElementById('qBal'),qR=document.getElementById('qRate'),qP=document.getElementById('qPay');
-[qB,qP].forEach(commafy);
-function quickCalc(){
-  var bal=num(qB.value), rate=parseFloat(qR.value)||0, pay=num(qP.value);
-  var out=document.getElementById('qOut'), sub=document.getElementById('qOutSub');
-  if(bal<=0||pay<=0){ out.textContent='---'; sub.textContent='Enter a balance and payment'; return; }
-  var mr=rate/100/12, interest=0, m=0, b=bal;
-  if(pay<=b*mr){ out.textContent='Never'; sub.textContent='Payment is below monthly interest'; return; }
-  while(b>0 && m<600){ var i=b*mr; interest+=i; b=b+i-pay; m++; }
-  var d=new Date(); d.setMonth(d.getMonth()+m);
-  out.textContent=MO[d.getMonth()]+' '+d.getFullYear();
-  sub.textContent=m+' months  \u00b7  $'+Math.round(interest).toLocaleString()+' interest';
-}
-[qB,qR,qP].forEach(function(el){ el.addEventListener('input',quickCalc); });
-quickCalc();
-
-/* ── SOCIAL PROOF ── */
 var PROOF=[
 ["Sarah","Chicago"],["Michael","Dallas"],["Jennifer","Atlanta"],["David","Phoenix"],["Ashley","Denver"],
 ["Chris","Seattle"],["Jessica","Boston"],["Matthew","Nashville"],["Amanda","Portland"],["Daniel","Austin"],
@@ -1166,22 +1149,7 @@ var PROOF=[
 ["Noah","Melbourne"],["Zainab","Karachi"],["Arjun","Mumbai"],["Yuki","Tokyo"],["Carlos","Madrid"],
 ["Giulia","Rome"],["Erik","Stockholm"],["Fatima","Dubai"],["Kwame","Accra"],["Thabo","Johannesburg"],
 ["Isabella","Sao Paulo"],["Ravi","Bangalore"],["Aroha","Auckland"],["Mateus","Lisbon"],["Ana","Barcelona"],
-["Ivan","Warsaw"],["Elin","Oslo"],["Katarina","Zagreb"],["Miguel","Buenos Aires"]
-];
-
-/* marquee */
-(function(){
-  var t=document.getElementById('mqTrack');
-  if(!t) return;
-  var picks=[];
-  for(var i=0;i<16;i++){ picks.push(PROOF[Math.floor(Math.random()*PROOF.length)]); }
-  var html=picks.map(function(p){
-    return '<span class="mq-item"><span class="mq-dot"></span><b>'+p[0]+'</b> from '+p[1]+'</span>';
-  }).join('');
-  t.innerHTML=html+html;
-})();
-
-/* lead proof toast */
+["Ivan","Warsaw"],["Elin","Oslo"],["Katarina","Zagreb"],["Miguel","Buenos Aires"]];
 var pIdx=Math.floor(Math.random()*PROOF.length), pTimer=null;
 function nextProof(){
   var box=document.getElementById('leadProof'), txt=document.getElementById('leadProofText');
@@ -1193,52 +1161,39 @@ function nextProof(){
     box.classList.add('show');
   },380);
 }
-if('IntersectionObserver' in window){
-  var lo=new IntersectionObserver(function(es){
-    es.forEach(function(e){
-      if(e.isIntersecting && !pTimer){
-        nextProof();
-        pTimer=setInterval(nextProof,6000+Math.random()*2000);
-      }
-    });
-  },{threshold:.25});
+(function(){
   var lp=document.getElementById('leadProof');
-  if(lp) lo.observe(lp);
-}
-
-/* ── LEAD SUBMIT ── */
-function submitLead(){
-  var el=document.getElementById('leadEmail'), msg=document.getElementById('leadMsg');
+  if(!lp||!('IntersectionObserver' in window)) return;
+  new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting&&!pTimer){ nextProof(); pTimer=setInterval(nextProof,6000+Math.random()*2000); } });
+  },{threshold:.25}).observe(lp);
+})();
+function submitLead(id){
+  var sfx=id||'';
+  var el=document.getElementById('leadEmail'+sfx), msg=document.getElementById('leadMsg'+sfx);
   var v=(el.value||'').trim();
   msg.className='lead-msg';
   if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)){
-    msg.textContent='Please enter a valid email address.'; msg.className='lead-msg err'; return;
+    msg.textContent='That email does not look right. Mind checking it?'; msg.className='lead-msg err'; return;
   }
-  var btn=el.parentElement.querySelector('button');
-  var orig=btn.innerHTML;
-  btn.disabled=true; btn.textContent='Sending...';
+  var wrap=el.closest('.lead-form-card')||el.parentElement;
+  var btn=wrap.querySelector('button');
+  var orig=btn?btn.innerHTML:'';
+  if(btn){ btn.disabled=true; btn.textContent='Sending...'; }
   fetch('https://script.google.com/macros/s/REPLACE_WITH_YOUR_DEPLOYMENT_ID/exec',{
     method:'POST',mode:'no-cors',
     headers:{'Content-Type':'text/plain;charset=utf-8'},
-    body:JSON.stringify({email:v,source:'/',type:'debt_guide'})
+    body:JSON.stringify({email:v,source:location.pathname,type:'debt_guide'})
   }).then(function(){
-    msg.textContent='Check your inbox. Your guide is on its way.';
+    msg.textContent='Done. Check your inbox in the next minute or two.';
     msg.className='lead-msg ok';
-    btn.textContent='Sent';
+    if(btn) btn.textContent='Sent';
   }).catch(function(){
-    btn.disabled=false; btn.innerHTML=orig;
-    msg.textContent='Something went wrong. Please try again.';
+    if(btn){ btn.disabled=false; btn.innerHTML=orig; }
+    msg.textContent='That did not go through. Try once more?';
     msg.className='lead-msg err';
   });
 }
-document.getElementById('leadEmail').addEventListener('keydown',function(e){
-  if(e.key==='Enter') submitLead();
-});
-
-/* close mobile nav on link click */
-document.querySelectorAll('.drop a').forEach(function(a){
-  a.addEventListener('click',function(){ document.getElementById('navTog').checked=false; });
-});
 </script>
 </body>
 </html>
